@@ -1604,7 +1604,7 @@ Module ModTheSkyX
                     End If
                 End If
 
-                FrmMDIParent.StatusStrip.Items(0).Text = ExposureStatus  'pTheSkyXExposureStatus 'Exposing Light ( x left )
+                FrmMain.StatusStrip.Items(0).Text = ExposureStatus  'pTheSkyXExposureStatus 'Exposing Light ( x left )
                 FrmMain.LblCCDExposureStatus.Text = ExposureStatus
             End If
 

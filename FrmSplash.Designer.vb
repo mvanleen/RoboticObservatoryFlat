@@ -106,6 +106,7 @@ Partial Class FrmSplash
         Me.MinimizeBox = False
         Me.Name = "FrmSplash"
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

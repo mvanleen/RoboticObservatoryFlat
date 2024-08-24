@@ -1085,6 +1085,7 @@ Partial Class FrmHADS
         Me.Controls.Add(Me.BtnSave)
         Me.Controls.Add(Me.BtnCancel)
         Me.Name = "FrmHADS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "HADS targets"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

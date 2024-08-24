@@ -1078,14 +1078,14 @@ Module ModHelper
                         FrmMain.RTXLog.SelectionColor = Color.Black
                         FrmMain.RTXLog.AppendText(Format(DateTime.UtcNow(), "HH:mm:ss") + ": " + vLogText + vLogTextVar + vbCrLf)
                         FrmMain.RTXLog.SelectionColor = Color.Black
-                        FrmMDIParent.StatusStrip.Items(0).Text = vLogText + vLogTextVar
+                        FrmMain.StatusStrip.Items(0).Text = vLogText + vLogTextVar
                         FrmMain.RTXLog.ScrollToCaret()
                         FrmMain.RTXLog.Refresh()
                         pLastLogLineTimeStamp = DateTime.UtcNow()
                     ElseIf vLogType = "FULL" And (My.Settings.sLogType = "FULL" Or My.Settings.sLogType = "DEBUG") Then
                         FrmMain.RTXLog.SelectionColor = Color.DarkGray
                         FrmMain.RTXLog.AppendText(Format(DateTime.UtcNow(), "HH:mm:ss") + ": " + vLogText + vLogTextVar + vbCrLf)
-                        FrmMDIParent.StatusStrip.Items(0).Text = vLogText + vLogTextVar
+                        FrmMain.StatusStrip.Items(0).Text = vLogText + vLogTextVar
                         FrmMain.RTXLog.ScrollToCaret()
                         FrmMain.RTXLog.Refresh()
                         pLastLogLineTimeStamp = DateTime.UtcNow()

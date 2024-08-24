@@ -55,6 +55,8 @@ Partial Class FrmDebug
         Me.LblpManualAbort = New System.Windows.Forms.Label()
         Me.LblpAbort = New System.Windows.Forms.Label()
         Me.GrpStatus = New System.Windows.Forms.GroupBox()
+        Me.LblpMoonCooldownStatus = New System.Windows.Forms.Label()
+        Me.LblMoonSafetyStatus = New System.Windows.Forms.Label()
         Me.lblpOldSequenceTimeSMART = New System.Windows.Forms.Label()
         Me.LblpOldProgramTimeSMART = New System.Windows.Forms.Label()
         Me.LblpSmartError = New System.Windows.Forms.Label()
@@ -73,8 +75,6 @@ Partial Class FrmDebug
         Me.TxtMosaicOverlap = New System.Windows.Forms.TextBox()
         Me.BtnError = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.LblpMoonCooldownStatus = New System.Windows.Forms.Label()
-        Me.LblMoonSafetyStatus = New System.Windows.Forms.Label()
         Me.GrpStatus.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -391,6 +391,28 @@ Partial Class FrmDebug
         Me.GrpStatus.TabStop = False
         Me.GrpStatus.Text = "Status"
         '
+        'LblpMoonCooldownStatus
+        '
+        Me.LblpMoonCooldownStatus.AutoSize = True
+        Me.LblpMoonCooldownStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpMoonCooldownStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblpMoonCooldownStatus.Location = New System.Drawing.Point(193, 36)
+        Me.LblpMoonCooldownStatus.Name = "LblpMoonCooldownStatus"
+        Me.LblpMoonCooldownStatus.Size = New System.Drawing.Size(117, 13)
+        Me.LblpMoonCooldownStatus.TabIndex = 100
+        Me.LblpMoonCooldownStatus.Text = "pMoonCooldownStatus"
+        '
+        'LblMoonSafetyStatus
+        '
+        Me.LblMoonSafetyStatus.AutoSize = True
+        Me.LblMoonSafetyStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMoonSafetyStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblMoonSafetyStatus.Location = New System.Drawing.Point(193, 16)
+        Me.LblMoonSafetyStatus.Name = "LblMoonSafetyStatus"
+        Me.LblMoonSafetyStatus.Size = New System.Drawing.Size(100, 13)
+        Me.LblMoonSafetyStatus.TabIndex = 99
+        Me.LblMoonSafetyStatus.Text = "pMoonSafetyStatus"
+        '
         'lblpOldSequenceTimeSMART
         '
         Me.lblpOldSequenceTimeSMART.AutoSize = True
@@ -554,28 +576,6 @@ Partial Class FrmDebug
         Me.Button1.Text = "Play Error"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'LblpMoonCooldownStatus
-        '
-        Me.LblpMoonCooldownStatus.AutoSize = True
-        Me.LblpMoonCooldownStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblpMoonCooldownStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblpMoonCooldownStatus.Location = New System.Drawing.Point(193, 36)
-        Me.LblpMoonCooldownStatus.Name = "LblpMoonCooldownStatus"
-        Me.LblpMoonCooldownStatus.Size = New System.Drawing.Size(117, 13)
-        Me.LblpMoonCooldownStatus.TabIndex = 100
-        Me.LblpMoonCooldownStatus.Text = "pMoonCooldownStatus"
-        '
-        'LblMoonSafetyStatus
-        '
-        Me.LblMoonSafetyStatus.AutoSize = True
-        Me.LblMoonSafetyStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMoonSafetyStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblMoonSafetyStatus.Location = New System.Drawing.Point(193, 16)
-        Me.LblMoonSafetyStatus.Name = "LblMoonSafetyStatus"
-        Me.LblMoonSafetyStatus.Size = New System.Drawing.Size(100, 13)
-        Me.LblMoonSafetyStatus.TabIndex = 99
-        Me.LblMoonSafetyStatus.Text = "pMoonSafetyStatus"
-        '
         'FrmDebug
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -620,6 +620,7 @@ Partial Class FrmDebug
         Me.Controls.Add(Me.ButtonEnableInternet)
         Me.Controls.Add(Me.ButtonKillInternet)
         Me.Name = "FrmDebug"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Debugging"
         Me.TopMost = True
         Me.GrpStatus.ResumeLayout(False)

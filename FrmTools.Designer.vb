@@ -941,6 +941,7 @@ Partial Class FrmTools
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmTools"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Tools"
         Me.TopMost = True
         Me.grpCover.ResumeLayout(False)

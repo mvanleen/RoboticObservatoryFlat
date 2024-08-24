@@ -213,12 +213,6 @@
       <DependentUpon>FrmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMDIParent.Designer.vb">
-      <DependentUpon>FrmMDIParent.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMDIParent.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmProperties.Designer.vb">
       <DependentUpon>FrmProperties.vb</DependentUpon>
     </Compile>
@@ -294,10 +288,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMDIParent.resx">
-      <DependentUpon>FrmMDIParent.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProperties.resx">

@@ -29,7 +29,6 @@ C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmCalibration.resources
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmDebug.resources
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmMain.resources
-C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmMDIParent.resources
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmProperties.resources
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmSplash.resources
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmTarget.resources

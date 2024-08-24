@@ -1481,6 +1481,7 @@ Partial Class FrmTarget
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmTarget"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = " Deepsky targets"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()

@@ -354,6 +354,7 @@ Partial Class FrmCalibration
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCalibration"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Calibration frames"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

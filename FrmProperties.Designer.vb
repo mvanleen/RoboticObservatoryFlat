@@ -4067,6 +4067,7 @@ Partial Class FrmProperties
         Me.Controls.Add(Me.TabControl)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmProperties"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Properties"
         Me.TopMost = True
         Me.GroupBoxCCD.ResumeLayout(False)

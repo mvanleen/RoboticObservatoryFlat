@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.RoboticObs.FrmMDIParent
+            Me.MainForm = Global.RoboticObs.FrmMain
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

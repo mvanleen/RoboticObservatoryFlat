@@ -54,7 +54,7 @@ Public Class FrmMain
             pLogFileFull = My.Computer.FileSystem.OpenTextFileWriter(pLogFileNameFull, True)
             pWeatherFile = My.Computer.FileSystem.OpenTextFileWriter(pWeatherLogFileName, True)
 
-            FrmMDIParent.StatusStrip.Items(0).Text = ""
+            StatusStrip.Items(0).Text = ""
 
             'enable Telegram
             returnvalue = ConnectTelegram(My.Settings.sTelegramBOT)
@@ -262,7 +262,7 @@ Public Class FrmMain
         End Try
     End Sub
 
-    Private Sub ChkDebugMode_CheckedChanged(sender As Object, e As EventArgs) Handles ChkSimulatorMode.CheckedChanged
+    Private Sub ChkDebugMode_CheckedChanged(sender As Object, e As EventArgs)
         Try
             If ChkSimulatorMode.Checked = True Then
                 ChkSimulatorMode.BackColor = Color.Red
@@ -535,7 +535,7 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
+    Private Sub BtnStart_Click(sender As Object, e As EventArgs)
         Try
             If MsgBox("Do you want to manually start the run ?", vbYesNo, "Start run...") = vbYes Then
                 If My.Settings.sDisableSafetyCheck = True Then
@@ -607,7 +607,7 @@ Public Class FrmMain
         End Try
     End Sub
 
-    Private Sub ChkAutoStart_CheckedChanged(sender As Object, e As EventArgs) Handles ChkAutoStart.CheckedChanged
+    Private Sub ChkAutoStart_CheckedChanged(sender As Object, e As EventArgs)
         Try
             If ChkAutoStart.Checked = True Then
                 If pStartRun = True Then
@@ -656,7 +656,7 @@ Public Class FrmMain
         End Try
     End Sub
 
-    Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
+    Private Sub BtnStop_Click(sender As Object, e As EventArgs)
         Try
             If MsgBox("Do you want to abort the run ?", vbYesNo, "Abort run...") = vbYes Then
                 'only when a sequence is running it can be aborted !
@@ -695,6 +695,17 @@ Public Class FrmMain
 
     Private Sub FrmMain_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         Try
+
+            My.Application.DoEvents()
+
+            FrmSplash.StartPosition = FormStartPosition.CenterScreen
+            My.Application.DoEvents()
+            FrmSplash.Show()
+            My.Application.DoEvents()
+
+            WaitSeconds(3, True, False)
+            FrmSplash.Close()
+
             Dim returnvalue As String
 
             'check equipment status
@@ -782,7 +793,7 @@ Public Class FrmMain
         End Try
     End Sub
 
-    Private Sub ChkDisableSafetyCheck_CheckedChanged(sender As Object, e As EventArgs) Handles ChkDisableSafetyCheck.CheckedChanged
+    Private Sub ChkDisableSafetyCheck_CheckedChanged(sender As Object, e As EventArgs)
         If ChkDisableSafetyCheck.Checked = True Then
             'If MsgBox("Are you sure to disable the safety check ?", vbYesNo, "Safety check") = vbYes Then
             TimerDisaster.Enabled = False
@@ -796,11 +807,11 @@ Public Class FrmMain
         End If
     End Sub
 
-    Private Sub BtnClearErrorLog_Click(sender As Object, e As EventArgs) Handles BtnClearErrorLog.Click
+    Private Sub BtnClearErrorLog_Click(sender As Object, e As EventArgs)
         RTXErrors.Clear()
     End Sub
 
-    Private Sub BtnClearLog_Click(sender As Object, e As EventArgs) Handles BtnClearLog.Click
+    Private Sub BtnClearLog_Click(sender As Object, e As EventArgs)
         RTXLog.Clear()
     End Sub
 
@@ -897,7 +908,7 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub BtnViewLog_Click(sender As Object, e As EventArgs) Handles BtnViewLog.Click
+    Private Sub BtnViewLog_Click(sender As Object, e As EventArgs)
         'System.Diagnostics.Process.Start("notepad.exe", pLogFileName)
         System.Diagnostics.Process.Start("wordpad.exe", pLogFileNameRTF)
     End Sub
@@ -910,5 +921,90 @@ Public Class FrmMain
         End If
     End Sub
 
+    Private Sub TimerSplit1_Tick(sender As Object, e As EventArgs) Handles TimerSplit1.Tick
+        If SplitContainer.SplitterDistance > 50 Then
+            SplitContainer.SplitterDistance -= 20
+        Else
+            TimerSplit1.Enabled = False
+        End If
+    End Sub
 
+    Private Sub TimerSplit2_Tick(sender As Object, e As EventArgs) Handles TimerSplit2.Tick
+        If SplitContainer.SplitterDistance < 220 Then
+            SplitContainer.SplitterDistance += 20
+        Else
+            TimerSplit2.Enabled = False
+        End If
+    End Sub
+
+    Private Sub BtnMenu_Click(sender As Object, e As EventArgs) Handles BtnMenu.Click
+        If SplitContainer.SplitterDistance > 50 Then
+            TimerSplit1.Enabled = True
+        Else
+            TimerSplit2.Enabled = True
+        End If
+    End Sub
+
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
+        If pStartRun = True Then
+            MsgBox("First abort the run !", vbCritical, "Abort")
+        Else
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub BtnProperties_Click(sender As Object, e As EventArgs) Handles BtnProperties.Click
+        FrmProperties.Show()
+    End Sub
+
+    Private Sub BtnDebug_Click(sender As Object, e As EventArgs) Handles BtnDebug.Click
+        FrmDebug.Show()
+    End Sub
+
+    Private Sub BtnTools_Click(sender As Object, e As EventArgs) Handles BtnTools.Click
+        FrmTools.StartPosition = FormStartPosition.Manual
+        FrmTools.Location = New Point(0, 150)
+        FrmTools.Show()
+    End Sub
+
+    Private Sub BtnStartSentinel_Click(sender As Object, e As EventArgs) Handles BtnStartSentinel.Click
+        'try to start the sentinel
+        StartProcess(My.Settings.sSentinelEXE)
+    End Sub
+
+    Private Sub BtnStopSound_Click(sender As Object, e As EventArgs) Handles BtnStopSound.Click
+        StopSound()
+    End Sub
+
+    Private Sub BtnDeepsky_Click(sender As Object, e As EventArgs) Handles BtnDeepsky.Click
+        FrmTarget.Show()
+    End Sub
+
+    Private Sub BtnHADS_Click(sender As Object, e As EventArgs) Handles BtnHADS.Click
+        FrmHADS.Show()
+    End Sub
+
+    Private Sub BtnCalibration_Click(sender As Object, e As EventArgs) Handles BtnCalibration.Click
+
+        FrmCalibration.Show()
+    End Sub
+
+    Private Sub BtnAbout_Click(sender As Object, e As EventArgs) Handles BtnAbout.Click
+
+        FrmSplash.StartPosition = FormStartPosition.CenterScreen
+        FrmSplash.Show()
+    End Sub
+
+    Private Sub FrmMain_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Try
+            LogInitializeArray()
+
+            If pStartRun = True Then
+                MsgBox("First abort the run !", vbCritical, "Abort")
+                e.Cancel = True
+            End If
+        Catch ex As Exception
+            MsgBox("FrmMain_Closing: " + ex.Message)
+        End Try
+    End Sub
 End Class
