@@ -1,0 +1,546 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="sRoofDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NONE</Value>
+    </Setting>
+    <Setting Name="sInternetTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="sDebugKillInternet" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sUPSHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">172.20.7.41</Value>
+    </Setting>
+    <Setting Name="sUPSCommunity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">public</Value>
+    </Setting>
+    <Setting Name="sUPSrequestOid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.1.3.6.1.4.1.3808.1.1.1.4.1.1.0</Value>
+    </Setting>
+    <Setting Name="sSimulatorMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sDebugKillUPS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sUPSTimeout" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="sRoofOpenPartly" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="sSwitch1Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EYEMA-PC &amp; CAM2</Value>
+    </Setting>
+    <Setting Name="sSwitch2Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KVM &amp; RASPI &amp; Solo</Value>
+    </Setting>
+    <Setting Name="sSwitch3Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EzViz 1&amp;2</Value>
+    </Setting>
+    <Setting Name="sSwitch4Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10 Micron / Baader</Value>
+    </Setting>
+    <Setting Name="sSwitch5Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pegasus Controller</Value>
+    </Setting>
+    <Setting Name="sSwitch6Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dew Control All Sky</Value>
+    </Setting>
+    <Setting Name="sSwitch7Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Spare CCD</Value>
+    </Setting>
+    <Setting Name="sSwitch8Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Cabinet Fan</Value>
+    </Setting>
+    <Setting Name="sSwitch1Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch2Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch3Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch4Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sSwitch5Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch6Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sSwitch7Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch8Needed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sSwitch1Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Are you sure to powercycle the PC ?</Value>
+    </Setting>
+    <Setting Name="sSwitch2Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Are you sure to powercycle the KVM / Raspberry / AAG Solo ?</Value>
+    </Setting>
+    <Setting Name="sSwitch3Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Are you sure to powercycle EzViz 1&amp;2 ?</Value>
+    </Setting>
+    <Setting Name="sSwitch4Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Are you sure to powercycle the 10Micron/Power Switch ?</Value>
+    </Setting>
+    <Setting Name="sSwitch5Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Are you sure to powercycle the Pegasus controller ?</Value>
+    </Setting>
+    <Setting Name="sSwitch6Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="sSwitch7Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="sSwitch8Warning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Are you sure to powercycle the mount power cooling ?</Value>
+    </Setting>
+    <Setting Name="sObserverHeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">556</Value>
+    </Setting>
+    <Setting Name="sObserverLatitude" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">38.215506</Value>
+    </Setting>
+    <Setting Name="sObserverLongitude" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-6.6295967</Value>
+    </Setting>
+    <Setting Name="sObserverPressure" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1013</Value>
+    </Setting>
+    <Setting Name="sObserverTemperature" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="sWeatherURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://aagsolo/cgi-bin/cgiLastData</Value>
+    </Setting>
+    <Setting Name="sWeatherCloud_Clear" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-5</Value>
+    </Setting>
+    <Setting Name="sWeatherCloud_Cloudy" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sWeatherCloud_Overcast" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">11</Value>
+    </Setting>
+    <Setting Name="sWeatherHumidity_Dry" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sWeatherHumidity_Normal" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">70</Value>
+    </Setting>
+    <Setting Name="sWeatherHumidity_Humid" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">90</Value>
+    </Setting>
+    <Setting Name="sWeatherRain_Dry" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sWeatherRain_Wet" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="sWeatherRain_Rain" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3750</Value>
+    </Setting>
+    <Setting Name="sWeatherLightness_Dark" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2100</Value>
+    </Setting>
+    <Setting Name="sWeatherLightness_Light" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="sWeatherLightness_VeryLight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sWeatherClearDelay" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">900</Value>
+    </Setting>
+    <Setting Name="sCCDFilter1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">L</Value>
+    </Setting>
+    <Setting Name="sCCDFilter2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">H</Value>
+    </Setting>
+    <Setting Name="sCCDFilter3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LPS</Value>
+    </Setting>
+    <Setting Name="sCCDFilter4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LENH</Value>
+    </Setting>
+    <Setting Name="sCCDFilter5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">V</Value>
+    </Setting>
+    <Setting Name="sAlarmPlay" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sAlarmSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\RoboticObs\best_wake_up_sound.wav</Value>
+    </Setting>
+    <Setting Name="sLogLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\RoboObsLog\</Value>
+    </Setting>
+    <Setting Name="sObservatoryName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EYEMA-OBS</Value>
+    </Setting>
+    <Setting Name="sTelegramErrorID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-445733727</Value>
+    </Setting>
+    <Setting Name="sTelegramSessionID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-410999015</Value>
+    </Setting>
+    <Setting Name="sTelegramLoggingType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BRIEF</Value>
+    </Setting>
+    <Setting Name="sTelegramBOT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">965192245:AAFuAzlsjUkWX5eLb6GC0zT5Sgj_oSpgLo0</Value>
+    </Setting>
+    <Setting Name="sLogType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FULL</Value>
+    </Setting>
+    <Setting Name="sCCDFocusSubFrame" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sCCDSensorSizeX" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6248</Value>
+    </Setting>
+    <Setting Name="sCCDSensorSizeY" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4176</Value>
+    </Setting>
+    <Setting Name="sCCDImageScale" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.868</Value>
+    </Setting>
+    <Setting Name="sWeatherTimeout" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="sCCDImagePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\RoboObsImages\</Value>
+    </Setting>
+    <Setting Name="sMountDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ASCOM.SoftwareBisque.Telescope</Value>
+    </Setting>
+    <Setting Name="sCCDPlateSolveExposure" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sCCDPlateSolveMaxError" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="sCCDPlateSolveBinning" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2x2</Value>
+    </Setting>
+    <Setting Name="sCCDPlateSolveNbrTries" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="sAutoStart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sDebugCloud" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SAFE</Value>
+    </Setting>
+    <Setting Name="sDebugLight" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DARK</Value>
+    </Setting>
+    <Setting Name="sDebugAAGData" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sDebugSunMoonCoordinates" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SDebugSunAltitude" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="SDebugMoonAltitude" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-20</Value>
+    </Setting>
+    <Setting Name="SDebugSunRisingSetting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SETTING</Value>
+    </Setting>
+    <Setting Name="SDebugMoonRisingSetting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RISING</Value>
+    </Setting>
+    <Setting Name="sSunOpenRoof" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="sSunDuskFlats" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="sSunStartRun" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-12</Value>
+    </Setting>
+    <Setting Name="sSunStopRun" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-12</Value>
+    </Setting>
+    <Setting Name="sSunDawnFlats" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-4</Value>
+    </Setting>
+    <Setting Name="sRoofOpenTimeout" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="sObjectAltLimitEast" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sObjectAltLimitWest" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="sAlarmRepeat" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sDebugKillAAG" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sCCDFocusEveryXImages" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sCCDFocusEveryXDegrees" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.5</Value>
+    </Setting>
+    <Setting Name="sCCDDithering" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sCCDDitheringAmount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="sCCDFocusMeridianFlip" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sSnapCapSerialPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM13</Value>
+    </Setting>
+    <Setting Name="sCoverMethod" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SERIAL</Value>
+    </Setting>
+    <Setting Name="sDisableSafetyCheck" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sCCDFocusDefExp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="sCCDFocusSamples" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="sSunDuskFlatsNeeded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSunDawnFlatsNeeded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSynologyPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\SynologyDrive\e-eye data\</Value>
+    </Setting>
+    <Setting Name="sSMARTTimeout" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="sSentinelEXE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\RoboticSentinel\RoboticSentinel.exe</Value>
+    </Setting>
+    <Setting Name="sTurnOffCompletely" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sObservationProgram" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DEEPSKY</Value>
+    </Setting>
+    <Setting Name="sMoonIgnore" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sCCDBlindSolve" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sMountMeridianFlip" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sMountMeridianFlipMinutes" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sToolsOpenRoof" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sDebugMoonIllumination" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="sUPSNotPresent" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sCCDCoolingEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sCCDCoolingTemp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-5</Value>
+    </Setting>
+    <Setting Name="sCCDFocusDefaultPosition" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">106000</Value>
+    </Setting>
+    <Setting Name="sCCDFocusDefaultFork" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="sSMARTCycle" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="s7ZipLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\7-Zip\7z.exe</Value>
+    </Setting>
+    <Setting Name="sSentinelAutostart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sAutoFlatMinExp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="sAutoFlatMaxExp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="sAutoFlatMinADU" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">15000</Value>
+    </Setting>
+    <Setting Name="sAutoFlatMaxADU" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">35000</Value>
+    </Setting>
+    <Setting Name="sAutoFlatAlt" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">80</Value>
+    </Setting>
+    <Setting Name="sAutoFlatAz" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+    <Setting Name="sAutoFlatBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1x1</Value>
+    </Setting>
+    <Setting Name="sAutoFlatFilter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">L</Value>
+    </Setting>
+    <Setting Name="SHADSURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://docs.google.com/spreadsheets/d/e/2PACX-1vSyphtUrAM-tldhj0d4EH6BAbyPrMbfPq4UZ5AANyacd9OL8WAY4Ef0mZ_xbpIC7Bj3GhJuv6oSMyAM/pub?gid=316386585&amp;single=true&amp;output=tsv</Value>
+    </Setting>
+    <Setting Name="sMoonStartCooldown" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sSwitch1Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sSwitch2Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sSwitch3Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sSwitch4Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="sSwitch5Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sSwitch6Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sSwitch7Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sSwitch8Startup" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sSwitch1Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch2Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch3Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch4Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sSwitch5Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch6Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch7Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sSwitch8Mount" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sHADSMag8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sHADSMag9" Type="System.String" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="sHADSMag10" Type="System.String" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="sHADSMag11" Type="System.String" Scope="User">
+      <Value Profile="(Default)">90</Value>
+    </Setting>
+    <Setting Name="sHADSMag12" Type="System.String" Scope="User">
+      <Value Profile="(Default)">90</Value>
+    </Setting>
+    <Setting Name="sHADSMag13" Type="System.String" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="sHADSMag14" Type="System.String" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="sHADSMag15" Type="System.String" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="sHADSDECCutOff" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-25</Value>
+    </Setting>
+    <Setting Name="sCCDName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ASI ZWO2600MC</Value>
+    </Setting>
+    <Setting Name="sCCDColorCamera" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sTelescopeFocalLength" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">890</Value>
+    </Setting>
+    <Setting Name="sTelescopeName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Takahashi CCA250-3.6</Value>
+    </Setting>
+    <Setting Name="sTelescopeAparture" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
+    <Setting Name="sCCDPixelSize" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3.76</Value>
+    </Setting>
+    <Setting Name="sCoverDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="sSwitchDevice" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="sMountStartupLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://user:secret@172.20.7.49/?cmd=5&amp;p=1&amp;a1=1&amp;a2=0&amp;s=2</Value>
+    </Setting>
+    <Setting Name="sCCDFocusClosedLoopSlew" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sMoonAltitudeAlwaysSafe" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="sMoonPhaseAlwaysSafe" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="sMoonPhaseLimitLow" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="sMoonAltitudeLimitLow" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="sMoonStartCooldownLow" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="sMoonAltitudeLimitHigh" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="sMoonStartCooldownHigh" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
