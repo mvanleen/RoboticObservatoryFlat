@@ -48,7 +48,7 @@
             If pStrucWeather.containsData = 1 Then
 
                 FrmMain.lblLastRead.Text = "Last read: " + pLastKnownAAGConnected.ToString
-                FrmMain.txtAmbientTemperature.Text = Format(pStrucWeather.temp) + "°C"
+                FrmMain.LblAmbientTemperature.Text = "Ambient temp: " + Format(pStrucWeather.temp) + "°C"
 
                 'cloud status
                 FrmMain.ToolTip.SetToolTip(FrmMain.lblCloud, Format(pStrucWeather.clouds))
@@ -159,28 +159,23 @@
                 End Select
 
                 'humidity
-                FrmMain.txtRelativeHumidity.Text = Format(pStrucWeather.hum) + "%"
                 Select Case pStrucWeather.hum
                     Case > My.Settings.sWeatherHumidity_Humid
-                        FrmMain.lblRelativeHumidity.Text = "Humidity: wet"
+                        FrmMain.lblRelativeHumidity.Text = "Humidity: wet - " + Format(pStrucWeather.hum) + "%"
                         FrmMain.lblRelativeHumidity.BackColor = Color.LightBlue
-                        FrmMain.txtRelativeHumidity.Visible = True
+
                     Case > My.Settings.sWeatherHumidity_Normal
-                        FrmMain.lblRelativeHumidity.Text = "Humidity: normal"
+                        FrmMain.lblRelativeHumidity.Text = "Humidity: normal - " + Format(pStrucWeather.hum) + "%"
                         FrmMain.lblRelativeHumidity.BackColor = Color.LightCyan
-                        FrmMain.txtRelativeHumidity.Visible = True
                     Case > My.Settings.sWeatherHumidity_Dry
-                        FrmMain.lblRelativeHumidity.Text = "Humidity: dry"
+                        FrmMain.lblRelativeHumidity.Text = "Humidity: dry - " + Format(pStrucWeather.hum) + "%"
                         FrmMain.lblRelativeHumidity.BackColor = Color.Transparent
-                        FrmMain.txtRelativeHumidity.Visible = True
                     Case -9
-                        FrmMain.lblRelativeHumidity.Text = ""
+                        FrmMain.lblRelativeHumidity.Text = "Humidity: N/A"
                         FrmMain.lblRelativeHumidity.BackColor = Color.Transparent
-                        FrmMain.txtRelativeHumidity.Visible = False
                     Case Else
                         FrmMain.lblRelativeHumidity.Text = "Humidity: N/A"
                         FrmMain.lblRelativeHumidity.BackColor = Color.White
-                        FrmMain.txtRelativeHumidity.Visible = False
                 End Select
 
                 Dim Switch As String
@@ -230,7 +225,7 @@
             Else
                 'no cloud device defined
                 FrmMain.lblLastRead.Text = "Last read: no device available!"
-                FrmMain.txtAmbientTemperature.Text = ""
+                FrmMain.LblAmbientTemperature.Text = "Ambient temp: N/A"
 
                 'cloud status
                 FrmMain.lblCloud.BackColor = Color.Transparent
@@ -243,7 +238,6 @@
                 FrmMain.lblRain.BackColor = Color.Transparent
                 'humidity
                 FrmMain.lblRelativeHumidity.Text = "Humidity:"
-                FrmMain.txtRelativeHumidity.Text = ""
 
                 'safe or unsafe / open or closed
                 FrmMain.LblCloudSafe.Text = ""

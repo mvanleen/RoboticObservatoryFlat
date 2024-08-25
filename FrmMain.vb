@@ -992,16 +992,15 @@ Public Class FrmMain
         End Try
     End Sub
 
-
-    Private Sub BtnClearErrorLog_Click(sender As Object, e As EventArgs) Handles BtnClearErrorLog.Click
-        RTXErrors.Clear()
+    Private Sub BtnViewLog_Click(sender As Object, e As EventArgs) Handles BtnViewLog.Click
+        System.Diagnostics.Process.Start("wordpad.exe", pLogFileNameRTF)
     End Sub
 
     Private Sub BtnClearLog_Click(sender As Object, e As EventArgs) Handles BtnClearLog.Click
         RTXLog.Clear()
     End Sub
 
-    Private Sub BtnViewLog_Click(sender As Object, e As EventArgs) Handles BtnViewLog.Click
-        System.Diagnostics.Process.Start("wordpad.exe", pLogFileNameRTF)
+    Private Sub BtnClearErrorLog_Click(sender As Object, e As EventArgs) Handles BtnClearErrorLog.Click
+        RTXErrors.Clear()
     End Sub
 End Class

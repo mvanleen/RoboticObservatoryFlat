@@ -578,7 +578,7 @@ Module ModAstroUtils
 
             'LST / GST
             FrmMain.LblLST.Text = "LST: " + pAUtil.HoursToHMS(pStructEventTimes.LST)
-            FrmMain.LblGST.Text = "GST: " + pAUtil.HoursToHMS(pStructEventTimes.GST)
+            'FrmMain.LblGST.Text = "GST: " + pAUtil.HoursToHMS(pStructEventTimes.GST)
 
             'Moon
             FrmMain.LblPhaseMoon.Text = Format(pStructEventTimes.MoonIllumination * 100, "0") + "% " + pStructEventTimes.MoonPhaseShort
@@ -622,9 +622,9 @@ Module ModAstroUtils
 
             FrmMain.LblSunSettingRising.Text = pStructEventTimes.SunSettingRising
 
-            FrmMain.LblCivilTwilight.Text = "Civil:" + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightMorning)
-            FrmMain.LblAmateurTwilight.Text = "Amateur:" + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightMorning)
-            FrmMain.LblAstronomicalTwilight.Text = "Astronomical:" + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightMorning)
+            FrmMain.LblCivilTwilight.Text = "Civil twilight:" + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightMorning)
+            'FrmMain.LblAmateurTwilight.Text = "Amateur:" + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightMorning)
+            FrmMain.LblAstronomicalTwilight.Text = "Astronomical twilight:" + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightMorning)
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  CalculateEventTimes: " + executionTime.ToString, "", "CalculateEventTimes", "PROGRAM")
@@ -976,7 +976,7 @@ Module ModAstroUtils
 
             'LST / GST
             FrmMain.LblLST.Text = "LST: " + pAUtil.HoursToHMS(pStructEventTimes.LST)
-            FrmMain.LblGST.Text = "GST: " + pAUtil.HoursToHMS(pStructEventTimes.GST)
+            'FrmMain.LblGST.Text = "GST: " + pAUtil.HoursToHMS(pStructEventTimes.GST)
 
             'Moon
             FrmMain.LblPhaseMoon.Text = Format(pStructEventTimes.MoonIllumination * 100, "0") + "% " + pStructEventTimes.MoonPhaseShort
@@ -1170,9 +1170,9 @@ Module ModAstroUtils
             'Sun
             FrmMain.LblRisingSettingSun.Text = "Rise: " + pAUtil.HoursToHM(pStructEventTimes.SunRise) + " - Set: " + pAUtil.HoursToHM(pStructEventTimes.SunSet)
 
-            FrmMain.LblCivilTwilight.Text = "Civil: " + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightMorning)
-            FrmMain.LblAmateurTwilight.Text = "Amateur: " + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightMorning)
-            FrmMain.LblAstronomicalTwilight.Text = "Astronomical: " + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightMorning)
+            FrmMain.LblCivilTwilight.Text = "Civil twilight: " + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.CivilTwilightMorning)
+            'FrmMain.LblAmateurTwilight.Text = "Amateur: " + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AmateurTwilightMorning)
+            FrmMain.LblAstronomicalTwilight.Text = "Astronomical twilight: " + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightEvening) + "-" + pAUtil.HoursToHM(pStructEventTimes.AstronomicalTwilightMorning)
 
             returnvalue = CalculateSunMoonTimes("SUN")
             If returnvalue <> "OK" Then
