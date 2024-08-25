@@ -61,12 +61,12 @@ Module ModInternet
 
             'log file is not changing
             If i >= My.Settings.sInternetTimeout Then
-                FrmMain.LblInternet.BackColor = Color.Red
+                FrmMain.LblInternet.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 FrmMain.LblInternet.Text = "NO WWW"
                 LogSessionEntry("ERROR", "Internet not connected!", "", "CheckTimeoutInternet", "INTERNET")
                 CheckTimeoutInternet = "NOK"
             Else
-                FrmMain.LblInternet.BackColor = Color.Green
+                FrmMain.LblInternet.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 FrmMain.LblInternet.Text = "INTERNET"
                 CheckTimeoutInternet = "OK"
                 LogSessionEntry("DEBUG", "  Internet OK!", "", "CheckTimeoutInternet", "INTERNET")

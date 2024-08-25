@@ -10,11 +10,14 @@ Public Class FrmMain
             Dim time As DateTime = DateTime.UtcNow()
             Dim format As String = "yyyyMMdd_HHmm"
 
-            BtnStop.Enabled = False
-            BtnStart.Enabled = True
+            'set the splitcontainer with
+            SplitContainer.SplitterDistance = 40
+
+            BtnStopRun.Enabled = False
+            BtnStartRun.Enabled = True
 
             'will reset status fields        
-            pRunStatus = ""
+            pRunStatus = "NOT RUNNING"
             pAbort = False
             pManualAbort = False
             pEquipmentSafetyStatusError = False
@@ -168,7 +171,6 @@ Public Class FrmMain
     End Sub
 
 
-
     '------------------------------------------
     ' SPECIFIC CODE
     '------------------------------------------
@@ -259,20 +261,6 @@ Public Class FrmMain
 
         Catch ex As Exception
             MsgBox("CheckCycle: " + ex.Message)
-        End Try
-    End Sub
-
-    Private Sub ChkDebugMode_CheckedChanged(sender As Object, e As EventArgs)
-        Try
-            If ChkSimulatorMode.Checked = True Then
-                ChkSimulatorMode.BackColor = Color.Red
-                My.Settings.sSimulatorMode = True
-            Else
-                ChkSimulatorMode.BackColor = Color.Transparent
-                My.Settings.sSimulatorMode = False
-            End If
-        Catch ex As Exception
-            MsgBox("ChkDebugMode_CheckedChanged: " + ex.Message)
         End Try
     End Sub
 
@@ -393,7 +381,6 @@ Public Class FrmMain
             MsgBox("TimerWeather_Tick: " + ex.Message)
         End Try
     End Sub
-
 
     Private Sub TimerMount_Tick(sender As Object, e As EventArgs) Handles TimerMount.Tick
         Dim returnvalue As String
@@ -535,164 +522,6 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub BtnStart_Click(sender As Object, e As EventArgs)
-        Try
-            If MsgBox("Do you want to manually start the run ?", vbYesNo, "Start run...") = vbYes Then
-                If My.Settings.sDisableSafetyCheck = True Then
-                    MsgBox("WARNING: ALL SAFETY CHECKS ARE DISABLED !", vbCritical, "Safety checks...")
-                End If
-
-                LogInitializeArray()
-
-                If My.Settings.sSentinelAutostart = True Then
-                    'try to start the sentinel
-                    StartProcess(My.Settings.sSentinelEXE)
-                End If
-
-
-                If My.Settings.sRoofDevice <> "NONE" Then
-                    'only when a sequence is not running, it can be started !
-                    If pIsSequenceRunning = False And pStartRun = False Then
-
-                        TimerStartRun.Enabled = True
-                        BtnStart.Enabled = False
-                        BtnStop.Enabled = True
-
-                        'will reset status fields 
-                        pStartRun = True
-                        pAbort = False
-                        pManualAbort = False
-                        pIsSequenceRunning = False
-                        pIsActionRunning = False
-                        pSmartError = False
-                        pSmartTimeStamp = CDate("01/01/0001")
-                        pRunStatus = "STARTUP"
-                        pEquipmentStatus = "PARTIAL" 'reset all equipment in case something was changed between runs
-
-                        LogSessionEntry("ESSENTIAL", "STARTING RUN!", "", "BtnStart_Click", "PROGRAM")
-
-                        TimerStartRun_Tick(Nothing, Nothing)
-                    Else
-                        LogSessionEntry("FULL", "Run already started!", "", "BtnStart_Click", "PROGRAM")
-                    End If
-                Else
-                    If MsgBox("Are you sure the roof is open ? ", vbYesNo, "Roof warning") = vbYes Then
-                        'only when a sequence is not running, it can be started !
-                        If pIsSequenceRunning = False And pStartRun = False Then
-
-                            TimerStartRun.Enabled = True
-
-                            BtnStart.Enabled = False
-                            BtnStop.Enabled = True
-
-                            'will reset status fields 
-                            pStartRun = True
-                            pAbort = False
-                            pManualAbort = False
-                            pIsSequenceRunning = False
-                            pIsActionRunning = False
-                            pSmartError = False
-                            pSmartTimeStamp = CDate("01/01/0001")
-                            pRunStatus = "STARTUP"
-                            LogSessionEntry("ESSENTIAL", "STARTING RUN!", "", "BtnStart_Click", "PROGRAM")
-
-                            TimerStartRun_Tick(Nothing, Nothing)
-                        End If
-                    End If
-                End If
-            End If
-
-        Catch ex As Exception
-            MsgBox("BtnStart_Click: " + ex.Message)
-        End Try
-    End Sub
-
-    Private Sub ChkAutoStart_CheckedChanged(sender As Object, e As EventArgs)
-        Try
-            If ChkAutoStart.Checked = True Then
-                If pStartRun = True Then
-                    'do nothing, already running
-                Else
-                    'start the run
-
-                    If My.Settings.sSentinelAutostart = True Then
-                        'try to start the sentinel
-                        StartProcess(My.Settings.sSentinelEXE)
-                    End If
-
-
-                    pStartRun = True
-                    pAbort = False
-                    pManualAbort = False
-                    pIsSequenceRunning = False
-                    pSmartError = False
-                    pSmartTimeStamp = CDate("01/01/0001")
-                    pRunStatus = "STARTUP"
-                    LogSessionEntry("FULL", "Enabling autostart!", "", "ChkAutoStart_CheckedChanged", "PROGRAM")
-
-                    BtnStart.Enabled = False
-                    BtnStop.Enabled = True
-
-                    TimerStartRun.Enabled = True
-
-                    If My.Settings.sAutoStart = False Then
-                        My.Settings.sAutoStart = True
-                        My.Settings.Save()
-                    End If
-                    LogSessionEntry("ESSENTIAL", "STARTING RUN!", "", "BtnStart_Click", "PROGRAM")
-                End If
-
-            Else
-                'do nothing except disable the checkbox
-                LogSessionEntry("FULL", "Disabling autostart!", "", "ChkAutoStart_CheckedChanged", "PROGRAM")
-                If My.Settings.sAutoStart = True Then
-                    My.Settings.sAutoStart = False
-                    My.Settings.Save()
-                End If
-            End If
-
-        Catch ex As Exception
-            MsgBox("ChkAutoStart_CheckedChanged: " + ex.Message)
-        End Try
-    End Sub
-
-    Private Sub BtnStop_Click(sender As Object, e As EventArgs)
-        Try
-            If MsgBox("Do you want to abort the run ?", vbYesNo, "Abort run...") = vbYes Then
-                'only when a sequence is running it can be aborted !
-                If pStartRun = True And pRunStatus <> "ABORTED" Then
-                    pRunStatus = "ABORTING"
-                    LogSessionEntry("ESSENTIAL", "ABORTING RUN!", "", "BtnStop_Click", "PROGRAM")
-                    pAbort = True
-                    pManualAbort = True
-                    pSmartError = False
-                    pSmartTimeStamp = CDate("01/01/0001")
-                    pStartRun = False 'do not restart run
-                Else
-                    TimerStartRun.Enabled = False
-                    LblMonitorStatus.BackColor = Color.Transparent
-                    pRunStatus = "ABORTED"
-                    LogSessionEntry("ESSENTIAL", "RUN ABORTED.", "", "CheckRun", "SEQUENCE")
-                    BtnStart.Enabled = True
-                    BtnStop.Enabled = False
-                    pStartRun = False 'do not restart run
-                    pSmartError = False
-                    pSmartTimeStamp = CDate("01/01/0001")
-                    StopSound()
-                End If
-                LogInitializeArray()
-                'reset timer disaster
-                TimerDisaster.Stop()
-                TimerDisaster.Start()
-            End If
-
-        Catch ex As Exception
-            MsgBox("BtnStop_Click: " + ex.Message)
-        End Try
-    End Sub
-
-
-
     Private Sub FrmMain_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         Try
 
@@ -733,7 +562,6 @@ Public Class FrmMain
             MsgBox("FrmMain_Shown: " + ex.Message)
         End Try
     End Sub
-
 
     Private Sub TimerDisaster_Tick(sender As Object, e As EventArgs) Handles TimerDisaster.Tick
         Dim returnvalue As String
@@ -793,11 +621,11 @@ Public Class FrmMain
         End Try
     End Sub
 
-    Private Sub ChkDisableSafetyCheck_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub ChkDisableSafetyCheck_CheckedChanged(sender As Object, e As EventArgs) Handles ChkDisableSafetyCheck.CheckedChanged
         If ChkDisableSafetyCheck.Checked = True Then
             'If MsgBox("Are you sure to disable the safety check ?", vbYesNo, "Safety check") = vbYes Then
             TimerDisaster.Enabled = False
-            ChkDisableSafetyCheck.BackColor = Color.Red
+            ChkDisableSafetyCheck.BackColor = ColorTranslator.FromHtml("#d63031") 'red
             My.Settings.sDisableSafetyCheck = True
             'End If
         Else
@@ -805,14 +633,6 @@ Public Class FrmMain
             ChkDisableSafetyCheck.BackColor = Color.Transparent
             My.Settings.sDisableSafetyCheck = False
         End If
-    End Sub
-
-    Private Sub BtnClearErrorLog_Click(sender As Object, e As EventArgs)
-        RTXErrors.Clear()
-    End Sub
-
-    Private Sub BtnClearLog_Click(sender As Object, e As EventArgs)
-        RTXLog.Clear()
     End Sub
 
     Private Sub TimerColorStatus_Tick(sender As Object, e As EventArgs) Handles TimerColorStatus.Tick
@@ -823,8 +643,8 @@ Public Class FrmMain
             'STARTUP,ABORTING,ABORTED,DAY,SHUTDOWN,WAITING,FLATS,DEEPSKY,VARIABLES,UNSAFE,DONE
             If pMonitorStatusColor = False Then
                 Select Case pRunStatus
-                    Case ""
-                        LblMonitorStatus.BackColor = Color.Transparent
+                    Case "NOT RUNNING"
+                        LblMonitorStatus.BackColor = Color.LightGray
                     Case "STARTUP"
                         LblMonitorStatus.BackColor = Color.LightBlue
                     Case "FLATS"
@@ -834,9 +654,9 @@ Public Class FrmMain
                     Case "VARIABLES"
                         LblMonitorStatus.BackColor = Color.DarkGreen
                     Case "ABORTING"
-                        LblMonitorStatus.BackColor = Color.Red
+                        LblMonitorStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                     Case "UNSAFE"
-                        LblMonitorStatus.BackColor = Color.Red
+                        LblMonitorStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                         LblCCDExposureStatus.Text = ""
                     Case "SHUTDOWN"
                         LblMonitorStatus.BackColor = Color.Yellow
@@ -858,6 +678,7 @@ Public Class FrmMain
                         LblMonitorStatus.BackColor = Color.LightCyan
                         LblCCDExposureStatus.Text = ""
                     Case Else
+                        LblMonitorStatus.BackColor = Color.Purple
                 End Select
                 pMonitorStatusColor = True
             Else
@@ -891,8 +712,6 @@ Public Class FrmMain
         End Try
     End Sub
 
-
-
     Private Sub TimerHeartBeat_Tick_(sender As Object, e As EventArgs) Handles TimerHeartBeat.Tick
         Dim returnvalue As String
 
@@ -908,21 +727,16 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub BtnViewLog_Click(sender As Object, e As EventArgs)
-        'System.Diagnostics.Process.Start("notepad.exe", pLogFileName)
-        System.Diagnostics.Process.Start("wordpad.exe", pLogFileNameRTF)
-    End Sub
-
     Private Sub TimerHang_Tick(sender As Object, e As EventArgs) Handles TimerHang.Tick
-        If LblHang.BackColor = Color.Green Then
+        If LblHang.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green Then
             LblHang.BackColor = Color.Transparent
         Else
-            LblHang.BackColor = Color.Green
+            LblHang.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
         End If
     End Sub
 
     Private Sub TimerSplit1_Tick(sender As Object, e As EventArgs) Handles TimerSplit1.Tick
-        If SplitContainer.SplitterDistance > 50 Then
+        If SplitContainer.SplitterDistance > 40 Then
             SplitContainer.SplitterDistance -= 20
         Else
             TimerSplit1.Enabled = False
@@ -934,14 +748,6 @@ Public Class FrmMain
             SplitContainer.SplitterDistance += 20
         Else
             TimerSplit2.Enabled = False
-        End If
-    End Sub
-
-    Private Sub BtnMenu_Click(sender As Object, e As EventArgs) Handles BtnMenu.Click
-        If SplitContainer.SplitterDistance > 50 Then
-            TimerSplit1.Enabled = True
-        Else
-            TimerSplit2.Enabled = True
         End If
     End Sub
 
@@ -1006,5 +812,196 @@ Public Class FrmMain
         Catch ex As Exception
             MsgBox("FrmMain_Closing: " + ex.Message)
         End Try
+    End Sub
+
+    Private Sub BtnMenu_Click(sender As Object, e As EventArgs) Handles BtnMenu.Click
+        If SplitContainer.SplitterDistance > 40 Then
+            TimerSplit1.Enabled = True
+        Else
+            TimerSplit2.Enabled = True
+        End If
+    End Sub
+
+    Private Sub BtnStartRun_Click(sender As Object, e As EventArgs) Handles BtnStartRun.Click
+        Try
+            If MsgBox("Do you want to manually start the run ?", vbYesNo, "Start run...") = vbYes Then
+                If My.Settings.sDisableSafetyCheck = True Then
+                    MsgBox("WARNING: ALL SAFETY CHECKS ARE DISABLED !", vbCritical, "Safety checks...")
+                End If
+
+                LogInitializeArray()
+
+                If My.Settings.sSentinelAutostart = True Then
+                    'try to start the sentinel
+                    StartProcess(My.Settings.sSentinelEXE)
+                End If
+
+
+                If My.Settings.sRoofDevice <> "NONE" Then
+                    'only when a sequence is not running, it can be started !
+                    If pIsSequenceRunning = False And pStartRun = False Then
+
+                        TimerStartRun.Enabled = True
+                        BtnStartRun.Enabled = False
+                        BtnStopRun.Enabled = True
+
+                        'will reset status fields 
+                        pStartRun = True
+                        pAbort = False
+                        pManualAbort = False
+                        pIsSequenceRunning = False
+                        pIsActionRunning = False
+                        pSmartError = False
+                        pSmartTimeStamp = CDate("01/01/0001")
+                        pRunStatus = "STARTUP"
+                        pEquipmentStatus = "PARTIAL" 'reset all equipment in case something was changed between runs
+
+                        LogSessionEntry("ESSENTIAL", "STARTING RUN!", "", "BtnStartRun_Click", "PROGRAM")
+
+                        TimerStartRun_Tick(Nothing, Nothing)
+                    Else
+                        LogSessionEntry("FULL", "Run already started!", "", "BtnStartRun_Click", "PROGRAM")
+                    End If
+                Else
+                    If MsgBox("Are you sure the roof is open ? ", vbYesNo, "Roof warning") = vbYes Then
+                        'only when a sequence is not running, it can be started !
+                        If pIsSequenceRunning = False And pStartRun = False Then
+
+                            TimerStartRun.Enabled = True
+
+                            BtnStartRun.Enabled = False
+                            BtnStopRun.Enabled = True
+
+                            'will reset status fields 
+                            pStartRun = True
+                            pAbort = False
+                            pManualAbort = False
+                            pIsSequenceRunning = False
+                            pIsActionRunning = False
+                            pSmartError = False
+                            pSmartTimeStamp = CDate("01/01/0001")
+                            pRunStatus = "STARTUP"
+                            LogSessionEntry("ESSENTIAL", "STARTING RUN!", "", "BtnStartRun_Click", "PROGRAM")
+
+                            TimerStartRun_Tick(Nothing, Nothing)
+                        End If
+                    End If
+                End If
+            End If
+
+        Catch ex As Exception
+            MsgBox("BtnStartRun_Click: " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub BtnStopRun_Click(sender As Object, e As EventArgs) Handles BtnStopRun.Click
+        Try
+            If MsgBox("Do you want to abort the run ?", vbYesNo, "Abort run...") = vbYes Then
+                'only when a sequence is running it can be aborted !
+                If pStartRun = True And pRunStatus <> "ABORTED" Then
+                    pRunStatus = "ABORTING"
+                    LogSessionEntry("ESSENTIAL", "ABORTING RUN!", "", "BtnStopRun_Click", "PROGRAM")
+                    pAbort = True
+                    pManualAbort = True
+                    pSmartError = False
+                    pSmartTimeStamp = CDate("01/01/0001")
+                    pStartRun = False 'do not restart run
+                Else
+                    TimerStartRun.Enabled = False
+                    LblMonitorStatus.BackColor = Color.Transparent
+                    pRunStatus = "ABORTED"
+                    LogSessionEntry("ESSENTIAL", "RUN ABORTED.", "", "BtnStopRun_Click", "SEQUENCE")
+                    BtnStartRun.Enabled = True
+                    BtnStopRun.Enabled = False
+                    pStartRun = False 'do not restart run
+                    pSmartError = False
+                    pSmartTimeStamp = CDate("01/01/0001")
+                    StopSound()
+                End If
+                LogInitializeArray()
+                'reset timer disaster
+                TimerDisaster.Stop()
+                TimerDisaster.Start()
+            End If
+
+        Catch ex As Exception
+            MsgBox("BtnStopRun_Click: " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub ChkAutoStart_CheckedChanged_1(sender As Object, e As EventArgs) Handles ChkAutoStart.CheckedChanged
+        Try
+            If ChkAutoStart.Checked = True Then
+                If pStartRun = True Then
+                    'do nothing, already running
+                Else
+                    'start the run
+
+                    If My.Settings.sSentinelAutostart = True Then
+                        'try to start the sentinel
+                        StartProcess(My.Settings.sSentinelEXE)
+                    End If
+
+
+                    pStartRun = True
+                    pAbort = False
+                    pManualAbort = False
+                    pIsSequenceRunning = False
+                    pSmartError = False
+                    pSmartTimeStamp = CDate("01/01/0001")
+                    pRunStatus = "STARTUP"
+                    LogSessionEntry("FULL", "Enabling autostart!", "", "ChkAutoStart_CheckedChanged", "PROGRAM")
+
+                    BtnStartRun.Enabled = False
+                    BtnStopRun.Enabled = True
+
+                    TimerStartRun.Enabled = True
+
+                    If My.Settings.sAutoStart = False Then
+                        My.Settings.sAutoStart = True
+                        My.Settings.Save()
+                    End If
+                    LogSessionEntry("ESSENTIAL", "STARTING RUN!", "", "BtnStart_Click", "PROGRAM")
+                End If
+
+            Else
+                'do nothing except disable the checkbox
+                LogSessionEntry("FULL", "Disabling autostart!", "", "ChkAutoStart_CheckedChanged", "PROGRAM")
+                If My.Settings.sAutoStart = True Then
+                    My.Settings.sAutoStart = False
+                    My.Settings.Save()
+                End If
+            End If
+
+        Catch ex As Exception
+            MsgBox("ChkAutoStart_CheckedChanged: " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub ChkSimulatorMode_CheckedChanged(sender As Object, e As EventArgs) Handles ChkSimulatorMode.CheckedChanged
+        Try
+            If ChkSimulatorMode.Checked = True Then
+                ChkSimulatorMode.BackColor = ColorTranslator.FromHtml("#d63031") 'red
+                My.Settings.sSimulatorMode = True
+            Else
+                ChkSimulatorMode.BackColor = Color.Transparent
+                My.Settings.sSimulatorMode = False
+            End If
+        Catch ex As Exception
+            MsgBox("ChkDebugMode_CheckedChanged: " + ex.Message)
+        End Try
+    End Sub
+
+
+    Private Sub BtnClearErrorLog_Click(sender As Object, e As EventArgs) Handles BtnClearErrorLog.Click
+        RTXErrors.Clear()
+    End Sub
+
+    Private Sub BtnClearLog_Click(sender As Object, e As EventArgs) Handles BtnClearLog.Click
+        RTXLog.Clear()
+    End Sub
+
+    Private Sub BtnViewLog_Click(sender As Object, e As EventArgs) Handles BtnViewLog.Click
+        System.Diagnostics.Process.Start("wordpad.exe", pLogFileNameRTF)
     End Sub
 End Class

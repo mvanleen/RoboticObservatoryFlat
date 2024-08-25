@@ -108,12 +108,12 @@ Module ModUPS
 
                 'UPS is not connected
                 If i >= My.Settings.sUPSTimeout Then 'Or pUPSStatusNbr <> 2
-                    FrmMain.LblUPSCyberPower.BackColor = Color.Red
+                    FrmMain.LblUPSCyberPower.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                     FrmMain.LblUPSCyberPower.Text = "NO POWER"
                     CheckTimeoutUPS = "NOK"
                     LogSessionEntry("ERROR", "UPS: power down !", "", "CheckTimeoutUPS", "UPS")
                 Else
-                    FrmMain.LblUPSCyberPower.BackColor = Color.Green
+                    FrmMain.LblUPSCyberPower.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                     FrmMain.LblUPSCyberPower.Text = "UPS"
                     LogSessionEntry("DEBUG", "  UPS OK!", "", "CheckTimeoutUPS", "UPS")
                 End If

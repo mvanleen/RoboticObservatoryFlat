@@ -270,7 +270,7 @@ Module ModRun
                 pEquipmentStatus = "PARTIAL"
             End If
 
-            pRunStatus = ""
+            pRunStatus = "NOT RUNNING"
             LogSessionEntry("BRIEF", "STARTUP: power turned on.", "", "TurnOnEquipment", "PROGRAM")
 
         Catch ex As Exception
@@ -383,7 +383,7 @@ Module ModRun
 
             pIsEquipmentInitializing = False
 
-            pRunStatus = ""
+            pRunStatus = "NOT RUNNING"
             If pEquipmentStatus <> "ERROR" Then
                 pEquipmentStatus = "OFF"
                 LogSessionEntry("BRIEF", "Shutdown: equipment turned off.", "", "TurnOffEquipment", "PROGRAM")
@@ -799,8 +799,8 @@ Module ModRun
                     If pManualAbort = True Then
                         'manual abort, do not pause equipment, wait for the start button to be pushed or the checkbox is changed                 
                         pStartRun = False 'do not restart run unless manual action of user was taken
-                        FrmMain.BtnStart.Enabled = True
-                        FrmMain.BtnStop.Enabled = False
+                        FrmMain.BtnStartRun.Enabled = True
+                        FrmMain.BtnStopRun.Enabled = False
                         pRunStatus = "ABORTED"
                         LogSessionEntry("ESSENTIAL", "RUN ABORTED MANUEL.", "", "CheckRun", "SEQUENCE")
                     ElseIf pSmartError = True Then
@@ -1568,8 +1568,8 @@ Module ModRun
                 'pAbort = False => lijkt ervoor te zorgen dat deepsky gewoon verder loopt met plate solve en toestanden
                 If (vRunStatus2 = "ABORTED") Then
                     LogSessionEntry("ESSENTIAL", "RUN ABORTED.", "", "PauseRun", "SEQUENCE")
-                    FrmMain.BtnStart.Enabled = True
-                    FrmMain.BtnStop.Enabled = False
+                    FrmMain.BtnStartRun.Enabled = True
+                    FrmMain.BtnStopRun.Enabled = False
                 End If
                 pIsSequenceRunning = False
                 LogSessionEntry("ESSENTIAL", vMessage4, vMessage4Var, "PauseRun", "SEQUENCE")

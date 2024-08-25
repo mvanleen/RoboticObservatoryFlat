@@ -323,7 +323,7 @@ Module ModRoof
                 End If
 
                 If pRoofShutterStatus = "CLOSED" Then
-                    FrmMain.LblRoof.BackColor = Color.Red
+                    FrmMain.LblRoof.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                     FrmMain.LblRoof.Text = "RF CLOSED"
                 ElseIf pRoofShutterStatus = "OPENING" Then
                     FrmMain.LblRoof.BackColor = Color.Orange
@@ -332,7 +332,7 @@ Module ModRoof
                     FrmMain.LblRoof.BackColor = Color.Orange
                     FrmMain.LblRoof.Text = "RF CLOSING"
                 ElseIf pRoofShutterStatus = "OPEN" Then
-                    FrmMain.LblRoof.BackColor = Color.Green
+                    FrmMain.LblRoof.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                     FrmMain.LblRoof.Text = "RF OPEN"
                 ElseIf pRoofShutterStatus = "ERROR" Then
                     FrmMain.LblRoof.BackColor = Color.IndianRed

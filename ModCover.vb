@@ -277,13 +277,13 @@ Module ModCover
             'Error 5	The device encountered an Error When changing state 
 
             If pCoverStatus = 1 Then
-                FrmMain.LblCover.BackColor = Color.Red
+                FrmMain.LblCover.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 FrmMain.LblCover.Text = "CV CLOSED"
             ElseIf pCoverStatus = 2 Then
                 FrmMain.LblCover.BackColor = Color.Orange
                 FrmMain.LblCover.Text = "CV MOVING"
             ElseIf pCoverStatus = 3 Then
-                FrmMain.LblCover.BackColor = Color.Green
+                FrmMain.LblCover.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 FrmMain.LblCover.Text = "CV OPEN"
             ElseIf pCoverStatus = 4 Then
                 FrmMain.LblCover.BackColor = Color.Transparent

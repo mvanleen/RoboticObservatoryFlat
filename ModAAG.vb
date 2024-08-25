@@ -137,7 +137,7 @@ Module ModAAG
 
             'log file is not changing
             If i >= My.Settings.sWeatherTimeout Then
-                FrmMain.lblSafe.BackColor = Color.Red
+                FrmMain.lblSafe.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 FrmMain.LblCloudSafe.Text = "AAG offline"
                 CheckTimeoutAAG = "NOK"
                 LogSessionEntry("ERROR", "AAG offline !", "", "CheckTimeoutAAG", "WEATHER")

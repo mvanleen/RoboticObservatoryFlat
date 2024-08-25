@@ -38,14 +38,14 @@ Partial Class FrmMain
         Me.TimerSmartError = New System.Windows.Forms.Timer(Me.components)
         Me.TimerHeartBeat = New System.Windows.Forms.Timer(Me.components)
         Me.TimerHang = New System.Windows.Forms.Timer(Me.components)
-        Me.PanelTop = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnMenu = New System.Windows.Forms.Button()
         Me.SplitContainer = New System.Windows.Forms.SplitContainer()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnAbout = New System.Windows.Forms.Button()
         Me.BtnDebug = New System.Windows.Forms.Button()
+        Me.BtnViewLog = New System.Windows.Forms.Button()
+        Me.BtnClearErrorLog = New System.Windows.Forms.Button()
         Me.BtnStartSentinel = New System.Windows.Forms.Button()
+        Me.BtnClearLog = New System.Windows.Forms.Button()
         Me.BtnStopSound = New System.Windows.Forms.Button()
         Me.BtnCalibration = New System.Windows.Forms.Button()
         Me.BtnProperties = New System.Windows.Forms.Button()
@@ -55,7 +55,30 @@ Partial Class FrmMain
         Me.BtnStopRun = New System.Windows.Forms.Button()
         Me.BtnStartRun = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnMenu = New System.Windows.Forms.Button()
         Me.PictureBox = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LblCloudSafe = New System.Windows.Forms.Label()
+        Me.txtRelativeHumidity = New System.Windows.Forms.TextBox()
+        Me.lblRain = New System.Windows.Forms.Label()
+        Me.lblLight = New System.Windows.Forms.Label()
+        Me.lblCloud = New System.Windows.Forms.Label()
+        Me.txtAmbientTemperature = New System.Windows.Forms.TextBox()
+        Me.lblLastRead = New System.Windows.Forms.Label()
+        Me.lblRelativeHumidity = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblSafe = New System.Windows.Forms.Label()
+        Me.PanelTop = New System.Windows.Forms.Panel()
+        Me.LblHang = New System.Windows.Forms.Label()
+        Me.LblVersion = New System.Windows.Forms.Label()
+        Me.LblRoof = New System.Windows.Forms.Label()
+        Me.LblSwitch = New System.Windows.Forms.Label()
+        Me.LblCover = New System.Windows.Forms.Label()
+        Me.LblTSX = New System.Windows.Forms.Label()
+        Me.LblInternet = New System.Windows.Forms.Label()
+        Me.LblUPSCyberPower = New System.Windows.Forms.Label()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -71,16 +94,10 @@ Partial Class FrmMain
         Me.LblSunOpenRoof = New System.Windows.Forms.Label()
         Me.LblLST = New System.Windows.Forms.Label()
         Me.LblGST = New System.Windows.Forms.Label()
-        Me.LblHang = New System.Windows.Forms.Label()
-        Me.LblVersion = New System.Windows.Forms.Label()
-        Me.BtnViewLog = New System.Windows.Forms.Button()
-        Me.LblUPSCyberPower = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LblCCDFilter = New System.Windows.Forms.Label()
         Me.LblCCDTemp = New System.Windows.Forms.Label()
         Me.LblCCDExposureStatus = New System.Windows.Forms.Label()
-        Me.BtnClearErrorLog = New System.Windows.Forms.Button()
-        Me.BtnClearLog = New System.Windows.Forms.Button()
         Me.ChkDisableSafetyCheck = New System.Windows.Forms.CheckBox()
         Me.GrpFocus = New System.Windows.Forms.GroupBox()
         Me.LblLastFocusDateTime = New System.Windows.Forms.Label()
@@ -101,16 +118,9 @@ Partial Class FrmMain
         Me.LblRisingSettingSun = New System.Windows.Forms.Label()
         Me.LblRASun = New System.Windows.Forms.Label()
         Me.LblAltSun = New System.Windows.Forms.Label()
-        Me.LblSwitch = New System.Windows.Forms.Label()
-        Me.LblCover = New System.Windows.Forms.Label()
         Me.ChkSimulatorMode = New System.Windows.Forms.CheckBox()
         Me.ChkAutoStart = New System.Windows.Forms.CheckBox()
         Me.RTXLog = New System.Windows.Forms.RichTextBox()
-        Me.LblRoof = New System.Windows.Forms.Label()
-        Me.LblInternet = New System.Windows.Forms.Label()
-        Me.LblTSX = New System.Windows.Forms.Label()
-        Me.BtnStop = New System.Windows.Forms.Button()
-        Me.BtnStart = New System.Windows.Forms.Button()
         Me.LblMonitorStatus = New System.Windows.Forms.Label()
         Me.grpMount = New System.Windows.Forms.GroupBox()
         Me.LblMountPierSide = New System.Windows.Forms.Label()
@@ -119,27 +129,16 @@ Partial Class FrmMain
         Me.lblMountAz = New System.Windows.Forms.Label()
         Me.lblMountAlt = New System.Windows.Forms.Label()
         Me.RTXErrors = New System.Windows.Forms.RichTextBox()
-        Me.grpAAG = New System.Windows.Forms.GroupBox()
-        Me.LblCloudSafe = New System.Windows.Forms.Label()
-        Me.LblBlink = New System.Windows.Forms.Label()
-        Me.txtRelativeHumidity = New System.Windows.Forms.TextBox()
-        Me.lblRain = New System.Windows.Forms.Label()
-        Me.lblLight = New System.Windows.Forms.Label()
-        Me.lblCloud = New System.Windows.Forms.Label()
-        Me.txtAmbientTemperature = New System.Windows.Forms.TextBox()
-        Me.lblLastRead = New System.Windows.Forms.Label()
-        Me.lblRelativeHumidity = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblSafe = New System.Windows.Forms.Label()
         Me.TimerSplit1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSplit2 = New System.Windows.Forms.Timer(Me.components)
-        Me.PanelTop.SuspendLayout()
         CType(Me.SplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer.Panel1.SuspendLayout()
         Me.SplitContainer.Panel2.SuspendLayout()
         Me.SplitContainer.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        Me.PanelTop.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBoxTwilight.SuspendLayout()
@@ -150,7 +149,6 @@ Partial Class FrmMain
         Me.grpMoon.SuspendLayout()
         Me.grpSun.SuspendLayout()
         Me.grpMount.SuspendLayout()
-        Me.grpAAG.SuspendLayout()
         Me.SuspendLayout()
         '
         'TimerCheckCycle
@@ -210,57 +208,23 @@ Partial Class FrmMain
         Me.TimerHang.Enabled = True
         Me.TimerHang.Interval = 250
         '
-        'PanelTop
-        '
-        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
-        Me.PanelTop.Controls.Add(Me.Label1)
-        Me.PanelTop.Controls.Add(Me.BtnMenu)
-        Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelTop.Location = New System.Drawing.Point(0, 0)
-        Me.PanelTop.Name = "PanelTop"
-        Me.PanelTop.Size = New System.Drawing.Size(1873, 76)
-        Me.PanelTop.TabIndex = 81
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(41, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(303, 33)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Robotic Observatory "
-        '
-        'BtnMenu
-        '
-        Me.BtnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BtnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.BtnMenu.FlatAppearance.BorderSize = 0
-        Me.BtnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.BtnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMenu.ForeColor = System.Drawing.Color.White
-        Me.BtnMenu.Image = CType(resources.GetObject("BtnMenu.Image"), System.Drawing.Image)
-        Me.BtnMenu.Location = New System.Drawing.Point(0, 0)
-        Me.BtnMenu.Name = "BtnMenu"
-        Me.BtnMenu.Size = New System.Drawing.Size(38, 76)
-        Me.BtnMenu.TabIndex = 0
-        Me.BtnMenu.UseVisualStyleBackColor = True
-        '
         'SplitContainer
         '
+        Me.SplitContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.SplitContainer.Dock = System.Windows.Forms.DockStyle.Left
-        Me.SplitContainer.Location = New System.Drawing.Point(0, 76)
+        Me.SplitContainer.Location = New System.Drawing.Point(0, 0)
         Me.SplitContainer.Name = "SplitContainer"
         '
         'SplitContainer.Panel1
         '
-        Me.SplitContainer.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.SplitContainer.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnExit)
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnAbout)
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnDebug)
+        Me.SplitContainer.Panel1.Controls.Add(Me.BtnViewLog)
+        Me.SplitContainer.Panel1.Controls.Add(Me.BtnClearErrorLog)
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnStartSentinel)
+        Me.SplitContainer.Panel1.Controls.Add(Me.BtnClearLog)
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnStopSound)
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnCalibration)
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnProperties)
@@ -270,37 +234,28 @@ Partial Class FrmMain
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnStopRun)
         Me.SplitContainer.Panel1.Controls.Add(Me.BtnStartRun)
         Me.SplitContainer.Panel1.Controls.Add(Me.Panel1)
+        Me.SplitContainer.Panel1MinSize = 40
         '
         'SplitContainer.Panel2
         '
+        Me.SplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.SplitContainer.Panel2.Controls.Add(Me.Panel2)
+        Me.SplitContainer.Panel2.Controls.Add(Me.PanelTop)
         Me.SplitContainer.Panel2.Controls.Add(Me.StatusStrip)
         Me.SplitContainer.Panel2.Controls.Add(Me.GroupBox3)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblHang)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblVersion)
-        Me.SplitContainer.Panel2.Controls.Add(Me.BtnViewLog)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblUPSCyberPower)
         Me.SplitContainer.Panel2.Controls.Add(Me.GroupBox1)
-        Me.SplitContainer.Panel2.Controls.Add(Me.BtnClearErrorLog)
-        Me.SplitContainer.Panel2.Controls.Add(Me.BtnClearLog)
         Me.SplitContainer.Panel2.Controls.Add(Me.ChkDisableSafetyCheck)
         Me.SplitContainer.Panel2.Controls.Add(Me.GrpFocus)
         Me.SplitContainer.Panel2.Controls.Add(Me.GroupBox)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblSwitch)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblCover)
         Me.SplitContainer.Panel2.Controls.Add(Me.ChkSimulatorMode)
         Me.SplitContainer.Panel2.Controls.Add(Me.ChkAutoStart)
         Me.SplitContainer.Panel2.Controls.Add(Me.RTXLog)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblRoof)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblInternet)
-        Me.SplitContainer.Panel2.Controls.Add(Me.LblTSX)
-        Me.SplitContainer.Panel2.Controls.Add(Me.BtnStop)
-        Me.SplitContainer.Panel2.Controls.Add(Me.BtnStart)
         Me.SplitContainer.Panel2.Controls.Add(Me.LblMonitorStatus)
         Me.SplitContainer.Panel2.Controls.Add(Me.grpMount)
         Me.SplitContainer.Panel2.Controls.Add(Me.RTXErrors)
-        Me.SplitContainer.Panel2.Controls.Add(Me.grpAAG)
-        Me.SplitContainer.Size = New System.Drawing.Size(1873, 778)
+        Me.SplitContainer.Size = New System.Drawing.Size(1873, 987)
         Me.SplitContainer.SplitterDistance = 220
+        Me.SplitContainer.SplitterWidth = 1
         Me.SplitContainer.TabIndex = 82
         '
         'BtnExit
@@ -309,13 +264,13 @@ Partial Class FrmMain
         Me.BtnExit.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnExit.FlatAppearance.BorderSize = 0
-        Me.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExit.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnExit.ForeColor = System.Drawing.Color.White
         Me.BtnExit.Image = CType(resources.GetObject("BtnExit.Image"), System.Drawing.Image)
         Me.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnExit.Location = New System.Drawing.Point(0, 584)
+        Me.BtnExit.Location = New System.Drawing.Point(0, 645)
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnExit.Size = New System.Drawing.Size(220, 40)
@@ -330,13 +285,13 @@ Partial Class FrmMain
         Me.BtnAbout.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnAbout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnAbout.FlatAppearance.BorderSize = 0
-        Me.BtnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAbout.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAbout.ForeColor = System.Drawing.Color.White
         Me.BtnAbout.Image = CType(resources.GetObject("BtnAbout.Image"), System.Drawing.Image)
         Me.BtnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAbout.Location = New System.Drawing.Point(0, 544)
+        Me.BtnAbout.Location = New System.Drawing.Point(0, 605)
         Me.BtnAbout.Name = "BtnAbout"
         Me.BtnAbout.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnAbout.Size = New System.Drawing.Size(220, 40)
@@ -351,13 +306,13 @@ Partial Class FrmMain
         Me.BtnDebug.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnDebug.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnDebug.FlatAppearance.BorderSize = 0
-        Me.BtnDebug.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnDebug.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnDebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDebug.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDebug.ForeColor = System.Drawing.Color.White
         Me.BtnDebug.Image = CType(resources.GetObject("BtnDebug.Image"), System.Drawing.Image)
         Me.BtnDebug.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDebug.Location = New System.Drawing.Point(0, 504)
+        Me.BtnDebug.Location = New System.Drawing.Point(0, 565)
         Me.BtnDebug.Name = "BtnDebug"
         Me.BtnDebug.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnDebug.Size = New System.Drawing.Size(220, 40)
@@ -366,19 +321,39 @@ Partial Class FrmMain
         Me.BtnDebug.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnDebug.UseVisualStyleBackColor = True
         '
+        'BtnViewLog
+        '
+        Me.BtnViewLog.Location = New System.Drawing.Point(76, 737)
+        Me.BtnViewLog.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnViewLog.Name = "BtnViewLog"
+        Me.BtnViewLog.Size = New System.Drawing.Size(104, 27)
+        Me.BtnViewLog.TabIndex = 102
+        Me.BtnViewLog.Text = "View Log"
+        Me.BtnViewLog.UseVisualStyleBackColor = True
+        '
+        'BtnClearErrorLog
+        '
+        Me.BtnClearErrorLog.Location = New System.Drawing.Point(76, 807)
+        Me.BtnClearErrorLog.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnClearErrorLog.Name = "BtnClearErrorLog"
+        Me.BtnClearErrorLog.Size = New System.Drawing.Size(104, 27)
+        Me.BtnClearErrorLog.TabIndex = 100
+        Me.BtnClearErrorLog.Text = "Clear Error Log"
+        Me.BtnClearErrorLog.UseVisualStyleBackColor = True
+        '
         'BtnStartSentinel
         '
         Me.BtnStartSentinel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnStartSentinel.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnStartSentinel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnStartSentinel.FlatAppearance.BorderSize = 0
-        Me.BtnStartSentinel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnStartSentinel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnStartSentinel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStartSentinel.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnStartSentinel.ForeColor = System.Drawing.Color.White
         Me.BtnStartSentinel.Image = CType(resources.GetObject("BtnStartSentinel.Image"), System.Drawing.Image)
         Me.BtnStartSentinel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnStartSentinel.Location = New System.Drawing.Point(0, 464)
+        Me.BtnStartSentinel.Location = New System.Drawing.Point(0, 525)
         Me.BtnStartSentinel.Name = "BtnStartSentinel"
         Me.BtnStartSentinel.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnStartSentinel.Size = New System.Drawing.Size(220, 40)
@@ -387,19 +362,29 @@ Partial Class FrmMain
         Me.BtnStartSentinel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnStartSentinel.UseVisualStyleBackColor = True
         '
+        'BtnClearLog
+        '
+        Me.BtnClearLog.Location = New System.Drawing.Point(76, 772)
+        Me.BtnClearLog.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnClearLog.Name = "BtnClearLog"
+        Me.BtnClearLog.Size = New System.Drawing.Size(104, 27)
+        Me.BtnClearLog.TabIndex = 99
+        Me.BtnClearLog.Text = "Clear Log"
+        Me.BtnClearLog.UseVisualStyleBackColor = True
+        '
         'BtnStopSound
         '
         Me.BtnStopSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnStopSound.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnStopSound.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnStopSound.FlatAppearance.BorderSize = 0
-        Me.BtnStopSound.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnStopSound.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnStopSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStopSound.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnStopSound.ForeColor = System.Drawing.Color.White
         Me.BtnStopSound.Image = CType(resources.GetObject("BtnStopSound.Image"), System.Drawing.Image)
         Me.BtnStopSound.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnStopSound.Location = New System.Drawing.Point(0, 424)
+        Me.BtnStopSound.Location = New System.Drawing.Point(0, 485)
         Me.BtnStopSound.Name = "BtnStopSound"
         Me.BtnStopSound.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnStopSound.Size = New System.Drawing.Size(220, 40)
@@ -414,13 +399,13 @@ Partial Class FrmMain
         Me.BtnCalibration.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnCalibration.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnCalibration.FlatAppearance.BorderSize = 0
-        Me.BtnCalibration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnCalibration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnCalibration.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCalibration.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCalibration.ForeColor = System.Drawing.Color.White
         Me.BtnCalibration.Image = CType(resources.GetObject("BtnCalibration.Image"), System.Drawing.Image)
         Me.BtnCalibration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCalibration.Location = New System.Drawing.Point(0, 384)
+        Me.BtnCalibration.Location = New System.Drawing.Point(0, 445)
         Me.BtnCalibration.Name = "BtnCalibration"
         Me.BtnCalibration.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnCalibration.Size = New System.Drawing.Size(220, 40)
@@ -435,13 +420,13 @@ Partial Class FrmMain
         Me.BtnProperties.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnProperties.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnProperties.FlatAppearance.BorderSize = 0
-        Me.BtnProperties.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnProperties.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnProperties.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnProperties.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnProperties.ForeColor = System.Drawing.Color.White
         Me.BtnProperties.Image = CType(resources.GetObject("BtnProperties.Image"), System.Drawing.Image)
         Me.BtnProperties.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnProperties.Location = New System.Drawing.Point(0, 344)
+        Me.BtnProperties.Location = New System.Drawing.Point(0, 405)
         Me.BtnProperties.Name = "BtnProperties"
         Me.BtnProperties.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnProperties.Size = New System.Drawing.Size(220, 40)
@@ -456,13 +441,13 @@ Partial Class FrmMain
         Me.BtnTools.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnTools.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnTools.FlatAppearance.BorderSize = 0
-        Me.BtnTools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnTools.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTools.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnTools.ForeColor = System.Drawing.Color.White
         Me.BtnTools.Image = CType(resources.GetObject("BtnTools.Image"), System.Drawing.Image)
         Me.BtnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnTools.Location = New System.Drawing.Point(0, 304)
+        Me.BtnTools.Location = New System.Drawing.Point(0, 365)
         Me.BtnTools.Name = "BtnTools"
         Me.BtnTools.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnTools.Size = New System.Drawing.Size(220, 40)
@@ -477,13 +462,13 @@ Partial Class FrmMain
         Me.BtnHADS.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnHADS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnHADS.FlatAppearance.BorderSize = 0
-        Me.BtnHADS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnHADS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnHADS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHADS.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHADS.ForeColor = System.Drawing.Color.White
         Me.BtnHADS.Image = CType(resources.GetObject("BtnHADS.Image"), System.Drawing.Image)
         Me.BtnHADS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnHADS.Location = New System.Drawing.Point(0, 264)
+        Me.BtnHADS.Location = New System.Drawing.Point(0, 325)
         Me.BtnHADS.Name = "BtnHADS"
         Me.BtnHADS.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnHADS.Size = New System.Drawing.Size(220, 40)
@@ -498,13 +483,13 @@ Partial Class FrmMain
         Me.BtnDeepsky.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnDeepsky.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnDeepsky.FlatAppearance.BorderSize = 0
-        Me.BtnDeepsky.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnDeepsky.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnDeepsky.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDeepsky.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDeepsky.ForeColor = System.Drawing.Color.White
         Me.BtnDeepsky.Image = CType(resources.GetObject("BtnDeepsky.Image"), System.Drawing.Image)
         Me.BtnDeepsky.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDeepsky.Location = New System.Drawing.Point(0, 224)
+        Me.BtnDeepsky.Location = New System.Drawing.Point(0, 285)
         Me.BtnDeepsky.Name = "BtnDeepsky"
         Me.BtnDeepsky.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnDeepsky.Size = New System.Drawing.Size(220, 40)
@@ -519,13 +504,13 @@ Partial Class FrmMain
         Me.BtnStopRun.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnStopRun.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnStopRun.FlatAppearance.BorderSize = 0
-        Me.BtnStopRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnStopRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnStopRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStopRun.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnStopRun.ForeColor = System.Drawing.Color.White
         Me.BtnStopRun.Image = CType(resources.GetObject("BtnStopRun.Image"), System.Drawing.Image)
         Me.BtnStopRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnStopRun.Location = New System.Drawing.Point(0, 184)
+        Me.BtnStopRun.Location = New System.Drawing.Point(0, 245)
         Me.BtnStopRun.Name = "BtnStopRun"
         Me.BtnStopRun.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnStopRun.Size = New System.Drawing.Size(220, 40)
@@ -540,13 +525,13 @@ Partial Class FrmMain
         Me.BtnStartRun.Dock = System.Windows.Forms.DockStyle.Top
         Me.BtnStartRun.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.BtnStartRun.FlatAppearance.BorderSize = 0
-        Me.BtnStartRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.BtnStartRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnStartRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStartRun.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnStartRun.ForeColor = System.Drawing.Color.White
         Me.BtnStartRun.Image = CType(resources.GetObject("BtnStartRun.Image"), System.Drawing.Image)
         Me.BtnStartRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnStartRun.Location = New System.Drawing.Point(0, 144)
+        Me.BtnStartRun.Location = New System.Drawing.Point(0, 205)
         Me.BtnStartRun.Name = "BtnStartRun"
         Me.BtnStartRun.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.BtnStartRun.Size = New System.Drawing.Size(220, 40)
@@ -557,28 +542,314 @@ Partial Class FrmMain
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.BtnMenu)
         Me.Panel1.Controls.Add(Me.PictureBox)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(220, 144)
+        Me.Panel1.Size = New System.Drawing.Size(220, 205)
         Me.Panel1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(33, 1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(184, 67)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Robotic Observatory "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnMenu
+        '
+        Me.BtnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.BtnMenu.FlatAppearance.BorderSize = 0
+        Me.BtnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMenu.ForeColor = System.Drawing.Color.White
+        Me.BtnMenu.Image = CType(resources.GetObject("BtnMenu.Image"), System.Drawing.Image)
+        Me.BtnMenu.Location = New System.Drawing.Point(6, 114)
+        Me.BtnMenu.Name = "BtnMenu"
+        Me.BtnMenu.Size = New System.Drawing.Size(28, 32)
+        Me.BtnMenu.TabIndex = 1
+        Me.BtnMenu.UseVisualStyleBackColor = True
         '
         'PictureBox
         '
         Me.PictureBox.Image = CType(resources.GetObject("PictureBox.Image"), System.Drawing.Image)
-        Me.PictureBox.Location = New System.Drawing.Point(48, 6)
+        Me.PictureBox.Location = New System.Drawing.Point(63, 71)
         Me.PictureBox.Name = "PictureBox"
         Me.PictureBox.Size = New System.Drawing.Size(128, 128)
         Me.PictureBox.TabIndex = 0
         Me.PictureBox.TabStop = False
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.LblCloudSafe)
+        Me.Panel2.Controls.Add(Me.txtRelativeHumidity)
+        Me.Panel2.Controls.Add(Me.lblRain)
+        Me.Panel2.Controls.Add(Me.lblLight)
+        Me.Panel2.Controls.Add(Me.lblCloud)
+        Me.Panel2.Controls.Add(Me.txtAmbientTemperature)
+        Me.Panel2.Controls.Add(Me.lblLastRead)
+        Me.Panel2.Controls.Add(Me.lblRelativeHumidity)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.lblSafe)
+        Me.Panel2.Location = New System.Drawing.Point(5, 112)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(161, 250)
+        Me.Panel2.TabIndex = 108
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(6, 4)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(35, 16)
+        Me.Label3.TabIndex = 41
+        Me.Label3.Text = "AAG"
+        '
+        'LblCloudSafe
+        '
+        Me.LblCloudSafe.BackColor = System.Drawing.Color.Transparent
+        Me.LblCloudSafe.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCloudSafe.ForeColor = System.Drawing.Color.White
+        Me.LblCloudSafe.Location = New System.Drawing.Point(8, 146)
+        Me.LblCloudSafe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblCloudSafe.Name = "LblCloudSafe"
+        Me.LblCloudSafe.Size = New System.Drawing.Size(147, 25)
+        Me.LblCloudSafe.TabIndex = 40
+        Me.LblCloudSafe.Text = "Unsafe and open"
+        Me.LblCloudSafe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtRelativeHumidity
+        '
+        Me.txtRelativeHumidity.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtRelativeHumidity.Enabled = False
+        Me.txtRelativeHumidity.Location = New System.Drawing.Point(101, 201)
+        Me.txtRelativeHumidity.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtRelativeHumidity.Name = "txtRelativeHumidity"
+        Me.txtRelativeHumidity.Size = New System.Drawing.Size(59, 16)
+        Me.txtRelativeHumidity.TabIndex = 39
+        '
+        'lblRain
+        '
+        Me.lblRain.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRain.ForeColor = System.Drawing.Color.White
+        Me.lblRain.Location = New System.Drawing.Point(9, 108)
+        Me.lblRain.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRain.Name = "lblRain"
+        Me.lblRain.Size = New System.Drawing.Size(146, 36)
+        Me.lblRain.TabIndex = 37
+        Me.lblRain.Text = "Unknown"
+        Me.lblRain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblLight
+        '
+        Me.lblLight.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLight.ForeColor = System.Drawing.Color.White
+        Me.lblLight.Location = New System.Drawing.Point(9, 69)
+        Me.lblLight.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLight.Name = "lblLight"
+        Me.lblLight.Size = New System.Drawing.Size(146, 36)
+        Me.lblLight.TabIndex = 36
+        Me.lblLight.Text = "Unknown"
+        Me.lblLight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblCloud
+        '
+        Me.lblCloud.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCloud.ForeColor = System.Drawing.Color.White
+        Me.lblCloud.Location = New System.Drawing.Point(9, 30)
+        Me.lblCloud.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCloud.Name = "lblCloud"
+        Me.lblCloud.Size = New System.Drawing.Size(146, 36)
+        Me.lblCloud.TabIndex = 35
+        Me.lblCloud.Text = "Unknown"
+        Me.lblCloud.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtAmbientTemperature
+        '
+        Me.txtAmbientTemperature.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAmbientTemperature.Enabled = False
+        Me.txtAmbientTemperature.Location = New System.Drawing.Point(101, 175)
+        Me.txtAmbientTemperature.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtAmbientTemperature.Name = "txtAmbientTemperature"
+        Me.txtAmbientTemperature.Size = New System.Drawing.Size(59, 16)
+        Me.txtAmbientTemperature.TabIndex = 34
+        '
+        'lblLastRead
+        '
+        Me.lblLastRead.AutoSize = True
+        Me.lblLastRead.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastRead.ForeColor = System.Drawing.Color.White
+        Me.lblLastRead.Location = New System.Drawing.Point(5, 219)
+        Me.lblLastRead.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLastRead.Name = "lblLastRead"
+        Me.lblLastRead.Size = New System.Drawing.Size(46, 12)
+        Me.lblLastRead.TabIndex = 33
+        Me.lblLastRead.Text = "Last read:"
+        '
+        'lblRelativeHumidity
+        '
+        Me.lblRelativeHumidity.AutoSize = True
+        Me.lblRelativeHumidity.ForeColor = System.Drawing.Color.White
+        Me.lblRelativeHumidity.Location = New System.Drawing.Point(3, 198)
+        Me.lblRelativeHumidity.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblRelativeHumidity.Name = "lblRelativeHumidity"
+        Me.lblRelativeHumidity.Size = New System.Drawing.Size(61, 16)
+        Me.lblRelativeHumidity.TabIndex = 32
+        Me.lblRelativeHumidity.Text = "Humidity:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(3, 174)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(87, 16)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "Temperature:"
+        '
+        'lblSafe
+        '
+        Me.lblSafe.BackColor = System.Drawing.SystemColors.Control
+        Me.lblSafe.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSafe.Location = New System.Drawing.Point(5, 22)
+        Me.lblSafe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSafe.Name = "lblSafe"
+        Me.lblSafe.Size = New System.Drawing.Size(155, 151)
+        Me.lblSafe.TabIndex = 38
+        Me.lblSafe.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'PanelTop
+        '
+        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.PanelTop.Controls.Add(Me.LblHang)
+        Me.PanelTop.Controls.Add(Me.LblVersion)
+        Me.PanelTop.Controls.Add(Me.LblRoof)
+        Me.PanelTop.Controls.Add(Me.LblSwitch)
+        Me.PanelTop.Controls.Add(Me.LblCover)
+        Me.PanelTop.Controls.Add(Me.LblTSX)
+        Me.PanelTop.Controls.Add(Me.LblInternet)
+        Me.PanelTop.Controls.Add(Me.LblUPSCyberPower)
+        Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelTop.Location = New System.Drawing.Point(0, 0)
+        Me.PanelTop.Name = "PanelTop"
+        Me.PanelTop.Size = New System.Drawing.Size(1652, 42)
+        Me.PanelTop.TabIndex = 107
+        '
+        'LblHang
+        '
+        Me.LblHang.AutoSize = True
+        Me.LblHang.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHang.ForeColor = System.Drawing.Color.White
+        Me.LblHang.Location = New System.Drawing.Point(1117, 13)
+        Me.LblHang.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblHang.Name = "LblHang"
+        Me.LblHang.Size = New System.Drawing.Size(16, 16)
+        Me.LblHang.TabIndex = 106
+        Me.LblHang.Text = "X"
+        '
+        'LblVersion
+        '
+        Me.LblVersion.AutoSize = True
+        Me.LblVersion.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVersion.ForeColor = System.Drawing.Color.White
+        Me.LblVersion.Location = New System.Drawing.Point(1021, 13)
+        Me.LblVersion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblVersion.Name = "LblVersion"
+        Me.LblVersion.Size = New System.Drawing.Size(88, 16)
+        Me.LblVersion.TabIndex = 105
+        Me.LblVersion.Text = "Version 3.00"
+        Me.LblVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LblRoof
+        '
+        Me.LblRoof.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblRoof.ForeColor = System.Drawing.Color.White
+        Me.LblRoof.Location = New System.Drawing.Point(4, 5)
+        Me.LblRoof.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblRoof.Name = "LblRoof"
+        Me.LblRoof.Size = New System.Drawing.Size(121, 32)
+        Me.LblRoof.TabIndex = 87
+        Me.LblRoof.Text = "ROOF"
+        Me.LblRoof.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LblSwitch
+        '
+        Me.LblSwitch.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSwitch.ForeColor = System.Drawing.Color.White
+        Me.LblSwitch.Location = New System.Drawing.Point(127, 5)
+        Me.LblSwitch.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSwitch.Name = "LblSwitch"
+        Me.LblSwitch.Size = New System.Drawing.Size(121, 32)
+        Me.LblSwitch.TabIndex = 95
+        Me.LblSwitch.Text = "SWITCH"
+        Me.LblSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LblCover
+        '
+        Me.LblCover.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCover.ForeColor = System.Drawing.Color.White
+        Me.LblCover.Location = New System.Drawing.Point(250, 5)
+        Me.LblCover.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblCover.Name = "LblCover"
+        Me.LblCover.Size = New System.Drawing.Size(121, 32)
+        Me.LblCover.TabIndex = 94
+        Me.LblCover.Text = "COVER"
+        Me.LblCover.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LblTSX
+        '
+        Me.LblTSX.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTSX.ForeColor = System.Drawing.Color.White
+        Me.LblTSX.Location = New System.Drawing.Point(374, 5)
+        Me.LblTSX.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblTSX.Name = "LblTSX"
+        Me.LblTSX.Size = New System.Drawing.Size(121, 32)
+        Me.LblTSX.TabIndex = 84
+        Me.LblTSX.Text = "TSX"
+        Me.LblTSX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LblInternet
+        '
+        Me.LblInternet.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInternet.ForeColor = System.Drawing.Color.White
+        Me.LblInternet.Location = New System.Drawing.Point(498, 5)
+        Me.LblInternet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblInternet.Name = "LblInternet"
+        Me.LblInternet.Size = New System.Drawing.Size(121, 32)
+        Me.LblInternet.TabIndex = 85
+        Me.LblInternet.Text = "INTERNET"
+        Me.LblInternet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LblUPSCyberPower
+        '
+        Me.LblUPSCyberPower.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUPSCyberPower.ForeColor = System.Drawing.Color.White
+        Me.LblUPSCyberPower.Location = New System.Drawing.Point(621, 5)
+        Me.LblUPSCyberPower.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblUPSCyberPower.Name = "LblUPSCyberPower"
+        Me.LblUPSCyberPower.Size = New System.Drawing.Size(120, 32)
+        Me.LblUPSCyberPower.TabIndex = 91
+        Me.LblUPSCyberPower.Text = "UPS"
+        Me.LblUPSCyberPower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 756)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 965)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(1649, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(1652, 22)
         Me.StatusStrip.TabIndex = 106
         Me.StatusStrip.Text = "StatusStrip"
         '
@@ -594,7 +865,7 @@ Partial Class FrmMain
         Me.GroupBox3.Controls.Add(Me.GroupBox2)
         Me.GroupBox3.Controls.Add(Me.LblLST)
         Me.GroupBox3.Controls.Add(Me.LblGST)
-        Me.GroupBox3.Location = New System.Drawing.Point(959, 446)
+        Me.GroupBox3.Location = New System.Drawing.Point(1193, 546)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
@@ -752,56 +1023,12 @@ Partial Class FrmMain
         Me.LblGST.TabIndex = 69
         Me.LblGST.Text = "LblGST"
         '
-        'LblHang
-        '
-        Me.LblHang.AutoSize = True
-        Me.LblHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblHang.Location = New System.Drawing.Point(923, 709)
-        Me.LblHang.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblHang.Name = "LblHang"
-        Me.LblHang.Size = New System.Drawing.Size(17, 18)
-        Me.LblHang.TabIndex = 104
-        Me.LblHang.Text = "X"
-        '
-        'LblVersion
-        '
-        Me.LblVersion.AutoSize = True
-        Me.LblVersion.Location = New System.Drawing.Point(840, 712)
-        Me.LblVersion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblVersion.Name = "LblVersion"
-        Me.LblVersion.Size = New System.Drawing.Size(79, 16)
-        Me.LblVersion.TabIndex = 103
-        Me.LblVersion.Text = "Version 2.10"
-        Me.LblVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'BtnViewLog
-        '
-        Me.BtnViewLog.Location = New System.Drawing.Point(219, 704)
-        Me.BtnViewLog.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnViewLog.Name = "BtnViewLog"
-        Me.BtnViewLog.Size = New System.Drawing.Size(104, 27)
-        Me.BtnViewLog.TabIndex = 102
-        Me.BtnViewLog.Text = "View Log"
-        Me.BtnViewLog.UseVisualStyleBackColor = True
-        '
-        'LblUPSCyberPower
-        '
-        Me.LblUPSCyberPower.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblUPSCyberPower.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUPSCyberPower.Location = New System.Drawing.Point(833, 24)
-        Me.LblUPSCyberPower.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblUPSCyberPower.Name = "LblUPSCyberPower"
-        Me.LblUPSCyberPower.Size = New System.Drawing.Size(120, 32)
-        Me.LblUPSCyberPower.TabIndex = 91
-        Me.LblUPSCyberPower.Text = "UPS"
-        Me.LblUPSCyberPower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.LblCCDFilter)
         Me.GroupBox1.Controls.Add(Me.LblCCDTemp)
         Me.GroupBox1.Controls.Add(Me.LblCCDExposureStatus)
-        Me.GroupBox1.Location = New System.Drawing.Point(959, 200)
+        Me.GroupBox1.Location = New System.Drawing.Point(911, 238)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
@@ -846,30 +1073,10 @@ Partial Class FrmMain
         Me.LblCCDExposureStatus.Text = "Exposure"
         Me.LblCCDExposureStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'BtnClearErrorLog
-        '
-        Me.BtnClearErrorLog.Location = New System.Drawing.Point(429, 704)
-        Me.BtnClearErrorLog.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnClearErrorLog.Name = "BtnClearErrorLog"
-        Me.BtnClearErrorLog.Size = New System.Drawing.Size(104, 27)
-        Me.BtnClearErrorLog.TabIndex = 100
-        Me.BtnClearErrorLog.Text = "Clear Error Log"
-        Me.BtnClearErrorLog.UseVisualStyleBackColor = True
-        '
-        'BtnClearLog
-        '
-        Me.BtnClearLog.Location = New System.Drawing.Point(324, 704)
-        Me.BtnClearLog.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnClearLog.Name = "BtnClearLog"
-        Me.BtnClearLog.Size = New System.Drawing.Size(104, 27)
-        Me.BtnClearLog.TabIndex = 99
-        Me.BtnClearLog.Text = "Clear Log"
-        Me.BtnClearLog.UseVisualStyleBackColor = True
-        '
         'ChkDisableSafetyCheck
         '
         Me.ChkDisableSafetyCheck.AutoSize = True
-        Me.ChkDisableSafetyCheck.Location = New System.Drawing.Point(545, 709)
+        Me.ChkDisableSafetyCheck.Location = New System.Drawing.Point(1314, 457)
         Me.ChkDisableSafetyCheck.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkDisableSafetyCheck.Name = "ChkDisableSafetyCheck"
         Me.ChkDisableSafetyCheck.Size = New System.Drawing.Size(151, 20)
@@ -883,7 +1090,7 @@ Partial Class FrmMain
         Me.GrpFocus.Controls.Add(Me.LblLastFocusTemperature)
         Me.GrpFocus.Controls.Add(Me.LblFocusserTemperature)
         Me.GrpFocus.Controls.Add(Me.LblFocusserPosition)
-        Me.GrpFocus.Location = New System.Drawing.Point(959, 307)
+        Me.GrpFocus.Location = New System.Drawing.Point(919, 351)
         Me.GrpFocus.Margin = New System.Windows.Forms.Padding(4)
         Me.GrpFocus.Name = "GrpFocus"
         Me.GrpFocus.Padding = New System.Windows.Forms.Padding(4)
@@ -942,7 +1149,7 @@ Partial Class FrmMain
         '
         Me.GroupBox.Controls.Add(Me.grpMoon)
         Me.GroupBox.Controls.Add(Me.grpSun)
-        Me.GroupBox.Location = New System.Drawing.Point(55, 393)
+        Me.GroupBox.Location = New System.Drawing.Point(4, 360)
         Me.GroupBox.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox.Name = "GroupBox"
         Me.GroupBox.Padding = New System.Windows.Forms.Padding(4)
@@ -1115,34 +1322,10 @@ Partial Class FrmMain
         Me.LblAltSun.Text = "LblAltSun"
         Me.LblAltSun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LblSwitch
-        '
-        Me.LblSwitch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblSwitch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSwitch.Location = New System.Drawing.Point(342, 24)
-        Me.LblSwitch.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblSwitch.Name = "LblSwitch"
-        Me.LblSwitch.Size = New System.Drawing.Size(121, 32)
-        Me.LblSwitch.TabIndex = 95
-        Me.LblSwitch.Text = "SWITCH"
-        Me.LblSwitch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LblCover
-        '
-        Me.LblCover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblCover.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCover.Location = New System.Drawing.Point(464, 24)
-        Me.LblCover.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblCover.Name = "LblCover"
-        Me.LblCover.Size = New System.Drawing.Size(121, 32)
-        Me.LblCover.TabIndex = 94
-        Me.LblCover.Text = "COVER"
-        Me.LblCover.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'ChkSimulatorMode
         '
         Me.ChkSimulatorMode.AutoSize = True
-        Me.ChkSimulatorMode.Location = New System.Drawing.Point(709, 709)
+        Me.ChkSimulatorMode.Location = New System.Drawing.Point(1235, 179)
         Me.ChkSimulatorMode.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkSimulatorMode.Name = "ChkSimulatorMode"
         Me.ChkSimulatorMode.Size = New System.Drawing.Size(117, 20)
@@ -1153,7 +1336,7 @@ Partial Class FrmMain
         'ChkAutoStart
         '
         Me.ChkAutoStart.AutoSize = True
-        Me.ChkAutoStart.Location = New System.Drawing.Point(55, 135)
+        Me.ChkAutoStart.Location = New System.Drawing.Point(1421, 121)
         Me.ChkAutoStart.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkAutoStart.Name = "ChkAutoStart"
         Me.ChkAutoStart.Size = New System.Drawing.Size(137, 20)
@@ -1163,79 +1346,26 @@ Partial Class FrmMain
         '
         'RTXLog
         '
-        Me.RTXLog.Location = New System.Drawing.Point(219, 59)
+        Me.RTXLog.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.RTXLog.Location = New System.Drawing.Point(170, 44)
         Me.RTXLog.Margin = New System.Windows.Forms.Padding(4)
         Me.RTXLog.Name = "RTXLog"
         Me.RTXLog.ReadOnly = True
-        Me.RTXLog.Size = New System.Drawing.Size(733, 575)
+        Me.RTXLog.Size = New System.Drawing.Size(733, 589)
         Me.RTXLog.TabIndex = 88
         Me.RTXLog.Text = ""
         '
-        'LblRoof
-        '
-        Me.LblRoof.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblRoof.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblRoof.Location = New System.Drawing.Point(219, 24)
-        Me.LblRoof.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblRoof.Name = "LblRoof"
-        Me.LblRoof.Size = New System.Drawing.Size(121, 32)
-        Me.LblRoof.TabIndex = 87
-        Me.LblRoof.Text = "ROOF"
-        Me.LblRoof.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LblInternet
-        '
-        Me.LblInternet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblInternet.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblInternet.Location = New System.Drawing.Point(709, 24)
-        Me.LblInternet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblInternet.Name = "LblInternet"
-        Me.LblInternet.Size = New System.Drawing.Size(121, 32)
-        Me.LblInternet.TabIndex = 85
-        Me.LblInternet.Text = "INTERNET"
-        Me.LblInternet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LblTSX
-        '
-        Me.LblTSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LblTSX.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTSX.Location = New System.Drawing.Point(587, 24)
-        Me.LblTSX.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblTSX.Name = "LblTSX"
-        Me.LblTSX.Size = New System.Drawing.Size(121, 32)
-        Me.LblTSX.TabIndex = 84
-        Me.LblTSX.Text = "TSX"
-        Me.LblTSX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnStop
-        '
-        Me.BtnStop.Location = New System.Drawing.Point(137, 105)
-        Me.BtnStop.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnStop.Name = "BtnStop"
-        Me.BtnStop.Size = New System.Drawing.Size(80, 28)
-        Me.BtnStop.TabIndex = 83
-        Me.BtnStop.Text = "&Stop"
-        Me.BtnStop.UseVisualStyleBackColor = True
-        '
-        'BtnStart
-        '
-        Me.BtnStart.Location = New System.Drawing.Point(55, 104)
-        Me.BtnStart.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnStart.Name = "BtnStart"
-        Me.BtnStart.Size = New System.Drawing.Size(80, 28)
-        Me.BtnStart.TabIndex = 82
-        Me.BtnStart.Text = "St&art"
-        Me.BtnStart.UseVisualStyleBackColor = True
-        '
         'LblMonitorStatus
         '
-        Me.LblMonitorStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LblMonitorStatus.BackColor = System.Drawing.Color.Silver
         Me.LblMonitorStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblMonitorStatus.Location = New System.Drawing.Point(55, 24)
+        Me.LblMonitorStatus.ForeColor = System.Drawing.Color.White
+        Me.LblMonitorStatus.Location = New System.Drawing.Point(3, 44)
         Me.LblMonitorStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblMonitorStatus.Name = "LblMonitorStatus"
-        Me.LblMonitorStatus.Size = New System.Drawing.Size(162, 76)
+        Me.LblMonitorStatus.Size = New System.Drawing.Size(162, 61)
         Me.LblMonitorStatus.TabIndex = 81
+        Me.LblMonitorStatus.Text = "STATUS"
         Me.LblMonitorStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'grpMount
@@ -1246,7 +1376,7 @@ Partial Class FrmMain
         Me.grpMount.Controls.Add(Me.lblMountAz)
         Me.grpMount.Controls.Add(Me.lblMountAlt)
         Me.grpMount.ImeMode = System.Windows.Forms.ImeMode.Katakana
-        Me.grpMount.Location = New System.Drawing.Point(959, 20)
+        Me.grpMount.Location = New System.Drawing.Point(911, 49)
         Me.grpMount.Margin = New System.Windows.Forms.Padding(4)
         Me.grpMount.Name = "grpMount"
         Me.grpMount.Padding = New System.Windows.Forms.Padding(4)
@@ -1315,153 +1445,13 @@ Partial Class FrmMain
         '
         'RTXErrors
         '
-        Me.RTXErrors.Location = New System.Drawing.Point(219, 637)
+        Me.RTXErrors.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.RTXErrors.Location = New System.Drawing.Point(170, 638)
         Me.RTXErrors.Margin = New System.Windows.Forms.Padding(4)
         Me.RTXErrors.Name = "RTXErrors"
         Me.RTXErrors.Size = New System.Drawing.Size(733, 62)
         Me.RTXErrors.TabIndex = 89
         Me.RTXErrors.Text = ""
-        '
-        'grpAAG
-        '
-        Me.grpAAG.Controls.Add(Me.LblCloudSafe)
-        Me.grpAAG.Controls.Add(Me.LblBlink)
-        Me.grpAAG.Controls.Add(Me.txtRelativeHumidity)
-        Me.grpAAG.Controls.Add(Me.lblRain)
-        Me.grpAAG.Controls.Add(Me.lblLight)
-        Me.grpAAG.Controls.Add(Me.lblCloud)
-        Me.grpAAG.Controls.Add(Me.txtAmbientTemperature)
-        Me.grpAAG.Controls.Add(Me.lblLastRead)
-        Me.grpAAG.Controls.Add(Me.lblRelativeHumidity)
-        Me.grpAAG.Controls.Add(Me.Label2)
-        Me.grpAAG.Controls.Add(Me.lblSafe)
-        Me.grpAAG.Location = New System.Drawing.Point(55, 159)
-        Me.grpAAG.Margin = New System.Windows.Forms.Padding(4)
-        Me.grpAAG.Name = "grpAAG"
-        Me.grpAAG.Padding = New System.Windows.Forms.Padding(4)
-        Me.grpAAG.Size = New System.Drawing.Size(161, 235)
-        Me.grpAAG.TabIndex = 86
-        Me.grpAAG.TabStop = False
-        Me.grpAAG.Text = "Clouddata"
-        '
-        'LblCloudSafe
-        '
-        Me.LblCloudSafe.BackColor = System.Drawing.Color.Transparent
-        Me.LblCloudSafe.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCloudSafe.Location = New System.Drawing.Point(6, 142)
-        Me.LblCloudSafe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblCloudSafe.Name = "LblCloudSafe"
-        Me.LblCloudSafe.Size = New System.Drawing.Size(144, 25)
-        Me.LblCloudSafe.TabIndex = 30
-        Me.LblCloudSafe.Text = "Unsafe and open"
-        Me.LblCloudSafe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LblBlink
-        '
-        Me.LblBlink.AutoSize = True
-        Me.LblBlink.Location = New System.Drawing.Point(172, 181)
-        Me.LblBlink.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblBlink.Name = "LblBlink"
-        Me.LblBlink.Size = New System.Drawing.Size(11, 16)
-        Me.LblBlink.TabIndex = 29
-        Me.LblBlink.Text = " "
-        '
-        'txtRelativeHumidity
-        '
-        Me.txtRelativeHumidity.Enabled = False
-        Me.txtRelativeHumidity.Location = New System.Drawing.Point(99, 196)
-        Me.txtRelativeHumidity.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtRelativeHumidity.Name = "txtRelativeHumidity"
-        Me.txtRelativeHumidity.Size = New System.Drawing.Size(59, 23)
-        Me.txtRelativeHumidity.TabIndex = 28
-        '
-        'lblRain
-        '
-        Me.lblRain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblRain.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRain.Location = New System.Drawing.Point(8, 103)
-        Me.lblRain.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRain.Name = "lblRain"
-        Me.lblRain.Size = New System.Drawing.Size(142, 36)
-        Me.lblRain.TabIndex = 26
-        Me.lblRain.Text = "Unknown"
-        Me.lblRain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblLight
-        '
-        Me.lblLight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLight.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLight.Location = New System.Drawing.Point(8, 64)
-        Me.lblLight.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblLight.Name = "lblLight"
-        Me.lblLight.Size = New System.Drawing.Size(142, 36)
-        Me.lblLight.TabIndex = 25
-        Me.lblLight.Text = "Unknown"
-        Me.lblLight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblCloud
-        '
-        Me.lblCloud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblCloud.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCloud.Location = New System.Drawing.Point(8, 25)
-        Me.lblCloud.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblCloud.Name = "lblCloud"
-        Me.lblCloud.Size = New System.Drawing.Size(142, 36)
-        Me.lblCloud.TabIndex = 24
-        Me.lblCloud.Text = "Unknown"
-        Me.lblCloud.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtAmbientTemperature
-        '
-        Me.txtAmbientTemperature.Enabled = False
-        Me.txtAmbientTemperature.Location = New System.Drawing.Point(99, 170)
-        Me.txtAmbientTemperature.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtAmbientTemperature.Name = "txtAmbientTemperature"
-        Me.txtAmbientTemperature.Size = New System.Drawing.Size(57, 23)
-        Me.txtAmbientTemperature.TabIndex = 23
-        '
-        'lblLastRead
-        '
-        Me.lblLastRead.AutoSize = True
-        Me.lblLastRead.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLastRead.Location = New System.Drawing.Point(6, 217)
-        Me.lblLastRead.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblLastRead.Name = "lblLastRead"
-        Me.lblLastRead.Size = New System.Drawing.Size(46, 12)
-        Me.lblLastRead.TabIndex = 7
-        Me.lblLastRead.Text = "Last read:"
-        '
-        'lblRelativeHumidity
-        '
-        Me.lblRelativeHumidity.AutoSize = True
-        Me.lblRelativeHumidity.Location = New System.Drawing.Point(4, 196)
-        Me.lblRelativeHumidity.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRelativeHumidity.Name = "lblRelativeHumidity"
-        Me.lblRelativeHumidity.Size = New System.Drawing.Size(61, 16)
-        Me.lblRelativeHumidity.TabIndex = 2
-        Me.lblRelativeHumidity.Text = "Humidity:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(4, 172)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 16)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Temperature:"
-        '
-        'lblSafe
-        '
-        Me.lblSafe.BackColor = System.Drawing.SystemColors.Control
-        Me.lblSafe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblSafe.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSafe.Location = New System.Drawing.Point(3, 17)
-        Me.lblSafe.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblSafe.Name = "lblSafe"
-        Me.lblSafe.Size = New System.Drawing.Size(155, 151)
-        Me.lblSafe.TabIndex = 27
-        Me.lblSafe.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'TimerSplit1
         '
@@ -1477,10 +1467,9 @@ Partial Class FrmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1873, 854)
+        Me.ClientSize = New System.Drawing.Size(1856, 987)
         Me.ControlBox = False
         Me.Controls.Add(Me.SplitContainer)
-        Me.Controls.Add(Me.PanelTop)
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1489,9 +1478,7 @@ Partial Class FrmMain
         Me.MinimizeBox = False
         Me.Name = "FrmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Robotic observatory"
-        Me.PanelTop.ResumeLayout(False)
-        Me.PanelTop.PerformLayout()
+        Me.Text = " "
         Me.SplitContainer.Panel1.ResumeLayout(False)
         Me.SplitContainer.Panel2.ResumeLayout(False)
         Me.SplitContainer.Panel2.PerformLayout()
@@ -1499,6 +1486,10 @@ Partial Class FrmMain
         Me.SplitContainer.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.PanelTop.ResumeLayout(False)
+        Me.PanelTop.PerformLayout()
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -1517,8 +1508,6 @@ Partial Class FrmMain
         Me.grpSun.PerformLayout()
         Me.grpMount.ResumeLayout(False)
         Me.grpMount.PerformLayout()
-        Me.grpAAG.ResumeLayout(False)
-        Me.grpAAG.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1536,7 +1525,6 @@ Partial Class FrmMain
     Friend WithEvents TimerSmartError As Timer
     Friend WithEvents TimerHeartBeat As Timer
     Friend WithEvents TimerHang As Timer
-    Friend WithEvents PanelTop As Panel
     Friend WithEvents SplitContainer As SplitContainer
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBoxTwilight As GroupBox
@@ -1551,8 +1539,6 @@ Partial Class FrmMain
     Friend WithEvents LblSunOpenRoof As Label
     Friend WithEvents LblLST As Label
     Friend WithEvents LblGST As Label
-    Friend WithEvents LblHang As Label
-    Friend WithEvents LblVersion As Label
     Friend WithEvents BtnViewLog As Button
     Friend WithEvents LblUPSCyberPower As Label
     Friend WithEvents GroupBox1 As GroupBox
@@ -1589,8 +1575,6 @@ Partial Class FrmMain
     Friend WithEvents LblRoof As Label
     Friend WithEvents LblInternet As Label
     Friend WithEvents LblTSX As Label
-    Friend WithEvents BtnStop As Button
-    Friend WithEvents BtnStart As Button
     Friend WithEvents LblMonitorStatus As Label
     Friend WithEvents grpMount As GroupBox
     Friend WithEvents LblMountPierSide As Label
@@ -1599,19 +1583,6 @@ Partial Class FrmMain
     Friend WithEvents lblMountAz As Label
     Friend WithEvents lblMountAlt As Label
     Friend WithEvents RTXErrors As RichTextBox
-    Friend WithEvents grpAAG As GroupBox
-    Friend WithEvents LblCloudSafe As Label
-    Friend WithEvents LblBlink As Label
-    Friend WithEvents txtRelativeHumidity As TextBox
-    Friend WithEvents lblRain As Label
-    Friend WithEvents lblLight As Label
-    Friend WithEvents lblCloud As Label
-    Friend WithEvents txtAmbientTemperature As TextBox
-    Friend WithEvents lblLastRead As Label
-    Friend WithEvents lblRelativeHumidity As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents lblSafe As Label
-    Friend WithEvents BtnMenu As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox As PictureBox
     Friend WithEvents BtnStartRun As Button
@@ -1628,7 +1599,23 @@ Partial Class FrmMain
     Friend WithEvents BtnStopRun As Button
     Friend WithEvents TimerSplit1 As Timer
     Friend WithEvents TimerSplit2 As Timer
-    Friend WithEvents Label1 As Label
     Friend WithEvents StatusStrip As StatusStrip
     Friend WithEvents ToolStripStatusLabel As ToolStripStatusLabel
+    Friend WithEvents BtnMenu As Button
+    Friend WithEvents PanelTop As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LblHang As Label
+    Friend WithEvents LblVersion As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents LblCloudSafe As Label
+    Friend WithEvents txtRelativeHumidity As TextBox
+    Friend WithEvents lblRain As Label
+    Friend WithEvents lblLight As Label
+    Friend WithEvents lblCloud As Label
+    Friend WithEvents txtAmbientTemperature As TextBox
+    Friend WithEvents lblLastRead As Label
+    Friend WithEvents lblRelativeHumidity As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lblSafe As Label
 End Class

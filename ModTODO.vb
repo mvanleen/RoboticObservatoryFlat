@@ -184,7 +184,8 @@
     '                 sMoonStartCooldownLow
     '                 sMoonAltitudeLimitHigh
     '                 sMoonStartCooldownHigh
-
+    '3.00 change: Flat UI design
+    '               https://icon-icons.com/pack/Iconsax-Vol2---bulk/3868&page=4
 
     '&& last observed hads is sorted as text and not as date
     '&& maan opsplitsen < 40% => vanaf 10° en anders 0° / < 10% gewoon altijd

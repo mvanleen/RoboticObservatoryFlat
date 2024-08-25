@@ -597,10 +597,10 @@ Module ModAstroUtils
             FrmMain.LblAltMoon.Text = pAUtil.DegreesToDM(pStructEventTimes.MoonAlt) + " " + pStructEventTimes.MoonCompassDirection
 
             If pStructEventTimes.MoonSafetyStatus = "SAFE" Then
-                FrmMain.LblAltMoon.BackColor = Color.Green
+                FrmMain.LblAltMoon.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 'ElseIf pStructEventTimes.MoonSafetyStatus = "UNSAFE" Or pStructEventTimes.MoonSafetyStatus = "COOLDOWN" Then
             ElseIf pStructEventTimes.MoonSafetyStatus = "UNSAFE" Then
-                FrmMain.LblAltMoon.BackColor = Color.Red
+                FrmMain.LblAltMoon.BackColor = ColorTranslator.FromHtml("#d63031") 'red
             Else
                 FrmMain.LblAltMoon.BackColor = Color.Transparent
             End If
@@ -613,9 +613,9 @@ Module ModAstroUtils
             FrmMain.LblRisingSettingSun.Text = "Rise: " + pAUtil.HoursToHM(pStructEventTimes.SunRise) + " - Set: " + pAUtil.HoursToHM(pStructEventTimes.SunSet)
 
             If pStructEventTimes.SunSafetyStatus = "SAFE" Then
-                FrmMain.LblAltSun.BackColor = Color.Green
+                FrmMain.LblAltSun.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
             ElseIf pStructEventTimes.SunSafetyStatus = "UNSAFE" Then
-                FrmMain.LblAltSun.BackColor = Color.Red
+                FrmMain.LblAltSun.BackColor = ColorTranslator.FromHtml("#d63031") 'red
             Else
                 FrmMain.LblAltSun.BackColor = Color.Transparent
             End If
@@ -987,10 +987,10 @@ Module ModAstroUtils
             FrmMain.LblAltMoon.Text = pAUtil.DegreesToDM(pStructEventTimes.MoonAlt) + " " + pStructEventTimes.MoonCompassDirection
 
             If pStructEventTimes.MoonSafetyStatus = "SAFE" Then
-                FrmMain.LblAltMoon.BackColor = Color.Green
+                FrmMain.LblAltMoon.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 'ElseIf pStructEventTimes.MoonSafetyStatus = "UNSAFE" Or pStructEventTimes.MoonSafetyStatus = "COOLDOWN" Then
             ElseIf pStructEventTimes.MoonSafetyStatus = "UNSAFE" Then
-                FrmMain.LblAltMoon.BackColor = Color.Red
+                FrmMain.LblAltMoon.BackColor = ColorTranslator.FromHtml("#d63031") 'red
             Else
                 FrmMain.LblAltMoon.BackColor = Color.Transparent
             End If
@@ -1001,9 +1001,9 @@ Module ModAstroUtils
             FrmMain.LblAltSun.Text = pAUtil.DegreesToDM(pStructEventTimes.SunAlt) + " " + pStructEventTimes.SunCompasDirection
 
             If pStructEventTimes.SunSafetyStatus = "SAFE" Then
-                FrmMain.LblAltSun.BackColor = Color.Green
+                FrmMain.LblAltSun.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
             ElseIf pStructEventTimes.SunSafetyStatus = "UNSAFE" Then
-                FrmMain.LblAltSun.BackColor = Color.Red
+                FrmMain.LblAltSun.BackColor = ColorTranslator.FromHtml("#d63031") 'red
             Else
                 FrmMain.LblAltSun.BackColor = Color.Transparent
             End If

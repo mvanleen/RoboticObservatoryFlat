@@ -290,12 +290,12 @@ Module ModMount
 
             If pStructMount.AtPark = True Then
                 FrmMain.LblMountStatus.Text = "Parked"
-                FrmMain.LblMountStatus.BackColor = Color.Red
+                FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
             Else
                 If pStructMount.Tracking = True Then
                     If pStructMount.TrackingRate = 0 Then
                         FrmMain.LblMountStatus.Text = "Tracking: Sidereal"
-                        FrmMain.LblMountStatus.BackColor = Color.Green
+                        FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                     ElseIf pStructMount.TrackingRate = 1 Then
                         FrmMain.LblMountStatus.Text = "Tracking: Lunar"
                         FrmMain.LblMountStatus.BackColor = Color.Yellow
@@ -304,11 +304,11 @@ Module ModMount
                         FrmMain.LblMountStatus.BackColor = Color.Yellow
                     ElseIf pStructMount.TrackingRate = 3 Then
                         FrmMain.LblMountStatus.Text = "Tracking: King"
-                        FrmMain.LblMountStatus.BackColor = Color.Green
+                        FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                     End If
                 Else
                     FrmMain.LblMountStatus.Text = "Not tracking"
-                    FrmMain.LblMountStatus.BackColor = Color.Red
+                    FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
             End If
 

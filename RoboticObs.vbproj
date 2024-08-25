@@ -282,6 +282,7 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmCalibration.resx">
       <DependentUpon>FrmCalibration.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDebug.resx">
       <DependentUpon>FrmDebug.vb</DependentUpon>

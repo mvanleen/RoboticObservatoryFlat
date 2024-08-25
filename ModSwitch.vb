@@ -283,10 +283,10 @@ Module ModSwitch
             End If
 
             If SwitchAvailable = SwitchNeeded Then
-                FrmMain.LblSwitch.BackColor = Color.Green
+                FrmMain.LblSwitch.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 pSwitchEquipmentOnOff = "ON"
             Else
-                FrmMain.LblSwitch.BackColor = Color.Red
+                FrmMain.LblSwitch.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 pSwitchEquipmentOnOff = "OFF"
             End If
 

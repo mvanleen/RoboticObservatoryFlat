@@ -186,9 +186,9 @@ Module ModTheSkyX
             startExecution = DateTime.UtcNow()
             TSXRunning = CheckIfRunning("TheSky64")
             If TSXRunning = "OK" Then
-                FrmMain.LblTSX.BackColor = Color.Green
+                FrmMain.LblTSX.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
             Else
-                FrmMain.LblTSX.BackColor = Color.Red
+                FrmMain.LblTSX.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 CheckIsRunningTheSkyX = "NOK"
                 LogSessionEntry("ERROR", "TheSkyX is not running!", "", "ConnectTheSkyXFocusser", "TSX")
             End If

@@ -45,7 +45,6 @@
         Try
             startExecution = DateTime.UtcNow()
 
-            FrmMain.grpAAG.Text = "AAG"
             If pStrucWeather.containsData = 1 Then
 
                 FrmMain.lblLastRead.Text = "Last read: " + pLastKnownAAGConnected.ToString
@@ -55,7 +54,7 @@
                 FrmMain.ToolTip.SetToolTip(FrmMain.lblCloud, Format(pStrucWeather.clouds))
                 Select Case pStrucWeather.clouds
                     Case < My.Settings.sWeatherCloud_Clear
-                        FrmMain.lblCloud.BackColor = Color.Green
+                        FrmMain.lblCloud.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                         FrmMain.lblCloud.Text = "Clear"
                         pStrucWeather.clouds = 1
                     'FrmMain.ToolTip
@@ -67,7 +66,7 @@
                         End If
                         pStrucWeather.clouds = 2
                     Case < My.Settings.sWeatherCloud_Overcast
-                        FrmMain.lblCloud.BackColor = Color.Red
+                        FrmMain.lblCloud.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                         FrmMain.lblCloud.Text = "Overcast"
                         If pStrucWeather.AAGversion = "OLD" Then
                             pStrucWeather.safe = 0
@@ -265,7 +264,7 @@
                 If (pRunStatus <> "" And pRunStatus <> "ABORTED") Then
                     pCloudMonitorSafe = DateTime.UtcNow()
                 Else
-                    If DateDiff(DateInterval.Second, pCloudMonitorSafe, DateTime.UtcNow) > My.Settings.sWeatherClearDelay And (pRunStatus = "" Or pRunStatus = "ABORTED" Or pRunStatus = "ABORTING") And pContinueRunningCalibrationFrames = False Then
+                    If DateDiff(DateInterval.Second, pCloudMonitorSafe, DateTime.UtcNow) > My.Settings.sWeatherClearDelay And (pRunStatus = "NOT RUNNING" Or pRunStatus = "ABORTED" Or pRunStatus = "ABORTING") And pContinueRunningCalibrationFrames = False Then
                         LogSessionEntry("ERROR", "Clear skies for: " + Format(My.Settings.sWeatherClearDelay) + " seconds detected! ", "", "ReportWeather", "WEATHER")
                         'rest the timer, so a message only pops up every timed minutes.
                         pCloudMonitorSafe = DateTime.UtcNow()

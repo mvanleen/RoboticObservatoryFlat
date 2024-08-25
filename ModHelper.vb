@@ -1062,13 +1062,13 @@ Module ModHelper
                     FrmMain.RTXLog.SelectionLength = 0
 
                     If vLogType = "ERROR" Then
-                        FrmMain.RTXLog.SelectionColor = Color.Red
+                        FrmMain.RTXLog.SelectionColor = ColorTranslator.FromHtml("#d63031") 'red
                         FrmMain.RTXLog.AppendText(Format(DateTime.UtcNow(), "HH:mm:ss") + ": " + vLogText + vLogTextVar + vbCrLf)
                         FrmMain.RTXLog.SelectionColor = Color.Black
                         FrmMain.RTXLog.ScrollToCaret()
                         FrmMain.RTXLog.Refresh()
                     ElseIf vLogType = "ESSENTIAL" Then
-                        FrmMain.RTXLog.SelectionColor = Color.Green
+                        FrmMain.RTXLog.SelectionColor = ColorTranslator.FromHtml("#4cd137") 'green
                         FrmMain.RTXLog.AppendText(Format(DateTime.UtcNow(), "HH:mm:ss") + ": " + vLogText + vLogTextVar + vbCrLf)
                         FrmMain.RTXLog.SelectionColor = Color.Black
                         FrmMain.RTXLog.ScrollToCaret()

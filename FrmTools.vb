@@ -57,7 +57,7 @@ Public Class FrmTools
                     LblRoof.Text = "Roof " + pRoofShutterStatus
 
                     If pRoofShutterStatus = "CLOSED" Then
-                        LblRoof.BackColor = Color.Red
+                        LblRoof.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                         LblRoof.Text = "Roof CLOSED"
                     ElseIf pRoofShutterStatus = "OPENING" Then
                         LblRoof.BackColor = Color.Orange
@@ -66,7 +66,7 @@ Public Class FrmTools
                         LblRoof.BackColor = Color.Orange
                         LblRoof.Text = "Roof CLOSING..."
                     ElseIf pRoofShutterStatus = "OPEN" Then
-                        LblRoof.BackColor = Color.Green
+                        LblRoof.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                         LblRoof.Text = "Roof OPEN"
                     Else
                         LblRoof.BackColor = Color.Purple
@@ -166,13 +166,13 @@ Public Class FrmTools
                 LblCover.Text = "Cover"
 
                 If pCoverStatus = 1 Then
-                    LblCover.BackColor = Color.Red
+                    LblCover.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                     LblCover.Text = "Cover CLOSED"
                 ElseIf pCoverStatus = 2 Then
                     LblCover.BackColor = Color.Orange
                     LblCover.Text = "Cover MOVING"
                 ElseIf pCoverStatus = 3 Then
-                    LblCover.BackColor = Color.Green
+                    LblCover.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                     LblCover.Text = "Cover OPEN"
                 ElseIf pCoverStatus = 4 Then
                     LblCover.BackColor = Color.Purple
@@ -181,12 +181,12 @@ Public Class FrmTools
                     LblCover.BackColor = Color.Purple
                     LblCover.Text = "Cover UNKNOWN"
                 End If
-                BtnConnectCover.BackColor = Color.Green
+                BtnConnectCover.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 BtnDisconnectCover.BackColor = Color.Transparent
                 BtnConnectCover.Enabled = False
                 BtnDisconnectCover.Enabled = True
             Else
-                BtnDisconnectCover.BackColor = Color.Red
+                BtnDisconnectCover.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 BtnConnectCover.BackColor = Color.Transparent
                 LblCover.Text = ""
                 LblCover.BackColor = Color.Transparent
@@ -261,51 +261,51 @@ Public Class FrmTools
 
                 'fill the fields
                 If pStructSwitch.Switch1Status = True Then
-                    lblSwitch1Status.BackColor = Color.Green
+                    lblSwitch1Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch1Status.BackColor = Color.Red
+                    lblSwitch1Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
 
                 If pStructSwitch.Switch2Status = True Then
-                    lblSwitch2Status.BackColor = Color.Green
+                    lblSwitch2Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch2Status.BackColor = Color.Red
+                    lblSwitch2Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
 
                 If pStructSwitch.Switch3Status = True Then
-                    lblSwitch3Status.BackColor = Color.Green
+                    lblSwitch3Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch3Status.BackColor = Color.Red
+                    lblSwitch3Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
 
                 If pStructSwitch.Switch4Status = True Then
-                    lblSwitch4Status.BackColor = Color.Green
+                    lblSwitch4Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch4Status.BackColor = Color.Red
+                    lblSwitch4Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
 
                 If pStructSwitch.Switch5Status = True Then
-                    lblSwitch5Status.BackColor = Color.Green
+                    lblSwitch5Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch5Status.BackColor = Color.Red
+                    lblSwitch5Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
 
                 If pStructSwitch.Switch6Status = True Then
-                    lblSwitch6Status.BackColor = Color.Green
+                    lblSwitch6Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch6Status.BackColor = Color.Red
+                    lblSwitch6Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
 
                 If pStructSwitch.Switch7Status = True Then
-                    lblSwitch7Status.BackColor = Color.Green
+                    lblSwitch7Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch7Status.BackColor = Color.Red
+                    lblSwitch7Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
 
                 If pStructSwitch.Switch8Status = True Then
-                    lblSwitch8Status.BackColor = Color.Green
+                    lblSwitch8Status.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 Else
-                    lblSwitch8Status.BackColor = Color.Red
+                    lblSwitch8Status.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 End If
             End If
         Catch ex As Exception
@@ -337,7 +337,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch1Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch1Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch1Status.BackColor = Color.Green Then
+                    If lblSwitch1Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(0, False)
                         If returnvalue <> "OK" Then
@@ -356,7 +356,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch1Status.BackColor = Color.Green Then
+                If lblSwitch1Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(0, False)
                     If returnvalue <> "OK" Then
@@ -393,7 +393,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch2Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch2Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch2Status.BackColor = Color.Green Then
+                    If lblSwitch2Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(1, False)
                         If returnvalue <> "OK" Then
@@ -412,7 +412,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch2Status.BackColor = Color.Green Then
+                If lblSwitch2Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(1, False)
                     If returnvalue <> "OK" Then
@@ -448,7 +448,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch3Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch3Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch3Status.BackColor = Color.Green Then
+                    If lblSwitch3Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(2, False)
                         If returnvalue <> "OK" Then
@@ -467,7 +467,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch3Status.BackColor = Color.Green Then
+                If lblSwitch3Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(2, False)
                     If returnvalue <> "OK" Then
@@ -501,7 +501,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch4Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch4Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch4Status.BackColor = Color.Green Then
+                    If lblSwitch4Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(3, False)
                         If returnvalue <> "OK" Then
@@ -520,7 +520,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch4Status.BackColor = Color.Green Then
+                If lblSwitch4Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(3, False)
                     If returnvalue <> "OK" Then
@@ -556,7 +556,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch5Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch5Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch5Status.BackColor = Color.Green Then
+                    If lblSwitch5Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(4, False)
                         If returnvalue <> "OK" Then
@@ -575,7 +575,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch5Status.BackColor = Color.Green Then
+                If lblSwitch5Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(4, False)
                     If returnvalue <> "OK" Then
@@ -611,7 +611,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch6Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch6Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch6Status.BackColor = Color.Green Then
+                    If lblSwitch6Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(5, False)
                         If returnvalue <> "OK" Then
@@ -630,7 +630,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch6Status.BackColor = Color.Green Then
+                If lblSwitch6Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(5, False)
                     If returnvalue <> "OK" Then
@@ -666,7 +666,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch7Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch7Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch7Status.BackColor = Color.Green Then
+                    If lblSwitch7Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(6, False)
                         If returnvalue <> "OK" Then
@@ -685,7 +685,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch7Status.BackColor = Color.Green Then
+                If lblSwitch7Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(6, False)
                     If returnvalue <> "OK" Then
@@ -717,7 +717,7 @@ Public Class FrmTools
         Try
             If My.Settings.sSwitch8Warning <> "" Then
                 If MessageBox.Show(My.Settings.sSwitch8Warning, "Warning", MessageBoxButtons.OKCancel) = vbOK Then
-                    If lblSwitch8Status.BackColor = Color.Green Then
+                    If lblSwitch8Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                         ShowWaitCursor()
                         returnvalue = SwitchEnable(7, False)
                         If returnvalue <> "OK" Then
@@ -738,7 +738,7 @@ Public Class FrmTools
                     End If
                 End If
             Else
-                If lblSwitch8Status.BackColor = Color.Green Then
+                If lblSwitch8Status.BackColor = ColorTranslator.FromHtml("#4cd137") Then 'green
                     ShowWaitCursor()
                     returnvalue = SwitchEnable(7, False)
                     If returnvalue <> "OK" Then
@@ -935,7 +935,7 @@ Public Class FrmTools
                 End If
 
                 LblCCDExposureStatus.Text = ExposureStatus  'pTheSkyXExposureStatus 'Exposing Light ( x left )
-                BtnConnectCCD.BackColor = Color.Green
+                BtnConnectCCD.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 BtnDisconnectCCD.BackColor = Color.Transparent
                 BtnConnectCCD.Enabled = False
                 BtnDisconnectCCD.Enabled = True
@@ -947,7 +947,7 @@ Public Class FrmTools
                 LblFocusserPosition.Text = ""
                 LblCCDExposureStatus.Text = ""
                 BtnConnectCCD.BackColor = Color.Transparent
-                BtnDisconnectCCD.BackColor = Color.Red
+                BtnDisconnectCCD.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 BtnConnectCCD.Enabled = True
                 BtnDisconnectCCD.Enabled = False
                 BtnFocusserIN.Enabled = False
@@ -1107,7 +1107,7 @@ Public Class FrmTools
                 BtnMountSouth.Enabled = True
                 BtnMountNorth.Enabled = True
 
-                BtnConnectMount.BackColor = Color.Green
+                BtnConnectMount.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
                 BtnDisconnectMount.BackColor = Color.Transparent
                 BtnConnectMount.Enabled = False
                 BtnDisconnectMount.Enabled = True
@@ -1133,7 +1133,7 @@ Public Class FrmTools
                 End If
             Else
                 BtnConnectMount.BackColor = Color.Transparent
-                BtnDisconnectMount.BackColor = Color.Red
+                BtnDisconnectMount.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 BtnConnectMount.Enabled = True
                 BtnDisconnectMount.Enabled = False
                 BtnClosedLoopSlew.Enabled = False
