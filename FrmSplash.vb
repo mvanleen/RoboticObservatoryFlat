@@ -1,6 +1,6 @@
 ﻿Public NotInheritable Class FrmSplash
     Private Sub FrmSplash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.CenterToParent()
+        Me.CenterToScreen()
         LblVersion.Text = FrmMain.LblVersion.Text
     End Sub
 

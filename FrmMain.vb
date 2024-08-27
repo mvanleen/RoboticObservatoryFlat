@@ -735,22 +735,6 @@ Public Class FrmMain
         End If
     End Sub
 
-    Private Sub TimerSplit1_Tick(sender As Object, e As EventArgs) Handles TimerSplit1.Tick
-        If SplitContainer.SplitterDistance > 40 Then
-            SplitContainer.SplitterDistance -= 20
-        Else
-            TimerSplit1.Enabled = False
-        End If
-    End Sub
-
-    Private Sub TimerSplit2_Tick(sender As Object, e As EventArgs) Handles TimerSplit2.Tick
-        If SplitContainer.SplitterDistance < 220 Then
-            SplitContainer.SplitterDistance += 20
-        Else
-            TimerSplit2.Enabled = False
-        End If
-    End Sub
-
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
         If pStartRun = True Then
             MsgBox("First abort the run !", vbCritical, "Abort")
@@ -816,9 +800,13 @@ Public Class FrmMain
 
     Private Sub BtnMenu_Click(sender As Object, e As EventArgs) Handles BtnMenu.Click
         If SplitContainer.SplitterDistance > 40 Then
-            TimerSplit1.Enabled = True
+            SplitContainer.Width = 1190
+            SplitContainer.SplitterDistance = 40
+            Me.Width = 1195
         Else
-            TimerSplit2.Enabled = True
+            SplitContainer.Width = 1370
+            SplitContainer.SplitterDistance = 220
+            Me.Width = 1375
         End If
     End Sub
 

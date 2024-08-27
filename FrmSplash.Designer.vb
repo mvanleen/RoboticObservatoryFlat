@@ -35,11 +35,11 @@ Partial Class FrmSplash
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(52, 216)
+        Me.Label1.Location = New System.Drawing.Point(89, 184)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 57)
+        Me.Label1.Size = New System.Drawing.Size(209, 58)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Robotic"
         '
@@ -47,9 +47,11 @@ Partial Class FrmSplash
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(23, 9)
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(2, 410)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(203, 13)
+        Me.Label2.Size = New System.Drawing.Size(259, 16)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Copyright 2023 VANLEENHOVE Maarten"
         '
@@ -58,11 +60,11 @@ Partial Class FrmSplash
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label3.Font = New System.Drawing.Font("Monotype Corsiva", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(16, 273)
+        Me.Label3.Location = New System.Drawing.Point(53, 241)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(238, 57)
+        Me.Label3.Size = New System.Drawing.Size(323, 58)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Observatory"
         '
@@ -71,22 +73,28 @@ Partial Class FrmSplash
         Me.LblVersion.AutoSize = True
         Me.LblVersion.BackColor = System.Drawing.Color.Transparent
         Me.LblVersion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LblVersion.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVersion.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVersion.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.LblVersion.Location = New System.Drawing.Point(21, 367)
+        Me.LblVersion.Location = New System.Drawing.Point(173, 299)
         Me.LblVersion.Name = "LblVersion"
-        Me.LblVersion.Size = New System.Drawing.Size(71, 25)
+        Me.LblVersion.Size = New System.Drawing.Size(88, 25)
         Me.LblVersion.TabIndex = 3
         Me.LblVersion.Text = "version"
         '
         'BtnClose
         '
-        Me.BtnClose.Location = New System.Drawing.Point(209, 360)
+        Me.BtnClose.BackColor = System.Drawing.Color.Silver
+        Me.BtnClose.FlatAppearance.BorderSize = 0
+        Me.BtnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClose.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClose.ForeColor = System.Drawing.Color.White
+        Me.BtnClose.Location = New System.Drawing.Point(341, 395)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(53, 31)
         Me.BtnClose.TabIndex = 4
         Me.BtnClose.Text = "Close"
-        Me.BtnClose.UseVisualStyleBackColor = True
+        Me.BtnClose.UseVisualStyleBackColor = False
         '
         'FrmSplash
         '
@@ -94,7 +102,7 @@ Partial Class FrmSplash
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(263, 394)
+        Me.ClientSize = New System.Drawing.Size(398, 433)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.LblVersion)

@@ -129,8 +129,6 @@ Partial Class FrmMain
         Me.RTXLog = New System.Windows.Forms.RichTextBox()
         Me.LblMonitorStatus = New System.Windows.Forms.Label()
         Me.RTXErrors = New System.Windows.Forms.RichTextBox()
-        Me.TimerSplit1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerSplit2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.SplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer.Panel1.SuspendLayout()
         Me.SplitContainer.Panel2.SuspendLayout()
@@ -210,6 +208,7 @@ Partial Class FrmMain
         Me.SplitContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.SplitContainer.Dock = System.Windows.Forms.DockStyle.Left
         Me.SplitContainer.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.SplitContainer.Name = "SplitContainer"
         '
         'SplitContainer.Panel1
@@ -253,8 +252,10 @@ Partial Class FrmMain
         Me.SplitContainer.Panel2.Controls.Add(Me.RTXLog)
         Me.SplitContainer.Panel2.Controls.Add(Me.LblMonitorStatus)
         Me.SplitContainer.Panel2.Controls.Add(Me.RTXErrors)
-        Me.SplitContainer.Size = New System.Drawing.Size(1287, 727)
-        Me.SplitContainer.SplitterDistance = 151
+        Me.SplitContainer.Panel2MinSize = 1135
+        Me.SplitContainer.Size = New System.Drawing.Size(1195, 727)
+        Me.SplitContainer.SplitterDistance = 40
+        Me.SplitContainer.SplitterIncrement = 10
         Me.SplitContainer.SplitterWidth = 1
         Me.SplitContainer.TabIndex = 82
         '
@@ -273,7 +274,7 @@ Partial Class FrmMain
         Me.BtnExit.Location = New System.Drawing.Point(0, 664)
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnExit.Size = New System.Drawing.Size(151, 30)
+        Me.BtnExit.Size = New System.Drawing.Size(40, 30)
         Me.BtnExit.TabIndex = 1027
         Me.BtnExit.Text = "     Exit"
         Me.BtnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -294,7 +295,7 @@ Partial Class FrmMain
         Me.BtnClearErrorLog.Location = New System.Drawing.Point(0, 634)
         Me.BtnClearErrorLog.Name = "BtnClearErrorLog"
         Me.BtnClearErrorLog.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnClearErrorLog.Size = New System.Drawing.Size(151, 30)
+        Me.BtnClearErrorLog.Size = New System.Drawing.Size(40, 30)
         Me.BtnClearErrorLog.TabIndex = 1026
         Me.BtnClearErrorLog.Text = "     Clear Error Log"
         Me.BtnClearErrorLog.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -315,7 +316,7 @@ Partial Class FrmMain
         Me.BtnClearLog.Location = New System.Drawing.Point(0, 604)
         Me.BtnClearLog.Name = "BtnClearLog"
         Me.BtnClearLog.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnClearLog.Size = New System.Drawing.Size(151, 30)
+        Me.BtnClearLog.Size = New System.Drawing.Size(40, 30)
         Me.BtnClearLog.TabIndex = 1025
         Me.BtnClearLog.Text = "     Clear Log"
         Me.BtnClearLog.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -336,7 +337,7 @@ Partial Class FrmMain
         Me.BtnViewLog.Location = New System.Drawing.Point(0, 574)
         Me.BtnViewLog.Name = "BtnViewLog"
         Me.BtnViewLog.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnViewLog.Size = New System.Drawing.Size(151, 30)
+        Me.BtnViewLog.Size = New System.Drawing.Size(40, 30)
         Me.BtnViewLog.TabIndex = 1024
         Me.BtnViewLog.Text = "     View log"
         Me.BtnViewLog.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -368,7 +369,7 @@ Partial Class FrmMain
         Me.BtnAbout.Location = New System.Drawing.Point(0, 505)
         Me.BtnAbout.Name = "BtnAbout"
         Me.BtnAbout.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnAbout.Size = New System.Drawing.Size(151, 30)
+        Me.BtnAbout.Size = New System.Drawing.Size(40, 30)
         Me.BtnAbout.TabIndex = 11
         Me.BtnAbout.Text = "     About"
         Me.BtnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -389,7 +390,7 @@ Partial Class FrmMain
         Me.BtnDebug.Location = New System.Drawing.Point(0, 475)
         Me.BtnDebug.Name = "BtnDebug"
         Me.BtnDebug.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnDebug.Size = New System.Drawing.Size(151, 30)
+        Me.BtnDebug.Size = New System.Drawing.Size(40, 30)
         Me.BtnDebug.TabIndex = 10
         Me.BtnDebug.Text = "     Debug"
         Me.BtnDebug.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -410,7 +411,7 @@ Partial Class FrmMain
         Me.BtnStartSentinel.Location = New System.Drawing.Point(0, 445)
         Me.BtnStartSentinel.Name = "BtnStartSentinel"
         Me.BtnStartSentinel.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnStartSentinel.Size = New System.Drawing.Size(151, 30)
+        Me.BtnStartSentinel.Size = New System.Drawing.Size(40, 30)
         Me.BtnStartSentinel.TabIndex = 9
         Me.BtnStartSentinel.Text = "     Start sentinel"
         Me.BtnStartSentinel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -431,7 +432,7 @@ Partial Class FrmMain
         Me.BtnStopSound.Location = New System.Drawing.Point(0, 415)
         Me.BtnStopSound.Name = "BtnStopSound"
         Me.BtnStopSound.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnStopSound.Size = New System.Drawing.Size(151, 30)
+        Me.BtnStopSound.Size = New System.Drawing.Size(40, 30)
         Me.BtnStopSound.TabIndex = 8
         Me.BtnStopSound.Text = "     Stop sound"
         Me.BtnStopSound.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -452,7 +453,7 @@ Partial Class FrmMain
         Me.BtnCalibration.Location = New System.Drawing.Point(0, 385)
         Me.BtnCalibration.Name = "BtnCalibration"
         Me.BtnCalibration.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnCalibration.Size = New System.Drawing.Size(151, 30)
+        Me.BtnCalibration.Size = New System.Drawing.Size(40, 30)
         Me.BtnCalibration.TabIndex = 7
         Me.BtnCalibration.Text = "     Calibration"
         Me.BtnCalibration.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -473,7 +474,7 @@ Partial Class FrmMain
         Me.BtnProperties.Location = New System.Drawing.Point(0, 355)
         Me.BtnProperties.Name = "BtnProperties"
         Me.BtnProperties.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnProperties.Size = New System.Drawing.Size(151, 30)
+        Me.BtnProperties.Size = New System.Drawing.Size(40, 30)
         Me.BtnProperties.TabIndex = 6
         Me.BtnProperties.Text = "     Properties"
         Me.BtnProperties.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -494,7 +495,7 @@ Partial Class FrmMain
         Me.BtnTools.Location = New System.Drawing.Point(0, 325)
         Me.BtnTools.Name = "BtnTools"
         Me.BtnTools.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnTools.Size = New System.Drawing.Size(151, 30)
+        Me.BtnTools.Size = New System.Drawing.Size(40, 30)
         Me.BtnTools.TabIndex = 5
         Me.BtnTools.Text = "     Tools"
         Me.BtnTools.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -515,7 +516,7 @@ Partial Class FrmMain
         Me.BtnHADS.Location = New System.Drawing.Point(0, 295)
         Me.BtnHADS.Name = "BtnHADS"
         Me.BtnHADS.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnHADS.Size = New System.Drawing.Size(151, 30)
+        Me.BtnHADS.Size = New System.Drawing.Size(40, 30)
         Me.BtnHADS.TabIndex = 4
         Me.BtnHADS.Text = "     HADS targets"
         Me.BtnHADS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -536,7 +537,7 @@ Partial Class FrmMain
         Me.BtnDeepsky.Location = New System.Drawing.Point(0, 265)
         Me.BtnDeepsky.Name = "BtnDeepsky"
         Me.BtnDeepsky.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnDeepsky.Size = New System.Drawing.Size(151, 30)
+        Me.BtnDeepsky.Size = New System.Drawing.Size(40, 30)
         Me.BtnDeepsky.TabIndex = 3
         Me.BtnDeepsky.Text = "     Deepsky targets"
         Me.BtnDeepsky.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -557,7 +558,7 @@ Partial Class FrmMain
         Me.BtnStopRun.Location = New System.Drawing.Point(0, 235)
         Me.BtnStopRun.Name = "BtnStopRun"
         Me.BtnStopRun.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnStopRun.Size = New System.Drawing.Size(151, 30)
+        Me.BtnStopRun.Size = New System.Drawing.Size(40, 30)
         Me.BtnStopRun.TabIndex = 2
         Me.BtnStopRun.Text = "     Stop run"
         Me.BtnStopRun.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -578,7 +579,7 @@ Partial Class FrmMain
         Me.BtnStartRun.Location = New System.Drawing.Point(0, 205)
         Me.BtnStartRun.Name = "BtnStartRun"
         Me.BtnStartRun.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.BtnStartRun.Size = New System.Drawing.Size(151, 30)
+        Me.BtnStartRun.Size = New System.Drawing.Size(40, 30)
         Me.BtnStartRun.TabIndex = 1
         Me.BtnStartRun.Text = "     Start run"
         Me.BtnStartRun.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -592,7 +593,7 @@ Partial Class FrmMain
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(151, 205)
+        Me.Panel1.Size = New System.Drawing.Size(40, 205)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -632,7 +633,7 @@ Partial Class FrmMain
         '
         'Panel5
         '
-        Me.Panel5.BackColor = System.Drawing.Color.Silver
+        Me.Panel5.BackColor = System.Drawing.Color.Transparent
         Me.Panel5.Controls.Add(Me.LblMountPierSide)
         Me.Panel5.Controls.Add(Me.LblMountRADEC)
         Me.Panel5.Controls.Add(Me.LblMountStatus)
@@ -670,7 +671,7 @@ Partial Class FrmMain
         '
         'LblMountStatus
         '
-        Me.LblMountStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblMountStatus.BackColor = System.Drawing.Color.Silver
         Me.LblMountStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblMountStatus.ForeColor = System.Drawing.Color.White
         Me.LblMountStatus.Location = New System.Drawing.Point(4, 20)
@@ -683,10 +684,10 @@ Partial Class FrmMain
         '
         'lblMountAz
         '
-        Me.lblMountAz.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.lblMountAz.BackColor = System.Drawing.Color.Silver
         Me.lblMountAz.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMountAz.ForeColor = System.Drawing.Color.White
-        Me.lblMountAz.Location = New System.Drawing.Point(4, 100)
+        Me.lblMountAz.Location = New System.Drawing.Point(4, 98)
         Me.lblMountAz.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMountAz.Name = "lblMountAz"
         Me.lblMountAz.Size = New System.Drawing.Size(219, 36)
@@ -696,10 +697,10 @@ Partial Class FrmMain
         '
         'lblMountAlt
         '
-        Me.lblMountAlt.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.lblMountAlt.BackColor = System.Drawing.Color.Silver
         Me.lblMountAlt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMountAlt.ForeColor = System.Drawing.Color.White
-        Me.lblMountAlt.Location = New System.Drawing.Point(4, 60)
+        Me.lblMountAlt.Location = New System.Drawing.Point(4, 59)
         Me.lblMountAlt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMountAlt.Name = "lblMountAlt"
         Me.lblMountAlt.Size = New System.Drawing.Size(219, 36)
@@ -710,7 +711,7 @@ Partial Class FrmMain
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Silver
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(4, 4)
@@ -722,7 +723,7 @@ Partial Class FrmMain
         '
         'Panel6
         '
-        Me.Panel6.BackColor = System.Drawing.Color.Silver
+        Me.Panel6.BackColor = System.Drawing.Color.Transparent
         Me.Panel6.Controls.Add(Me.LblCivilTwilight)
         Me.Panel6.Controls.Add(Me.LblAstronomicalTwilight)
         Me.Panel6.Controls.Add(Me.LblLST)
@@ -779,7 +780,7 @@ Partial Class FrmMain
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Silver
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(2, 1)
@@ -856,8 +857,7 @@ Partial Class FrmMain
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.Silver
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.BackColor = System.Drawing.Color.Transparent
         Me.Panel7.Controls.Add(Me.LblLastFocusDateTime)
         Me.Panel7.Controls.Add(Me.LblLastFocusTemperature)
         Me.Panel7.Controls.Add(Me.LblFocusserTemperature)
@@ -894,7 +894,7 @@ Partial Class FrmMain
         '
         'LblFocusserTemperature
         '
-        Me.LblFocusserTemperature.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblFocusserTemperature.BackColor = System.Drawing.Color.Silver
         Me.LblFocusserTemperature.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFocusserTemperature.ForeColor = System.Drawing.Color.White
         Me.LblFocusserTemperature.Location = New System.Drawing.Point(4, 56)
@@ -907,7 +907,7 @@ Partial Class FrmMain
         '
         'LblFocusserPosition
         '
-        Me.LblFocusserPosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblFocusserPosition.BackColor = System.Drawing.Color.Silver
         Me.LblFocusserPosition.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFocusserPosition.ForeColor = System.Drawing.Color.White
         Me.LblFocusserPosition.Location = New System.Drawing.Point(4, 16)
@@ -921,7 +921,7 @@ Partial Class FrmMain
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Silver
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(4, 0)
@@ -933,7 +933,7 @@ Partial Class FrmMain
         '
         'Panel8
         '
-        Me.Panel8.BackColor = System.Drawing.Color.Silver
+        Me.Panel8.BackColor = System.Drawing.Color.Transparent
         Me.Panel8.Controls.Add(Me.LblSunSettingRising)
         Me.Panel8.Controls.Add(Me.LblDECSun)
         Me.Panel8.Controls.Add(Me.LblRisingSettingSun)
@@ -947,10 +947,10 @@ Partial Class FrmMain
         '
         'LblSunSettingRising
         '
-        Me.LblSunSettingRising.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblSunSettingRising.BackColor = System.Drawing.Color.Silver
         Me.LblSunSettingRising.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSunSettingRising.ForeColor = System.Drawing.Color.White
-        Me.LblSunSettingRising.Location = New System.Drawing.Point(4, 51)
+        Me.LblSunSettingRising.Location = New System.Drawing.Point(4, 52)
         Me.LblSunSettingRising.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblSunSettingRising.Name = "LblSunSettingRising"
         Me.LblSunSettingRising.Size = New System.Drawing.Size(153, 32)
@@ -999,7 +999,7 @@ Partial Class FrmMain
         '
         'LblAltSun
         '
-        Me.LblAltSun.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblAltSun.BackColor = System.Drawing.Color.Silver
         Me.LblAltSun.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAltSun.ForeColor = System.Drawing.Color.White
         Me.LblAltSun.Location = New System.Drawing.Point(4, 18)
@@ -1013,7 +1013,7 @@ Partial Class FrmMain
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Silver
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(4, 2)
@@ -1025,8 +1025,7 @@ Partial Class FrmMain
         '
         'PanelCCD
         '
-        Me.PanelCCD.BackColor = System.Drawing.Color.Silver
-        Me.PanelCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelCCD.BackColor = System.Drawing.Color.Transparent
         Me.PanelCCD.Controls.Add(Me.LblCCDFilter)
         Me.PanelCCD.Controls.Add(Me.LblCCDTemp)
         Me.PanelCCD.Controls.Add(Me.LblCCDExposureStatus)
@@ -1039,7 +1038,7 @@ Partial Class FrmMain
         '
         'LblCCDFilter
         '
-        Me.LblCCDFilter.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblCCDFilter.BackColor = System.Drawing.Color.Silver
         Me.LblCCDFilter.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold)
         Me.LblCCDFilter.ForeColor = System.Drawing.Color.White
         Me.LblCCDFilter.Location = New System.Drawing.Point(7, 56)
@@ -1052,7 +1051,7 @@ Partial Class FrmMain
         '
         'LblCCDTemp
         '
-        Me.LblCCDTemp.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblCCDTemp.BackColor = System.Drawing.Color.Silver
         Me.LblCCDTemp.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCCDTemp.ForeColor = System.Drawing.Color.White
         Me.LblCCDTemp.Location = New System.Drawing.Point(70, 56)
@@ -1065,7 +1064,7 @@ Partial Class FrmMain
         '
         'LblCCDExposureStatus
         '
-        Me.LblCCDExposureStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblCCDExposureStatus.BackColor = System.Drawing.Color.Silver
         Me.LblCCDExposureStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold)
         Me.LblCCDExposureStatus.ForeColor = System.Drawing.Color.White
         Me.LblCCDExposureStatus.Location = New System.Drawing.Point(7, 17)
@@ -1079,7 +1078,7 @@ Partial Class FrmMain
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Silver
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(4, 1)
@@ -1091,7 +1090,7 @@ Partial Class FrmMain
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Silver
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.Controls.Add(Me.LblMoonSettingRising)
         Me.Panel3.Controls.Add(Me.LblDECMoon)
         Me.Panel3.Controls.Add(Me.LblPhaseMoon)
@@ -1106,10 +1105,10 @@ Partial Class FrmMain
         '
         'LblMoonSettingRising
         '
-        Me.LblMoonSettingRising.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblMoonSettingRising.BackColor = System.Drawing.Color.Silver
         Me.LblMoonSettingRising.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblMoonSettingRising.ForeColor = System.Drawing.Color.White
-        Me.LblMoonSettingRising.Location = New System.Drawing.Point(4, 85)
+        Me.LblMoonSettingRising.Location = New System.Drawing.Point(4, 86)
         Me.LblMoonSettingRising.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblMoonSettingRising.Name = "LblMoonSettingRising"
         Me.LblMoonSettingRising.Size = New System.Drawing.Size(153, 32)
@@ -1132,10 +1131,10 @@ Partial Class FrmMain
         '
         'LblPhaseMoon
         '
-        Me.LblPhaseMoon.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblPhaseMoon.BackColor = System.Drawing.Color.Silver
         Me.LblPhaseMoon.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPhaseMoon.ForeColor = System.Drawing.Color.White
-        Me.LblPhaseMoon.Location = New System.Drawing.Point(4, 51)
+        Me.LblPhaseMoon.Location = New System.Drawing.Point(4, 52)
         Me.LblPhaseMoon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblPhaseMoon.Name = "LblPhaseMoon"
         Me.LblPhaseMoon.Size = New System.Drawing.Size(153, 32)
@@ -1158,7 +1157,7 @@ Partial Class FrmMain
         '
         'LblAltMoon
         '
-        Me.LblAltMoon.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.LblAltMoon.BackColor = System.Drawing.Color.Silver
         Me.LblAltMoon.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblAltMoon.ForeColor = System.Drawing.Color.White
         Me.LblAltMoon.Location = New System.Drawing.Point(4, 18)
@@ -1185,7 +1184,7 @@ Partial Class FrmMain
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Silver
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(4, 2)
@@ -1331,7 +1330,7 @@ Partial Class FrmMain
         Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTop.Location = New System.Drawing.Point(0, 0)
         Me.PanelTop.Name = "PanelTop"
-        Me.PanelTop.Size = New System.Drawing.Size(1135, 42)
+        Me.PanelTop.Size = New System.Drawing.Size(1154, 42)
         Me.PanelTop.TabIndex = 107
         '
         'LblHang
@@ -1437,7 +1436,7 @@ Partial Class FrmMain
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
         Me.StatusStrip.Location = New System.Drawing.Point(0, 705)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(1135, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(1154, 22)
         Me.StatusStrip.Stretch = False
         Me.StatusStrip.TabIndex = 106
         Me.StatusStrip.Text = "StatusStrip"
@@ -1452,12 +1451,13 @@ Partial Class FrmMain
         'ChkDisableSafetyCheck
         '
         Me.ChkDisableSafetyCheck.AutoSize = True
+        Me.ChkDisableSafetyCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkDisableSafetyCheck.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkDisableSafetyCheck.ForeColor = System.Drawing.Color.White
         Me.ChkDisableSafetyCheck.Location = New System.Drawing.Point(914, 680)
         Me.ChkDisableSafetyCheck.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkDisableSafetyCheck.Name = "ChkDisableSafetyCheck"
-        Me.ChkDisableSafetyCheck.Size = New System.Drawing.Size(170, 20)
+        Me.ChkDisableSafetyCheck.Size = New System.Drawing.Size(167, 20)
         Me.ChkDisableSafetyCheck.TabIndex = 98
         Me.ChkDisableSafetyCheck.Text = "Disable safety check ?"
         Me.ChkDisableSafetyCheck.UseVisualStyleBackColor = True
@@ -1465,12 +1465,13 @@ Partial Class FrmMain
         'ChkSimulatorMode
         '
         Me.ChkSimulatorMode.AutoSize = True
+        Me.ChkSimulatorMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkSimulatorMode.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkSimulatorMode.ForeColor = System.Drawing.Color.White
         Me.ChkSimulatorMode.Location = New System.Drawing.Point(914, 636)
         Me.ChkSimulatorMode.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkSimulatorMode.Name = "ChkSimulatorMode"
-        Me.ChkSimulatorMode.Size = New System.Drawing.Size(126, 20)
+        Me.ChkSimulatorMode.Size = New System.Drawing.Size(123, 20)
         Me.ChkSimulatorMode.TabIndex = 93
         Me.ChkSimulatorMode.Text = "Simulator mode"
         Me.ChkSimulatorMode.UseVisualStyleBackColor = True
@@ -1478,12 +1479,13 @@ Partial Class FrmMain
         'ChkAutoStart
         '
         Me.ChkAutoStart.AutoSize = True
+        Me.ChkAutoStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkAutoStart.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkAutoStart.ForeColor = System.Drawing.Color.White
         Me.ChkAutoStart.Location = New System.Drawing.Point(914, 658)
         Me.ChkAutoStart.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkAutoStart.Name = "ChkAutoStart"
-        Me.ChkAutoStart.Size = New System.Drawing.Size(156, 20)
+        Me.ChkAutoStart.Size = New System.Drawing.Size(153, 20)
         Me.ChkAutoStart.TabIndex = 92
         Me.ChkAutoStart.Text = "Autostart Enabled ?"
         Me.ChkAutoStart.UseVisualStyleBackColor = True
@@ -1491,6 +1493,7 @@ Partial Class FrmMain
         'RTXLog
         '
         Me.RTXLog.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.RTXLog.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RTXLog.Location = New System.Drawing.Point(170, 44)
         Me.RTXLog.Margin = New System.Windows.Forms.Padding(4)
         Me.RTXLog.Name = "RTXLog"
@@ -1515,6 +1518,7 @@ Partial Class FrmMain
         'RTXErrors
         '
         Me.RTXErrors.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.RTXErrors.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RTXErrors.Location = New System.Drawing.Point(170, 636)
         Me.RTXErrors.Margin = New System.Windows.Forms.Padding(4)
         Me.RTXErrors.Name = "RTXErrors"
@@ -1522,21 +1526,13 @@ Partial Class FrmMain
         Me.RTXErrors.TabIndex = 89
         Me.RTXErrors.Text = ""
         '
-        'TimerSplit1
-        '
-        Me.TimerSplit1.Interval = 1
-        '
-        'TimerSplit2
-        '
-        Me.TimerSplit2.Interval = 1
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(2048, 727)
+        Me.ClientSize = New System.Drawing.Size(1184, 727)
         Me.ControlBox = False
         Me.Controls.Add(Me.SplitContainer)
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1617,8 +1613,6 @@ Partial Class FrmMain
     Friend WithEvents BtnHADS As Button
     Friend WithEvents BtnDeepsky As Button
     Friend WithEvents BtnStopRun As Button
-    Friend WithEvents TimerSplit1 As Timer
-    Friend WithEvents TimerSplit2 As Timer
     Friend WithEvents StatusStrip As StatusStrip
     Friend WithEvents ToolStripStatusLabel As ToolStripStatusLabel
     Friend WithEvents BtnMenu As Button
