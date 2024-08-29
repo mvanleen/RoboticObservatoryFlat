@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmsplash.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmmessagebox.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmessagebox.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmmessagebox.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmessagebox.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modmount.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modmount.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmsplash.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmsplash.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -17,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modinternet.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modinternet.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmmain.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -74,10 +86,6 @@
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modroof.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modmount.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modmount.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modcover.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modcover.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -113,17 +121,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "FrmMain.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMain.vb",
               "RelativeDocumentMoniker": "FrmMain.vb",
               "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMain.vb",
               "RelativeToolTip": "FrmMain.vb",
-              "ViewState": "AgIAAA0DAAAAAAAAAAArwCgDAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAANUDAAAAAAAAAAASwOUDAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-08-25T12:59:49.087Z",
               "IsPinned": true,
@@ -132,55 +140,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmSplash.vb",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb",
-              "RelativeDocumentMoniker": "FrmSplash.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb",
-              "RelativeToolTip": "FrmSplash.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Title": "FrmMessageBox.vb",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb",
+              "RelativeDocumentMoniker": "FrmMessageBox.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb",
+              "RelativeToolTip": "FrmMessageBox.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-27T19:43:36.337Z",
+              "WhenOpened": "2024-08-29T16:46:51.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ModMount.vb",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModMount.vb",
-              "RelativeDocumentMoniker": "ModMount.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModMount.vb",
-              "RelativeToolTip": "ModMount.vb",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAmwCQBAABUAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FrmMessageBox.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb",
+              "RelativeDocumentMoniker": "FrmMessageBox.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb [Design]",
+              "RelativeToolTip": "FrmMessageBox.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-25T08:41:03.178Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ModRoof.vb",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModRoof.vb",
-              "RelativeDocumentMoniker": "ModRoof.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModRoof.vb",
-              "RelativeToolTip": "ModRoof.vb",
-              "ViewState": "AgIAACsBAAAAAAAAAAAcwEUBAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-25T08:40:59.178Z"
+              "WhenOpened": "2024-08-29T15:14:55.981Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "ModSwitch.vb",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModSwitch.vb",
-              "RelativeDocumentMoniker": "ModSwitch.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModSwitch.vb",
-              "RelativeToolTip": "ModSwitch.vb",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAmwCABAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-25T08:40:55.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "RoboticObs",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\RoboticObs.vbproj",
               "RelativeDocumentMoniker": "RoboticObs.vbproj",
@@ -191,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ModRun.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModRun.vb",
               "RelativeDocumentMoniker": "ModRun.vb",
@@ -203,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "ModTODO.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModTODO.vb",
               "RelativeDocumentMoniker": "ModTODO.vb",
@@ -215,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ModBackup.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModBackup.vb",
               "RelativeDocumentMoniker": "ModBackup.vb",
@@ -227,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "FrmCalibration.resx",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmCalibration.resx",
               "RelativeDocumentMoniker": "FrmCalibration.resx",
@@ -239,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ModAstroUtils.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModAstroUtils.vb",
               "RelativeDocumentMoniker": "ModAstroUtils.vb",
@@ -251,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "FrmMain.Designer.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMain.Designer.vb",
               "RelativeDocumentMoniker": "FrmMain.Designer.vb",
@@ -261,18 +244,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-08-25T20:57:18.681Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmSplash.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb",
-              "RelativeDocumentMoniker": "FrmSplash.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb [Design]",
-              "RelativeToolTip": "FrmSplash.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-24T20:25:52.403Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -288,7 +259,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
+              "Title": "ModSwitch.vb",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModSwitch.vb",
+              "RelativeDocumentMoniker": "ModSwitch.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModSwitch.vb",
+              "RelativeToolTip": "ModSwitch.vb",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAmwCABAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-25T08:40:55.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModMount.vb",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModMount.vb",
+              "RelativeDocumentMoniker": "ModMount.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModMount.vb",
+              "RelativeToolTip": "ModMount.vb",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAmwBoBAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-25T08:41:03.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmSplash.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb",
+              "RelativeDocumentMoniker": "FrmSplash.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb [Design]",
+              "RelativeToolTip": "FrmSplash.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-24T20:25:52.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ModRoof.vb",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModRoof.vb",
+              "RelativeDocumentMoniker": "ModRoof.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModRoof.vb",
+              "RelativeToolTip": "ModRoof.vb",
+              "ViewState": "AgIAACsBAAAAAAAAAAAcwEUBAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-25T08:40:59.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmSplash.vb",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb",
+              "RelativeDocumentMoniker": "FrmSplash.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmSplash.vb",
+              "RelativeToolTip": "FrmSplash.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-08-27T19:43:36.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ModInternet.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModInternet.vb",
               "RelativeDocumentMoniker": "ModInternet.vb",
@@ -296,12 +326,11 @@
               "RelativeToolTip": "ModInternet.vb",
               "ViewState": "AgIAACUAAAAAAAAAAAAcwD8AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-08-25T08:41:11.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T08:41:11.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ModAAG.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModAAG.vb",
               "RelativeDocumentMoniker": "ModAAG.vb",
@@ -313,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ModUPS.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModUPS.vb",
               "RelativeDocumentMoniker": "ModUPS.vb",
@@ -325,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "ModWeather.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModWeather.vb",
               "RelativeDocumentMoniker": "ModWeather.vb",
@@ -337,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ModTheSkyX.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModTheSkyX.vb",
               "RelativeDocumentMoniker": "ModTheSkyX.vb",
@@ -349,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "FrmHADS.vb [Design]",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmHADS.vb",
               "RelativeDocumentMoniker": "FrmHADS.vb",
@@ -360,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ModCover.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModCover.vb",
               "RelativeDocumentMoniker": "ModCover.vb",
@@ -372,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "FrmProperties.vb [Design]",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmProperties.vb",
               "RelativeDocumentMoniker": "FrmProperties.vb",
@@ -383,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "FrmDebug.vb [Design]",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmDebug.vb",
               "RelativeDocumentMoniker": "FrmDebug.vb",
@@ -394,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "FrmCalibration.vb [Design]",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmCalibration.vb",
               "RelativeDocumentMoniker": "FrmCalibration.vb",
@@ -405,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "FrmTools.vb [Design]",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTools.vb",
               "RelativeDocumentMoniker": "FrmTools.vb",
@@ -416,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "FrmTarget.vb [Design]",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTarget.vb",
               "RelativeDocumentMoniker": "FrmTarget.vb",

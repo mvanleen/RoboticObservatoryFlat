@@ -991,4 +991,9 @@ Public Class FrmMain
     Private Sub BtnClearErrorLog_Click(sender As Object, e As EventArgs) Handles BtnClearErrorLog.Click
         RTXErrors.Clear()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim svalue As DialogResult
+        svalue = FrmMessageBox.ShowDialog()
+    End Sub
 End Class

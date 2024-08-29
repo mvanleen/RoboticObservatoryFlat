@@ -41,3 +41,4 @@ C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObservatory.exe
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObservatory.xml
 C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObservatory.pdb
+C:\Users\maart\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObs.FrmMessageBox.resources

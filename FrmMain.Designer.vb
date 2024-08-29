@@ -77,6 +77,7 @@ Partial Class FrmMain
         Me.LblSunStartRun = New System.Windows.Forms.Label()
         Me.LblSunOpenRoof = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LblLastFocusDateTime = New System.Windows.Forms.Label()
         Me.LblLastFocusTemperature = New System.Windows.Forms.Label()
         Me.LblFocusserTemperature = New System.Windows.Forms.Label()
@@ -858,6 +859,7 @@ Partial Class FrmMain
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Transparent
+        Me.Panel7.Controls.Add(Me.Button1)
         Me.Panel7.Controls.Add(Me.LblLastFocusDateTime)
         Me.Panel7.Controls.Add(Me.LblLastFocusTemperature)
         Me.Panel7.Controls.Add(Me.LblFocusserTemperature)
@@ -867,6 +869,15 @@ Partial Class FrmMain
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(227, 134)
         Me.Panel7.TabIndex = 110
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(127, 97)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 48
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'LblLastFocusDateTime
         '
@@ -1678,4 +1689,5 @@ Partial Class FrmMain
     Friend WithEvents LblSunStopRun As Label
     Friend WithEvents LblSunStartRun As Label
     Friend WithEvents LblSunOpenRoof As Label
+    Friend WithEvents Button1 As Button
 End Class
