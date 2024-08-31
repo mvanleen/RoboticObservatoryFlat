@@ -55,6 +55,19 @@ Module ModHelper
     Private PZipFile As String
     Private PZipSynologyLocation As String
 
+    Public pMessageBoxTitle As String
+    Public pMessageBoxText As String
+    Public pMessageBoxType As String 'CRITICAL, OKONLY, YESNO, OKCANCEL
+
+
+    Public Function ShowMessage(vMessage As String, vType As String, vTitle As String) As String
+        Dim svalue As DialogResult
+        pMessageBoxTitle = vMessage
+        pMessageBoxText = vTitle
+        pMessageBoxType = vType
+        svalue = FrmMessageBox.ShowDialog()
+        Return svalue.ToString
+    End Function
 
     '--------------------------------------------------------------------------------------------------------------------------------------------
     ' SOUND

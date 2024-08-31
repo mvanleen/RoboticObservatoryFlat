@@ -1802,11 +1802,11 @@ Public Class FrmTarget
         Try
             If TxtTargetNbrExposedFrames.Text <> "" Then
                 If IsNumeric(TxtTargetNbrExposedFrames.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!")
                     Exit Sub
                 End If
                 If Convert.ToInt32(TxtTargetNbrExposedFrames.Text) < 0 Or Convert.ToInt32(TxtTargetNbrExposedFrames.Text) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!")
                     Exit Sub
                 End If
             End If
@@ -2708,11 +2708,11 @@ Public Class FrmTarget
 
             If TxtTargetPanel3DEC2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3DEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel3DEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel3DEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!")
                     Exit Sub
                 End If
             End If

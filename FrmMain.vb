@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.Entity
+Imports Newtonsoft.Json.Linq
 
 Public Class FrmMain
 
@@ -154,7 +155,7 @@ Public Class FrmMain
             Me.Cursor = Cursors.Default
 
         Catch ex As Exception
-            MsgBox("FrmMain_Load: " + ex.Message)
+            ShowMessage("FrmMain_Load: " + ex.Message)
         End Try
 
     End Sub
@@ -166,7 +167,7 @@ Public Class FrmMain
             CheckCycle()
             LogSessionEntry("DEBUG", "  TimerCheckCycle_Tick Stop", "", "TimerCheckCycle_Tick", "SEQUENCE")
         Catch ex As Exception
-            MsgBox("TimerCheckCycle_Tick: " + ex.Message)
+            ShowMessage("TimerCheckCycle_Tick: " + ex.Message)
         End Try
     End Sub
 
@@ -993,7 +994,17 @@ Public Class FrmMain
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim svalue As DialogResult
-        svalue = FrmMessageBox.ShowDialog()
+        Dim returnvalue As String
+
+        returnvalue = ShowMessage("What a crazy title !", "CRITICAL", "Loads of text here ...")
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim returnvalue As String
+
+        returnvalue = ShowMessage("Tell me", "YESNO", "Red pill or blue pill ?")
+
     End Sub
 End Class
