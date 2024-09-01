@@ -200,7 +200,7 @@ Public Class FrmProperties
             TxtMountDevice.Enabled = False
 
         Catch ex As Exception
-            MsgBox("FrmProperties_Load: " + ex.Message)
+            ShowMessage("FrmProperties_Load: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -214,7 +214,7 @@ Public Class FrmProperties
                 End If
             End If
         Catch ex As Exception
-            MsgBox("BtnBrowseLog_Click: " + ex.Message)
+            ShowMessage("BtnBrowseLog_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
 
@@ -227,7 +227,7 @@ Public Class FrmProperties
                 TxtAlarmSound.Text = OpenFileDialog.FileName
             End If
         Catch ex As Exception
-            MsgBox("BtnBrowseSound_Click: " + ex.Message)
+            ShowMessage("BtnBrowseSound_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -405,7 +405,7 @@ Public Class FrmProperties
                 TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString() Then
                 'no changes
             Else
-                If MsgBox("Do you want to save the changes ?", vbOKCancel, "Save changes ?") = vbOK Then
+                If ShowMessage("Do you want to save the changes ?", "OKCancel", "Save changes ?") = vbOK Then
                     My.Settings.sAlarmPlay = ChkAlarmPlay.Checked
                     My.Settings.sAlarmRepeat = Convert.ToInt32(TxtAlarmRepeat.Text)
                     My.Settings.sAlarmSound = TxtAlarmSound.Text
@@ -593,13 +593,13 @@ Public Class FrmProperties
                 End If
             End If
         Catch ex As Exception
-            MsgBox("FrmProperties_FormClosing: " + ex.Message)
+            ShowMessage("FrmProperties_FormClosing: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
     Private Sub TxtCCDImagePath_Validating(sender As Object, e As EventArgs) Handles TxtCCDImagePath.Validating
         If TxtCCDImagePath.Text.Last <> "\" Then
-            MsgBox("Last character should be \ !", vbCritical)
+            ShowMessage("Last character should be \ !", "CRITICAL", "Invalid input.")
         End If
     End Sub
 
@@ -609,7 +609,7 @@ Public Class FrmProperties
                 TxtCCDImagePath.Text = FolderBrowserDialog.SelectedPath
             End If
         Catch ex As Exception
-            MsgBox("BtnBrowseLog_Click: " + ex.Message)
+            ShowMessage("BtnBrowseLog_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -623,7 +623,7 @@ Public Class FrmProperties
                 End If
             End If
         Catch ex As Exception
-            MsgBox("BtnBrowseLog_Click: " + ex.Message)
+            ShowMessage("BtnBrowseLog_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -637,7 +637,7 @@ Public Class FrmProperties
                 End If
             End If
         Catch ex As Exception
-            MsgBox("BtnBrowseLog_Click: " + ex.Message)
+            ShowMessage("BtnBrowseLog_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -648,21 +648,21 @@ Public Class FrmProperties
                 TxtSentinelEXE.Text = OpenFileDialog.FileName
             End If
         Catch ex As Exception
-            MsgBox("BtnBrowseSound_Click: " + ex.Message)
+            ShowMessage("BtnBrowseSound_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
 
     Private Sub TxtCCDImagePath_Validating(sender As Object, e As CancelEventArgs) Handles TxtCCDImagePath.Validating
         If TxtCCDImagePath.Text.Last <> "\" Then
-            MsgBox("Last character must be \ !", vbCritical, "Correct input!")
+            ShowMessage("Last character must be \ !", "CRITICAL", "Correct input!")
             TxtCCDImagePath.Focus()
         End If
     End Sub
 
     Private Sub TxtSynologyPath_Validating(sender As Object, e As CancelEventArgs) Handles TxtSynologyPath.Validating
         If TxtSynologyPath.Text.Last <> "\" Then
-            MsgBox("Last character must be \ !", vbCritical, "Correct input!")
+            ShowMessage("Last character must be \ !", "CRITICAL", "Correct input!")
             TxtSynologyPath.Focus()
         End If
     End Sub
@@ -670,7 +670,7 @@ Public Class FrmProperties
 
     Private Sub TxtLogLocation_Validating(sender As Object, e As CancelEventArgs) Handles TxtLogLocation.Validating
         If TxtLogLocation.Text.Last <> "\" Then
-            MsgBox("Last character must be \ !", vbCritical, "Correct input!")
+            ShowMessage("Last character must be \ !", "CRITICAL", "Incorrect input...")
             TxtLogLocation.Focus()
         End If
     End Sub
@@ -680,7 +680,7 @@ Public Class FrmProperties
         ciClone.NumberFormat.NumberDecimalSeparator = "."
 
         If Double.Parse(TxtSunOpenRoof.Text, ciClone) < 0 Then
-            MsgBox("Must be larger or equal to zero!", vbCritical, "Correct input!")
+            ShowMessage("Must be larger or equal to zero!", "CRITICAL", "Incorrect input...")
             TxtLogLocation.Focus()
         End If
     End Sub
@@ -690,7 +690,7 @@ Public Class FrmProperties
         ciClone.NumberFormat.NumberDecimalSeparator = "."
 
         If Double.Parse(TxtSunDuskFlats.Text, ciClone) < -10 Then
-            MsgBox("Must be larger or equal than minus ten!", vbCritical, "Correct input!")
+            ShowMessage("Must be larger or equal than minus ten!", "CRITICAL", "Incorrect input...")
             TxtLogLocation.Focus()
         End If
     End Sub
@@ -700,7 +700,7 @@ Public Class FrmProperties
         ciClone.NumberFormat.NumberDecimalSeparator = "."
 
         If Double.Parse(TxtSunStartRun.Text, ciClone) > 0 Then
-            MsgBox("Must be smaller than zero!", vbCritical, "Correct input!")
+            ShowMessage("Must be smaller than zero!", "CRITICAL", "Inorrect input...")
             TxtLogLocation.Focus()
         End If
     End Sub
@@ -730,7 +730,7 @@ Public Class FrmProperties
 
     Private Sub Txt7ZipLocation_Validating(sender As Object, e As EventArgs) Handles Txt7ZipLocation.Validating
         If Txt7ZipLocation.Text.Contains("7z.exe") = False Then
-            MsgBox("Must contain the path and filename of 7z.exe!", vbCritical, "Correct input!")
+            ShowMessage("Must contain the path and filename of 7z.exe!", "CRITICAL", "Incorrect input...")
             Txt7ZipLocation.Focus()
         End If
     End Sub
@@ -742,7 +742,7 @@ Public Class FrmProperties
                 Txt7ZipLocation.Text = OpenFileDialog.FileName
             End If
         Catch ex As Exception
-            MsgBox("BtnBrowseSound_Click: " + ex.Message)
+            ShowMessage("BtnBrowseSound_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 

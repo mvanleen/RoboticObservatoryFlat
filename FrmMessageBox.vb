@@ -1,6 +1,6 @@
 ﻿
 Public Class FrmMessageBox
-
+    'CRITICAL, OKONLY, YESNO, OKCANCEL
     Private Sub FrmMessageBox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If pMessageBoxType = "CRITICAL" Then
             LblCritical.Visible = True

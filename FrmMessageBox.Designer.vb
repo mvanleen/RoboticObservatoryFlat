@@ -26,9 +26,9 @@ Partial Class FrmMessageBox
         Me.BtnOne = New System.Windows.Forms.Button()
         Me.LblMessage = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnExit = New System.Windows.Forms.Button()
         Me.LblTitle = New System.Windows.Forms.Label()
         Me.LblCritical = New System.Windows.Forms.Label()
-        Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnTwoAlfa = New System.Windows.Forms.Button()
         Me.BtnTwoBeta = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class FrmMessageBox
         Me.BtnOne.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnOne.ForeColor = System.Drawing.Color.White
         Me.BtnOne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnOne.Location = New System.Drawing.Point(140, 109)
+        Me.BtnOne.Location = New System.Drawing.Point(140, 73)
         Me.BtnOne.Name = "BtnOne"
         Me.BtnOne.Size = New System.Drawing.Size(75, 38)
         Me.BtnOne.TabIndex = 0
@@ -54,7 +54,7 @@ Partial Class FrmMessageBox
         '
         Me.LblMessage.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblMessage.ForeColor = System.Drawing.Color.White
-        Me.LblMessage.Location = New System.Drawing.Point(53, 50)
+        Me.LblMessage.Location = New System.Drawing.Point(53, 26)
         Me.LblMessage.Name = "LblMessage"
         Me.LblMessage.Size = New System.Drawing.Size(249, 56)
         Me.LblMessage.TabIndex = 1
@@ -69,8 +69,21 @@ Partial Class FrmMessageBox
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(354, 37)
+        Me.Panel1.Size = New System.Drawing.Size(354, 33)
         Me.Panel1.TabIndex = 4
+        '
+        'BtnExit
+        '
+        Me.BtnExit.BackgroundImage = CType(resources.GetObject("BtnExit.BackgroundImage"), System.Drawing.Image)
+        Me.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnExit.FlatAppearance.BorderSize = 0
+        Me.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnExit.Location = New System.Drawing.Point(320, 0)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.Size = New System.Drawing.Size(34, 34)
+        Me.BtnExit.TabIndex = 6
+        Me.BtnExit.UseVisualStyleBackColor = True
         '
         'LblTitle
         '
@@ -86,23 +99,10 @@ Partial Class FrmMessageBox
         'LblCritical
         '
         Me.LblCritical.Image = CType(resources.GetObject("LblCritical.Image"), System.Drawing.Image)
-        Me.LblCritical.Location = New System.Drawing.Point(0, 50)
+        Me.LblCritical.Location = New System.Drawing.Point(0, 36)
         Me.LblCritical.Name = "LblCritical"
         Me.LblCritical.Size = New System.Drawing.Size(64, 64)
         Me.LblCritical.TabIndex = 5
-        '
-        'BtnExit
-        '
-        Me.BtnExit.BackgroundImage = CType(resources.GetObject("BtnExit.BackgroundImage"), System.Drawing.Image)
-        Me.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnExit.FlatAppearance.BorderSize = 0
-        Me.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnExit.Location = New System.Drawing.Point(320, 0)
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(34, 34)
-        Me.BtnExit.TabIndex = 6
-        Me.BtnExit.UseVisualStyleBackColor = True
         '
         'BtnTwoAlfa
         '
@@ -113,7 +113,7 @@ Partial Class FrmMessageBox
         Me.BtnTwoAlfa.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnTwoAlfa.ForeColor = System.Drawing.Color.White
         Me.BtnTwoAlfa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnTwoAlfa.Location = New System.Drawing.Point(99, 109)
+        Me.BtnTwoAlfa.Location = New System.Drawing.Point(99, 73)
         Me.BtnTwoAlfa.Name = "BtnTwoAlfa"
         Me.BtnTwoAlfa.Size = New System.Drawing.Size(75, 38)
         Me.BtnTwoAlfa.TabIndex = 6
@@ -129,7 +129,7 @@ Partial Class FrmMessageBox
         Me.BtnTwoBeta.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnTwoBeta.ForeColor = System.Drawing.Color.White
         Me.BtnTwoBeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnTwoBeta.Location = New System.Drawing.Point(180, 109)
+        Me.BtnTwoBeta.Location = New System.Drawing.Point(180, 73)
         Me.BtnTwoBeta.Name = "BtnTwoBeta"
         Me.BtnTwoBeta.Size = New System.Drawing.Size(75, 38)
         Me.BtnTwoBeta.TabIndex = 7
@@ -141,13 +141,13 @@ Partial Class FrmMessageBox
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(354, 155)
+        Me.ClientSize = New System.Drawing.Size(354, 117)
+        Me.Controls.Add(Me.BtnOne)
         Me.Controls.Add(Me.BtnTwoBeta)
         Me.Controls.Add(Me.BtnTwoAlfa)
         Me.Controls.Add(Me.LblCritical)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LblMessage)
-        Me.Controls.Add(Me.BtnOne)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmMessageBox"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

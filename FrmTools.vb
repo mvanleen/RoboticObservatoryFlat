@@ -1007,7 +1007,7 @@ Public Class FrmTools
         Try
 
             If TxtFocusserAbsolutePosition.Text = "" Then
-                MsgBox("Enter a focus position value first !", MsgBoxStyle.Critical, "Moving to focus postion.")
+                ShowMessage("Enter a focus position value first !", "CRITICAL", "Moving to focus postion.")
             Else
                 If pTheSkyXEquipmentConnected = True Then
                     ShowWaitCursor()
@@ -1379,7 +1379,7 @@ Public Class FrmTools
                     Exit Sub
                 End If
             Else
-                MsgBox("First enter target coordinates!", vbCritical, "Target slew error")
+                ShowMessage("First enter target coordinates!", "CRITICAL", "Target slew error...")
             End If
             ShowDefaultCursor()
         Catch ex As Exception
@@ -1416,16 +1416,16 @@ Public Class FrmTools
 
             If TxtTargetRA2000HH.Text <> "" Then
                 If IsNumeric(TxtTargetRA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetRA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtTargetRA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetRA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetRA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1436,16 +1436,16 @@ Public Class FrmTools
 
             If TxtTargetRA2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetRA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetRA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetRA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetRA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetRA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1456,16 +1456,16 @@ Public Class FrmTools
 
             If TxtTargetRA2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetRA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetRA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetRA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetRA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetRA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1473,12 +1473,12 @@ Public Class FrmTools
         Try
             If TxtTargetDEC2000DG.Text <> "" Then
                 If IsNumeric(TxtTargetDEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetDEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1489,16 +1489,16 @@ Public Class FrmTools
 
             If TxtTargetDEC2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetDEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetDEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetDEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetDEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1509,16 +1509,16 @@ Public Class FrmTools
 
             If TxtTargetDEC2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetDEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetDEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetDEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetDEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1532,7 +1532,7 @@ Public Class FrmTools
 
                 Select Case returnvalue
                     Case "NOTFOUND"
-                        MsgBox("Target not found !", vbCritical, "The Sky X Application")
+                        ShowMessage("Target not found !", "CRITICAL", "The Sky X Application...")
                         ShowDefaultCursor()
                         Exit Sub
                     Case "OK"
@@ -1568,7 +1568,7 @@ Public Class FrmTools
             ShowDefaultCursor()
         Catch ex As Exception
             ShowDefaultCursor()
-            MsgBox("TxtTargetDEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1636,7 +1636,7 @@ Public Class FrmTools
                     BtnTargetSlew.Enabled = False
 
                 Else
-                    MsgBox("First enter target coordinates!", vbCritical, "Target slew error")
+                    ShowMessage("First enter target coordinates!", "CRITICAL", "Target slew error...")
                 End If
             Else
                 LogSessionEntry("FULL", "Slew could not be completed! Object at : " + Format(pStructObject.ObjectAlt, "0.00") + "°", "", "BtnClosedLoopSlew_Click", "TSX")
@@ -1741,7 +1741,7 @@ Public Class FrmTools
                 ShowDefaultCursor()
             Else
                 'first everything must be on !
-                MsgBox("First turn equipment on!", vbCritical, "Shutdown equipment...")
+                ShowMessage("First turn equipment on!", "CRITICAL", "Shutdown equipment...")
             End If
 
         Catch ex As Exception

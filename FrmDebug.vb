@@ -153,7 +153,7 @@ Public Class FrmDebug
     End Sub
 
     Private Sub BtnShowTargets_Click(sender As Object, e As EventArgs) Handles BtnShowTargets.Click
-        If MsgBox("Show unsafe targets ?", vbYesNo, "What targets should be shown?") = vbYes Then
+        If ShowMessage("Show unsafe targets ?", "YESNO", "What targets should be shown?") = vbYes Then
             DatabaseSelectDeepSky(False, True)
         Else
             DatabaseSelectDeepSky(False, False)
@@ -181,9 +181,5 @@ Public Class FrmDebug
 
     Private Sub BtnError_Click(sender As Object, e As EventArgs) Handles BtnError.Click
         LogSessionEntry("ERROR", "SOME ERROR", "", "SOMETHING", "TSX")
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox(Math.Abs(-1.2345 - 1.456789))
     End Sub
 End Class

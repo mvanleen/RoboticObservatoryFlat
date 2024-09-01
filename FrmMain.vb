@@ -155,7 +155,7 @@ Public Class FrmMain
             Me.Cursor = Cursors.Default
 
         Catch ex As Exception
-            ShowMessage("FrmMain_Load: " + ex.Message)
+            ShowMessage("FrmMain_Load: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
     End Sub
@@ -167,7 +167,7 @@ Public Class FrmMain
             CheckCycle()
             LogSessionEntry("DEBUG", "  TimerCheckCycle_Tick Stop", "", "TimerCheckCycle_Tick", "SEQUENCE")
         Catch ex As Exception
-            ShowMessage("TimerCheckCycle_Tick: " + ex.Message)
+            ShowMessage("TimerCheckCycle_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -261,7 +261,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("CheckCycle: " + ex.Message)
+            ShowMessage("CheckCycle: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -286,7 +286,7 @@ Public Class FrmMain
                 LblRoof.BackColor = Color.IndianRed
             End If
         Catch ex As Exception
-            MsgBox("TimerRoof_Tick: " + ex.Message)
+            ShowMessage("TimerRoof_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -325,7 +325,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("TimerCover_Tick: " + ex.Message)
+            ShowMessage("TimerCover_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -347,7 +347,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("TimerSwitch_Tick: " + ex.Message)
+            ShowMessage("TimerSwitch_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -379,7 +379,7 @@ Public Class FrmMain
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TimerWeather_Tick: " + ex.Message)
+            ShowMessage("TimerWeather_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -425,7 +425,7 @@ Public Class FrmMain
             LogSessionEntry("DEBUG", "  TimerMount_Tick Stop", "", "TimerMount_Tick", "SEQUENCE")
 
         Catch ex As Exception
-            MsgBox("TimerMount_Tick: " + ex.Message)
+            ShowMessage("TimerMount_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -500,7 +500,7 @@ Public Class FrmMain
             LogSessionEntry("DEBUG", "  TimerCCD_Tick Stop", "", "TimerCCD_Tick", "SEQUENCE")
 
         Catch ex As Exception
-            MsgBox("TimerCCD_Tick: " + ex.Message)
+            ShowMessage("TimerCCD_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -518,7 +518,7 @@ Public Class FrmMain
             LogSessionEntry("DEBUG", "  TimerStartRun Stop", "", "TimerStartRun_Tick", "SEQUENCE")
 
         Catch ex As Exception
-            MsgBox("TimerStartRun_Tick: " + ex.Message)
+            ShowMessage("TimerStartRun_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
     End Sub
@@ -560,7 +560,7 @@ Public Class FrmMain
                 TimerStartRun.Enabled = False
             End If
         Catch ex As Exception
-            MsgBox("FrmMain_Shown: " + ex.Message)
+            ShowMessage("FrmMain_Shown: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -618,13 +618,13 @@ Public Class FrmMain
             LogSessionEntry("DEBUG", "  TimerDisaster_Tick Stop", "", "TimerDisaster_Tick", "SEQUENCE")
 
         Catch ex As Exception
-            MsgBox("TimerDisaster_Tick: " + ex.Message)
+            ShowMessage("TimerDisaster_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
     Private Sub ChkDisableSafetyCheck_CheckedChanged(sender As Object, e As EventArgs) Handles ChkDisableSafetyCheck.CheckedChanged
         If ChkDisableSafetyCheck.Checked = True Then
-            'If MsgBox("Are you sure to disable the safety check ?", vbYesNo, "Safety check") = vbYes Then
+            'If ShowMessage("Are you sure to disable the safety check ?", vbYesNo, "Safety check") = vbYes Then
             TimerDisaster.Enabled = False
             ChkDisableSafetyCheck.BackColor = ColorTranslator.FromHtml("#d63031") 'red
             My.Settings.sDisableSafetyCheck = True
@@ -688,7 +688,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("TimerColorStatus_Tick: " + ex.Message)
+            ShowMessage("TimerColorStatus_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
     End Sub
@@ -709,7 +709,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("TimerSmartError_Tick: " + ex.Message)
+            ShowMessage("TimerSmartError_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -723,7 +723,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("TimerSmartError_Tick: " + ex.Message)
+            ShowMessage("TimerSmartError_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
     End Sub
@@ -738,7 +738,7 @@ Public Class FrmMain
 
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
         If pStartRun = True Then
-            MsgBox("First abort the run !", vbCritical, "Abort")
+            ShowMessage("First abort the run !", "CRITICAL", "Abort")
         Else
             Me.Close()
         End If
@@ -791,11 +791,11 @@ Public Class FrmMain
             LogInitializeArray()
 
             If pStartRun = True Then
-                MsgBox("First abort the run !", vbCritical, "Abort")
+                ShowMessage("First abort the run !", "CRITICAL", "Abort")
                 e.Cancel = True
             End If
         Catch ex As Exception
-            MsgBox("FrmMain_Closing: " + ex.Message)
+            ShowMessage("FrmMain_Closing: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -813,9 +813,9 @@ Public Class FrmMain
 
     Private Sub BtnStartRun_Click(sender As Object, e As EventArgs) Handles BtnStartRun.Click
         Try
-            If MsgBox("Do you want to manually start the run ?", vbYesNo, "Start run...") = vbYes Then
+            If ShowMessage("Do you want to manually start the run ?", "YESNO", "Start run...") = vbYes Then
                 If My.Settings.sDisableSafetyCheck = True Then
-                    MsgBox("WARNING: ALL SAFETY CHECKS ARE DISABLED !", vbCritical, "Safety checks...")
+                    ShowMessage("WARNING: ALL SAFETY CHECKS ARE DISABLED !", "CRITICAL", "Safety checks...")
                 End If
 
                 LogInitializeArray()
@@ -852,7 +852,7 @@ Public Class FrmMain
                         LogSessionEntry("FULL", "Run already started!", "", "BtnStartRun_Click", "PROGRAM")
                     End If
                 Else
-                    If MsgBox("Are you sure the roof is open ? ", vbYesNo, "Roof warning") = vbYes Then
+                    If ShowMessage("Are you sure the roof is open ? ", "YESNO", "Roof warning...") = vbYes Then
                         'only when a sequence is not running, it can be started !
                         If pIsSequenceRunning = False And pStartRun = False Then
 
@@ -879,13 +879,13 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("BtnStartRun_Click: " + ex.Message)
+            ShowMessage("BtnStartRun_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
     Private Sub BtnStopRun_Click(sender As Object, e As EventArgs) Handles BtnStopRun.Click
         Try
-            If MsgBox("Do you want to abort the run ?", vbYesNo, "Abort run...") = vbYes Then
+            If ShowMessage("Do you want to abort the run ?", "YESNO", "Abort run...") = vbYes Then
                 'only when a sequence is running it can be aborted !
                 If pStartRun = True And pRunStatus <> "ABORTED" Then
                     pRunStatus = "ABORTING"
@@ -914,7 +914,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("BtnStopRun_Click: " + ex.Message)
+            ShowMessage("BtnStopRun_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -963,7 +963,7 @@ Public Class FrmMain
             End If
 
         Catch ex As Exception
-            MsgBox("ChkAutoStart_CheckedChanged: " + ex.Message)
+            ShowMessage("ChkAutoStart_CheckedChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -977,7 +977,7 @@ Public Class FrmMain
                 My.Settings.sSimulatorMode = False
             End If
         Catch ex As Exception
-            MsgBox("ChkDebugMode_CheckedChanged: " + ex.Message)
+            ShowMessage("ChkDebugMode_CheckedChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -994,17 +994,6 @@ Public Class FrmMain
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim returnvalue As String
-
-        returnvalue = ShowMessage("What a crazy title !", "CRITICAL", "Loads of text here ...")
-
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim returnvalue As String
-
-        returnvalue = ShowMessage("Tell me", "YESNO", "Red pill or blue pill ?")
-
+        ShowMessage("godamned error", "CRITICAL", "what the fuck")
     End Sub
 End Class

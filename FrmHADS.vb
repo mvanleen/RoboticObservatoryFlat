@@ -27,7 +27,7 @@ Public Class FrmHADS
             ComboBoxHADSFilter.Items.Add(My.Settings.sCCDFilter5)
 
         Catch ex As Exception
-            MsgBox("FrmVariables_Load: " + ex.Message)
+            ShowMessage("FrmVariables_Load: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -201,7 +201,7 @@ Public Class FrmHADS
             DataGridViewHADS.DataSource = dtSL_master
             Me.Cursor = Cursors.Default
         Catch ex As Exception
-            MsgBox("LoadDataGrid " + ex.Message)
+            ShowMessage("LoadDataGrid " + ex.Message, "CRITICAL", "Error!")
             Me.Cursor = Cursors.Default
             LoadDataGrid = "NOK"
         End Try
@@ -362,7 +362,7 @@ Public Class FrmHADS
             End Using
             Me.Cursor = Cursors.Default
         Catch ex As Exception
-            MsgBox("LoadRecord " + ex.Message)
+            ShowMessage("LoadRecord " + ex.Message, "CRITICAL", "Error!")
             Me.Cursor = Cursors.Default
             LoadRecord = "NOK"
         End Try
@@ -525,7 +525,7 @@ Public Class FrmHADS
                 .HADSErrorText = Nothing
             End With
         Catch ex As Exception
-            MsgBox("ClearDetailRecord " + ex.Message)
+            ShowMessage("ClearDetailRecord " + ex.Message, "CRITICAL", "Error!")
             ClearDetailRecord = "NOK"
         End Try
     End Function
@@ -538,9 +538,9 @@ Public Class FrmHADS
         returnvalue2 = LoadDataGrid()
 
         If returnvalue <> "OK" Then
-            MsgBox("HADS-file Is Not read correctly.", vbCritical, "Read HADS-file")
+            ShowMessage("HADS-file Is Not read correctly.", "CRITICAL", "Read HADS-file")
         Else
-            MsgBox("HADS-file Is read correctly.", vbOKOnly, "Read HADS-file")
+            ShowMessage("HADS-file Is read correctly.", "OKONLY", "Read HADS-file")
         End If
         Me.Cursor = Cursors.Default
     End Sub
@@ -578,7 +578,7 @@ Public Class FrmHADS
             End If
             Me.Cursor = Cursors.Default
         Catch ex As Exception
-            MsgBox("DataGridViewHADS_CellClick: " + ex.Message)
+            ShowMessage("DataGridViewHADS_CellClick: " + ex.Message, "CRITICAL", "Error!")
             Me.Cursor = Cursors.Default
         End Try
     End Sub
@@ -617,7 +617,7 @@ Public Class FrmHADS
             Me.Cursor = Cursors.Default
 
         Catch ex As Exception
-            MsgBox("DataGridViewHADS_CellClick: " + ex.Message)
+            ShowMessage("DataGridViewHADS_CellClick: " + ex.Message, "CRITICAL", "Error!")
             Me.Cursor = Cursors.Default
         End Try
     End Sub
@@ -655,7 +655,7 @@ Public Class FrmHADS
             End If
             Me.Cursor = Cursors.Default
         Catch ex As Exception
-            MsgBox("DataGridViewHADS_CellClick: " + ex.Message)
+            ShowMessage("DataGridViewHADS_CellClick: " + ex.Message, "CRITICAL", "Error!")
             Me.Cursor = Cursors.Default
         End Try
     End Sub
@@ -816,7 +816,7 @@ Public Class FrmHADS
             End If
             Me.Cursor = Cursors.Default
         Catch ex As Exception
-            MsgBox("UpdateRecord: " + ex.Message)
+            ShowMessage("UpdateRecord: " + ex.Message, "CRITICAL", "Error!")
             Me.Cursor = Cursors.Default
             UpdateRecord = "NOK"
         End Try
@@ -837,7 +837,7 @@ Public Class FrmHADS
             End If
 
         Catch ex As Exception
-            MsgBox(" FrmHADS_Closing: " + ex.Message)
+            ShowMessage(" FrmHADS_Closing: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -852,16 +852,16 @@ Public Class FrmHADS
 
             If TxtFocusStarRA2000HH.Text <> "" Then
                 If IsNumeric(TxtFocusStarRA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarRA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarRA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarRA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarRA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -872,16 +872,16 @@ Public Class FrmHADS
 
             If TxtFocusStarRA2000MM.Text <> "" Then
                 If IsNumeric(TxtFocusStarRA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarRA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarRA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarRA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarRA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -892,16 +892,16 @@ Public Class FrmHADS
 
             If TxtFocusStarRA2000SS.Text <> "" Then
                 If IsNumeric(TxtFocusStarRA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarRA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarRA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarRA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarRA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -909,12 +909,12 @@ Public Class FrmHADS
         Try
             If TxtFocusStarDEC2000DG.Text <> "" Then
                 If IsNumeric(TxtFocusStarDEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarDEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarDEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -925,16 +925,16 @@ Public Class FrmHADS
 
             If TxtFocusStarDEC2000MM.Text <> "" Then
                 If IsNumeric(TxtFocusStarDEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarDEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarDEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarDEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarDEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -945,16 +945,16 @@ Public Class FrmHADS
 
             If TxtFocusStarDEC2000SS.Text <> "" Then
                 If IsNumeric(TxtFocusStarDEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarDEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarDEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarDEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarDEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -965,16 +965,16 @@ Public Class FrmHADS
 
             If TxtFocusStarExposure.Text <> "" Then
                 If IsNumeric(TxtFocusStarExposure.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarExposure.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarExposure.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarExposure_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarExposure_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -985,17 +985,17 @@ Public Class FrmHADS
 
             If TxtHADSExposure.Text <> "" Then
                 If IsNumeric(TxtHADSExposure.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtHADSExposure.Text, ciClone) < 0 Or Double.Parse(TxtHADSExposure.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
 
         Catch ex As Exception
-            MsgBox("TxtTargetExposure_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetExposure_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1014,7 +1014,7 @@ Public Class FrmHADS
                 If Math.Abs(Double.Parse(TxtFocusStarRA2000HH.Text, ciClone) - Double.Parse(TxtHADSRA2000HH.Text, ciClone)) > 2 Or
                         Math.Abs(Double.Parse(TxtFocusStarDEC2000DG.Text, ciClone) - Double.Parse(TxtHADSDEC2000DG.Text, ciClone)) > 10 Then
 
-                    MsgBox("Are you sure the focusstar Is correct? It should be maximum within 2 hours RA And 10° DEC from the target!", vbCritical, "Check the focusstar ...")
+                    ShowMessage("Are you sure the focusstar Is correct? It should be maximum within 2 hours RA And 10° DEC from the target!", "CRITICAL", "Check the focusstar ...")
                     Exit Sub
                 End If
             End If
@@ -1034,7 +1034,7 @@ Public Class FrmHADS
             End If
 
         Catch ex As Exception
-            MsgBox("BtnSave_Click: " + ex.Message)
+            ShowMessage("BtnSave_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1048,7 +1048,7 @@ Public Class FrmHADS
 
                 Select Case returnvalue
                     Case "NOTFOUND"
-                        MsgBox("Focus star not found !", vbCritical, "The Sky X Application")
+                        ShowMessage("Focus star not found !", "CRITICAL", "The Sky X Application")
                         Exit Sub
                     Case "OK"
                         'do nothing
@@ -1081,7 +1081,7 @@ Public Class FrmHADS
                 TxtFocusStarDEC2000SS.Text = DEC_string.Substring(index + 2, 2)
             End If
         Catch ex As Exception
-            MsgBox("BtnFindObject_Click: " + ex.Message)
+            ShowMessage("BtnFindObject_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1101,9 +1101,9 @@ Public Class FrmHADS
         returnvalue2 = LoadDataGrid()
 
         If returnvalue <> "OK" Then
-            MsgBox("HADS-table was not truncated correctly.", vbCritical, "Read HADS-file")
+            ShowMessage("HADS-table was not truncated correctly.", "CRITICAL", "Read HADS-file")
         Else
-            MsgBox("HADS-file truncated correctly.", vbOKOnly, "Read HADS-file")
+            ShowMessage("HADS-file truncated correctly.", "OKONLY", "Read HADS-file")
         End If
         Me.Cursor = Cursors.Default
     End Sub
@@ -1116,9 +1116,9 @@ Public Class FrmHADS
         returnvalue2 = LoadDataGrid()
 
         If returnvalue <> "OK" Then
-            MsgBox("Inactive records HADS-table were NOT deleted correctly.", vbCritical, "Read HADS-file")
+            ShowMessage("Inactive records HADS-table were NOT deleted correctly.", "CRITICAL", "Read HADS-file")
         Else
-            MsgBox("Inactive records HADS-table were deleted correctly.", vbOKOnly, "Read HADS-file")
+            ShowMessage("Inactive records HADS-table were deleted correctly.", "OKONLY", "Read HADS-file")
         End If
         Me.Cursor = Cursors.Default
     End Sub
@@ -1134,7 +1134,7 @@ Public Class FrmHADS
             returnvalue = FindTheSkyXRADEC(RA2000, DEC2000)
 
         Catch ex As Exception
-            MsgBox("BtnTSXCenter_Click: " + ex.Message)
+            ShowMessage("BtnTSXCenter_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 

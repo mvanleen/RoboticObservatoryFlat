@@ -13,17 +13,17 @@ Public Class FrmCalibration
 
             If pStartRun = True Then
                 'sequence already running
-                MsgBox("Cannot start, there is already a run in progesss...", vbCritical, "Calibration frames...")
+                ShowMessage("Cannot start, there is already a run in progesss...", "CRITICAL", "Calibration frames...")
             Else
                 'reset abort flag
                 pAbort = False
 
                 'check status Snapcap: should be closed
                 If pTheSkyXEquipmentConnected = False Then
-                    MsgBox("CCD is not connected... use tools to turn on.", vbCritical, "Calibration frames...")
+                    ShowMessage("CCD is not connected... use tools to turn on.", "CRITICAL", "Calibration frames...")
                 Else
                     If pCoverStatus <> 1 And My.Settings.sCoverMethod <> "NONE" Then 'closed
-                        MsgBox("First close the cover.", vbCritical, "Calibration frames...")
+                        ShowMessage("First close the cover.", "CRITICAL", "Calibration frames...")
                     Else
                         pContinueRunningCalibrationFrames = True
                         BtnStart.Enabled = False
@@ -139,7 +139,7 @@ Public Class FrmCalibration
             End If
 
         Catch ex As Exception
-            MsgBox("BtnStart_Click: " + ex.Message)
+            ShowMessage("BtnStart_Click: " + ex.Message, "CRITICAL", "Error!")
             pContinueRunningCalibrationFrames = False
             BtnStart.Enabled = True
             BtnStop.Enabled = False
@@ -156,7 +156,7 @@ Public Class FrmCalibration
             CmbTargetFilter.Items.Add(My.Settings.sCCDFilter4)
             CmbTargetFilter.Items.Add(My.Settings.sCCDFilter5)
         Catch ex As Exception
-            MsgBox("FrmCalibration_Load: " + ex.Message)
+            ShowMessage("FrmCalibration_Load: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -166,7 +166,7 @@ Public Class FrmCalibration
             BtnStart.Enabled = True
             BtnStop.Enabled = False
         Catch ex As Exception
-            MsgBox("BtnStop_Click: " + ex.Message)
+            ShowMessage("BtnStop_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
     End Sub

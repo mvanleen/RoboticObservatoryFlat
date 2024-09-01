@@ -77,7 +77,6 @@ Partial Class FrmMain
         Me.LblSunStartRun = New System.Windows.Forms.Label()
         Me.LblSunOpenRoof = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.LblLastFocusDateTime = New System.Windows.Forms.Label()
         Me.LblLastFocusTemperature = New System.Windows.Forms.Label()
         Me.LblFocusserTemperature = New System.Windows.Forms.Label()
@@ -130,7 +129,7 @@ Partial Class FrmMain
         Me.RTXLog = New System.Windows.Forms.RichTextBox()
         Me.LblMonitorStatus = New System.Windows.Forms.Label()
         Me.RTXErrors = New System.Windows.Forms.RichTextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer.Panel1.SuspendLayout()
         Me.SplitContainer.Panel2.SuspendLayout()
@@ -730,7 +729,7 @@ Partial Class FrmMain
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.Transparent
-        Me.Panel6.Controls.Add(Me.Button2)
+        Me.Panel6.Controls.Add(Me.Button1)
         Me.Panel6.Controls.Add(Me.LblCivilTwilight)
         Me.Panel6.Controls.Add(Me.LblAstronomicalTwilight)
         Me.Panel6.Controls.Add(Me.LblLST)
@@ -865,7 +864,6 @@ Partial Class FrmMain
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Transparent
-        Me.Panel7.Controls.Add(Me.Button1)
         Me.Panel7.Controls.Add(Me.LblLastFocusDateTime)
         Me.Panel7.Controls.Add(Me.LblLastFocusTemperature)
         Me.Panel7.Controls.Add(Me.LblFocusserTemperature)
@@ -875,15 +873,6 @@ Partial Class FrmMain
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(227, 134)
         Me.Panel7.TabIndex = 110
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(127, 97)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 48
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'LblLastFocusDateTime
         '
@@ -1379,7 +1368,7 @@ Partial Class FrmMain
         '
         Me.LblRoof.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblRoof.ForeColor = System.Drawing.Color.White
-        Me.LblRoof.Location = New System.Drawing.Point(4, 4)
+        Me.LblRoof.Location = New System.Drawing.Point(2, 3)
         Me.LblRoof.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblRoof.Name = "LblRoof"
         Me.LblRoof.Size = New System.Drawing.Size(121, 32)
@@ -1391,7 +1380,7 @@ Partial Class FrmMain
         '
         Me.LblSwitch.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblSwitch.ForeColor = System.Drawing.Color.White
-        Me.LblSwitch.Location = New System.Drawing.Point(127, 4)
+        Me.LblSwitch.Location = New System.Drawing.Point(125, 3)
         Me.LblSwitch.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblSwitch.Name = "LblSwitch"
         Me.LblSwitch.Size = New System.Drawing.Size(121, 32)
@@ -1403,7 +1392,7 @@ Partial Class FrmMain
         '
         Me.LblCover.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCover.ForeColor = System.Drawing.Color.White
-        Me.LblCover.Location = New System.Drawing.Point(250, 4)
+        Me.LblCover.Location = New System.Drawing.Point(248, 3)
         Me.LblCover.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblCover.Name = "LblCover"
         Me.LblCover.Size = New System.Drawing.Size(121, 32)
@@ -1415,7 +1404,7 @@ Partial Class FrmMain
         '
         Me.LblTSX.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTSX.ForeColor = System.Drawing.Color.White
-        Me.LblTSX.Location = New System.Drawing.Point(374, 4)
+        Me.LblTSX.Location = New System.Drawing.Point(372, 3)
         Me.LblTSX.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTSX.Name = "LblTSX"
         Me.LblTSX.Size = New System.Drawing.Size(121, 32)
@@ -1427,7 +1416,7 @@ Partial Class FrmMain
         '
         Me.LblInternet.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInternet.ForeColor = System.Drawing.Color.White
-        Me.LblInternet.Location = New System.Drawing.Point(498, 4)
+        Me.LblInternet.Location = New System.Drawing.Point(496, 3)
         Me.LblInternet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInternet.Name = "LblInternet"
         Me.LblInternet.Size = New System.Drawing.Size(121, 32)
@@ -1439,7 +1428,7 @@ Partial Class FrmMain
         '
         Me.LblUPSCyberPower.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblUPSCyberPower.ForeColor = System.Drawing.Color.White
-        Me.LblUPSCyberPower.Location = New System.Drawing.Point(621, 4)
+        Me.LblUPSCyberPower.Location = New System.Drawing.Point(619, 3)
         Me.LblUPSCyberPower.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblUPSCyberPower.Name = "LblUPSCyberPower"
         Me.LblUPSCyberPower.Size = New System.Drawing.Size(120, 32)
@@ -1547,14 +1536,14 @@ Partial Class FrmMain
         Me.RTXErrors.TabIndex = 89
         Me.RTXErrors.Text = ""
         '
-        'Button2
+        'Button1
         '
-        Me.Button2.Location = New System.Drawing.Point(128, -2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 49
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button1.Location = New System.Drawing.Point(99, 20)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 85
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'FrmMain
         '
@@ -1709,5 +1698,4 @@ Partial Class FrmMain
     Friend WithEvents LblSunStartRun As Label
     Friend WithEvents LblSunOpenRoof As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
 End Class

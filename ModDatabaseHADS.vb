@@ -345,7 +345,7 @@ Module ModDatabaseHADS
 
                         End If
                     Catch ex As Microsoft.VisualBasic.FileIO.MalformedLineException
-                        MsgBox("Line " & ex.Message & "is not valid and will be skipped.")
+                        ShowMessage("Line " & ex.Message & "is not valid and will be skipped.", "CRITICAL", "Incorrect input...")
                     End Try
                 End While
 

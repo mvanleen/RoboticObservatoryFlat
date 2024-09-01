@@ -40,7 +40,7 @@ Public Class FrmTarget
             End If
 
         Catch ex As Exception
-            MsgBox("FrmTarget_Load: " + ex.Message)
+            ShowMessage("FrmTarget_Load: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -139,7 +139,7 @@ Public Class FrmTarget
             DataGridViewTarget.Width = 525
 
         Catch ex As Exception
-            MsgBox("LoadDataGrid " + ex.Message)
+            ShowMessage("LoadDataGrid " + ex.Message, "CRITICAL", "Error!")
             LoadDataGrid = "NOK"
         End Try
     End Function
@@ -344,7 +344,7 @@ Public Class FrmTarget
             End Using
 
         Catch ex As Exception
-            MsgBox("LoadRecord " + ex.Message)
+            ShowMessage("LoadRecord " + ex.Message, "CRITICAL", "Error!")
             LoadRecord = "NOK"
         End Try
     End Function
@@ -563,7 +563,7 @@ Public Class FrmTarget
                 .TargetMosaicOverlap = Nothing
             End With
         Catch ex As Exception
-            MsgBox("ClearDetailRecord " + ex.Message)
+            ShowMessage("ClearDetailRecord " + ex.Message, "CRITICAL", "Error!")
             ClearDetailRecord = "NOK"
         End Try
     End Function
@@ -595,7 +595,7 @@ Public Class FrmTarget
             End If
 
         Catch ex As Exception
-            MsgBox("DataGridViewTarget_CellClick: " + ex.Message)
+            ShowMessage("DataGridViewTarget_CellClick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -609,7 +609,7 @@ Public Class FrmTarget
             End If
 
         Catch ex As Exception
-            MsgBox("BtnDelete_Click: " + ex.Message)
+            ShowMessage("BtnDelete_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
     End Sub
@@ -697,7 +697,7 @@ Public Class FrmTarget
             TxtTargetPanel4NbrExposedFrames.Text = "0"
             TxtTargetMosaicOverlap.Text = "25"
         Catch ex As Exception
-            MsgBox("BtnNew_Click: " + ex.Message)
+            ShowMessage("BtnNew_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
 
     End Sub
@@ -1203,7 +1203,7 @@ Public Class FrmTarget
             End If
 
             If UpdateString <> "" Then
-                If MsgBox("Do you want to update the record?", vbYesNo, "Update record ?") = vbYes Then
+                If ShowMessage("Do you want to update the record?", "YESNO", "Update record?") = vbYes Then
                     Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                         Using cmd As SQLiteCommand = pCon.CreateCommand
                             Using da As New SQLiteDataAdapter
@@ -1234,7 +1234,7 @@ Public Class FrmTarget
 
 
         Catch ex As Exception
-            MsgBox("UpdateRecord: " + ex.Message)
+            ShowMessage("UpdateRecord: " + ex.Message, "CRITICAL", "Error!")
             UpdateRecord = "NOK"
         End Try
     End Function
@@ -1247,7 +1247,7 @@ Public Class FrmTarget
 
         InsertRecord = "OK"
         Try
-            If MsgBox("Do you want to insert the record?", vbYesNo, "Insert record ?") = vbYes Then
+            If ShowMessage("Do you want to insert the record?", "YESNO", "Insert record ?") = vbYes Then
                 'check if all necessary fields are filled
                 If TxtTargetName.Text = "" Or
                    TxtTargetRA2000HH.Text = "" Or
@@ -1366,7 +1366,7 @@ Public Class FrmTarget
                 Exit Function
             End If
         Catch ex As Exception
-            MsgBox("InsertRecord: " + ex.Message)
+            ShowMessage("InsertRecord: " + ex.Message, "CRITICAL", "Error!")
             InsertRecord = "NOK"
 
         End Try
@@ -1382,7 +1382,7 @@ Public Class FrmTarget
             Dim ciClone As CultureInfo = CType(CultureInfo.InvariantCulture.Clone(), CultureInfo)
             ciClone.NumberFormat.NumberDecimalSeparator = "."
 
-            If MsgBox("Are you sure to delete the record?", vbYesNo, "Delete record ?") = vbYes Then
+            If ShowMessage("Are you sure to delete the record?", "YESNO", "Delete record?") = vbYes Then
 
                 Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                     Using cmd As SQLiteCommand = pCon.CreateCommand
@@ -1466,7 +1466,7 @@ Public Class FrmTarget
                                         .TargetMosaicOverlap = Convert.ToInt32(TxtTargetMosaicOverlap.Text)
                                     End With
                                 Else
-                                    MsgBox("No record was DELETED!")
+                                    ShowMessage("No record was DELETED!", "CRITICAL", "Incorrect input...")
                                 End If
                                 pCon.Close()
 
@@ -1488,7 +1488,7 @@ Public Class FrmTarget
 
 
         Catch ex As Exception
-            MsgBox("DeleteRecord: " + ex.Message)
+            ShowMessage("DeleteRecord: " + ex.Message, "CRITICAL", "Error!")
             DeleteRecord = "NOK"
         End Try
 
@@ -1503,16 +1503,16 @@ Public Class FrmTarget
 
             If TxtTargetRA2000HH.Text <> "" Then
                 If IsNumeric(TxtTargetRA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetRA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtTargetRA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetRA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetRA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1520,12 +1520,12 @@ Public Class FrmTarget
         Try
             If TxtTargetDEC2000DG.Text <> "" Then
                 If IsNumeric(TxtTargetDEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetDEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1536,16 +1536,16 @@ Public Class FrmTarget
 
             If TxtFocusStarRA2000HH.Text <> "" Then
                 If IsNumeric(TxtFocusStarRA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarRA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarRA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarRA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarRA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1553,12 +1553,12 @@ Public Class FrmTarget
         Try
             If TxtFocusStarDEC2000DG.Text <> "" Then
                 If IsNumeric(TxtFocusStarDEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarDEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarDEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1569,16 +1569,16 @@ Public Class FrmTarget
 
             If TxtTargetRA2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetRA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetRA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetRA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetRA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetRA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1589,16 +1589,16 @@ Public Class FrmTarget
 
             If TxtTargetDEC2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetDEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetDEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetDEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetDEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1609,16 +1609,16 @@ Public Class FrmTarget
 
             If TxtFocusStarRA2000MM.Text <> "" Then
                 If IsNumeric(TxtFocusStarRA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarRA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarRA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarRA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarRA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1629,16 +1629,16 @@ Public Class FrmTarget
 
             If TxtFocusStarDEC2000MM.Text <> "" Then
                 If IsNumeric(TxtFocusStarDEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarDEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarDEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarDEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarDEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1649,16 +1649,16 @@ Public Class FrmTarget
 
             If TxtTargetRA2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetRA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetRA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetRA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetRA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetRA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1669,16 +1669,16 @@ Public Class FrmTarget
 
             If TxtTargetDEC2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetDEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetDEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetDEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetDEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1689,16 +1689,16 @@ Public Class FrmTarget
 
             If TxtFocusStarRA2000SS.Text <> "" Then
                 If IsNumeric(TxtFocusStarRA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarRA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarRA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarRA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarRA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1709,16 +1709,16 @@ Public Class FrmTarget
 
             If TxtFocusStarDEC2000SS.Text <> "" Then
                 If IsNumeric(TxtFocusStarDEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarDEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarDEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarDEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarDEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1735,7 +1735,7 @@ Public Class FrmTarget
             Next
 
             If doesContain = False Then
-                MsgBox("Text not in list !")
+                ShowMessage("Text not in list !", "CRITICAL", "Correct user input...")
             End If
         End If
     End Sub
@@ -1752,7 +1752,7 @@ Public Class FrmTarget
             Next
 
             If doesContain = False Then
-                MsgBox("Text not in list !")
+                ShowMessage("Text not in list !", "CRITICAL", "Incorrect input...")
             End If
         End If
     End Sub
@@ -1764,17 +1764,17 @@ Public Class FrmTarget
 
             If TxtTargetExposure.Text <> "" Then
                 If IsNumeric(TxtTargetExposure.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetExposure.Text, ciClone) < 0 Or Double.Parse(TxtTargetExposure.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
 
         Catch ex As Exception
-            MsgBox("TxtTargetExposure_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetExposure_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1785,16 +1785,16 @@ Public Class FrmTarget
 
             If TxtTargetNbrFrames.Text <> "" Then
                 If IsNumeric(TxtTargetNbrFrames.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetNbrFrames.Text, ciClone) < 0 Or Double.Parse(TxtTargetNbrFrames.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetNbrFrames_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetNbrFrames_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1802,16 +1802,16 @@ Public Class FrmTarget
         Try
             If TxtTargetNbrExposedFrames.Text <> "" Then
                 If IsNumeric(TxtTargetNbrExposedFrames.Text) = False Then
-                    ShowMessage("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Convert.ToInt32(TxtTargetNbrExposedFrames.Text) < 0 Or Convert.ToInt32(TxtTargetNbrExposedFrames.Text) > 9999 Then
-                    ShowMessage("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect user input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetNbrExposedFrames_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetNbrExposedFrames_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1822,16 +1822,16 @@ Public Class FrmTarget
 
             If TxtFocusStarExposure.Text <> "" Then
                 If IsNumeric(TxtFocusStarExposure.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtFocusStarExposure.Text, ciClone) < 0 Or Double.Parse(TxtFocusStarExposure.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtFocusStarExposure_TextChanged: " + ex.Message)
+            ShowMessage("TxtFocusStarExposure_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1839,11 +1839,11 @@ Public Class FrmTarget
     Private Sub TxtTargetName_TextChanged(sender As Object, e As EventArgs) Handles TxtTargetName.TextChanged
         Try
             If TxtTargetName.Text = "" And TxtTargetName.DataBindings.Count > 0 Then
-                MsgBox("Target name cannot be empty!")
+                ShowMessage("Target name cannot be empty!", "CRITICAL", "Incorrect input...")
                 Exit Sub
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetName_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetName_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1851,16 +1851,16 @@ Public Class FrmTarget
         Try
             If TxtGuideStarExposure.Text <> "" Then
                 If IsNumeric(TxtGuideStarExposure.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Convert.ToInt32(TxtGuideStarExposure.Text) < 0 Or Convert.ToInt32(TxtGuideStarExposure.Text) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtGuideStarExposure_TextChanged: " + ex.Message)
+            ShowMessage("TxtGuideStarExposure_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1868,16 +1868,16 @@ Public Class FrmTarget
         Try
             If TxtGuideStarXBMF.Text <> "" Then
                 If IsNumeric(TxtGuideStarXBMF.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Convert.ToInt32(TxtGuideStarXBMF.Text) < 0 Or Convert.ToInt32(TxtGuideStarXBMF.Text) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtGuideStarXBMF_TextChanged: " + ex.Message)
+            ShowMessage("TxtGuideStarXBMF_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1885,16 +1885,16 @@ Public Class FrmTarget
         Try
             If TxtGuideStarXPMF.Text <> "" Then
                 If IsNumeric(TxtGuideStarXPMF.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Convert.ToInt32(TxtGuideStarXPMF.Text) < 0 Or Convert.ToInt32(TxtGuideStarXPMF.Text) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtGuideStarXPMF_TextChanged: " + ex.Message)
+            ShowMessage("TxtGuideStarXPMF_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1902,16 +1902,16 @@ Public Class FrmTarget
         Try
             If TxtGuideStarYBMF.Text <> "" Then
                 If IsNumeric(TxtGuideStarYBMF.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Convert.ToInt32(TxtGuideStarYBMF.Text) < 0 Or Convert.ToInt32(TxtGuideStarYBMF.Text) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtGuideStarYBMF_TextChanged: " + ex.Message)
+            ShowMessage("TxtGuideStarYBMF_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1919,16 +1919,16 @@ Public Class FrmTarget
         Try
             If TxtGuideStarYPMF.Text <> "" Then
                 If IsNumeric(TxtGuideStarYPMF.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Convert.ToInt32(TxtGuideStarYPMF.Text) < 0 Or Convert.ToInt32(TxtGuideStarYPMF.Text) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtGuideStarYPMF_TextChanged: " + ex.Message)
+            ShowMessage("TxtGuideStarYPMF_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -1942,7 +1942,7 @@ Public Class FrmTarget
 
                 Select Case returnvalue
                     Case "NOTFOUND"
-                        MsgBox("Target not found !", vbCritical, "The Sky X Application")
+                        ShowMessage("Target not found !", "CRITICAL", "The Sky X Application...")
                         Exit Sub
                     Case "OK"
                         'do nothing
@@ -1976,7 +1976,7 @@ Public Class FrmTarget
 
             End If
         Catch ex As Exception
-            MsgBox("BtnFindObject_Click: " + ex.Message)
+            ShowMessage("BtnFindObject_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2003,7 +2003,7 @@ Public Class FrmTarget
             End If
 
         Catch ex As Exception
-            MsgBox("DataGridViewTarget_CellClick: " + ex.Message)
+            ShowMessage("DataGridViewTarget_CellClick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2030,7 +2030,7 @@ Public Class FrmTarget
             End If
 
         Catch ex As Exception
-            MsgBox("DataGridViewTarget_CellClick: " + ex.Message)
+            ShowMessage("DataGridViewTarget_CellClick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2049,7 +2049,7 @@ Public Class FrmTarget
             TxtTargetName.DataBindings.Clear()
 
         Catch ex As Exception
-            MsgBox("BtnNew_Click: " + ex.Message)
+            ShowMessage("BtnNew_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2063,7 +2063,7 @@ Public Class FrmTarget
 
                 Select Case returnvalue
                     Case "NOTFOUND"
-                        MsgBox("Focus star not found !", vbOKOnly, "The Sky X Application")
+                        ShowMessage("Focus star not found !", "OKONLY", "The Sky X Application...")
                         Exit Sub
                     Case "OK"
                         'do nothing
@@ -2096,7 +2096,7 @@ Public Class FrmTarget
                 TxtFocusStarDEC2000SS.Text = DEC_string.Substring(index + 2, 2)
             End If
         Catch ex As Exception
-            MsgBox("BtnFindObject_Click: " + ex.Message)
+            ShowMessage("BtnFindObject_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2115,7 +2115,7 @@ Public Class FrmTarget
             If TxtFocusStarName.Text <> "" Then
                 If Math.Abs(Double.Parse(TxtFocusStarRA2000HH.Text, ciClone) - Double.Parse(TxtTargetRA2000HH.Text, ciClone)) > 2 Or
                         Math.Abs(Double.Parse(TxtFocusStarDEC2000DG.Text, ciClone) - Double.Parse(TxtTargetDEC2000DG.Text, ciClone)) > 10 Then
-                    MsgBox("Are you sure the focusstar Is correct? It should be maximum within 2 hours RA And 10° DEC from the target!", vbCritical, "Check the focusstar ...")
+                    ShowMessage("Are you sure the focusstar Is correct? It should be maximum within 2 hours RA And 10° DEC from the target!", "CRITICAL", "Check the focusstar ...")
                     Exit Sub
                 End If
             End If
@@ -2128,20 +2128,20 @@ Public Class FrmTarget
                 'update
                 returnvalue = UpdateRecord()
                 If returnvalue <> "OK" Then
-                    MsgBox("Update failed!", vbCritical, "Update record")
+                    ShowMessage("Update failed!", "CRITICAL", "Update record...")
                     Exit Sub
                 End If
             ElseIf TxtTargetName.Text <> "" Then
                 'insert
                 returnvalue = InsertRecord()
                 If returnvalue <> "OK" Then
-                    MsgBox("Insert failed!", vbCritical, "Insert record")
+                    ShowMessage("Insert failed!", "CRITICAL", "Insert record...")
                     Exit Sub
                 End If
             End If
 
         Catch ex As Exception
-            MsgBox("InsertUpdateRecord: " + ex.Message)
+            ShowMessage("InsertUpdateRecord: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2164,53 +2164,53 @@ Public Class FrmTarget
             End If
             BtnCalculateMosaic.Enabled = True
 
-                If TxtTargetMosaicFramesPerPanel.Text = "0" Or TxtTargetMosaicFramesPerPanel.Text = "" Then
-                    TxtTargetMosaicFramesPerPanel.Text = "500"
-                End If
+            If TxtTargetMosaicFramesPerPanel.Text = "0" Or TxtTargetMosaicFramesPerPanel.Text = "" Then
+                TxtTargetMosaicFramesPerPanel.Text = "500"
+            End If
 
-                TxtTargetMosaicFramesPerPanel.Enabled = True
-                TxtTargetPanel1RA2000HH.Enabled = True
-                TxtTargetPanel2RA2000HH.Enabled = True
-                TxtTargetPanel3RA2000HH.Enabled = True
-                TxtTargetPanel4RA2000HH.Enabled = True
-                TxtTargetPanel1RA2000MM.Enabled = True
-                TxtTargetPanel2RA2000MM.Enabled = True
-                TxtTargetPanel3RA2000MM.Enabled = True
-                TxtTargetPanel4RA2000MM.Enabled = True
-                TxtTargetPanel1RA2000SS.Enabled = True
-                TxtTargetPanel2RA2000SS.Enabled = True
-                TxtTargetPanel3RA2000SS.Enabled = True
-                TxtTargetPanel4RA2000SS.Enabled = True
-                TxtTargetPanel1DEC2000DG.Enabled = True
-                TxtTargetPanel2DEC2000DG.Enabled = True
-                TxtTargetPanel3DEC2000DG.Enabled = True
-                TxtTargetPanel4DEC2000DG.Enabled = True
-                TxtTargetPanel1DEC2000MM.Enabled = True
-                TxtTargetPanel2DEC2000MM.Enabled = True
-                TxtTargetPanel3DEC2000MM.Enabled = True
-                TxtTargetPanel4DEC2000MM.Enabled = True
-                TxtTargetPanel1DEC2000SS.Enabled = True
-                TxtTargetPanel2DEC2000SS.Enabled = True
-                TxtTargetPanel3DEC2000SS.Enabled = True
-                TxtTargetPanel4DEC2000SS.Enabled = True
-                TxtTargetPanel1NbrExposedFrames.Enabled = True
-                TxtTargetPanel2NbrExposedFrames.Enabled = True
-                TxtTargetPanel3NbrExposedFrames.Enabled = True
-                TxtTargetPanel4NbrExposedFrames.Enabled = True
-                TxtTargetMosaicOverlap.Enabled = True
+            TxtTargetMosaicFramesPerPanel.Enabled = True
+            TxtTargetPanel1RA2000HH.Enabled = True
+            TxtTargetPanel2RA2000HH.Enabled = True
+            TxtTargetPanel3RA2000HH.Enabled = True
+            TxtTargetPanel4RA2000HH.Enabled = True
+            TxtTargetPanel1RA2000MM.Enabled = True
+            TxtTargetPanel2RA2000MM.Enabled = True
+            TxtTargetPanel3RA2000MM.Enabled = True
+            TxtTargetPanel4RA2000MM.Enabled = True
+            TxtTargetPanel1RA2000SS.Enabled = True
+            TxtTargetPanel2RA2000SS.Enabled = True
+            TxtTargetPanel3RA2000SS.Enabled = True
+            TxtTargetPanel4RA2000SS.Enabled = True
+            TxtTargetPanel1DEC2000DG.Enabled = True
+            TxtTargetPanel2DEC2000DG.Enabled = True
+            TxtTargetPanel3DEC2000DG.Enabled = True
+            TxtTargetPanel4DEC2000DG.Enabled = True
+            TxtTargetPanel1DEC2000MM.Enabled = True
+            TxtTargetPanel2DEC2000MM.Enabled = True
+            TxtTargetPanel3DEC2000MM.Enabled = True
+            TxtTargetPanel4DEC2000MM.Enabled = True
+            TxtTargetPanel1DEC2000SS.Enabled = True
+            TxtTargetPanel2DEC2000SS.Enabled = True
+            TxtTargetPanel3DEC2000SS.Enabled = True
+            TxtTargetPanel4DEC2000SS.Enabled = True
+            TxtTargetPanel1NbrExposedFrames.Enabled = True
+            TxtTargetPanel2NbrExposedFrames.Enabled = True
+            TxtTargetPanel3NbrExposedFrames.Enabled = True
+            TxtTargetPanel4NbrExposedFrames.Enabled = True
+            TxtTargetMosaicOverlap.Enabled = True
 
-                'TxtTargetNbrFrames.Text = "0"
-                'TxtTargetNbrExposedFrames.Text = "0"
+            'TxtTargetNbrFrames.Text = "0"
+            'TxtTargetNbrExposedFrames.Text = "0"
 
-                'never do panels on a comet
-                ChkTargetIsComet.Enabled = False
-                ChkTargetIsComet.Checked = False
-                TxtTargetNbrFrames.Enabled = False
-                TxtTargetNbrExposedFrames.Enabled = False
+            'never do panels on a comet
+            ChkTargetIsComet.Enabled = False
+            ChkTargetIsComet.Checked = False
+            TxtTargetNbrFrames.Enabled = False
+            TxtTargetNbrExposedFrames.Enabled = False
 
-            Else
-                'disable mosaic fields
-                CmbTargetMosaicType.Enabled = False
+        Else
+            'disable mosaic fields
+            CmbTargetMosaicType.Enabled = False
             CmbTargetMosaicType.Text = ""
             TxtTargetMosaicFramesPerPanel.Enabled = False
             TxtTargetPanel1RA2000HH.Enabled = False
@@ -2296,16 +2296,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel1RA2000HH.Text <> "" Then
                 If IsNumeric(TxtTargetPanel1RA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel1RA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel1RA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel1RA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel1RA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2316,16 +2316,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel2RA2000HH.Text <> "" Then
                 If IsNumeric(TxtTargetPanel2RA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel2RA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel2RA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel2RA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel2RA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2336,16 +2336,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel3RA2000HH.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3RA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel3RA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel3RA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel3RA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel3RA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2356,16 +2356,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel4RA2000HH.Text <> "" Then
                 If IsNumeric(TxtTargetPanel4RA2000HH.Text) = False Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel4RA2000HH.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel4RA2000HH.Text, ciClone) > 24 Then
-                    MsgBox("Not a number between 0 and 24!")
+                    ShowMessage("Not a number between 0 and 24!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel4RA2000HH_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel4RA2000HH_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2376,16 +2376,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel1RA2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel1RA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel1RA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel1RA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel1RA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel1RA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2396,16 +2396,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel2RA2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel2RA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel2RA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel2RA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel2RA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel2RA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2416,16 +2416,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel3RA2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3RA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel3RA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel3RA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TTxtTargetPanel3RA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TTxtTargetPanel3RA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2436,16 +2436,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel4RA2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel4RA2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel4RA2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel4RA2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel4RA2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel4RA2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2456,16 +2456,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel1RA2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel1RA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel1RA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel1RA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel1RA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel1RA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2476,16 +2476,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel2RA2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel2RA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel2RA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel2RA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel2RA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel2RA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2496,16 +2496,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel3RA2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3RA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel3RA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel3RA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel3RA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel3RA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2516,16 +2516,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel4RA2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel4RA2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel4RA2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel4RA2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel4RA2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel4RA2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2533,12 +2533,12 @@ Public Class FrmTarget
         Try
             If TxtTargetPanel1DEC2000DG.Text <> "" Then
                 If IsNumeric(TxtTargetPanel1DEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel1DEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel1DEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2546,12 +2546,12 @@ Public Class FrmTarget
         Try
             If TxtTargetPanel2DEC2000DG.Text <> "" Then
                 If IsNumeric(TxtTargetPanel2DEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel2DEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel2DEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2559,12 +2559,12 @@ Public Class FrmTarget
         Try
             If TxtTargetPanel3DEC2000DG.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3DEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel3DEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel3DEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2572,12 +2572,12 @@ Public Class FrmTarget
         Try
             If TxtTargetPanel4DEC2000DG.Text <> "" Then
                 If IsNumeric(TxtTargetPanel4DEC2000DG.Text) = False Then
-                    MsgBox("Not a number!")
+                    ShowMessage("Not a number!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel4DEC2000DG_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel4DEC2000DG_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2588,16 +2588,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel1DEC2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel1DEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel1DEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel1DEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel1DEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel1DEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2608,16 +2608,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel2DEC2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel2DEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel2DEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel2DEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetDEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetDEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2628,16 +2628,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel3DEC2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3DEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel3DEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel3DEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel3DEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel3DEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2648,16 +2648,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel4DEC2000MM.Text <> "" Then
                 If IsNumeric(TxtTargetPanel4DEC2000MM.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel4DEC2000MM.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel4DEC2000MM.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel4DEC2000MM_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel4DEC2000MM_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2668,16 +2668,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel1DEC2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel1DEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel1DEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel1DEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel1DEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel1DEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2688,16 +2688,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel2DEC2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel2DEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel2DEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel2DEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel2DEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel2DEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2708,16 +2708,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel3DEC2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3DEC2000SS.Text) = False Then
-                    ShowMessage("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel3DEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel3DEC2000SS.Text, ciClone) > 60 Then
-                    ShowMessage("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel3DEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel3DEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2728,16 +2728,16 @@ Public Class FrmTarget
 
             If TxtTargetPanel4DEC2000SS.Text <> "" Then
                 If IsNumeric(TxtTargetPanel4DEC2000SS.Text) = False Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel4DEC2000SS.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel4DEC2000SS.Text, ciClone) > 60 Then
-                    MsgBox("Not a number between 0 and 60!")
+                    ShowMessage("Not a number between 0 and 60!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel4DEC2000SS_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel4DEC2000SS_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2748,11 +2748,11 @@ Public Class FrmTarget
 
             If TxtTargetPanel1NbrExposedFrames.Text <> "" Then
                 If IsNumeric(TxtTargetPanel1NbrExposedFrames.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel1NbrExposedFrames.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel1NbrExposedFrames.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
 
@@ -2789,7 +2789,7 @@ Public Class FrmTarget
             End If
 
         Catch ex As Exception
-            MsgBox("TxtTargetPanel1NbrExposedFrames_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel1NbrExposedFrames_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2800,11 +2800,11 @@ Public Class FrmTarget
 
             If TxtTargetPanel2NbrExposedFrames.Text <> "" Then
                 If IsNumeric(TxtTargetPanel2NbrExposedFrames.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel2NbrExposedFrames.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel2NbrExposedFrames.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
 
@@ -2841,7 +2841,7 @@ Public Class FrmTarget
 
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel2NbrExposedFrames_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel2NbrExposedFrames_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2852,11 +2852,11 @@ Public Class FrmTarget
 
             If TxtTargetPanel3NbrExposedFrames.Text <> "" Then
                 If IsNumeric(TxtTargetPanel3NbrExposedFrames.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel3NbrExposedFrames.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel3NbrExposedFrames.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
 
@@ -2891,7 +2891,7 @@ Public Class FrmTarget
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel3NbrExposedFrames: " + ex.Message)
+            ShowMessage("TxtTargetPanel3NbrExposedFrames: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2902,11 +2902,11 @@ Public Class FrmTarget
 
             If TxtTargetPanel4NbrExposedFrames.Text <> "" Then
                 If IsNumeric(TxtTargetPanel4NbrExposedFrames.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetPanel4NbrExposedFrames.Text, ciClone) < 0 Or Double.Parse(TxtTargetPanel4NbrExposedFrames.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
 
@@ -2942,7 +2942,7 @@ Public Class FrmTarget
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetPanel4NbrExposedFrames_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetPanel4NbrExposedFrames_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2953,17 +2953,17 @@ Public Class FrmTarget
 
             If TxtTargetMosaicFramesPerPanel.Text <> "" Then
                 If IsNumeric(TxtTargetMosaicFramesPerPanel.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetMosaicFramesPerPanel.Text, ciClone) < 0 Or Double.Parse(TxtTargetMosaicFramesPerPanel.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
 
         Catch ex As Exception
-            MsgBox("TxtTargetMosaicFramesPerPanel_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetMosaicFramesPerPanel_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -2974,16 +2974,16 @@ Public Class FrmTarget
 
             If TxtTargetMosaicOverlap.Text <> "" Then
                 If IsNumeric(TxtTargetMosaicOverlap.Text) = False Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
                 If Double.Parse(TxtTargetMosaicOverlap.Text, ciClone) < 0 Or Double.Parse(TxtTargetMosaicOverlap.Text, ciClone) > 9999 Then
-                    MsgBox("Not a number between 0 and 9999!")
+                    ShowMessage("Not a number between 0 and 9999!", "CRITICAL", "Incorrect input...")
                     Exit Sub
                 End If
             End If
         Catch ex As Exception
-            MsgBox("TxtTargetMosaicOverlap_TextChanged: " + ex.Message)
+            ShowMessage("TxtTargetMosaicOverlap_TextChanged: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -3053,10 +3053,10 @@ Public Class FrmTarget
             TxtTargetPanel4DEC2000SS.Text = ""
 
             If CmbTargetMosaicType.Text = "" Then
-                MsgBox("Mosaic type is not filled in!", vbCritical, "Error")
+                ShowMessage("Mosaic type is not filled in!", "CRITICAL", "Incorrect input...")
             Else
                 If TxtTargetMosaicOverlap.Text = "" Then
-                    MsgBox("Mosaic overlap is not filled in!", vbCritical, "Error")
+                    ShowMessage("Mosaic overlap is not filled in!", "CRITICAL", "Incorrect input...")
                 Else
                     'calculate the numbers
                     If CmbTargetMosaicType.Text = "2x2" Then
@@ -3160,7 +3160,7 @@ Public Class FrmTarget
                 End If
             End If
         Catch ex As Exception
-            MsgBox("BtnCalculateMosaic_Click: " + ex.Message)
+            ShowMessage("BtnCalculateMosaic_Click: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 
@@ -3251,7 +3251,7 @@ Public Class FrmTarget
             End If
 
         Catch ex As Exception
-            MsgBox("DataGridViewTarget_CellClick: " + ex.Message)
+            ShowMessage("DataGridViewTarget_CellClick: " + ex.Message, "CRITICAL", "Error!")
         End Try
     End Sub
 

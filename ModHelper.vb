@@ -60,13 +60,13 @@ Module ModHelper
     Public pMessageBoxType As String 'CRITICAL, OKONLY, YESNO, OKCANCEL
 
 
-    Public Function ShowMessage(vMessage As String, vType As String, vTitle As String) As String
+    Public Function ShowMessage(vMessage As String, vType As String, vTitle As String) As DialogResult
         Dim svalue As DialogResult
-        pMessageBoxTitle = vMessage
-        pMessageBoxText = vTitle
+        pMessageBoxTitle = vTitle
+        pMessageBoxText = vMessage
         pMessageBoxType = vType
         svalue = FrmMessageBox.ShowDialog()
-        Return svalue.ToString
+        Return svalue
     End Function
 
     '--------------------------------------------------------------------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ Module ModHelper
                 End If
 
                 If vBox = True Then
-                    If MsgBox(vMessage, vbCritical, vTitle) = CType("OK", MsgBoxResult) Then
+                    If ShowMessage(vMessage, "CRITICAL", vTitle) = CType("OK", MsgBoxResult) Then
                         StopSound()
                     End If
                 End If
