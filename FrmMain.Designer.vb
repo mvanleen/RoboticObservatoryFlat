@@ -129,7 +129,6 @@ Partial Class FrmMain
         Me.RTXLog = New System.Windows.Forms.RichTextBox()
         Me.LblMonitorStatus = New System.Windows.Forms.Label()
         Me.RTXErrors = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer.Panel1.SuspendLayout()
         Me.SplitContainer.Panel2.SuspendLayout()
@@ -729,7 +728,6 @@ Partial Class FrmMain
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.Transparent
-        Me.Panel6.Controls.Add(Me.Button1)
         Me.Panel6.Controls.Add(Me.LblCivilTwilight)
         Me.Panel6.Controls.Add(Me.LblAstronomicalTwilight)
         Me.Panel6.Controls.Add(Me.LblLST)
@@ -1536,15 +1534,6 @@ Partial Class FrmMain
         Me.RTXErrors.TabIndex = 89
         Me.RTXErrors.Text = ""
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(99, 20)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 85
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -1697,5 +1686,4 @@ Partial Class FrmMain
     Friend WithEvents LblSunStopRun As Label
     Friend WithEvents LblSunStartRun As Label
     Friend WithEvents LblSunOpenRoof As Label
-    Friend WithEvents Button1 As Button
 End Class

@@ -296,7 +296,7 @@ Public Class FrmMain
         Try
             If My.Settings.sCoverMethod = "NONE" Then
                 LblCover.Text = "NO COVER"
-                LblCover.BackColor = Color.Transparent
+                LblCover.BackColor = Color.Silver
             Else
                 If My.Settings.sCoverDevice = "ASCOM.SnapCap.CoverCalibrator" Then
                     LblCover.Text = "SNAPCAP"
@@ -319,7 +319,7 @@ Public Class FrmMain
                             Exit Sub
                         End If
                         LblCover.Text = "ERROR"
-                        LblCover.BackColor = Color.Transparent
+                        LblCover.BackColor = Color.Silver
                     End If
                 End If
             End If
@@ -753,8 +753,6 @@ Public Class FrmMain
     End Sub
 
     Private Sub BtnTools_Click(sender As Object, e As EventArgs) Handles BtnTools.Click
-        FrmTools.StartPosition = FormStartPosition.Manual
-        FrmTools.Location = New Point(0, 150)
         FrmTools.Show()
     End Sub
 
@@ -993,7 +991,7 @@ Public Class FrmMain
         RTXErrors.Clear()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         ShowMessage("godamned error", "CRITICAL", "what the fuck")
     End Sub
 End Class
