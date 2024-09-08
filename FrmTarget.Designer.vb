@@ -808,8 +808,10 @@ Partial Class FrmTarget
         Me.DataGridViewTarget.AllowUserToAddRows = False
         Me.DataGridViewTarget.AllowUserToDeleteRows = False
         Me.DataGridViewTarget.AllowUserToOrderColumns = True
+        Me.DataGridViewTarget.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DataGridViewTarget.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewTarget.Dock = System.Windows.Forms.DockStyle.Left
+        Me.DataGridViewTarget.GridColor = System.Drawing.SystemColors.ActiveCaption
         Me.DataGridViewTarget.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewTarget.MultiSelect = False
         Me.DataGridViewTarget.Name = "DataGridViewTarget"

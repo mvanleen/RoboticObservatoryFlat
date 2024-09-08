@@ -448,7 +448,7 @@ Partial Class FrmTools
         Me.TxtTargetDEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetDEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTargetDEC2000DG.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTargetDEC2000DG.Location = New System.Drawing.Point(251, 65)
+        Me.TxtTargetDEC2000DG.Location = New System.Drawing.Point(253, 65)
         Me.TxtTargetDEC2000DG.Name = "TxtTargetDEC2000DG"
         Me.TxtTargetDEC2000DG.Size = New System.Drawing.Size(26, 14)
         Me.TxtTargetDEC2000DG.TabIndex = 31
@@ -479,7 +479,7 @@ Partial Class FrmTools
         Me.TxtTargetRA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetRA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTargetRA2000HH.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTargetRA2000HH.Location = New System.Drawing.Point(251, 47)
+        Me.TxtTargetRA2000HH.Location = New System.Drawing.Point(253, 47)
         Me.TxtTargetRA2000HH.Name = "TxtTargetRA2000HH"
         Me.TxtTargetRA2000HH.Size = New System.Drawing.Size(26, 14)
         Me.TxtTargetRA2000HH.TabIndex = 25
@@ -547,10 +547,11 @@ Partial Class FrmTools
         'TxtFocusserAbsolutePosition
         '
         Me.TxtFocusserAbsolutePosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusserAbsolutePosition.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtFocusserAbsolutePosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtFocusserAbsolutePosition.Location = New System.Drawing.Point(9, 36)
         Me.TxtFocusserAbsolutePosition.Name = "TxtFocusserAbsolutePosition"
-        Me.TxtFocusserAbsolutePosition.Size = New System.Drawing.Size(51, 21)
+        Me.TxtFocusserAbsolutePosition.Size = New System.Drawing.Size(51, 14)
         Me.TxtFocusserAbsolutePosition.TabIndex = 8
         '
         'TxtRelPosition
@@ -597,6 +598,7 @@ Partial Class FrmTools
         '
         Me.LblFocusserPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LblFocusserPosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFocusserPosition.ForeColor = System.Drawing.Color.White
         Me.LblFocusserPosition.Location = New System.Drawing.Point(109, 5)
         Me.LblFocusserPosition.Name = "LblFocusserPosition"
         Me.LblFocusserPosition.Size = New System.Drawing.Size(95, 20)

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmproperties.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmproperties.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmmessagebox.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmmessagebox.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmessagebox.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maart\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmtarget.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmtarget.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +34,25 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "FrmMessageBox.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb",
+              "RelativeDocumentMoniker": "FrmMessageBox.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb [Design]",
+              "RelativeToolTip": "FrmMessageBox.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-09-04T19:27:10.8Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FrmTools.vb",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTools.vb",
               "RelativeDocumentMoniker": "FrmTools.vb",
               "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTools.vb",
               "RelativeToolTip": "FrmTools.vb",
-              "ViewState": "AgIAAJYDAAAAAAAAAAAAAKwDAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAANoGAAAAAAAAAAAgwPQGAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-09-03T19:58:59.258Z",
               "EditorCaption": ""
@@ -48,43 +60,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "FrmMain.vb",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMain.vb",
-              "RelativeDocumentMoniker": "FrmMain.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMain.vb",
-              "RelativeToolTip": "FrmMain.vb",
-              "ViewState": "AgIAACsBAAAAAAAAAAAAAEEBAAA5AAAAAAAAAA==",
+              "Title": "FrmTarget.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTarget.vb",
+              "RelativeDocumentMoniker": "FrmTarget.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTarget.vb [Design]",
+              "RelativeToolTip": "FrmTarget.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-03T18:52:03.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmMessageBox.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb",
-              "RelativeDocumentMoniker": "FrmMessageBox.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMessageBox.vb [Design]",
-              "RelativeToolTip": "FrmMessageBox.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-01T19:47:11.265Z",
+              "WhenOpened": "2024-09-04T18:56:01.354Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmTools.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTools.vb",
-              "RelativeDocumentMoniker": "FrmTools.vb",
-              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmTools.vb [Design]",
-              "RelativeToolTip": "FrmTools.vb [Design]",
+              "Title": "FrmProperties.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmProperties.vb",
+              "RelativeDocumentMoniker": "FrmProperties.vb",
+              "ToolTip": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmProperties.vb [Design]",
+              "RelativeToolTip": "FrmProperties.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-01T18:33:45.161Z",
+              "WhenOpened": "2024-09-04T17:42:31.649Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FrmMain.vb [Design]",
               "DocumentMoniker": "C:\\Users\\maart\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMain.vb",
               "RelativeDocumentMoniker": "FrmMain.vb",

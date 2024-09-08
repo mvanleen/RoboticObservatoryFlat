@@ -955,6 +955,7 @@ Public Class FrmTools
                 BtnFocusserOUT.Enabled = False
                 BtnFocusserMoveTo.Enabled = False
                 BtnFocusserAutofocus.Enabled = False
+
             End If
         Catch ex As Exception
             LogSessionEntry("ERROR", "TimerFocusser_Tick: " + Err.ToString(), "", "TimerFocusser_Tick", "PROGRAM")
@@ -1203,6 +1204,7 @@ Public Class FrmTools
                 BtnMountWest.Enabled = False
                 BtnMountSouth.Enabled = False
                 BtnMountNorth.Enabled = False
+
             End If
             'set equipent status on PARTIAL when manual change was made => disaster check will close roof
             pEquipmentStatus = "PARTIAL"

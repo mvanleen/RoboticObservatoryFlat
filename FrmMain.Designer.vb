@@ -1459,6 +1459,7 @@ Partial Class FrmMain
         'ChkDisableSafetyCheck
         '
         Me.ChkDisableSafetyCheck.AutoSize = True
+        Me.ChkDisableSafetyCheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.ChkDisableSafetyCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkDisableSafetyCheck.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkDisableSafetyCheck.ForeColor = System.Drawing.Color.White
@@ -1473,6 +1474,7 @@ Partial Class FrmMain
         'ChkSimulatorMode
         '
         Me.ChkSimulatorMode.AutoSize = True
+        Me.ChkSimulatorMode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.ChkSimulatorMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkSimulatorMode.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkSimulatorMode.ForeColor = System.Drawing.Color.White
@@ -1487,6 +1489,7 @@ Partial Class FrmMain
         'ChkAutoStart
         '
         Me.ChkAutoStart.AutoSize = True
+        Me.ChkAutoStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.ChkAutoStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkAutoStart.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkAutoStart.ForeColor = System.Drawing.Color.White
