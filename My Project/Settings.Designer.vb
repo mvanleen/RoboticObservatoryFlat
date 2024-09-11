@@ -524,7 +524,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://aagsolo/cgi-bin/cgiLastData")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://customer.astrohostinge-eye.es:17043//cgi-bin/cgiLastData")>  _
         Public Property sWeatherURL() As String
             Get
                 Return CType(Me("sWeatherURL"),String)

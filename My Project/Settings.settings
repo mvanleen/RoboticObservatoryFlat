@@ -120,7 +120,7 @@
       <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="sWeatherURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://aagsolo/cgi-bin/cgiLastData</Value>
+      <Value Profile="(Default)">http://customer.astrohostinge-eye.es:17043//cgi-bin/cgiLastData</Value>
     </Setting>
     <Setting Name="sWeatherCloud_Clear" Type="System.Double" Scope="User">
       <Value Profile="(Default)">-5</Value>
