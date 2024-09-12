@@ -1815,12 +1815,4 @@ Public Class FrmTools
             LogSessionEntry("ERROR", "BtnPauseEquipment_Click: " + Err.ToString(), "", "BtnPauseEquipment_Click", "PROGRAM")
         End Try
     End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel8_Paint(sender As Object, e As PaintEventArgs) Handles Panel8.Paint
-
-    End Sub
 End Class

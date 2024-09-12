@@ -248,12 +248,13 @@ Partial Class FrmTools
         '
         Me.TxtMountSpeed.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtMountSpeed.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtMountSpeed.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtMountSpeed.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMountSpeed.Location = New System.Drawing.Point(133, 111)
         Me.TxtMountSpeed.Name = "TxtMountSpeed"
         Me.TxtMountSpeed.Size = New System.Drawing.Size(28, 14)
         Me.TxtMountSpeed.TabIndex = 27
         Me.TxtMountSpeed.Text = "1"
+        Me.TxtMountSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnMountWest
         '
@@ -360,11 +361,12 @@ Partial Class FrmTools
         '
         Me.TxtTargetName.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTargetName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTargetName.Location = New System.Drawing.Point(251, 28)
+        Me.TxtTargetName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTargetName.Location = New System.Drawing.Point(252, 28)
         Me.TxtTargetName.Name = "TxtTargetName"
-        Me.TxtTargetName.Size = New System.Drawing.Size(67, 14)
+        Me.TxtTargetName.Size = New System.Drawing.Size(66, 14)
         Me.TxtTargetName.TabIndex = 24
+        Me.TxtTargetName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
@@ -447,11 +449,12 @@ Partial Class FrmTools
         '
         Me.TxtTargetDEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetDEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTargetDEC2000DG.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTargetDEC2000DG.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTargetDEC2000DG.Location = New System.Drawing.Point(253, 65)
         Me.TxtTargetDEC2000DG.Name = "TxtTargetDEC2000DG"
         Me.TxtTargetDEC2000DG.Size = New System.Drawing.Size(26, 14)
         Me.TxtTargetDEC2000DG.TabIndex = 31
+        Me.TxtTargetDEC2000DG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
@@ -468,51 +471,56 @@ Partial Class FrmTools
         '
         Me.TxtTargetRA2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetRA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTargetRA2000SS.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTargetRA2000SS.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTargetRA2000SS.Location = New System.Drawing.Point(336, 48)
         Me.TxtTargetRA2000SS.Name = "TxtTargetRA2000SS"
         Me.TxtTargetRA2000SS.Size = New System.Drawing.Size(40, 14)
         Me.TxtTargetRA2000SS.TabIndex = 28
+        Me.TxtTargetRA2000SS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtTargetRA2000HH
         '
         Me.TxtTargetRA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetRA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTargetRA2000HH.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTargetRA2000HH.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTargetRA2000HH.Location = New System.Drawing.Point(253, 47)
         Me.TxtTargetRA2000HH.Name = "TxtTargetRA2000HH"
         Me.TxtTargetRA2000HH.Size = New System.Drawing.Size(26, 14)
         Me.TxtTargetRA2000HH.TabIndex = 25
+        Me.TxtTargetRA2000HH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtTargetDEC2000MM
         '
         Me.TxtTargetDEC2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetDEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTargetDEC2000MM.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTargetDEC2000MM.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTargetDEC2000MM.Location = New System.Drawing.Point(292, 65)
         Me.TxtTargetDEC2000MM.Name = "TxtTargetDEC2000MM"
         Me.TxtTargetDEC2000MM.Size = New System.Drawing.Size(26, 14)
         Me.TxtTargetDEC2000MM.TabIndex = 33
+        Me.TxtTargetDEC2000MM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtTargetDEC2000SS
         '
         Me.TxtTargetDEC2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetDEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTargetDEC2000SS.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTargetDEC2000SS.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTargetDEC2000SS.Location = New System.Drawing.Point(336, 65)
         Me.TxtTargetDEC2000SS.Name = "TxtTargetDEC2000SS"
         Me.TxtTargetDEC2000SS.Size = New System.Drawing.Size(40, 14)
         Me.TxtTargetDEC2000SS.TabIndex = 34
+        Me.TxtTargetDEC2000SS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtTargetRA2000MM
         '
         Me.TxtTargetRA2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtTargetRA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtTargetRA2000MM.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTargetRA2000MM.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTargetRA2000MM.Location = New System.Drawing.Point(292, 48)
         Me.TxtTargetRA2000MM.Name = "TxtTargetRA2000MM"
         Me.TxtTargetRA2000MM.Size = New System.Drawing.Size(26, 14)
         Me.TxtTargetRA2000MM.TabIndex = 27
+        Me.TxtTargetRA2000MM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnFocusserAutofocus
         '
@@ -548,21 +556,23 @@ Partial Class FrmTools
         '
         Me.TxtFocusserAbsolutePosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtFocusserAbsolutePosition.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtFocusserAbsolutePosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtFocusserAbsolutePosition.Location = New System.Drawing.Point(9, 36)
+        Me.TxtFocusserAbsolutePosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtFocusserAbsolutePosition.Location = New System.Drawing.Point(9, 39)
         Me.TxtFocusserAbsolutePosition.Name = "TxtFocusserAbsolutePosition"
         Me.TxtFocusserAbsolutePosition.Size = New System.Drawing.Size(51, 14)
         Me.TxtFocusserAbsolutePosition.TabIndex = 8
+        Me.TxtFocusserAbsolutePosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtRelPosition
         '
         Me.TxtRelPosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.TxtRelPosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtRelPosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtRelPosition.Location = New System.Drawing.Point(280, 36)
         Me.TxtRelPosition.Name = "TxtRelPosition"
         Me.TxtRelPosition.Size = New System.Drawing.Size(25, 21)
         Me.TxtRelPosition.TabIndex = 7
         Me.TxtRelPosition.Text = "50"
+        Me.TxtRelPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnFocusserOUT
         '
@@ -675,7 +685,8 @@ Partial Class FrmTools
         'CmbTargetFilter
         '
         Me.CmbTargetFilter.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.CmbTargetFilter.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbTargetFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CmbTargetFilter.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbTargetFilter.FormattingEnabled = True
         Me.CmbTargetFilter.Location = New System.Drawing.Point(252, 31)
         Me.CmbTargetFilter.Name = "CmbTargetFilter"
@@ -686,7 +697,8 @@ Partial Class FrmTools
         'CmbTargetBinning
         '
         Me.CmbTargetBinning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.CmbTargetBinning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbTargetBinning.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CmbTargetBinning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbTargetBinning.FormattingEnabled = True
         Me.CmbTargetBinning.Items.AddRange(New Object() {"1x1", "2x2", "3x3"})
         Me.CmbTargetBinning.Location = New System.Drawing.Point(306, 31)
@@ -709,12 +721,14 @@ Partial Class FrmTools
         'TxtCCDExpsoure
         '
         Me.TxtCCDExpsoure.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.TxtCCDExpsoure.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCCDExpsoure.Location = New System.Drawing.Point(197, 31)
+        Me.TxtCCDExpsoure.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtCCDExpsoure.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDExpsoure.Location = New System.Drawing.Point(197, 35)
         Me.TxtCCDExpsoure.Name = "TxtCCDExpsoure"
-        Me.TxtCCDExpsoure.Size = New System.Drawing.Size(54, 21)
+        Me.TxtCCDExpsoure.Size = New System.Drawing.Size(54, 14)
         Me.TxtCCDExpsoure.TabIndex = 11
         Me.TxtCCDExpsoure.Text = "5"
+        Me.TxtCCDExpsoure.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnTakeImage
         '

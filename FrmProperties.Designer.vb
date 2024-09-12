@@ -2877,9 +2877,11 @@ Partial Class FrmProperties
         'ChkSunDawnFlatsNeeded
         '
         Me.ChkSunDawnFlatsNeeded.AutoSize = True
+        Me.ChkSunDawnFlatsNeeded.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkSunDawnFlatsNeeded.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkSunDawnFlatsNeeded.Location = New System.Drawing.Point(3, 101)
         Me.ChkSunDawnFlatsNeeded.Name = "ChkSunDawnFlatsNeeded"
-        Me.ChkSunDawnFlatsNeeded.Size = New System.Drawing.Size(91, 17)
+        Me.ChkSunDawnFlatsNeeded.Size = New System.Drawing.Size(81, 17)
         Me.ChkSunDawnFlatsNeeded.TabIndex = 28
         Me.ChkSunDawnFlatsNeeded.Text = "Dawn flats :"
         Me.ToolTip.SetToolTip(Me.ChkSunDawnFlatsNeeded, "Are dawn flats needed")
@@ -2888,9 +2890,11 @@ Partial Class FrmProperties
         'ChkSunDuskFlatsNeeded
         '
         Me.ChkSunDuskFlatsNeeded.AutoSize = True
+        Me.ChkSunDuskFlatsNeeded.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkSunDuskFlatsNeeded.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkSunDuskFlatsNeeded.Location = New System.Drawing.Point(3, 37)
         Me.ChkSunDuskFlatsNeeded.Name = "ChkSunDuskFlatsNeeded"
-        Me.ChkSunDuskFlatsNeeded.Size = New System.Drawing.Size(88, 17)
+        Me.ChkSunDuskFlatsNeeded.Size = New System.Drawing.Size(77, 17)
         Me.ChkSunDuskFlatsNeeded.TabIndex = 27
         Me.ChkSunDuskFlatsNeeded.Text = "Dusk flats :"
         Me.ToolTip.SetToolTip(Me.ChkSunDuskFlatsNeeded, "Are dusk flats needed")
@@ -2899,112 +2903,135 @@ Partial Class FrmProperties
         'Label82
         '
         Me.Label82.AutoSize = True
+        Me.Label82.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label82.Location = New System.Drawing.Point(139, 102)
         Me.Label82.Name = "Label82"
-        Me.Label82.Size = New System.Drawing.Size(13, 13)
+        Me.Label82.Size = New System.Drawing.Size(12, 13)
         Me.Label82.TabIndex = 26
         Me.Label82.Text = "°"
         '
         'TxtSunDawnFlats
         '
+        Me.TxtSunDawnFlats.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSunDawnFlats.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtSunDawnFlats.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSunDawnFlats.Location = New System.Drawing.Point(85, 99)
         Me.TxtSunDawnFlats.Name = "TxtSunDawnFlats"
-        Me.TxtSunDawnFlats.Size = New System.Drawing.Size(52, 21)
+        Me.TxtSunDawnFlats.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunDawnFlats.TabIndex = 4
         Me.ToolTip.SetToolTip(Me.TxtSunDawnFlats, "Run dawn flats at Sun altitude")
         '
         'Label81
         '
         Me.Label81.AutoSize = True
+        Me.Label81.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label81.Location = New System.Drawing.Point(139, 81)
         Me.Label81.Name = "Label81"
-        Me.Label81.Size = New System.Drawing.Size(13, 13)
+        Me.Label81.Size = New System.Drawing.Size(12, 13)
         Me.Label81.TabIndex = 23
         Me.Label81.Text = "°"
         '
         'Label80
         '
         Me.Label80.AutoSize = True
+        Me.Label80.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label80.Location = New System.Drawing.Point(139, 62)
         Me.Label80.Name = "Label80"
-        Me.Label80.Size = New System.Drawing.Size(13, 13)
+        Me.Label80.Size = New System.Drawing.Size(12, 13)
         Me.Label80.TabIndex = 22
         Me.Label80.Text = "°"
         '
         'Label79
         '
         Me.Label79.AutoSize = True
+        Me.Label79.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label79.Location = New System.Drawing.Point(139, 38)
         Me.Label79.Name = "Label79"
-        Me.Label79.Size = New System.Drawing.Size(13, 13)
+        Me.Label79.Size = New System.Drawing.Size(12, 13)
         Me.Label79.TabIndex = 21
         Me.Label79.Text = "°"
         '
         'Label78
         '
         Me.Label78.AutoSize = True
+        Me.Label78.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label78.Location = New System.Drawing.Point(139, 18)
         Me.Label78.Name = "Label78"
-        Me.Label78.Size = New System.Drawing.Size(13, 13)
+        Me.Label78.Size = New System.Drawing.Size(12, 13)
         Me.Label78.TabIndex = 19
         Me.Label78.Text = "°"
         '
         'TxtSunStopRun
         '
+        Me.TxtSunStopRun.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSunStopRun.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtSunStopRun.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSunStopRun.Location = New System.Drawing.Point(85, 78)
         Me.TxtSunStopRun.Name = "TxtSunStopRun"
-        Me.TxtSunStopRun.Size = New System.Drawing.Size(52, 21)
+        Me.TxtSunStopRun.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunStopRun.TabIndex = 3
         Me.ToolTip.SetToolTip(Me.TxtSunStopRun, "Stop imaging run at Sun altitude")
         '
         'Label72
         '
         Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label72.Location = New System.Drawing.Point(28, 80)
         Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(58, 13)
+        Me.Label72.Size = New System.Drawing.Size(52, 13)
         Me.Label72.TabIndex = 19
         Me.Label72.Text = "Stop run:"
         '
         'TxtSunStartRun
         '
+        Me.TxtSunStartRun.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSunStartRun.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtSunStartRun.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSunStartRun.Location = New System.Drawing.Point(85, 57)
         Me.TxtSunStartRun.Name = "TxtSunStartRun"
-        Me.TxtSunStartRun.Size = New System.Drawing.Size(52, 21)
+        Me.TxtSunStartRun.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunStartRun.TabIndex = 2
         Me.ToolTip.SetToolTip(Me.TxtSunStartRun, "Start imaging run at Sun altitude")
         '
         'Label73
         '
         Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label73.Location = New System.Drawing.Point(30, 60)
         Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(61, 13)
+        Me.Label73.Size = New System.Drawing.Size(54, 13)
         Me.Label73.TabIndex = 17
         Me.Label73.Text = "Start run:"
         '
         'TxtSunDuskFlats
         '
+        Me.TxtSunDuskFlats.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSunDuskFlats.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtSunDuskFlats.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSunDuskFlats.Location = New System.Drawing.Point(85, 36)
         Me.TxtSunDuskFlats.Name = "TxtSunDuskFlats"
-        Me.TxtSunDuskFlats.Size = New System.Drawing.Size(52, 21)
+        Me.TxtSunDuskFlats.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunDuskFlats.TabIndex = 1
         Me.ToolTip.SetToolTip(Me.TxtSunDuskFlats, "Start dusk flat exposures at Sun altitude")
         '
         'TxtSunOpenRoof
         '
+        Me.TxtSunOpenRoof.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSunOpenRoof.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtSunOpenRoof.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSunOpenRoof.Location = New System.Drawing.Point(85, 15)
         Me.TxtSunOpenRoof.Name = "TxtSunOpenRoof"
-        Me.TxtSunOpenRoof.Size = New System.Drawing.Size(52, 21)
+        Me.TxtSunOpenRoof.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunOpenRoof.TabIndex = 0
         Me.ToolTip.SetToolTip(Me.TxtSunOpenRoof, "Open roof at Sun altitude")
         '
         'Label75
         '
         Me.Label75.AutoSize = True
+        Me.Label75.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label75.Location = New System.Drawing.Point(25, 18)
         Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(65, 13)
+        Me.Label75.Size = New System.Drawing.Size(60, 13)
         Me.Label75.TabIndex = 13
         Me.Label75.Text = "Open roof:"
         '
@@ -3018,7 +3045,7 @@ Partial Class FrmProperties
         Me.GrpObject.Controls.Add(Me.Label89)
         Me.GrpObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GrpObject.ForeColor = System.Drawing.Color.White
-        Me.GrpObject.Location = New System.Drawing.Point(165, 189)
+        Me.GrpObject.Location = New System.Drawing.Point(209, 189)
         Me.GrpObject.Name = "GrpObject"
         Me.GrpObject.Size = New System.Drawing.Size(160, 60)
         Me.GrpObject.TabIndex = 12
@@ -3028,61 +3055,73 @@ Partial Class FrmProperties
         'Label87
         '
         Me.Label87.AutoSize = True
+        Me.Label87.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label87.Location = New System.Drawing.Point(145, 39)
         Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(13, 13)
+        Me.Label87.Size = New System.Drawing.Size(12, 13)
         Me.Label87.TabIndex = 21
         Me.Label87.Text = "°"
         '
         'TxtObjectAltLimitWest
         '
+        Me.TxtObjectAltLimitWest.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtObjectAltLimitWest.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtObjectAltLimitWest.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObjectAltLimitWest.Location = New System.Drawing.Point(110, 36)
         Me.TxtObjectAltLimitWest.Name = "TxtObjectAltLimitWest"
-        Me.TxtObjectAltLimitWest.Size = New System.Drawing.Size(33, 21)
+        Me.TxtObjectAltLimitWest.Size = New System.Drawing.Size(33, 14)
         Me.TxtObjectAltLimitWest.TabIndex = 1
         Me.ToolTip.SetToolTip(Me.TxtObjectAltLimitWest, "Altitude limit West to end observations of object.")
         '
         'Label88
         '
         Me.Label88.AutoSize = True
+        Me.Label88.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label88.Location = New System.Drawing.Point(6, 39)
         Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(120, 13)
+        Me.Label88.Size = New System.Drawing.Size(103, 13)
         Me.Label88.TabIndex = 19
         Me.Label88.Text = "Altitude Limit WEST:"
         '
         'Label86
         '
         Me.Label86.AutoSize = True
+        Me.Label86.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label86.Location = New System.Drawing.Point(145, 16)
         Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(13, 13)
+        Me.Label86.Size = New System.Drawing.Size(12, 13)
         Me.Label86.TabIndex = 18
         Me.Label86.Text = "°"
         '
         'TxtObjectAltLimitEast
         '
+        Me.TxtObjectAltLimitEast.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtObjectAltLimitEast.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtObjectAltLimitEast.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObjectAltLimitEast.Location = New System.Drawing.Point(110, 13)
         Me.TxtObjectAltLimitEast.Name = "TxtObjectAltLimitEast"
-        Me.TxtObjectAltLimitEast.Size = New System.Drawing.Size(33, 21)
+        Me.TxtObjectAltLimitEast.Size = New System.Drawing.Size(33, 14)
         Me.TxtObjectAltLimitEast.TabIndex = 0
         Me.ToolTip.SetToolTip(Me.TxtObjectAltLimitEast, "Altitude limit East before observations of object start.")
         '
         'Label89
         '
         Me.Label89.AutoSize = True
+        Me.Label89.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label89.Location = New System.Drawing.Point(6, 16)
         Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(117, 13)
+        Me.Label89.Size = New System.Drawing.Size(100, 13)
         Me.Label89.TabIndex = 13
         Me.Label89.Text = "Altitude Limit EAST:"
         '
         'ChkTurnOffCompletely
         '
         Me.ChkTurnOffCompletely.AutoSize = True
+        Me.ChkTurnOffCompletely.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkTurnOffCompletely.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkTurnOffCompletely.Location = New System.Drawing.Point(119, 37)
         Me.ChkTurnOffCompletely.Name = "ChkTurnOffCompletely"
-        Me.ChkTurnOffCompletely.Size = New System.Drawing.Size(142, 17)
+        Me.ChkTurnOffCompletely.Size = New System.Drawing.Size(121, 17)
         Me.ChkTurnOffCompletely.TabIndex = 30
         Me.ChkTurnOffCompletely.Text = "Turn off completely?"
         Me.ToolTip.SetToolTip(Me.ChkTurnOffCompletely, "Turn off electricity and close snapchat at daybreak ? If false, Snapcap is left o" &
@@ -3092,9 +3131,11 @@ Partial Class FrmProperties
         'ChkMoonIgnore
         '
         Me.ChkMoonIgnore.AutoSize = True
+        Me.ChkMoonIgnore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkMoonIgnore.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkMoonIgnore.Location = New System.Drawing.Point(8, 37)
         Me.ChkMoonIgnore.Name = "ChkMoonIgnore"
-        Me.ChkMoonIgnore.Size = New System.Drawing.Size(98, 17)
+        Me.ChkMoonIgnore.Size = New System.Drawing.Size(84, 17)
         Me.ChkMoonIgnore.TabIndex = 31
         Me.ChkMoonIgnore.Text = "Ignore Moon"
         Me.ToolTip.SetToolTip(Me.ChkMoonIgnore, "Ignore the moon, will do deepsky even when moon conditions are unsafe.")
@@ -3122,9 +3163,11 @@ Partial Class FrmProperties
         '
         'CmbObservationProgram
         '
+        Me.CmbObservationProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CmbObservationProgram.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbObservationProgram.FormattingEnabled = True
         Me.CmbObservationProgram.Items.AddRange(New Object() {"DEEPSKY", "VARIABLES", "DEEPSKY ELSE VARIABLES"})
-        Me.CmbObservationProgram.Location = New System.Drawing.Point(119, 13)
+        Me.CmbObservationProgram.Location = New System.Drawing.Point(136, 14)
         Me.CmbObservationProgram.Name = "CmbObservationProgram"
         Me.CmbObservationProgram.Size = New System.Drawing.Size(190, 21)
         Me.CmbObservationProgram.TabIndex = 20
@@ -3212,9 +3255,12 @@ Partial Class FrmProperties
         '
         'TxtMoonAltitudeAlwaysSafe
         '
-        Me.TxtMoonAltitudeAlwaysSafe.Location = New System.Drawing.Point(114, 14)
+        Me.TxtMoonAltitudeAlwaysSafe.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtMoonAltitudeAlwaysSafe.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMoonAltitudeAlwaysSafe.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtMoonAltitudeAlwaysSafe.Location = New System.Drawing.Point(125, 11)
         Me.TxtMoonAltitudeAlwaysSafe.Name = "TxtMoonAltitudeAlwaysSafe"
-        Me.TxtMoonAltitudeAlwaysSafe.Size = New System.Drawing.Size(28, 21)
+        Me.TxtMoonAltitudeAlwaysSafe.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonAltitudeAlwaysSafe.TabIndex = 0
         Me.TxtMoonAltitudeAlwaysSafe.Text = "0"
         Me.ToolTip.SetToolTip(Me.TxtMoonAltitudeAlwaysSafe, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
@@ -3222,9 +3268,12 @@ Partial Class FrmProperties
         '
         'TxtMoonPhaseAlwaysSafe
         '
-        Me.TxtMoonPhaseAlwaysSafe.Location = New System.Drawing.Point(114, 36)
+        Me.TxtMoonPhaseAlwaysSafe.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtMoonPhaseAlwaysSafe.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMoonPhaseAlwaysSafe.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtMoonPhaseAlwaysSafe.Location = New System.Drawing.Point(125, 36)
         Me.TxtMoonPhaseAlwaysSafe.Name = "TxtMoonPhaseAlwaysSafe"
-        Me.TxtMoonPhaseAlwaysSafe.Size = New System.Drawing.Size(28, 21)
+        Me.TxtMoonPhaseAlwaysSafe.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonPhaseAlwaysSafe.TabIndex = 1
         Me.TxtMoonPhaseAlwaysSafe.Text = "5"
         Me.ToolTip.SetToolTip(Me.TxtMoonPhaseAlwaysSafe, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
@@ -3232,9 +3281,12 @@ Partial Class FrmProperties
         '
         'TxtMoonPhaseLimitLow
         '
+        Me.TxtMoonPhaseLimitLow.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtMoonPhaseLimitLow.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMoonPhaseLimitLow.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMoonPhaseLimitLow.Location = New System.Drawing.Point(60, 59)
         Me.TxtMoonPhaseLimitLow.Name = "TxtMoonPhaseLimitLow"
-        Me.TxtMoonPhaseLimitLow.Size = New System.Drawing.Size(28, 21)
+        Me.TxtMoonPhaseLimitLow.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonPhaseLimitLow.TabIndex = 22
         Me.TxtMoonPhaseLimitLow.Text = "25"
         Me.ToolTip.SetToolTip(Me.TxtMoonPhaseLimitLow, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
@@ -3242,9 +3294,12 @@ Partial Class FrmProperties
         '
         'TxtMoonAltitudeLimitLow
         '
+        Me.TxtMoonAltitudeLimitLow.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtMoonAltitudeLimitLow.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMoonAltitudeLimitLow.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMoonAltitudeLimitLow.Location = New System.Drawing.Point(218, 59)
         Me.TxtMoonAltitudeLimitLow.Name = "TxtMoonAltitudeLimitLow"
-        Me.TxtMoonAltitudeLimitLow.Size = New System.Drawing.Size(28, 21)
+        Me.TxtMoonAltitudeLimitLow.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonAltitudeLimitLow.TabIndex = 25
         Me.TxtMoonAltitudeLimitLow.Text = "25"
         Me.ToolTip.SetToolTip(Me.TxtMoonAltitudeLimitLow, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
@@ -3252,9 +3307,12 @@ Partial Class FrmProperties
         '
         'TxtMoonStartCooldownLow
         '
+        Me.TxtMoonStartCooldownLow.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtMoonStartCooldownLow.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMoonStartCooldownLow.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMoonStartCooldownLow.Location = New System.Drawing.Point(367, 59)
         Me.TxtMoonStartCooldownLow.Name = "TxtMoonStartCooldownLow"
-        Me.TxtMoonStartCooldownLow.Size = New System.Drawing.Size(28, 21)
+        Me.TxtMoonStartCooldownLow.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonStartCooldownLow.TabIndex = 19
         Me.TxtMoonStartCooldownLow.Text = "35"
         Me.ToolTip.SetToolTip(Me.TxtMoonStartCooldownLow, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
@@ -3262,9 +3320,12 @@ Partial Class FrmProperties
         '
         'TxtMoonAltitudeLimitHigh
         '
+        Me.TxtMoonAltitudeLimitHigh.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtMoonAltitudeLimitHigh.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMoonAltitudeLimitHigh.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMoonAltitudeLimitHigh.Location = New System.Drawing.Point(136, 82)
         Me.TxtMoonAltitudeLimitHigh.Name = "TxtMoonAltitudeLimitHigh"
-        Me.TxtMoonAltitudeLimitHigh.Size = New System.Drawing.Size(28, 21)
+        Me.TxtMoonAltitudeLimitHigh.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonAltitudeLimitHigh.TabIndex = 31
         Me.TxtMoonAltitudeLimitHigh.Text = "10"
         Me.ToolTip.SetToolTip(Me.TxtMoonAltitudeLimitHigh, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
@@ -3273,9 +3334,11 @@ Partial Class FrmProperties
         'ChkMoonStartCooldown
         '
         Me.ChkMoonStartCooldown.AutoSize = True
+        Me.ChkMoonStartCooldown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkMoonStartCooldown.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkMoonStartCooldown.Location = New System.Drawing.Point(268, 61)
         Me.ChkMoonStartCooldown.Name = "ChkMoonStartCooldown"
-        Me.ChkMoonStartCooldown.Size = New System.Drawing.Size(111, 17)
+        Me.ChkMoonStartCooldown.Size = New System.Drawing.Size(95, 17)
         Me.ChkMoonStartCooldown.TabIndex = 32
         Me.ChkMoonStartCooldown.Text = "Start cooldown"
         Me.ToolTip.SetToolTip(Me.ChkMoonStartCooldown, "Ignore the moon, will do deepsky even when moon conditions are unsafe.")
@@ -3283,9 +3346,12 @@ Partial Class FrmProperties
         '
         'TxtMoonStartCooldownHigh
         '
+        Me.TxtMoonStartCooldownHigh.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtMoonStartCooldownHigh.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtMoonStartCooldownHigh.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMoonStartCooldownHigh.Location = New System.Drawing.Point(367, 85)
         Me.TxtMoonStartCooldownHigh.Name = "TxtMoonStartCooldownHigh"
-        Me.TxtMoonStartCooldownHigh.Size = New System.Drawing.Size(28, 21)
+        Me.TxtMoonStartCooldownHigh.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonStartCooldownHigh.TabIndex = 35
         Me.TxtMoonStartCooldownHigh.Text = "20"
         Me.ToolTip.SetToolTip(Me.TxtMoonStartCooldownHigh, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
@@ -3539,9 +3605,10 @@ Partial Class FrmProperties
         'Label106
         '
         Me.Label106.AutoSize = True
+        Me.Label106.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label106.Location = New System.Drawing.Point(5, 17)
         Me.Label106.Name = "Label106"
-        Me.Label106.Size = New System.Drawing.Size(131, 13)
+        Me.Label106.Size = New System.Drawing.Size(113, 13)
         Me.Label106.TabIndex = 21
         Me.Label106.Text = "Observation program:"
         '
@@ -3917,54 +3984,60 @@ Partial Class FrmProperties
         'Label168
         '
         Me.Label168.AutoSize = True
+        Me.Label168.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label168.Location = New System.Drawing.Point(396, 89)
         Me.Label168.Name = "Label168"
-        Me.Label168.Size = New System.Drawing.Size(13, 13)
+        Me.Label168.Size = New System.Drawing.Size(12, 13)
         Me.Label168.TabIndex = 36
         Me.Label168.Text = "°"
         '
         'Label126
         '
         Me.Label126.AutoSize = True
+        Me.Label126.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label126.Location = New System.Drawing.Point(396, 62)
         Me.Label126.Name = "Label126"
-        Me.Label126.Size = New System.Drawing.Size(13, 13)
+        Me.Label126.Size = New System.Drawing.Size(12, 13)
         Me.Label126.TabIndex = 20
         Me.Label126.Text = "°"
         '
         'Label162
         '
         Me.Label162.AutoSize = True
+        Me.Label162.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label162.Location = New System.Drawing.Point(170, 82)
         Me.Label162.Name = "Label162"
-        Me.Label162.Size = New System.Drawing.Size(13, 13)
+        Me.Label162.Size = New System.Drawing.Size(12, 13)
         Me.Label162.TabIndex = 32
         Me.Label162.Text = "°"
         '
         'Label163
         '
         Me.Label163.AutoSize = True
+        Me.Label163.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label163.Location = New System.Drawing.Point(6, 85)
         Me.Label163.Name = "Label163"
-        Me.Label163.Size = New System.Drawing.Size(158, 13)
+        Me.Label163.Size = New System.Drawing.Size(137, 13)
         Me.Label163.TabIndex = 30
         Me.Label163.Text = "else safe when altitude <="
         '
         'Label161
         '
         Me.Label161.AutoSize = True
+        Me.Label161.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label161.Location = New System.Drawing.Point(251, 59)
         Me.Label161.Name = "Label161"
-        Me.Label161.Size = New System.Drawing.Size(13, 13)
+        Me.Label161.Size = New System.Drawing.Size(12, 13)
         Me.Label161.TabIndex = 26
         Me.Label161.Text = "°"
         '
         'Label160
         '
         Me.Label160.AutoSize = True
+        Me.Label160.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label160.Location = New System.Drawing.Point(110, 62)
         Me.Label160.Name = "Label160"
-        Me.Label160.Size = New System.Drawing.Size(132, 13)
+        Me.Label160.Size = New System.Drawing.Size(115, 13)
         Me.Label160.TabIndex = 24
         Me.Label160.Text = "safe when altitude <="
         '
@@ -3980,63 +4053,70 @@ Partial Class FrmProperties
         'Label158
         '
         Me.Label158.AutoSize = True
-        Me.Label158.Location = New System.Drawing.Point(161, 39)
+        Me.Label158.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label158.Location = New System.Drawing.Point(170, 39)
         Me.Label158.Name = "Label158"
-        Me.Label158.Size = New System.Drawing.Size(30, 13)
+        Me.Label158.Size = New System.Drawing.Size(26, 13)
         Me.Label158.TabIndex = 21
         Me.Label158.Text = "else"
         '
         'Label157
         '
         Me.Label157.AutoSize = True
-        Me.Label157.Location = New System.Drawing.Point(161, 17)
+        Me.Label157.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label157.Location = New System.Drawing.Point(170, 17)
         Me.Label157.Name = "Label157"
-        Me.Label157.Size = New System.Drawing.Size(30, 13)
+        Me.Label157.Size = New System.Drawing.Size(26, 13)
         Me.Label157.TabIndex = 20
         Me.Label157.Text = "else"
         '
         'Label156
         '
         Me.Label156.AutoSize = True
+        Me.Label156.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label156.Location = New System.Drawing.Point(5, 62)
         Me.Label156.Name = "Label156"
-        Me.Label156.Size = New System.Drawing.Size(65, 13)
+        Me.Label156.Size = New System.Drawing.Size(59, 13)
         Me.Label156.TabIndex = 19
         Me.Label156.Text = "Phase: <="
         '
         'Label71
         '
         Me.Label71.AutoSize = True
-        Me.Label71.Location = New System.Drawing.Point(147, 14)
+        Me.Label71.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(156, 14)
         Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(13, 13)
+        Me.Label71.Size = New System.Drawing.Size(12, 13)
         Me.Label71.TabIndex = 18
         Me.Label71.Text = "°"
         '
         'Label70
         '
         Me.Label70.AutoSize = True
-        Me.Label70.Location = New System.Drawing.Point(143, 39)
+        Me.Label70.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Location = New System.Drawing.Point(152, 39)
         Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(20, 13)
+        Me.Label70.Size = New System.Drawing.Size(18, 13)
         Me.Label70.TabIndex = 17
         Me.Label70.Text = "%"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(2, 39)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(125, 13)
+        Me.Label19.Size = New System.Drawing.Size(111, 13)
         Me.Label19.TabIndex = 15
         Me.Label19.Text = "Phase always safe: <"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(2, 17)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(136, 13)
+        Me.Label18.Size = New System.Drawing.Size(119, 13)
         Me.Label18.TabIndex = 13
         Me.Label18.Text = "Altitude always safe: <"
         '

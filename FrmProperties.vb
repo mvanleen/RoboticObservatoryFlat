@@ -405,7 +405,7 @@ Public Class FrmProperties
                 TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString() Then
                 'no changes
             Else
-                If ShowMessage("Do you want to save the changes ?", "OKCancel", "Save changes ?") = vbOK Then
+                If ShowMessage("Do you want to save the changes ?", "OKCANCEL", "Save changes ?") = vbOK Then
                     My.Settings.sAlarmPlay = ChkAlarmPlay.Checked
                     My.Settings.sAlarmRepeat = Convert.ToInt32(TxtAlarmRepeat.Text)
                     My.Settings.sAlarmSound = TxtAlarmSound.Text
