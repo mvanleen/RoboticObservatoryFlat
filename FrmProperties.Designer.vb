@@ -450,7 +450,6 @@ Partial Class FrmProperties
         Me.GroupBoxCCD.Controls.Add(Me.Label96)
         Me.GroupBoxCCD.Controls.Add(Me.TxtCCDDitheringAmount)
         Me.GroupBoxCCD.Controls.Add(Me.GroupBox8)
-        Me.GroupBoxCCD.Controls.Add(Me.ChkCCDFocusMeridianFlip)
         Me.GroupBoxCCD.Controls.Add(Me.TxtCCDSensorSizeY)
         Me.GroupBoxCCD.Controls.Add(Me.TxtCCDSensorsizeX)
         Me.GroupBoxCCD.Controls.Add(Me.Label14)
@@ -469,9 +468,10 @@ Partial Class FrmProperties
         Me.GroupBoxCCD.Controls.Add(Me.Label7)
         Me.GroupBoxCCD.Controls.Add(Me.Label6)
         Me.GroupBoxCCD.Controls.Add(Me.GrpFocus)
+        Me.GroupBoxCCD.ForeColor = System.Drawing.Color.White
         Me.GroupBoxCCD.Location = New System.Drawing.Point(6, 6)
         Me.GroupBoxCCD.Name = "GroupBoxCCD"
-        Me.GroupBoxCCD.Size = New System.Drawing.Size(493, 288)
+        Me.GroupBoxCCD.Size = New System.Drawing.Size(639, 321)
         Me.GroupBoxCCD.TabIndex = 7
         Me.GroupBoxCCD.TabStop = False
         Me.GroupBoxCCD.Text = "CCD (using The Sky X)"
@@ -479,35 +479,41 @@ Partial Class FrmProperties
         'Label152
         '
         Me.Label152.AutoSize = True
-        Me.Label152.Location = New System.Drawing.Point(411, 58)
+        Me.Label152.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label152.Location = New System.Drawing.Point(483, 65)
         Me.Label152.Name = "Label152"
-        Me.Label152.Size = New System.Drawing.Size(46, 13)
+        Me.Label152.Size = New System.Drawing.Size(38, 13)
         Me.Label152.TabIndex = 56
         Me.Label152.Text = "micron"
         '
         'Label151
         '
         Me.Label151.AutoSize = True
-        Me.Label151.Location = New System.Drawing.Point(315, 58)
+        Me.Label151.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label151.Location = New System.Drawing.Point(383, 65)
         Me.Label151.Name = "Label151"
-        Me.Label151.Size = New System.Drawing.Size(62, 13)
+        Me.Label151.Size = New System.Drawing.Size(54, 13)
         Me.Label151.TabIndex = 55
         Me.Label151.Text = "Pixel size:"
         '
         'TxtCCDPixelSize
         '
-        Me.TxtCCDPixelSize.Location = New System.Drawing.Point(374, 55)
+        Me.TxtCCDPixelSize.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDPixelSize.Location = New System.Drawing.Point(446, 62)
         Me.TxtCCDPixelSize.Name = "TxtCCDPixelSize"
         Me.TxtCCDPixelSize.Size = New System.Drawing.Size(31, 21)
         Me.TxtCCDPixelSize.TabIndex = 54
+        Me.TxtCCDPixelSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtCCDPixelSize, "Normal image scale in 1x1 binning")
         '
         'ChkCCDColorCamera
         '
         Me.ChkCCDColorCamera.AutoSize = True
-        Me.ChkCCDColorCamera.Location = New System.Drawing.Point(318, 35)
+        Me.ChkCCDColorCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkCCDColorCamera.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkCCDColorCamera.Location = New System.Drawing.Point(386, 41)
         Me.ChkCCDColorCamera.Name = "ChkCCDColorCamera"
-        Me.ChkCCDColorCamera.Size = New System.Drawing.Size(101, 17)
+        Me.ChkCCDColorCamera.Size = New System.Drawing.Size(86, 17)
         Me.ChkCCDColorCamera.TabIndex = 53
         Me.ChkCCDColorCamera.Text = "Color camera"
         Me.ToolTip.SetToolTip(Me.ChkCCDColorCamera, "Enable CCD cooling?")
@@ -516,27 +522,32 @@ Partial Class FrmProperties
         'Label147
         '
         Me.Label147.AutoSize = True
-        Me.Label147.Location = New System.Drawing.Point(311, 16)
+        Me.Label147.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label147.Location = New System.Drawing.Point(383, 23)
         Me.Label147.Name = "Label147"
-        Me.Label147.Size = New System.Drawing.Size(89, 13)
+        Me.Label147.Size = New System.Drawing.Size(77, 13)
         Me.Label147.TabIndex = 52
         Me.Label147.Text = "Camera name:"
         '
         'txtCCDName
         '
-        Me.txtCCDName.Location = New System.Drawing.Point(388, 13)
+        Me.txtCCDName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCCDName.Location = New System.Drawing.Point(460, 20)
         Me.txtCCDName.Name = "txtCCDName"
         Me.txtCCDName.Size = New System.Drawing.Size(98, 21)
         Me.txtCCDName.TabIndex = 51
         Me.txtCCDName.Text = "ZWO ASI2600MC"
+        Me.txtCCDName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.txtCCDName, "Normal image scale in 1x1 binning")
         '
         'ChkCCDCoolingEnabled
         '
         Me.ChkCCDCoolingEnabled.AutoSize = True
-        Me.ChkCCDCoolingEnabled.Location = New System.Drawing.Point(102, 120)
+        Me.ChkCCDCoolingEnabled.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkCCDCoolingEnabled.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkCCDCoolingEnabled.Location = New System.Drawing.Point(137, 127)
         Me.ChkCCDCoolingEnabled.Name = "ChkCCDCoolingEnabled"
-        Me.ChkCCDCoolingEnabled.Size = New System.Drawing.Size(109, 17)
+        Me.ChkCCDCoolingEnabled.Size = New System.Drawing.Size(95, 17)
         Me.ChkCCDCoolingEnabled.TabIndex = 44
         Me.ChkCCDCoolingEnabled.Text = "Enable cooling:"
         Me.ToolTip.SetToolTip(Me.ChkCCDCoolingEnabled, "Enable CCD cooling?")
@@ -545,7 +556,7 @@ Partial Class FrmProperties
         'Label92
         '
         Me.Label92.AutoSize = True
-        Me.Label92.Location = New System.Drawing.Point(263, 122)
+        Me.Label92.Location = New System.Drawing.Point(298, 129)
         Me.Label92.Name = "Label92"
         Me.Label92.Size = New System.Drawing.Size(13, 13)
         Me.Label92.TabIndex = 43
@@ -553,36 +564,43 @@ Partial Class FrmProperties
         '
         'TxtCCDCoolingTemperature
         '
-        Me.TxtCCDCoolingTemperature.Location = New System.Drawing.Point(217, 118)
+        Me.TxtCCDCoolingTemperature.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDCoolingTemperature.Location = New System.Drawing.Point(252, 125)
         Me.TxtCCDCoolingTemperature.Name = "TxtCCDCoolingTemperature"
         Me.TxtCCDCoolingTemperature.Size = New System.Drawing.Size(45, 21)
         Me.TxtCCDCoolingTemperature.TabIndex = 42
         Me.TxtCCDCoolingTemperature.Text = "-5"
+        Me.TxtCCDCoolingTemperature.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtCCDCoolingTemperature, "Cooling temperature")
         '
         'Label107
         '
         Me.Label107.AutoSize = True
-        Me.Label107.Location = New System.Drawing.Point(263, 100)
+        Me.Label107.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label107.Location = New System.Drawing.Point(298, 107)
         Me.Label107.Name = "Label107"
-        Me.Label107.Size = New System.Drawing.Size(56, 13)
+        Me.Label107.Size = New System.Drawing.Size(47, 13)
         Me.Label107.TabIndex = 40
         Me.Label107.Text = "min past"
         '
         'TxtMountMeridianFlipMinutes
         '
-        Me.TxtMountMeridianFlipMinutes.Location = New System.Drawing.Point(217, 97)
+        Me.TxtMountMeridianFlipMinutes.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtMountMeridianFlipMinutes.Location = New System.Drawing.Point(252, 104)
         Me.TxtMountMeridianFlipMinutes.Name = "TxtMountMeridianFlipMinutes"
         Me.TxtMountMeridianFlipMinutes.Size = New System.Drawing.Size(45, 21)
         Me.TxtMountMeridianFlipMinutes.TabIndex = 39
+        Me.TxtMountMeridianFlipMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMountMeridianFlipMinutes, "Meridian filp x minutes past the meridian.")
         '
         'RdMountMeridianFlip
         '
         Me.RdMountMeridianFlip.AutoSize = True
-        Me.RdMountMeridianFlip.Location = New System.Drawing.Point(101, 98)
+        Me.RdMountMeridianFlip.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RdMountMeridianFlip.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdMountMeridianFlip.Location = New System.Drawing.Point(136, 105)
         Me.RdMountMeridianFlip.Name = "RdMountMeridianFlip"
-        Me.RdMountMeridianFlip.Size = New System.Drawing.Size(138, 17)
+        Me.RdMountMeridianFlip.Size = New System.Drawing.Size(120, 17)
         Me.RdMountMeridianFlip.TabIndex = 38
         Me.RdMountMeridianFlip.TabStop = True
         Me.RdMountMeridianFlip.Text = "Enable meridian flip:"
@@ -592,9 +610,11 @@ Partial Class FrmProperties
         'RdCCDDithering
         '
         Me.RdCCDDithering.AutoSize = True
-        Me.RdCCDDithering.Location = New System.Drawing.Point(101, 77)
+        Me.RdCCDDithering.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RdCCDDithering.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdCCDDithering.Location = New System.Drawing.Point(136, 84)
         Me.RdCCDDithering.Name = "RdCCDDithering"
-        Me.RdCCDDithering.Size = New System.Drawing.Size(119, 17)
+        Me.RdCCDDithering.Size = New System.Drawing.Size(105, 17)
         Me.RdCCDDithering.TabIndex = 37
         Me.RdCCDDithering.TabStop = True
         Me.RdCCDDithering.Text = "Enable dithering:"
@@ -604,18 +624,21 @@ Partial Class FrmProperties
         'Label96
         '
         Me.Label96.AutoSize = True
-        Me.Label96.Location = New System.Drawing.Point(263, 79)
+        Me.Label96.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label96.Location = New System.Drawing.Point(298, 86)
         Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(40, 13)
+        Me.Label96.Size = New System.Drawing.Size(34, 13)
         Me.Label96.TabIndex = 36
         Me.Label96.Text = "pixels"
         '
         'TxtCCDDitheringAmount
         '
-        Me.TxtCCDDitheringAmount.Location = New System.Drawing.Point(217, 76)
+        Me.TxtCCDDitheringAmount.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDDitheringAmount.Location = New System.Drawing.Point(252, 83)
         Me.TxtCCDDitheringAmount.Name = "TxtCCDDitheringAmount"
         Me.TxtCCDDitheringAmount.Size = New System.Drawing.Size(45, 21)
         Me.TxtCCDDitheringAmount.TabIndex = 6
+        Me.TxtCCDDitheringAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtCCDDitheringAmount, "Dithering of x pixels, calculated using the image paramters above. Dithering will" &
         " slew the telescope, ensuring the meridian flip is done by the mount controller." &
         "")
@@ -633,7 +656,8 @@ Partial Class FrmProperties
         Me.GroupBox8.Controls.Add(Me.Label51)
         Me.GroupBox8.Controls.Add(Me.Label50)
         Me.GroupBox8.Controls.Add(Me.TxtCCDPlateSolveExposure)
-        Me.GroupBox8.Location = New System.Drawing.Point(5, 136)
+        Me.GroupBox8.ForeColor = System.Drawing.Color.White
+        Me.GroupBox8.Location = New System.Drawing.Point(7, 143)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(126, 125)
         Me.GroupBox8.TabIndex = 10
@@ -643,9 +667,10 @@ Partial Class FrmProperties
         'ChkCCDBlindSolve
         '
         Me.ChkCCDBlindSolve.AutoSize = True
+        Me.ChkCCDBlindSolve.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkCCDBlindSolve.Location = New System.Drawing.Point(6, 16)
         Me.ChkCCDBlindSolve.Name = "ChkCCDBlindSolve"
-        Me.ChkCCDBlindSolve.Size = New System.Drawing.Size(92, 17)
+        Me.ChkCCDBlindSolve.Size = New System.Drawing.Size(81, 17)
         Me.ChkCCDBlindSolve.TabIndex = 37
         Me.ChkCCDBlindSolve.Text = "Blind solve?"
         Me.ToolTip.SetToolTip(Me.ChkCCDBlindSolve, "Blind solve images ?")
@@ -654,14 +679,16 @@ Partial Class FrmProperties
         'Label69
         '
         Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label69.Location = New System.Drawing.Point(2, 103)
         Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(103, 13)
+        Me.Label69.Size = New System.Drawing.Size(90, 13)
         Me.Label69.TabIndex = 38
         Me.Label69.Text = "Closed loop tries:"
         '
         'TxtCCDPlateSolveNbrTries
         '
+        Me.TxtCCDPlateSolveNbrTries.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDPlateSolveNbrTries.Location = New System.Drawing.Point(90, 100)
         Me.TxtCCDPlateSolveNbrTries.Name = "TxtCCDPlateSolveNbrTries"
         Me.TxtCCDPlateSolveNbrTries.Size = New System.Drawing.Size(20, 21)
@@ -672,9 +699,10 @@ Partial Class FrmProperties
         'Label68
         '
         Me.Label68.AutoSize = True
+        Me.Label68.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label68.Location = New System.Drawing.Point(2, 81)
         Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(51, 13)
+        Me.Label68.Size = New System.Drawing.Size(45, 13)
         Me.Label68.TabIndex = 37
         Me.Label68.Text = "Binning:"
         '
@@ -701,14 +729,16 @@ Partial Class FrmProperties
         'Label53
         '
         Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.Location = New System.Drawing.Point(2, 60)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(66, 13)
+        Me.Label53.Size = New System.Drawing.Size(58, 13)
         Me.Label53.TabIndex = 33
         Me.Label53.Text = "Max error:"
         '
         'TxtCCDPlateSolveMaxError
         '
+        Me.TxtCCDPlateSolveMaxError.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDPlateSolveMaxError.Location = New System.Drawing.Point(57, 57)
         Me.TxtCCDPlateSolveMaxError.Name = "TxtCCDPlateSolveMaxError"
         Me.TxtCCDPlateSolveMaxError.Size = New System.Drawing.Size(53, 21)
@@ -727,14 +757,16 @@ Partial Class FrmProperties
         'Label50
         '
         Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label50.Location = New System.Drawing.Point(2, 39)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(62, 13)
+        Me.Label50.Size = New System.Drawing.Size(56, 13)
         Me.Label50.TabIndex = 30
         Me.Label50.Text = "Exposure:"
         '
         'TxtCCDPlateSolveExposure
         '
+        Me.TxtCCDPlateSolveExposure.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDPlateSolveExposure.Location = New System.Drawing.Point(57, 36)
         Me.TxtCCDPlateSolveExposure.Name = "TxtCCDPlateSolveExposure"
         Me.TxtCCDPlateSolveExposure.Size = New System.Drawing.Size(53, 21)
@@ -744,9 +776,11 @@ Partial Class FrmProperties
         'ChkCCDFocusMeridianFlip
         '
         Me.ChkCCDFocusMeridianFlip.AutoSize = True
-        Me.ChkCCDFocusMeridianFlip.Location = New System.Drawing.Point(145, 155)
+        Me.ChkCCDFocusMeridianFlip.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkCCDFocusMeridianFlip.ForeColor = System.Drawing.Color.White
+        Me.ChkCCDFocusMeridianFlip.Location = New System.Drawing.Point(8, 21)
         Me.ChkCCDFocusMeridianFlip.Name = "ChkCCDFocusMeridianFlip"
-        Me.ChkCCDFocusMeridianFlip.Size = New System.Drawing.Size(184, 17)
+        Me.ChkCCDFocusMeridianFlip.Size = New System.Drawing.Size(160, 17)
         Me.ChkCCDFocusMeridianFlip.TabIndex = 45
         Me.ChkCCDFocusMeridianFlip.Text = "Refocus after meridian flip ?"
         Me.ToolTip.SetToolTip(Me.ChkCCDFocusMeridianFlip, "Refocus following meridian flip ?")
@@ -754,141 +788,166 @@ Partial Class FrmProperties
         '
         'TxtCCDSensorSizeY
         '
-        Me.TxtCCDSensorSizeY.Location = New System.Drawing.Point(217, 55)
+        Me.TxtCCDSensorSizeY.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDSensorSizeY.Location = New System.Drawing.Point(252, 62)
         Me.TxtCCDSensorSizeY.Name = "TxtCCDSensorSizeY"
         Me.TxtCCDSensorSizeY.Size = New System.Drawing.Size(45, 21)
         Me.TxtCCDSensorSizeY.TabIndex = 9
+        Me.TxtCCDSensorSizeY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtCCDSensorSizeY, "Sensorsize in pixels")
         '
         'TxtCCDSensorsizeX
         '
-        Me.TxtCCDSensorsizeX.Location = New System.Drawing.Point(217, 34)
+        Me.TxtCCDSensorsizeX.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDSensorsizeX.Location = New System.Drawing.Point(252, 41)
         Me.TxtCCDSensorsizeX.Name = "TxtCCDSensorsizeX"
         Me.TxtCCDSensorsizeX.Size = New System.Drawing.Size(45, 21)
         Me.TxtCCDSensorsizeX.TabIndex = 8
+        Me.TxtCCDSensorsizeX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtCCDSensorsizeX, "Sensorsize in pixels")
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(104, 61)
+        Me.Label14.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(139, 68)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(87, 13)
+        Me.Label14.Size = New System.Drawing.Size(77, 13)
         Me.Label14.TabIndex = 22
         Me.Label14.Text = "Sensor size Y :"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(104, 39)
+        Me.Label13.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(139, 46)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(84, 13)
+        Me.Label13.Size = New System.Drawing.Size(74, 13)
         Me.Label13.TabIndex = 21
         Me.Label13.Text = "Sensor size X:"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(268, 16)
+        Me.Label12.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(303, 23)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(33, 13)
+        Me.Label12.Size = New System.Drawing.Size(27, 13)
         Me.Label12.TabIndex = 20
         Me.Label12.Text = """/px"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(104, 16)
+        Me.Label11.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(139, 23)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(79, 13)
+        Me.Label11.Size = New System.Drawing.Size(68, 13)
         Me.Label11.TabIndex = 19
         Me.Label11.Text = "Image scale:"
         '
         'TxtCCDImageScale
         '
-        Me.TxtCCDImageScale.Location = New System.Drawing.Point(217, 13)
+        Me.TxtCCDImageScale.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDImageScale.Location = New System.Drawing.Point(252, 20)
         Me.TxtCCDImageScale.Name = "TxtCCDImageScale"
         Me.TxtCCDImageScale.Size = New System.Drawing.Size(45, 21)
         Me.TxtCCDImageScale.TabIndex = 7
+        Me.TxtCCDImageScale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtCCDImageScale, "Normal image scale in 1x1 binning")
         '
         'TxtCCDFilter4
         '
-        Me.TxtCCDFilter4.Location = New System.Drawing.Point(43, 76)
+        Me.TxtCCDFilter4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDFilter4.Location = New System.Drawing.Point(53, 83)
         Me.TxtCCDFilter4.Name = "TxtCCDFilter4"
         Me.TxtCCDFilter4.Size = New System.Drawing.Size(55, 21)
         Me.TxtCCDFilter4.TabIndex = 3
+        Me.TxtCCDFilter4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtCCDFilter5
         '
-        Me.TxtCCDFilter5.Location = New System.Drawing.Point(43, 97)
+        Me.TxtCCDFilter5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDFilter5.Location = New System.Drawing.Point(53, 104)
         Me.TxtCCDFilter5.Name = "TxtCCDFilter5"
         Me.TxtCCDFilter5.Size = New System.Drawing.Size(55, 21)
         Me.TxtCCDFilter5.TabIndex = 4
+        Me.TxtCCDFilter5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtCCDFilter3
         '
-        Me.TxtCCDFilter3.Location = New System.Drawing.Point(43, 55)
+        Me.TxtCCDFilter3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDFilter3.Location = New System.Drawing.Point(53, 62)
         Me.TxtCCDFilter3.Name = "TxtCCDFilter3"
         Me.TxtCCDFilter3.Size = New System.Drawing.Size(55, 21)
         Me.TxtCCDFilter3.TabIndex = 2
+        Me.TxtCCDFilter3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtCCDFilter2
         '
-        Me.TxtCCDFilter2.Location = New System.Drawing.Point(43, 34)
+        Me.TxtCCDFilter2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDFilter2.Location = New System.Drawing.Point(53, 41)
         Me.TxtCCDFilter2.Name = "TxtCCDFilter2"
         Me.TxtCCDFilter2.Size = New System.Drawing.Size(55, 21)
         Me.TxtCCDFilter2.TabIndex = 1
+        Me.TxtCCDFilter2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtCCDFilter1
         '
-        Me.TxtCCDFilter1.Location = New System.Drawing.Point(43, 13)
+        Me.TxtCCDFilter1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDFilter1.Location = New System.Drawing.Point(53, 20)
         Me.TxtCCDFilter1.Name = "TxtCCDFilter1"
         Me.TxtCCDFilter1.Size = New System.Drawing.Size(55, 21)
         Me.TxtCCDFilter1.TabIndex = 0
+        Me.TxtCCDFilter1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(3, 79)
+        Me.Label10.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(8, 86)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(49, 13)
+        Me.Label10.Size = New System.Drawing.Size(44, 13)
         Me.Label10.TabIndex = 6
         Me.Label10.Text = "Filter 4:"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 100)
+        Me.Label9.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(8, 107)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(49, 13)
+        Me.Label9.Size = New System.Drawing.Size(44, 13)
         Me.Label9.TabIndex = 5
         Me.Label9.Text = "Filter 5:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(3, 58)
+        Me.Label8.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(8, 65)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(49, 13)
+        Me.Label8.Size = New System.Drawing.Size(44, 13)
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Filter 3:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(2, 37)
+        Me.Label7.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(7, 44)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(49, 13)
+        Me.Label7.Size = New System.Drawing.Size(44, 13)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Filter 2:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 16)
+        Me.Label6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(8, 23)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Filter 1:"
         '
@@ -910,7 +969,9 @@ Partial Class FrmProperties
         Me.GrpFocus.Controls.Add(Me.Label94)
         Me.GrpFocus.Controls.Add(Me.Label15)
         Me.GrpFocus.Controls.Add(Me.TxtCCDFocusSubFrame)
-        Me.GrpFocus.Location = New System.Drawing.Point(137, 136)
+        Me.GrpFocus.Controls.Add(Me.ChkCCDFocusMeridianFlip)
+        Me.GrpFocus.ForeColor = System.Drawing.Color.White
+        Me.GrpFocus.Location = New System.Drawing.Point(206, 169)
         Me.GrpFocus.Name = "GrpFocus"
         Me.GrpFocus.Size = New System.Drawing.Size(249, 146)
         Me.GrpFocus.TabIndex = 46
@@ -920,9 +981,10 @@ Partial Class FrmProperties
         'ChkCCDFocusClosedLoopSlew
         '
         Me.ChkCCDFocusClosedLoopSlew.AutoSize = True
+        Me.ChkCCDFocusClosedLoopSlew.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkCCDFocusClosedLoopSlew.Location = New System.Drawing.Point(8, 38)
         Me.ChkCCDFocusClosedLoopSlew.Name = "ChkCCDFocusClosedLoopSlew"
-        Me.ChkCCDFocusClosedLoopSlew.Size = New System.Drawing.Size(198, 17)
+        Me.ChkCCDFocusClosedLoopSlew.Size = New System.Drawing.Size(174, 17)
         Me.ChkCCDFocusClosedLoopSlew.TabIndex = 57
         Me.ChkCCDFocusClosedLoopSlew.Text = "Closed loop slew to focus star?"
         Me.ToolTip.SetToolTip(Me.ChkCCDFocusClosedLoopSlew, "Refocus following meridian flip ?")
@@ -931,15 +993,17 @@ Partial Class FrmProperties
         'Label109
         '
         Me.Label109.AutoSize = True
+        Me.Label109.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label109.Location = New System.Drawing.Point(111, 123)
         Me.Label109.Name = "Label109"
-        Me.Label109.Size = New System.Drawing.Size(46, 13)
+        Me.Label109.Size = New System.Drawing.Size(41, 13)
         Me.Label109.TabIndex = 58
         Me.Label109.Text = "Within:"
         Me.ToolTip.SetToolTip(Me.Label109, "Fork +- focus position should be in relative to value above")
         '
         'TxtFocusDefaultFork
         '
+        Me.TxtFocusDefaultFork.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtFocusDefaultFork.Location = New System.Drawing.Point(198, 120)
         Me.TxtFocusDefaultFork.Name = "TxtFocusDefaultFork"
         Me.TxtFocusDefaultFork.Size = New System.Drawing.Size(45, 21)
@@ -951,14 +1015,16 @@ Partial Class FrmProperties
         'Label103
         '
         Me.Label103.AutoSize = True
+        Me.Label103.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label103.Location = New System.Drawing.Point(111, 103)
         Me.Label103.Name = "Label103"
-        Me.Label103.Size = New System.Drawing.Size(99, 13)
+        Me.Label103.Size = New System.Drawing.Size(86, 13)
         Me.Label103.TabIndex = 56
         Me.Label103.Text = "Default position:"
         '
         'TxtCCDFocusSamples
         '
+        Me.TxtCCDFocusSamples.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDFocusSamples.Location = New System.Drawing.Point(198, 77)
         Me.TxtCCDFocusSamples.Name = "TxtCCDFocusSamples"
         Me.TxtCCDFocusSamples.Size = New System.Drawing.Size(45, 21)
@@ -967,6 +1033,7 @@ Partial Class FrmProperties
         '
         'TxtCCDFocusDefExp
         '
+        Me.TxtCCDFocusDefExp.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDFocusDefExp.Location = New System.Drawing.Point(198, 57)
         Me.TxtCCDFocusDefExp.Name = "TxtCCDFocusDefExp"
         Me.TxtCCDFocusDefExp.Size = New System.Drawing.Size(45, 21)
@@ -975,6 +1042,7 @@ Partial Class FrmProperties
         '
         'TxtFocusDefaultPosition
         '
+        Me.TxtFocusDefaultPosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtFocusDefaultPosition.Location = New System.Drawing.Point(198, 98)
         Me.TxtFocusDefaultPosition.Name = "TxtFocusDefaultPosition"
         Me.TxtFocusDefaultPosition.Size = New System.Drawing.Size(45, 21)
@@ -986,18 +1054,20 @@ Partial Class FrmProperties
         'Label101
         '
         Me.Label101.AutoSize = True
+        Me.Label101.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label101.Location = New System.Drawing.Point(111, 62)
         Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(97, 13)
+        Me.Label101.Size = New System.Drawing.Size(86, 13)
         Me.Label101.TabIndex = 54
         Me.Label101.Text = "Default exp (s): "
         '
         'Label100
         '
         Me.Label100.AutoSize = True
+        Me.Label100.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label100.Location = New System.Drawing.Point(111, 81)
         Me.Label100.Name = "Label100"
-        Me.Label100.Size = New System.Drawing.Size(72, 13)
+        Me.Label100.Size = New System.Drawing.Size(63, 13)
         Me.Label100.TabIndex = 53
         Me.Label100.Text = "# samples :"
         '
@@ -1012,6 +1082,7 @@ Partial Class FrmProperties
         '
         'TxtCCDFocusEveryXExposures
         '
+        Me.TxtCCDFocusEveryXExposures.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDFocusEveryXExposures.Location = New System.Drawing.Point(10, 77)
         Me.TxtCCDFocusEveryXExposures.Name = "TxtCCDFocusEveryXExposures"
         Me.TxtCCDFocusEveryXExposures.Size = New System.Drawing.Size(33, 21)
@@ -1021,14 +1092,16 @@ Partial Class FrmProperties
         'Label95
         '
         Me.Label95.AutoSize = True
+        Me.Label95.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label95.Location = New System.Drawing.Point(45, 101)
         Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(53, 13)
+        Me.Label95.Size = New System.Drawing.Size(46, 13)
         Me.Label95.TabIndex = 50
         Me.Label95.Text = "degrees"
         '
         'TxtCCDFocusEveryXDegrees
         '
+        Me.TxtCCDFocusEveryXDegrees.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDFocusEveryXDegrees.Location = New System.Drawing.Point(10, 98)
         Me.TxtCCDFocusEveryXDegrees.Name = "TxtCCDFocusEveryXDegrees"
         Me.TxtCCDFocusEveryXDegrees.Size = New System.Drawing.Size(33, 21)
@@ -1038,23 +1111,26 @@ Partial Class FrmProperties
         'Label94
         '
         Me.Label94.AutoSize = True
+        Me.Label94.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label94.Location = New System.Drawing.Point(46, 80)
         Me.Label94.Name = "Label94"
-        Me.Label94.Size = New System.Drawing.Size(66, 13)
+        Me.Label94.Size = New System.Drawing.Size(57, 13)
         Me.Label94.TabIndex = 49
         Me.Label94.Text = "exposures"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(45, 123)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(80, 13)
+        Me.Label15.Size = New System.Drawing.Size(70, 13)
         Me.Label15.TabIndex = 47
         Me.Label15.Text = "subframe %:"
         '
         'TxtCCDFocusSubFrame
         '
+        Me.TxtCCDFocusSubFrame.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDFocusSubFrame.Location = New System.Drawing.Point(10, 120)
         Me.TxtCCDFocusSubFrame.Name = "TxtCCDFocusSubFrame"
         Me.TxtCCDFocusSubFrame.Size = New System.Drawing.Size(33, 21)
@@ -1098,7 +1174,7 @@ Partial Class FrmProperties
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(6, 152)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(639, 214)
+        Me.GroupBox1.Size = New System.Drawing.Size(639, 208)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Alarm"
@@ -1106,10 +1182,11 @@ Partial Class FrmProperties
         'ChkSentinelAutostart
         '
         Me.ChkSentinelAutostart.AutoSize = True
+        Me.ChkSentinelAutostart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkSentinelAutostart.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkSentinelAutostart.Location = New System.Drawing.Point(276, 159)
+        Me.ChkSentinelAutostart.Location = New System.Drawing.Point(276, 144)
         Me.ChkSentinelAutostart.Name = "ChkSentinelAutostart"
-        Me.ChkSentinelAutostart.Size = New System.Drawing.Size(206, 17)
+        Me.ChkSentinelAutostart.Size = New System.Drawing.Size(203, 17)
         Me.ChkSentinelAutostart.TabIndex = 42
         Me.ChkSentinelAutostart.Text = "Autostart Sentinel when starting run?"
         Me.ToolTip.SetToolTip(Me.ChkSentinelAutostart, "Play sound when alarm occurs !")
@@ -1156,7 +1233,10 @@ Partial Class FrmProperties
         'BtnSentinel
         '
         Me.BtnSentinel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BtnSentinel.Location = New System.Drawing.Point(399, 177)
+        Me.BtnSentinel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnSentinel.FlatAppearance.BorderSize = 0
+        Me.BtnSentinel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSentinel.Location = New System.Drawing.Point(395, 178)
         Me.BtnSentinel.Name = "BtnSentinel"
         Me.BtnSentinel.Size = New System.Drawing.Size(68, 23)
         Me.BtnSentinel.TabIndex = 37
@@ -1287,6 +1367,9 @@ Partial Class FrmProperties
         'BtnBrowseLog
         '
         Me.BtnBrowseLog.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnBrowseLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnBrowseLog.FlatAppearance.BorderSize = 0
+        Me.BtnBrowseLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBrowseLog.Location = New System.Drawing.Point(379, 9)
         Me.BtnBrowseLog.Name = "BtnBrowseLog"
         Me.BtnBrowseLog.Size = New System.Drawing.Size(68, 23)
@@ -1326,7 +1409,7 @@ Partial Class FrmProperties
         '
         Me.CmbLogType.FormattingEnabled = True
         Me.CmbLogType.Items.AddRange(New Object() {"DEBUG", "FULL", "BRIEF"})
-        Me.CmbLogType.Location = New System.Drawing.Point(95, 32)
+        Me.CmbLogType.Location = New System.Drawing.Point(94, 32)
         Me.CmbLogType.Name = "CmbLogType"
         Me.CmbLogType.Size = New System.Drawing.Size(118, 21)
         Me.CmbLogType.TabIndex = 12
@@ -1373,10 +1456,11 @@ Partial Class FrmProperties
         'ChkAlarmPlay
         '
         Me.ChkAlarmPlay.AutoSize = True
+        Me.ChkAlarmPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkAlarmPlay.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkAlarmPlay.Location = New System.Drawing.Point(276, 94)
         Me.ChkAlarmPlay.Name = "ChkAlarmPlay"
-        Me.ChkAlarmPlay.Size = New System.Drawing.Size(88, 17)
+        Me.ChkAlarmPlay.Size = New System.Drawing.Size(85, 17)
         Me.ChkAlarmPlay.TabIndex = 15
         Me.ChkAlarmPlay.Text = "Play alarms ?"
         Me.ToolTip.SetToolTip(Me.ChkAlarmPlay, "Play sound when alarm occurs !")
@@ -1385,6 +1469,9 @@ Partial Class FrmProperties
         'BtnBrowseSound
         '
         Me.BtnBrowseSound.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnBrowseSound.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnBrowseSound.FlatAppearance.BorderSize = 0
+        Me.BtnBrowseSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBrowseSound.Location = New System.Drawing.Point(379, 52)
         Me.BtnBrowseSound.Name = "BtnBrowseSound"
         Me.BtnBrowseSound.Size = New System.Drawing.Size(68, 23)
@@ -1777,6 +1864,7 @@ Partial Class FrmProperties
         'TxtObservatoryTemperature
         '
         Me.TxtObservatoryTemperature.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtObservatoryTemperature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtObservatoryTemperature.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservatoryTemperature.Location = New System.Drawing.Point(77, 118)
         Me.TxtObservatoryTemperature.Name = "TxtObservatoryTemperature"
@@ -1797,6 +1885,7 @@ Partial Class FrmProperties
         'TxtObservatoryPressure
         '
         Me.TxtObservatoryPressure.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtObservatoryPressure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtObservatoryPressure.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservatoryPressure.Location = New System.Drawing.Point(77, 97)
         Me.TxtObservatoryPressure.Name = "TxtObservatoryPressure"
@@ -1817,6 +1906,7 @@ Partial Class FrmProperties
         'TxtObservatoryLongitude
         '
         Me.TxtObservatoryLongitude.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtObservatoryLongitude.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtObservatoryLongitude.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservatoryLongitude.Location = New System.Drawing.Point(77, 76)
         Me.TxtObservatoryLongitude.Name = "TxtObservatoryLongitude"
@@ -1837,6 +1927,7 @@ Partial Class FrmProperties
         'TxtObservatoryLatitude
         '
         Me.TxtObservatoryLatitude.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtObservatoryLatitude.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtObservatoryLatitude.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservatoryLatitude.Location = New System.Drawing.Point(77, 55)
         Me.TxtObservatoryLatitude.Name = "TxtObservatoryLatitude"
@@ -1857,6 +1948,7 @@ Partial Class FrmProperties
         'TxtObservatoryHeight
         '
         Me.TxtObservatoryHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtObservatoryHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtObservatoryHeight.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservatoryHeight.Location = New System.Drawing.Point(77, 34)
         Me.TxtObservatoryHeight.Name = "TxtObservatoryHeight"
@@ -1877,6 +1969,7 @@ Partial Class FrmProperties
         'TxtObservatoryName
         '
         Me.TxtObservatoryName.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtObservatoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtObservatoryName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtObservatoryName.Location = New System.Drawing.Point(77, 13)
         Me.TxtObservatoryName.Name = "TxtObservatoryName"
@@ -1907,11 +2000,13 @@ Partial Class FrmProperties
         'TxtRoofOpenTimeout
         '
         Me.TxtRoofOpenTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtRoofOpenTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtRoofOpenTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtRoofOpenTimeout.Location = New System.Drawing.Point(118, 82)
         Me.TxtRoofOpenTimeout.Name = "TxtRoofOpenTimeout"
         Me.TxtRoofOpenTimeout.Size = New System.Drawing.Size(68, 21)
         Me.TxtRoofOpenTimeout.TabIndex = 5
+        Me.TxtRoofOpenTimeout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label84
         '
@@ -1926,6 +2021,7 @@ Partial Class FrmProperties
         'TxtRoofOpenPartly
         '
         Me.TxtRoofOpenPartly.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtRoofOpenPartly.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtRoofOpenPartly.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtRoofOpenPartly.Location = New System.Drawing.Point(118, 61)
         Me.TxtRoofOpenPartly.Name = "TxtRoofOpenPartly"
@@ -2021,9 +2117,10 @@ Partial Class FrmProperties
         'TxtSwitchDevice
         '
         Me.TxtSwitchDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitchDevice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitchDevice.Enabled = False
         Me.TxtSwitchDevice.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSwitchDevice.Location = New System.Drawing.Point(63, 13)
+        Me.TxtSwitchDevice.Location = New System.Drawing.Point(63, 15)
         Me.TxtSwitchDevice.Name = "TxtSwitchDevice"
         Me.TxtSwitchDevice.Size = New System.Drawing.Size(273, 21)
         Me.TxtSwitchDevice.TabIndex = 67
@@ -2032,7 +2129,7 @@ Partial Class FrmProperties
         '
         Me.Label154.AutoSize = True
         Me.Label154.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label154.Location = New System.Drawing.Point(6, 16)
+        Me.Label154.Location = New System.Drawing.Point(6, 15)
         Me.Label154.Name = "Label154"
         Me.Label154.Size = New System.Drawing.Size(42, 13)
         Me.Label154.TabIndex = 66
@@ -2044,7 +2141,7 @@ Partial Class FrmProperties
         Me.BtnChooseSwitch.FlatAppearance.BorderSize = 0
         Me.BtnChooseSwitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnChooseSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnChooseSwitch.Location = New System.Drawing.Point(342, 12)
+        Me.BtnChooseSwitch.Location = New System.Drawing.Point(342, 15)
         Me.BtnChooseSwitch.Name = "BtnChooseSwitch"
         Me.BtnChooseSwitch.Size = New System.Drawing.Size(75, 20)
         Me.BtnChooseSwitch.TabIndex = 65
@@ -2162,78 +2259,95 @@ Partial Class FrmProperties
         'TxtSwitch8Startup
         '
         Me.TxtSwitch8Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch8Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch8Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch8Startup.Location = New System.Drawing.Point(533, 202)
         Me.TxtSwitch8Startup.Name = "TxtSwitch8Startup"
         Me.TxtSwitch8Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch8Startup.TabIndex = 55
+        Me.TxtSwitch8Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch7Startup
         '
         Me.TxtSwitch7Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch7Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch7Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch7Startup.Location = New System.Drawing.Point(533, 181)
         Me.TxtSwitch7Startup.Name = "TxtSwitch7Startup"
         Me.TxtSwitch7Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch7Startup.TabIndex = 54
+        Me.TxtSwitch7Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch6Startup
         '
         Me.TxtSwitch6Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch6Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch6Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch6Startup.Location = New System.Drawing.Point(533, 160)
         Me.TxtSwitch6Startup.Name = "TxtSwitch6Startup"
         Me.TxtSwitch6Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch6Startup.TabIndex = 53
+        Me.TxtSwitch6Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch5Startup
         '
         Me.TxtSwitch5Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch5Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch5Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch5Startup.Location = New System.Drawing.Point(533, 139)
         Me.TxtSwitch5Startup.Name = "TxtSwitch5Startup"
         Me.TxtSwitch5Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch5Startup.TabIndex = 52
+        Me.TxtSwitch5Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch4Startup
         '
         Me.TxtSwitch4Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch4Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch4Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch4Startup.Location = New System.Drawing.Point(533, 118)
         Me.TxtSwitch4Startup.Name = "TxtSwitch4Startup"
         Me.TxtSwitch4Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch4Startup.TabIndex = 51
+        Me.TxtSwitch4Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch3Startup
         '
         Me.TxtSwitch3Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch3Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch3Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch3Startup.Location = New System.Drawing.Point(533, 97)
         Me.TxtSwitch3Startup.Name = "TxtSwitch3Startup"
         Me.TxtSwitch3Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch3Startup.TabIndex = 50
+        Me.TxtSwitch3Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch2Startup
         '
         Me.TxtSwitch2Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch2Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch2Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch2Startup.Location = New System.Drawing.Point(533, 76)
         Me.TxtSwitch2Startup.Name = "TxtSwitch2Startup"
         Me.TxtSwitch2Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch2Startup.TabIndex = 49
+        Me.TxtSwitch2Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch1Startup
         '
         Me.TxtSwitch1Startup.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch1Startup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch1Startup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch1Startup.Location = New System.Drawing.Point(533, 55)
         Me.TxtSwitch1Startup.Name = "TxtSwitch1Startup"
         Me.TxtSwitch1Startup.Size = New System.Drawing.Size(38, 21)
         Me.TxtSwitch1Startup.TabIndex = 48
+        Me.TxtSwitch1Startup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSwitch8Warning
         '
         Me.TxtSwitch8Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch8Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch8Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch8Warning.Location = New System.Drawing.Point(201, 202)
         Me.TxtSwitch8Warning.Name = "TxtSwitch8Warning"
@@ -2256,6 +2370,7 @@ Partial Class FrmProperties
         'TxtSwitch8Name
         '
         Me.TxtSwitch8Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch8Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch8Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch8Name.Location = New System.Drawing.Point(64, 202)
         Me.TxtSwitch8Name.Name = "TxtSwitch8Name"
@@ -2266,7 +2381,7 @@ Partial Class FrmProperties
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(2, 205)
+        Me.Label36.Location = New System.Drawing.Point(2, 203)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(51, 13)
         Me.Label36.TabIndex = 47
@@ -2286,6 +2401,7 @@ Partial Class FrmProperties
         'TxtSwitch7Name
         '
         Me.TxtSwitch7Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch7Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch7Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch7Name.Location = New System.Drawing.Point(64, 181)
         Me.TxtSwitch7Name.Name = "TxtSwitch7Name"
@@ -2296,7 +2412,7 @@ Partial Class FrmProperties
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(2, 184)
+        Me.Label35.Location = New System.Drawing.Point(2, 182)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(51, 13)
         Me.Label35.TabIndex = 43
@@ -2305,6 +2421,7 @@ Partial Class FrmProperties
         'TxtSwitch6Warning
         '
         Me.TxtSwitch6Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch6Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch6Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch6Warning.Location = New System.Drawing.Point(201, 160)
         Me.TxtSwitch6Warning.Name = "TxtSwitch6Warning"
@@ -2327,6 +2444,7 @@ Partial Class FrmProperties
         'TxtSwitch6Name
         '
         Me.TxtSwitch6Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch6Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch6Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch6Name.Location = New System.Drawing.Point(64, 160)
         Me.TxtSwitch6Name.Name = "TxtSwitch6Name"
@@ -2337,7 +2455,7 @@ Partial Class FrmProperties
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(2, 163)
+        Me.Label34.Location = New System.Drawing.Point(2, 161)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(51, 13)
         Me.Label34.TabIndex = 39
@@ -2346,6 +2464,7 @@ Partial Class FrmProperties
         'TxtSwitch5Warning
         '
         Me.TxtSwitch5Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch5Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch5Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch5Warning.Location = New System.Drawing.Point(201, 139)
         Me.TxtSwitch5Warning.Name = "TxtSwitch5Warning"
@@ -2368,6 +2487,7 @@ Partial Class FrmProperties
         'TxtSwitch5Name
         '
         Me.TxtSwitch5Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch5Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch5Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch5Name.Location = New System.Drawing.Point(64, 139)
         Me.TxtSwitch5Name.Name = "TxtSwitch5Name"
@@ -2378,7 +2498,7 @@ Partial Class FrmProperties
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(2, 142)
+        Me.Label33.Location = New System.Drawing.Point(2, 140)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(51, 13)
         Me.Label33.TabIndex = 35
@@ -2387,6 +2507,7 @@ Partial Class FrmProperties
         'TxtSwitch4Warning
         '
         Me.TxtSwitch4Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch4Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch4Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch4Warning.Location = New System.Drawing.Point(201, 118)
         Me.TxtSwitch4Warning.Name = "TxtSwitch4Warning"
@@ -2409,6 +2530,7 @@ Partial Class FrmProperties
         'TxtSwitch4Name
         '
         Me.TxtSwitch4Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch4Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch4Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch4Name.Location = New System.Drawing.Point(64, 118)
         Me.TxtSwitch4Name.Name = "TxtSwitch4Name"
@@ -2419,7 +2541,7 @@ Partial Class FrmProperties
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(2, 121)
+        Me.Label32.Location = New System.Drawing.Point(2, 119)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(51, 13)
         Me.Label32.TabIndex = 31
@@ -2428,6 +2550,7 @@ Partial Class FrmProperties
         'TxtSwitch3Warning
         '
         Me.TxtSwitch3Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch3Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch3Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch3Warning.Location = New System.Drawing.Point(201, 97)
         Me.TxtSwitch3Warning.Name = "TxtSwitch3Warning"
@@ -2450,6 +2573,7 @@ Partial Class FrmProperties
         'TxtSwitch3Name
         '
         Me.TxtSwitch3Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch3Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch3Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch3Name.Location = New System.Drawing.Point(64, 97)
         Me.TxtSwitch3Name.Name = "TxtSwitch3Name"
@@ -2460,7 +2584,7 @@ Partial Class FrmProperties
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(2, 100)
+        Me.Label31.Location = New System.Drawing.Point(2, 98)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(51, 13)
         Me.Label31.TabIndex = 27
@@ -2469,6 +2593,7 @@ Partial Class FrmProperties
         'TxtSwitch2Warning
         '
         Me.TxtSwitch2Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch2Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch2Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch2Warning.Location = New System.Drawing.Point(201, 76)
         Me.TxtSwitch2Warning.Name = "TxtSwitch2Warning"
@@ -2491,6 +2616,7 @@ Partial Class FrmProperties
         'TxtSwitch2Name
         '
         Me.TxtSwitch2Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch2Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch2Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch2Name.Location = New System.Drawing.Point(64, 76)
         Me.TxtSwitch2Name.Name = "TxtSwitch2Name"
@@ -2501,7 +2627,7 @@ Partial Class FrmProperties
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(2, 79)
+        Me.Label30.Location = New System.Drawing.Point(2, 77)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(51, 13)
         Me.Label30.TabIndex = 23
@@ -2520,6 +2646,7 @@ Partial Class FrmProperties
         'TxtSwitch1Warning
         '
         Me.TxtSwitch1Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch1Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch1Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch1Warning.Location = New System.Drawing.Point(201, 55)
         Me.TxtSwitch1Warning.Name = "TxtSwitch1Warning"
@@ -2562,6 +2689,7 @@ Partial Class FrmProperties
         'TxtSwitch1Name
         '
         Me.TxtSwitch1Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch1Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch1Name.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch1Name.Location = New System.Drawing.Point(64, 55)
         Me.TxtSwitch1Name.Name = "TxtSwitch1Name"
@@ -2572,7 +2700,7 @@ Partial Class FrmProperties
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(2, 58)
+        Me.Label26.Location = New System.Drawing.Point(2, 56)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(51, 13)
         Me.Label26.TabIndex = 15
@@ -2581,6 +2709,7 @@ Partial Class FrmProperties
         'TxtSwitch7Warning
         '
         Me.TxtSwitch7Warning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSwitch7Warning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSwitch7Warning.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSwitch7Warning.Location = New System.Drawing.Point(201, 181)
         Me.TxtSwitch7Warning.Name = "TxtSwitch7Warning"
@@ -2610,6 +2739,7 @@ Partial Class FrmProperties
         'TxtTelegramSessionID
         '
         Me.TxtTelegramSessionID.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTelegramSessionID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTelegramSessionID.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTelegramSessionID.Location = New System.Drawing.Point(292, 38)
         Me.TxtTelegramSessionID.Name = "TxtTelegramSessionID"
@@ -2630,6 +2760,7 @@ Partial Class FrmProperties
         'CmbTelegramLoggingType
         '
         Me.CmbTelegramLoggingType.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.CmbTelegramLoggingType.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CmbTelegramLoggingType.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbTelegramLoggingType.FormattingEnabled = True
         Me.CmbTelegramLoggingType.Items.AddRange(New Object() {"DEBUG", "FULL", "BRIEF", "ERROR"})
@@ -2642,6 +2773,7 @@ Partial Class FrmProperties
         'TxtTelegramBOT
         '
         Me.TxtTelegramBOT.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTelegramBOT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTelegramBOT.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTelegramBOT.Location = New System.Drawing.Point(61, 19)
         Me.TxtTelegramBOT.Name = "TxtTelegramBOT"
@@ -2652,6 +2784,7 @@ Partial Class FrmProperties
         'TxtTelegramErrorID
         '
         Me.TxtTelegramErrorID.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTelegramErrorID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTelegramErrorID.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTelegramErrorID.Location = New System.Drawing.Point(292, 16)
         Me.TxtTelegramErrorID.Name = "TxtTelegramErrorID"
@@ -2724,6 +2857,7 @@ Partial Class FrmProperties
         'TxtUPSrequestOid
         '
         Me.TxtUPSrequestOid.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtUPSrequestOid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtUPSrequestOid.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUPSrequestOid.Location = New System.Drawing.Point(350, 12)
         Me.TxtUPSrequestOid.Name = "TxtUPSrequestOid"
@@ -2733,6 +2867,7 @@ Partial Class FrmProperties
         'TxtUPSHost
         '
         Me.TxtUPSHost.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtUPSHost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtUPSHost.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUPSHost.Location = New System.Drawing.Point(203, 12)
         Me.TxtUPSHost.Name = "TxtUPSHost"
@@ -2742,6 +2877,7 @@ Partial Class FrmProperties
         'TxtUPSCommunity
         '
         Me.TxtUPSCommunity.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtUPSCommunity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtUPSCommunity.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUPSCommunity.Location = New System.Drawing.Point(71, 12)
         Me.TxtUPSCommunity.Name = "TxtUPSCommunity"
@@ -2800,8 +2936,9 @@ Partial Class FrmProperties
         'TxtMountStartupLink
         '
         Me.TxtMountStartupLink.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtMountStartupLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtMountStartupLink.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMountStartupLink.Location = New System.Drawing.Point(124, 37)
+        Me.TxtMountStartupLink.Location = New System.Drawing.Point(124, 39)
         Me.TxtMountStartupLink.Name = "TxtMountStartupLink"
         Me.TxtMountStartupLink.Size = New System.Drawing.Size(271, 21)
         Me.TxtMountStartupLink.TabIndex = 25
@@ -2819,8 +2956,9 @@ Partial Class FrmProperties
         'TxtMountDevice
         '
         Me.TxtMountDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtMountDevice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtMountDevice.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMountDevice.Location = New System.Drawing.Point(52, 16)
+        Me.TxtMountDevice.Location = New System.Drawing.Point(52, 18)
         Me.TxtMountDevice.Name = "TxtMountDevice"
         Me.TxtMountDevice.Size = New System.Drawing.Size(262, 21)
         Me.TxtMountDevice.TabIndex = 23
@@ -2831,7 +2969,7 @@ Partial Class FrmProperties
         Me.BtnChooseMount.FlatAppearance.BorderSize = 0
         Me.BtnChooseMount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnChooseMount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnChooseMount.Location = New System.Drawing.Point(320, 14)
+        Me.BtnChooseMount.Location = New System.Drawing.Point(320, 18)
         Me.BtnChooseMount.Name = "BtnChooseMount"
         Me.BtnChooseMount.Size = New System.Drawing.Size(75, 20)
         Me.BtnChooseMount.TabIndex = 22
@@ -2869,7 +3007,7 @@ Partial Class FrmProperties
         Me.GroupBox12.ForeColor = System.Drawing.Color.White
         Me.GroupBox12.Location = New System.Drawing.Point(7, 189)
         Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.Size = New System.Drawing.Size(152, 134)
+        Me.GroupBox12.Size = New System.Drawing.Size(152, 125)
         Me.GroupBox12.TabIndex = 10
         Me.GroupBox12.TabStop = False
         Me.GroupBox12.Text = "When Sun at"
@@ -2879,11 +3017,11 @@ Partial Class FrmProperties
         Me.ChkSunDawnFlatsNeeded.AutoSize = True
         Me.ChkSunDawnFlatsNeeded.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkSunDawnFlatsNeeded.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkSunDawnFlatsNeeded.Location = New System.Drawing.Point(3, 101)
+        Me.ChkSunDawnFlatsNeeded.Location = New System.Drawing.Point(5, 98)
         Me.ChkSunDawnFlatsNeeded.Name = "ChkSunDawnFlatsNeeded"
-        Me.ChkSunDawnFlatsNeeded.Size = New System.Drawing.Size(81, 17)
+        Me.ChkSunDawnFlatsNeeded.Size = New System.Drawing.Size(78, 17)
         Me.ChkSunDawnFlatsNeeded.TabIndex = 28
-        Me.ChkSunDawnFlatsNeeded.Text = "Dawn flats :"
+        Me.ChkSunDawnFlatsNeeded.Text = "Dawn flats:"
         Me.ToolTip.SetToolTip(Me.ChkSunDawnFlatsNeeded, "Are dawn flats needed")
         Me.ChkSunDawnFlatsNeeded.UseVisualStyleBackColor = True
         '
@@ -2892,11 +3030,11 @@ Partial Class FrmProperties
         Me.ChkSunDuskFlatsNeeded.AutoSize = True
         Me.ChkSunDuskFlatsNeeded.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkSunDuskFlatsNeeded.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkSunDuskFlatsNeeded.Location = New System.Drawing.Point(3, 37)
+        Me.ChkSunDuskFlatsNeeded.Location = New System.Drawing.Point(4, 36)
         Me.ChkSunDuskFlatsNeeded.Name = "ChkSunDuskFlatsNeeded"
-        Me.ChkSunDuskFlatsNeeded.Size = New System.Drawing.Size(77, 17)
+        Me.ChkSunDuskFlatsNeeded.Size = New System.Drawing.Size(74, 17)
         Me.ChkSunDuskFlatsNeeded.TabIndex = 27
-        Me.ChkSunDuskFlatsNeeded.Text = "Dusk flats :"
+        Me.ChkSunDuskFlatsNeeded.Text = "Dusk flats:"
         Me.ToolTip.SetToolTip(Me.ChkSunDuskFlatsNeeded, "Are dusk flats needed")
         Me.ChkSunDuskFlatsNeeded.UseVisualStyleBackColor = True
         '
@@ -2919,6 +3057,7 @@ Partial Class FrmProperties
         Me.TxtSunDawnFlats.Name = "TxtSunDawnFlats"
         Me.TxtSunDawnFlats.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunDawnFlats.TabIndex = 4
+        Me.TxtSunDawnFlats.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtSunDawnFlats, "Run dawn flats at Sun altitude")
         '
         'Label81
@@ -2970,6 +3109,7 @@ Partial Class FrmProperties
         Me.TxtSunStopRun.Name = "TxtSunStopRun"
         Me.TxtSunStopRun.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunStopRun.TabIndex = 3
+        Me.TxtSunStopRun.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtSunStopRun, "Stop imaging run at Sun altitude")
         '
         'Label72
@@ -2991,6 +3131,7 @@ Partial Class FrmProperties
         Me.TxtSunStartRun.Name = "TxtSunStartRun"
         Me.TxtSunStartRun.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunStartRun.TabIndex = 2
+        Me.TxtSunStartRun.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtSunStartRun, "Start imaging run at Sun altitude")
         '
         'Label73
@@ -3012,6 +3153,7 @@ Partial Class FrmProperties
         Me.TxtSunDuskFlats.Name = "TxtSunDuskFlats"
         Me.TxtSunDuskFlats.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunDuskFlats.TabIndex = 1
+        Me.TxtSunDuskFlats.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtSunDuskFlats, "Start dusk flat exposures at Sun altitude")
         '
         'TxtSunOpenRoof
@@ -3023,6 +3165,7 @@ Partial Class FrmProperties
         Me.TxtSunOpenRoof.Name = "TxtSunOpenRoof"
         Me.TxtSunOpenRoof.Size = New System.Drawing.Size(52, 14)
         Me.TxtSunOpenRoof.TabIndex = 0
+        Me.TxtSunOpenRoof.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtSunOpenRoof, "Open roof at Sun altitude")
         '
         'Label75
@@ -3067,10 +3210,11 @@ Partial Class FrmProperties
         Me.TxtObjectAltLimitWest.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtObjectAltLimitWest.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtObjectAltLimitWest.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtObjectAltLimitWest.Location = New System.Drawing.Point(110, 36)
+        Me.TxtObjectAltLimitWest.Location = New System.Drawing.Point(110, 38)
         Me.TxtObjectAltLimitWest.Name = "TxtObjectAltLimitWest"
         Me.TxtObjectAltLimitWest.Size = New System.Drawing.Size(33, 14)
         Me.TxtObjectAltLimitWest.TabIndex = 1
+        Me.TxtObjectAltLimitWest.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtObjectAltLimitWest, "Altitude limit West to end observations of object.")
         '
         'Label88
@@ -3098,10 +3242,11 @@ Partial Class FrmProperties
         Me.TxtObjectAltLimitEast.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtObjectAltLimitEast.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtObjectAltLimitEast.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtObjectAltLimitEast.Location = New System.Drawing.Point(110, 13)
+        Me.TxtObjectAltLimitEast.Location = New System.Drawing.Point(110, 15)
         Me.TxtObjectAltLimitEast.Name = "TxtObjectAltLimitEast"
         Me.TxtObjectAltLimitEast.Size = New System.Drawing.Size(33, 14)
         Me.TxtObjectAltLimitEast.TabIndex = 0
+        Me.TxtObjectAltLimitEast.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtObjectAltLimitEast, "Altitude limit East before observations of object start.")
         '
         'Label89
@@ -3119,7 +3264,7 @@ Partial Class FrmProperties
         Me.ChkTurnOffCompletely.AutoSize = True
         Me.ChkTurnOffCompletely.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkTurnOffCompletely.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkTurnOffCompletely.Location = New System.Drawing.Point(119, 37)
+        Me.ChkTurnOffCompletely.Location = New System.Drawing.Point(136, 37)
         Me.ChkTurnOffCompletely.Name = "ChkTurnOffCompletely"
         Me.ChkTurnOffCompletely.Size = New System.Drawing.Size(121, 17)
         Me.ChkTurnOffCompletely.TabIndex = 30
@@ -3144,6 +3289,7 @@ Partial Class FrmProperties
         'TxtSynologyPath
         '
         Me.TxtSynologyPath.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSynologyPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSynologyPath.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtSynologyPath.Location = New System.Drawing.Point(110, 39)
         Me.TxtSynologyPath.Name = "TxtSynologyPath"
@@ -3154,6 +3300,7 @@ Partial Class FrmProperties
         'TxtCCDImagePath
         '
         Me.TxtCCDImagePath.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtCCDImagePath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtCCDImagePath.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCCDImagePath.Location = New System.Drawing.Point(110, 17)
         Me.TxtCCDImagePath.Name = "TxtCCDImagePath"
@@ -3177,6 +3324,7 @@ Partial Class FrmProperties
         'Txt7ZipLocation
         '
         Me.Txt7ZipLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Txt7ZipLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt7ZipLocation.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt7ZipLocation.Location = New System.Drawing.Point(110, 61)
         Me.Txt7ZipLocation.Name = "Txt7ZipLocation"
@@ -3197,6 +3345,7 @@ Partial Class FrmProperties
         '
         'TxtsAutoFlatMaxExp
         '
+        Me.TxtsAutoFlatMaxExp.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtsAutoFlatMaxExp.Location = New System.Drawing.Point(177, 13)
         Me.TxtsAutoFlatMaxExp.Name = "TxtsAutoFlatMaxExp"
         Me.TxtsAutoFlatMaxExp.Size = New System.Drawing.Size(52, 21)
@@ -3205,6 +3354,7 @@ Partial Class FrmProperties
         '
         'TxtsAutoFlatAz
         '
+        Me.TxtsAutoFlatAz.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtsAutoFlatAz.Location = New System.Drawing.Point(348, 35)
         Me.TxtsAutoFlatAz.Name = "TxtsAutoFlatAz"
         Me.TxtsAutoFlatAz.Size = New System.Drawing.Size(52, 21)
@@ -3213,6 +3363,7 @@ Partial Class FrmProperties
         '
         'TxtsAutoFlatAlt
         '
+        Me.TxtsAutoFlatAlt.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtsAutoFlatAlt.Location = New System.Drawing.Point(348, 13)
         Me.TxtsAutoFlatAlt.Name = "TxtsAutoFlatAlt"
         Me.TxtsAutoFlatAlt.Size = New System.Drawing.Size(52, 21)
@@ -3221,6 +3372,7 @@ Partial Class FrmProperties
         '
         'TxtsAutoFlatMinADU
         '
+        Me.TxtsAutoFlatMinADU.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtsAutoFlatMinADU.Location = New System.Drawing.Point(80, 35)
         Me.TxtsAutoFlatMinADU.Name = "TxtsAutoFlatMinADU"
         Me.TxtsAutoFlatMinADU.Size = New System.Drawing.Size(52, 21)
@@ -3229,6 +3381,7 @@ Partial Class FrmProperties
         '
         'TxtsAutoFlatMaxADU
         '
+        Me.TxtsAutoFlatMaxADU.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtsAutoFlatMaxADU.Location = New System.Drawing.Point(177, 35)
         Me.TxtsAutoFlatMaxADU.Name = "TxtsAutoFlatMaxADU"
         Me.TxtsAutoFlatMaxADU.Size = New System.Drawing.Size(52, 21)
@@ -3237,6 +3390,7 @@ Partial Class FrmProperties
         '
         'TxtsAutoFlatMinExp
         '
+        Me.TxtsAutoFlatMinExp.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtsAutoFlatMinExp.Location = New System.Drawing.Point(80, 13)
         Me.TxtsAutoFlatMinExp.Name = "TxtsAutoFlatMinExp"
         Me.TxtsAutoFlatMinExp.Size = New System.Drawing.Size(52, 21)
@@ -3258,11 +3412,12 @@ Partial Class FrmProperties
         Me.TxtMoonAltitudeAlwaysSafe.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMoonAltitudeAlwaysSafe.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtMoonAltitudeAlwaysSafe.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMoonAltitudeAlwaysSafe.Location = New System.Drawing.Point(125, 11)
+        Me.TxtMoonAltitudeAlwaysSafe.Location = New System.Drawing.Point(122, 17)
         Me.TxtMoonAltitudeAlwaysSafe.Name = "TxtMoonAltitudeAlwaysSafe"
         Me.TxtMoonAltitudeAlwaysSafe.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonAltitudeAlwaysSafe.TabIndex = 0
         Me.TxtMoonAltitudeAlwaysSafe.Text = "0"
+        Me.TxtMoonAltitudeAlwaysSafe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMoonAltitudeAlwaysSafe, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
@@ -3271,11 +3426,12 @@ Partial Class FrmProperties
         Me.TxtMoonPhaseAlwaysSafe.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMoonPhaseAlwaysSafe.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtMoonPhaseAlwaysSafe.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMoonPhaseAlwaysSafe.Location = New System.Drawing.Point(125, 36)
+        Me.TxtMoonPhaseAlwaysSafe.Location = New System.Drawing.Point(122, 39)
         Me.TxtMoonPhaseAlwaysSafe.Name = "TxtMoonPhaseAlwaysSafe"
         Me.TxtMoonPhaseAlwaysSafe.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonPhaseAlwaysSafe.TabIndex = 1
         Me.TxtMoonPhaseAlwaysSafe.Text = "5"
+        Me.TxtMoonPhaseAlwaysSafe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMoonPhaseAlwaysSafe, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
@@ -3284,11 +3440,12 @@ Partial Class FrmProperties
         Me.TxtMoonPhaseLimitLow.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMoonPhaseLimitLow.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtMoonPhaseLimitLow.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMoonPhaseLimitLow.Location = New System.Drawing.Point(60, 59)
+        Me.TxtMoonPhaseLimitLow.Location = New System.Drawing.Point(64, 62)
         Me.TxtMoonPhaseLimitLow.Name = "TxtMoonPhaseLimitLow"
         Me.TxtMoonPhaseLimitLow.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonPhaseLimitLow.TabIndex = 22
         Me.TxtMoonPhaseLimitLow.Text = "25"
+        Me.TxtMoonPhaseLimitLow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMoonPhaseLimitLow, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
@@ -3297,11 +3454,12 @@ Partial Class FrmProperties
         Me.TxtMoonAltitudeLimitLow.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMoonAltitudeLimitLow.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtMoonAltitudeLimitLow.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMoonAltitudeLimitLow.Location = New System.Drawing.Point(218, 59)
+        Me.TxtMoonAltitudeLimitLow.Location = New System.Drawing.Point(236, 62)
         Me.TxtMoonAltitudeLimitLow.Name = "TxtMoonAltitudeLimitLow"
         Me.TxtMoonAltitudeLimitLow.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonAltitudeLimitLow.TabIndex = 25
         Me.TxtMoonAltitudeLimitLow.Text = "25"
+        Me.TxtMoonAltitudeLimitLow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMoonAltitudeLimitLow, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
@@ -3310,11 +3468,12 @@ Partial Class FrmProperties
         Me.TxtMoonStartCooldownLow.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMoonStartCooldownLow.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtMoonStartCooldownLow.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMoonStartCooldownLow.Location = New System.Drawing.Point(367, 59)
+        Me.TxtMoonStartCooldownLow.Location = New System.Drawing.Point(382, 62)
         Me.TxtMoonStartCooldownLow.Name = "TxtMoonStartCooldownLow"
         Me.TxtMoonStartCooldownLow.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonStartCooldownLow.TabIndex = 19
         Me.TxtMoonStartCooldownLow.Text = "35"
+        Me.TxtMoonStartCooldownLow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMoonStartCooldownLow, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
@@ -3323,11 +3482,12 @@ Partial Class FrmProperties
         Me.TxtMoonAltitudeLimitHigh.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMoonAltitudeLimitHigh.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtMoonAltitudeLimitHigh.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMoonAltitudeLimitHigh.Location = New System.Drawing.Point(136, 82)
+        Me.TxtMoonAltitudeLimitHigh.Location = New System.Drawing.Point(142, 84)
         Me.TxtMoonAltitudeLimitHigh.Name = "TxtMoonAltitudeLimitHigh"
         Me.TxtMoonAltitudeLimitHigh.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonAltitudeLimitHigh.TabIndex = 31
         Me.TxtMoonAltitudeLimitHigh.Text = "10"
+        Me.TxtMoonAltitudeLimitHigh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMoonAltitudeLimitHigh, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
@@ -3336,7 +3496,7 @@ Partial Class FrmProperties
         Me.ChkMoonStartCooldown.AutoSize = True
         Me.ChkMoonStartCooldown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkMoonStartCooldown.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkMoonStartCooldown.Location = New System.Drawing.Point(268, 61)
+        Me.ChkMoonStartCooldown.Location = New System.Drawing.Point(287, 61)
         Me.ChkMoonStartCooldown.Name = "ChkMoonStartCooldown"
         Me.ChkMoonStartCooldown.Size = New System.Drawing.Size(95, 17)
         Me.ChkMoonStartCooldown.TabIndex = 32
@@ -3349,11 +3509,12 @@ Partial Class FrmProperties
         Me.TxtMoonStartCooldownHigh.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMoonStartCooldownHigh.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TxtMoonStartCooldownHigh.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMoonStartCooldownHigh.Location = New System.Drawing.Point(367, 85)
+        Me.TxtMoonStartCooldownHigh.Location = New System.Drawing.Point(382, 84)
         Me.TxtMoonStartCooldownHigh.Name = "TxtMoonStartCooldownHigh"
         Me.TxtMoonStartCooldownHigh.Size = New System.Drawing.Size(28, 14)
         Me.TxtMoonStartCooldownHigh.TabIndex = 35
         Me.TxtMoonStartCooldownHigh.Text = "20"
+        Me.TxtMoonStartCooldownHigh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ToolTip.SetToolTip(Me.TxtMoonStartCooldownHigh, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
@@ -3378,7 +3539,7 @@ Partial Class FrmProperties
         '
         Me.Label153.AutoSize = True
         Me.Label153.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label153.Location = New System.Drawing.Point(6, 66)
+        Me.Label153.Location = New System.Drawing.Point(10, 65)
         Me.Label153.Name = "Label153"
         Me.Label153.Size = New System.Drawing.Size(40, 13)
         Me.Label153.TabIndex = 33
@@ -3387,8 +3548,9 @@ Partial Class FrmProperties
         'TxtCoverDevice
         '
         Me.TxtCoverDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtCoverDevice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtCoverDevice.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCoverDevice.Location = New System.Drawing.Point(83, 61)
+        Me.TxtCoverDevice.Location = New System.Drawing.Point(83, 62)
         Me.TxtCoverDevice.Name = "TxtCoverDevice"
         Me.TxtCoverDevice.Size = New System.Drawing.Size(181, 21)
         Me.TxtCoverDevice.TabIndex = 32
@@ -3410,7 +3572,7 @@ Partial Class FrmProperties
         '
         Me.Label98.AutoSize = True
         Me.Label98.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label98.Location = New System.Drawing.Point(6, 22)
+        Me.Label98.Location = New System.Drawing.Point(10, 22)
         Me.Label98.Name = "Label98"
         Me.Label98.Size = New System.Drawing.Size(47, 13)
         Me.Label98.TabIndex = 30
@@ -3419,6 +3581,7 @@ Partial Class FrmProperties
         'CmbCoverMethod
         '
         Me.CmbCoverMethod.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.CmbCoverMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CmbCoverMethod.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbCoverMethod.FormattingEnabled = True
         Me.CmbCoverMethod.Items.AddRange(New Object() {"ASCOM", "SERIAL", "NONE"})
@@ -3430,8 +3593,9 @@ Partial Class FrmProperties
         'TxtSnapCapSerialPort
         '
         Me.TxtSnapCapSerialPort.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtSnapCapSerialPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSnapCapSerialPort.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSnapCapSerialPort.Location = New System.Drawing.Point(83, 40)
+        Me.TxtSnapCapSerialPort.Location = New System.Drawing.Point(83, 41)
         Me.TxtSnapCapSerialPort.Name = "TxtSnapCapSerialPort"
         Me.TxtSnapCapSerialPort.Size = New System.Drawing.Size(48, 21)
         Me.TxtSnapCapSerialPort.TabIndex = 1
@@ -3440,7 +3604,7 @@ Partial Class FrmProperties
         '
         Me.Label102.AutoSize = True
         Me.Label102.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label102.Location = New System.Drawing.Point(6, 43)
+        Me.Label102.Location = New System.Drawing.Point(10, 43)
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(60, 13)
         Me.Label102.TabIndex = 27
@@ -3468,6 +3632,7 @@ Partial Class FrmProperties
         'TxtRoofDevice
         '
         Me.TxtRoofDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtRoofDevice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtRoofDevice.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtRoofDevice.Location = New System.Drawing.Point(45, 40)
         Me.TxtRoofDevice.Name = "TxtRoofDevice"
@@ -3985,7 +4150,7 @@ Partial Class FrmProperties
         '
         Me.Label168.AutoSize = True
         Me.Label168.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label168.Location = New System.Drawing.Point(396, 89)
+        Me.Label168.Location = New System.Drawing.Point(413, 84)
         Me.Label168.Name = "Label168"
         Me.Label168.Size = New System.Drawing.Size(12, 13)
         Me.Label168.TabIndex = 36
@@ -3995,7 +4160,7 @@ Partial Class FrmProperties
         '
         Me.Label126.AutoSize = True
         Me.Label126.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label126.Location = New System.Drawing.Point(396, 62)
+        Me.Label126.Location = New System.Drawing.Point(413, 62)
         Me.Label126.Name = "Label126"
         Me.Label126.Size = New System.Drawing.Size(12, 13)
         Me.Label126.TabIndex = 20
@@ -4025,7 +4190,7 @@ Partial Class FrmProperties
         '
         Me.Label161.AutoSize = True
         Me.Label161.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label161.Location = New System.Drawing.Point(251, 59)
+        Me.Label161.Location = New System.Drawing.Point(266, 59)
         Me.Label161.Name = "Label161"
         Me.Label161.Size = New System.Drawing.Size(12, 13)
         Me.Label161.TabIndex = 26
@@ -4035,7 +4200,7 @@ Partial Class FrmProperties
         '
         Me.Label160.AutoSize = True
         Me.Label160.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label160.Location = New System.Drawing.Point(110, 62)
+        Me.Label160.Location = New System.Drawing.Point(120, 62)
         Me.Label160.Name = "Label160"
         Me.Label160.Size = New System.Drawing.Size(115, 13)
         Me.Label160.TabIndex = 24
@@ -4044,7 +4209,7 @@ Partial Class FrmProperties
         'Label159
         '
         Me.Label159.AutoSize = True
-        Me.Label159.Location = New System.Drawing.Point(89, 62)
+        Me.Label159.Location = New System.Drawing.Point(99, 62)
         Me.Label159.Name = "Label159"
         Me.Label159.Size = New System.Drawing.Size(20, 13)
         Me.Label159.TabIndex = 23
@@ -4185,15 +4350,17 @@ Partial Class FrmProperties
         Me.GrpTelescope.Controls.Add(Me.Label148)
         Me.GrpTelescope.Controls.Add(Me.Label149)
         Me.GrpTelescope.Controls.Add(Me.Label150)
-        Me.GrpTelescope.Location = New System.Drawing.Point(7, 392)
+        Me.GrpTelescope.ForeColor = System.Drawing.Color.White
+        Me.GrpTelescope.Location = New System.Drawing.Point(7, 421)
         Me.GrpTelescope.Name = "GrpTelescope"
-        Me.GrpTelescope.Size = New System.Drawing.Size(492, 69)
+        Me.GrpTelescope.Size = New System.Drawing.Size(638, 69)
         Me.GrpTelescope.TabIndex = 18
         Me.GrpTelescope.TabStop = False
         Me.GrpTelescope.Text = "Telescope"
         '
         'TxtTelescopeFocalLength
         '
+        Me.TxtTelescopeFocalLength.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTelescopeFocalLength.Location = New System.Drawing.Point(254, 40)
         Me.TxtTelescopeFocalLength.Name = "TxtTelescopeFocalLength"
         Me.TxtTelescopeFocalLength.Size = New System.Drawing.Size(55, 21)
@@ -4201,6 +4368,7 @@ Partial Class FrmProperties
         '
         'TxtTelescopeAparture
         '
+        Me.TxtTelescopeAparture.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTelescopeAparture.Location = New System.Drawing.Point(94, 41)
         Me.TxtTelescopeAparture.Name = "TxtTelescopeAparture"
         Me.TxtTelescopeAparture.Size = New System.Drawing.Size(55, 21)
@@ -4208,6 +4376,7 @@ Partial Class FrmProperties
         '
         'TxtTelescopeName
         '
+        Me.TxtTelescopeName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTelescopeName.Location = New System.Drawing.Point(94, 19)
         Me.TxtTelescopeName.Name = "TxtTelescopeName"
         Me.TxtTelescopeName.Size = New System.Drawing.Size(215, 21)
@@ -4216,27 +4385,30 @@ Partial Class FrmProperties
         'Label148
         '
         Me.Label148.AutoSize = True
+        Me.Label148.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label148.Location = New System.Drawing.Point(159, 43)
         Me.Label148.Name = "Label148"
-        Me.Label148.Size = New System.Drawing.Size(116, 13)
+        Me.Label148.Size = New System.Drawing.Size(99, 13)
         Me.Label148.TabIndex = 10
         Me.Label148.Text = "Focal Length (mm):"
         '
         'Label149
         '
         Me.Label149.AutoSize = True
+        Me.Label149.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label149.Location = New System.Drawing.Point(1, 43)
         Me.Label149.Name = "Label149"
-        Me.Label149.Size = New System.Drawing.Size(96, 13)
+        Me.Label149.Size = New System.Drawing.Size(81, 13)
         Me.Label149.TabIndex = 9
         Me.Label149.Text = "Aparture (mm):"
         '
         'Label150
         '
         Me.Label150.AutoSize = True
+        Me.Label150.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label150.Location = New System.Drawing.Point(2, 22)
         Me.Label150.Name = "Label150"
-        Me.Label150.Size = New System.Drawing.Size(102, 13)
+        Me.Label150.Size = New System.Drawing.Size(88, 13)
         Me.Label150.TabIndex = 8
         Me.Label150.Text = "Telescope name:"
         '
@@ -4262,9 +4434,10 @@ Partial Class FrmProperties
         Me.GroupBox15.Controls.Add(Me.TxtsAutoFlatMaxADU)
         Me.GroupBox15.Controls.Add(Me.TxtsAutoFlatMinExp)
         Me.GroupBox15.Controls.Add(Me.Label120)
-        Me.GroupBox15.Location = New System.Drawing.Point(7, 300)
+        Me.GroupBox15.ForeColor = System.Drawing.Color.White
+        Me.GroupBox15.Location = New System.Drawing.Point(7, 333)
         Me.GroupBox15.Name = "GroupBox15"
-        Me.GroupBox15.Size = New System.Drawing.Size(492, 86)
+        Me.GroupBox15.Size = New System.Drawing.Size(638, 86)
         Me.GroupBox15.TabIndex = 17
         Me.GroupBox15.TabStop = False
         Me.GroupBox15.Text = "Autoflats"
@@ -4280,27 +4453,30 @@ Partial Class FrmProperties
         'Label124
         '
         Me.Label124.AutoSize = True
+        Me.Label124.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label124.Location = New System.Drawing.Point(144, 60)
         Me.Label124.Name = "Label124"
-        Me.Label124.Size = New System.Drawing.Size(39, 13)
+        Me.Label124.Size = New System.Drawing.Size(35, 13)
         Me.Label124.TabIndex = 41
         Me.Label124.Text = "Filter:"
         '
         'Label123
         '
         Me.Label123.AutoSize = True
+        Me.Label123.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label123.Location = New System.Drawing.Point(7, 60)
         Me.Label123.Name = "Label123"
-        Me.Label123.Size = New System.Drawing.Size(51, 13)
+        Me.Label123.Size = New System.Drawing.Size(45, 13)
         Me.Label123.TabIndex = 39
         Me.Label123.Text = "Binning:"
         '
         'Label119
         '
         Me.Label119.AutoSize = True
+        Me.Label119.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label119.Location = New System.Drawing.Point(320, 38)
         Me.Label119.Name = "Label119"
-        Me.Label119.Size = New System.Drawing.Size(24, 13)
+        Me.Label119.Size = New System.Drawing.Size(23, 13)
         Me.Label119.TabIndex = 34
         Me.Label119.Text = "Az:"
         '
@@ -4316,72 +4492,80 @@ Partial Class FrmProperties
         'Label122
         '
         Me.Label122.AutoSize = True
+        Me.Label122.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label122.Location = New System.Drawing.Point(138, 38)
         Me.Label122.Name = "Label122"
-        Me.Label122.Size = New System.Drawing.Size(41, 13)
+        Me.Label122.Size = New System.Drawing.Size(37, 13)
         Me.Label122.TabIndex = 32
         Me.Label122.Text = "  max:"
         '
         'Label116
         '
         Me.Label116.AutoSize = True
+        Me.Label116.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label116.Location = New System.Drawing.Point(7, 35)
         Me.Label116.Name = "Label116"
-        Me.Label116.Size = New System.Drawing.Size(82, 13)
+        Me.Label116.Size = New System.Drawing.Size(72, 13)
         Me.Label116.TabIndex = 31
         Me.Label116.Text = "Flat ADU min:"
         '
         'Label121
         '
         Me.Label121.AutoSize = True
+        Me.Label121.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label121.Location = New System.Drawing.Point(234, 16)
         Me.Label121.Name = "Label121"
-        Me.Label121.Size = New System.Drawing.Size(13, 13)
+        Me.Label121.Size = New System.Drawing.Size(12, 13)
         Me.Label121.TabIndex = 30
         Me.Label121.Text = "s"
         '
         'Label113
         '
         Me.Label113.AutoSize = True
+        Me.Label113.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label113.Location = New System.Drawing.Point(406, 38)
         Me.Label113.Name = "Label113"
-        Me.Label113.Size = New System.Drawing.Size(13, 13)
+        Me.Label113.Size = New System.Drawing.Size(12, 13)
         Me.Label113.TabIndex = 26
         Me.Label113.Text = "°"
         '
         'Label114
         '
         Me.Label114.AutoSize = True
+        Me.Label114.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label114.Location = New System.Drawing.Point(406, 16)
         Me.Label114.Name = "Label114"
-        Me.Label114.Size = New System.Drawing.Size(13, 13)
+        Me.Label114.Size = New System.Drawing.Size(12, 13)
         Me.Label114.TabIndex = 23
         Me.Label114.Text = "°"
         '
         'Label117
         '
         Me.Label117.AutoSize = True
+        Me.Label117.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label117.Location = New System.Drawing.Point(138, 16)
         Me.Label117.Name = "Label117"
-        Me.Label117.Size = New System.Drawing.Size(44, 13)
+        Me.Label117.Size = New System.Drawing.Size(39, 13)
         Me.Label117.TabIndex = 19
         Me.Label117.Text = "s max:"
         '
         'Label118
         '
         Me.Label118.AutoSize = True
+        Me.Label118.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label118.Location = New System.Drawing.Point(259, 16)
         Me.Label118.Name = "Label118"
-        Me.Label118.Size = New System.Drawing.Size(79, 13)
+        Me.Label118.Size = New System.Drawing.Size(69, 13)
         Me.Label118.TabIndex = 19
         Me.Label118.Text = "Flat location:"
         '
         'Label120
         '
         Me.Label120.AutoSize = True
+        Me.Label120.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label120.Location = New System.Drawing.Point(7, 16)
         Me.Label120.Name = "Label120"
-        Me.Label120.Size = New System.Drawing.Size(86, 13)
+        Me.Label120.Size = New System.Drawing.Size(75, 13)
         Me.Label120.TabIndex = 13
         Me.Label120.Text = "Exposure min:"
         '
