@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmHADS
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmHADS
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -118,11 +118,11 @@ Partial Class FrmHADS
         Me.TxtHADSName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnDownloadHADSList = New System.Windows.Forms.Button()
-        Me.BtnSave = New System.Windows.Forms.Button()
         Me.BtnCancel = New System.Windows.Forms.Button()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.BtnTruncateHADS = New System.Windows.Forms.Button()
         Me.BtnDeleteInactiveHADS = New System.Windows.Forms.Button()
+        Me.BtnSave = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridViewHADS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -131,7 +131,7 @@ Partial Class FrmHADS
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(332, 39)
+        Me.Label3.Location = New System.Drawing.Point(357, 44)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(13, 13)
         Me.Label3.TabIndex = 11
@@ -140,7 +140,7 @@ Partial Class FrmHADS
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(132, 100)
+        Me.Label25.Location = New System.Drawing.Point(132, 84)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(12, 13)
         Me.Label25.TabIndex = 60
@@ -148,32 +148,36 @@ Partial Class FrmHADS
         '
         'TxtFocusStarExposure
         '
-        Me.TxtFocusStarExposure.Location = New System.Drawing.Point(77, 97)
+        Me.TxtFocusStarExposure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtFocusStarExposure.Location = New System.Drawing.Point(77, 82)
         Me.TxtFocusStarExposure.Name = "TxtFocusStarExposure"
-        Me.TxtFocusStarExposure.Size = New System.Drawing.Size(49, 20)
+        Me.TxtFocusStarExposure.Size = New System.Drawing.Size(49, 21)
         Me.TxtFocusStarExposure.TabIndex = 7
         Me.TxtFocusStarExposure.Text = "5"
+        Me.TxtFocusStarExposure.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(11, 100)
+        Me.Label26.Location = New System.Drawing.Point(11, 84)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(54, 13)
+        Me.Label26.Size = New System.Drawing.Size(56, 13)
         Me.Label26.TabIndex = 58
         Me.Label26.Text = "Exposure:"
         '
         'TxtFocusStarDEC2000SS
         '
-        Me.TxtFocusStarDEC2000SS.Location = New System.Drawing.Point(165, 71)
+        Me.TxtFocusStarDEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtFocusStarDEC2000SS.Location = New System.Drawing.Point(165, 61)
         Me.TxtFocusStarDEC2000SS.Name = "TxtFocusStarDEC2000SS"
-        Me.TxtFocusStarDEC2000SS.Size = New System.Drawing.Size(40, 20)
+        Me.TxtFocusStarDEC2000SS.Size = New System.Drawing.Size(40, 21)
         Me.TxtFocusStarDEC2000SS.TabIndex = 6
+        Me.TxtFocusStarDEC2000SS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(376, 39)
+        Me.Label4.Location = New System.Drawing.Point(401, 44)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(15, 13)
         Me.Label4.TabIndex = 14
@@ -182,7 +186,7 @@ Partial Class FrmHADS
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(439, 39)
+        Me.Label5.Location = New System.Drawing.Point(464, 44)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(12, 13)
         Me.Label5.TabIndex = 6
@@ -190,50 +194,56 @@ Partial Class FrmHADS
         '
         'TxtHADSRA2000HH
         '
+        Me.TxtHADSRA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSRA2000HH.Enabled = False
-        Me.TxtHADSRA2000HH.Location = New System.Drawing.Point(305, 36)
+        Me.TxtHADSRA2000HH.Location = New System.Drawing.Point(330, 41)
         Me.TxtHADSRA2000HH.Name = "TxtHADSRA2000HH"
-        Me.TxtHADSRA2000HH.Size = New System.Drawing.Size(26, 20)
+        Me.TxtHADSRA2000HH.Size = New System.Drawing.Size(26, 21)
         Me.TxtHADSRA2000HH.TabIndex = 2
+        Me.TxtHADSRA2000HH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtHADSRA2000MM
         '
+        Me.TxtHADSRA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSRA2000MM.Enabled = False
-        Me.TxtHADSRA2000MM.Location = New System.Drawing.Point(346, 36)
+        Me.TxtHADSRA2000MM.Location = New System.Drawing.Point(371, 41)
         Me.TxtHADSRA2000MM.Name = "TxtHADSRA2000MM"
-        Me.TxtHADSRA2000MM.Size = New System.Drawing.Size(26, 20)
+        Me.TxtHADSRA2000MM.Size = New System.Drawing.Size(26, 21)
         Me.TxtHADSRA2000MM.TabIndex = 3
+        Me.TxtHADSRA2000MM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtHADSRA2000SS
         '
+        Me.TxtHADSRA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSRA2000SS.Enabled = False
-        Me.TxtHADSRA2000SS.Location = New System.Drawing.Point(393, 36)
+        Me.TxtHADSRA2000SS.Location = New System.Drawing.Point(418, 41)
         Me.TxtHADSRA2000SS.Name = "TxtHADSRA2000SS"
-        Me.TxtHADSRA2000SS.Size = New System.Drawing.Size(40, 20)
+        Me.TxtHADSRA2000SS.Size = New System.Drawing.Size(40, 21)
         Me.TxtHADSRA2000SS.TabIndex = 4
+        Me.TxtHADSRA2000SS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(229, 62)
+        Me.Label9.Location = New System.Drawing.Point(254, 67)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(65, 13)
+        Me.Label9.Size = New System.Drawing.Size(66, 13)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "DEC (2000):"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(332, 62)
+        Me.Label8.Location = New System.Drawing.Point(357, 67)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(11, 13)
+        Me.Label8.Size = New System.Drawing.Size(12, 13)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "°"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(376, 62)
+        Me.Label7.Location = New System.Drawing.Point(401, 67)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(15, 13)
         Me.Label7.TabIndex = 15
@@ -241,41 +251,47 @@ Partial Class FrmHADS
         '
         'TxtHADSDEC2000DG
         '
+        Me.TxtHADSDEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSDEC2000DG.Enabled = False
-        Me.TxtHADSDEC2000DG.Location = New System.Drawing.Point(305, 59)
+        Me.TxtHADSDEC2000DG.Location = New System.Drawing.Point(330, 64)
         Me.TxtHADSDEC2000DG.Name = "TxtHADSDEC2000DG"
-        Me.TxtHADSDEC2000DG.Size = New System.Drawing.Size(26, 20)
+        Me.TxtHADSDEC2000DG.Size = New System.Drawing.Size(26, 21)
         Me.TxtHADSDEC2000DG.TabIndex = 5
+        Me.TxtHADSDEC2000DG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtHADSDEC2000MM
         '
+        Me.TxtHADSDEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSDEC2000MM.Enabled = False
-        Me.TxtHADSDEC2000MM.Location = New System.Drawing.Point(346, 59)
+        Me.TxtHADSDEC2000MM.Location = New System.Drawing.Point(371, 64)
         Me.TxtHADSDEC2000MM.Name = "TxtHADSDEC2000MM"
-        Me.TxtHADSDEC2000MM.Size = New System.Drawing.Size(26, 20)
+        Me.TxtHADSDEC2000MM.Size = New System.Drawing.Size(26, 21)
         Me.TxtHADSDEC2000MM.TabIndex = 6
+        Me.TxtHADSDEC2000MM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtHADSDEC2000SS
         '
+        Me.TxtHADSDEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSDEC2000SS.Enabled = False
-        Me.TxtHADSDEC2000SS.Location = New System.Drawing.Point(393, 59)
+        Me.TxtHADSDEC2000SS.Location = New System.Drawing.Point(418, 64)
         Me.TxtHADSDEC2000SS.Name = "TxtHADSDEC2000SS"
-        Me.TxtHADSDEC2000SS.Size = New System.Drawing.Size(40, 20)
+        Me.TxtHADSDEC2000SS.Size = New System.Drawing.Size(40, 21)
         Me.TxtHADSDEC2000SS.TabIndex = 7
+        Me.TxtHADSDEC2000SS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(11, 134)
+        Me.Label10.Location = New System.Drawing.Point(21, 190)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(32, 13)
+        Me.Label10.Size = New System.Drawing.Size(35, 13)
         Me.Label10.TabIndex = 18
         Me.Label10.Text = "Filter:"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(11, 157)
+        Me.Label11.Location = New System.Drawing.Point(21, 212)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(45, 13)
         Me.Label11.TabIndex = 19
@@ -283,12 +299,17 @@ Partial Class FrmHADS
         '
         'BtnFindFocusStar
         '
+        Me.BtnFindFocusStar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnFindFocusStar.FlatAppearance.BorderSize = 0
+        Me.BtnFindFocusStar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnFindFocusStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnFindFocusStar.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnFindFocusStar.Location = New System.Drawing.Point(210, 17)
         Me.BtnFindFocusStar.Name = "BtnFindFocusStar"
         Me.BtnFindFocusStar.Size = New System.Drawing.Size(44, 23)
         Me.BtnFindFocusStar.TabIndex = 46
         Me.BtnFindFocusStar.Text = "Find"
-        Me.BtnFindFocusStar.UseVisualStyleBackColor = True
+        Me.BtnFindFocusStar.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
@@ -312,30 +333,35 @@ Partial Class FrmHADS
         Me.GroupBox2.Controls.Add(Me.Label21)
         Me.GroupBox2.Controls.Add(Me.TxtFocusStarName)
         Me.GroupBox2.Controls.Add(Me.Label22)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 684)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 562)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(272, 122)
+        Me.GroupBox2.Size = New System.Drawing.Size(272, 111)
         Me.GroupBox2.TabIndex = 20
         Me.GroupBox2.TabStop = False
         '
         'TxtFocusStarDEC2000MM
         '
-        Me.TxtFocusStarDEC2000MM.Location = New System.Drawing.Point(118, 71)
+        Me.TxtFocusStarDEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtFocusStarDEC2000MM.Location = New System.Drawing.Point(118, 61)
         Me.TxtFocusStarDEC2000MM.Name = "TxtFocusStarDEC2000MM"
-        Me.TxtFocusStarDEC2000MM.Size = New System.Drawing.Size(26, 20)
+        Me.TxtFocusStarDEC2000MM.Size = New System.Drawing.Size(26, 21)
         Me.TxtFocusStarDEC2000MM.TabIndex = 5
+        Me.TxtFocusStarDEC2000MM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtFocusStarDEC2000DG
         '
-        Me.TxtFocusStarDEC2000DG.Location = New System.Drawing.Point(77, 71)
+        Me.TxtFocusStarDEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtFocusStarDEC2000DG.Location = New System.Drawing.Point(77, 61)
         Me.TxtFocusStarDEC2000DG.Name = "TxtFocusStarDEC2000DG"
-        Me.TxtFocusStarDEC2000DG.Size = New System.Drawing.Size(26, 20)
+        Me.TxtFocusStarDEC2000DG.Size = New System.Drawing.Size(26, 21)
         Me.TxtFocusStarDEC2000DG.TabIndex = 4
+        Me.TxtFocusStarDEC2000DG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(207, 74)
+        Me.Label14.Location = New System.Drawing.Point(211, 63)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(12, 13)
         Me.Label14.TabIndex = 54
@@ -344,7 +370,7 @@ Partial Class FrmHADS
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(148, 74)
+        Me.Label15.Location = New System.Drawing.Point(150, 63)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(15, 13)
         Me.Label15.TabIndex = 53
@@ -353,46 +379,52 @@ Partial Class FrmHADS
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(104, 74)
+        Me.Label16.Location = New System.Drawing.Point(104, 63)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(11, 13)
+        Me.Label16.Size = New System.Drawing.Size(12, 13)
         Me.Label16.TabIndex = 52
         Me.Label16.Text = "°"
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(11, 74)
+        Me.Label17.Location = New System.Drawing.Point(11, 63)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(65, 13)
+        Me.Label17.Size = New System.Drawing.Size(66, 13)
         Me.Label17.TabIndex = 51
         Me.Label17.Text = "DEC (2000):"
         '
         'TxtFocusStarRA2000SS
         '
-        Me.TxtFocusStarRA2000SS.Location = New System.Drawing.Point(165, 45)
+        Me.TxtFocusStarRA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtFocusStarRA2000SS.Location = New System.Drawing.Point(165, 40)
         Me.TxtFocusStarRA2000SS.Name = "TxtFocusStarRA2000SS"
-        Me.TxtFocusStarRA2000SS.Size = New System.Drawing.Size(40, 20)
+        Me.TxtFocusStarRA2000SS.Size = New System.Drawing.Size(40, 21)
         Me.TxtFocusStarRA2000SS.TabIndex = 3
+        Me.TxtFocusStarRA2000SS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtFocusStarRA2000MM
         '
-        Me.TxtFocusStarRA2000MM.Location = New System.Drawing.Point(118, 45)
+        Me.TxtFocusStarRA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtFocusStarRA2000MM.Location = New System.Drawing.Point(118, 40)
         Me.TxtFocusStarRA2000MM.Name = "TxtFocusStarRA2000MM"
-        Me.TxtFocusStarRA2000MM.Size = New System.Drawing.Size(26, 20)
+        Me.TxtFocusStarRA2000MM.Size = New System.Drawing.Size(26, 21)
         Me.TxtFocusStarRA2000MM.TabIndex = 2
+        Me.TxtFocusStarRA2000MM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtFocusStarRA2000HH
         '
-        Me.TxtFocusStarRA2000HH.Location = New System.Drawing.Point(77, 45)
+        Me.TxtFocusStarRA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtFocusStarRA2000HH.Location = New System.Drawing.Point(77, 40)
         Me.TxtFocusStarRA2000HH.Name = "TxtFocusStarRA2000HH"
-        Me.TxtFocusStarRA2000HH.Size = New System.Drawing.Size(26, 20)
+        Me.TxtFocusStarRA2000HH.Size = New System.Drawing.Size(26, 21)
         Me.TxtFocusStarRA2000HH.TabIndex = 1
+        Me.TxtFocusStarRA2000HH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(207, 48)
+        Me.Label18.Location = New System.Drawing.Point(211, 42)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(12, 13)
         Me.Label18.TabIndex = 47
@@ -401,7 +433,7 @@ Partial Class FrmHADS
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(148, 48)
+        Me.Label19.Location = New System.Drawing.Point(148, 42)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(15, 13)
         Me.Label19.TabIndex = 46
@@ -410,7 +442,7 @@ Partial Class FrmHADS
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(104, 48)
+        Me.Label20.Location = New System.Drawing.Point(104, 42)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(13, 13)
         Me.Label20.TabIndex = 45
@@ -419,17 +451,18 @@ Partial Class FrmHADS
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(11, 48)
+        Me.Label21.Location = New System.Drawing.Point(11, 42)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(61, 13)
+        Me.Label21.Size = New System.Drawing.Size(63, 13)
         Me.Label21.TabIndex = 44
         Me.Label21.Text = "RA  (2000):"
         '
         'TxtFocusStarName
         '
+        Me.TxtFocusStarName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarName.Location = New System.Drawing.Point(77, 19)
         Me.TxtFocusStarName.Name = "TxtFocusStarName"
-        Me.TxtFocusStarName.Size = New System.Drawing.Size(128, 20)
+        Me.TxtFocusStarName.Size = New System.Drawing.Size(128, 21)
         Me.TxtFocusStarName.TabIndex = 0
         '
         'Label22
@@ -437,7 +470,7 @@ Partial Class FrmHADS
         Me.Label22.AutoSize = True
         Me.Label22.Location = New System.Drawing.Point(11, 23)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(59, 13)
+        Me.Label22.Size = New System.Drawing.Size(61, 13)
         Me.Label22.TabIndex = 42
         Me.Label22.Text = "Focus star:"
         '
@@ -446,7 +479,9 @@ Partial Class FrmHADS
         Me.DataGridViewHADS.AllowUserToAddRows = False
         Me.DataGridViewHADS.AllowUserToDeleteRows = False
         Me.DataGridViewHADS.AllowUserToOrderColumns = True
+        Me.DataGridViewHADS.BackgroundColor = System.Drawing.Color.Silver
         Me.DataGridViewHADS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewHADS.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.DataGridViewHADS.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewHADS.MultiSelect = False
         Me.DataGridViewHADS.Name = "DataGridViewHADS"
@@ -454,13 +489,13 @@ Partial Class FrmHADS
         Me.DataGridViewHADS.RowHeadersVisible = False
         Me.DataGridViewHADS.RowHeadersWidth = 62
         Me.DataGridViewHADS.ShowCellErrors = False
-        Me.DataGridViewHADS.Size = New System.Drawing.Size(925, 450)
+        Me.DataGridViewHADS.Size = New System.Drawing.Size(763, 288)
         Me.DataGridViewHADS.TabIndex = 18
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(439, 62)
+        Me.Label6.Location = New System.Drawing.Point(464, 67)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(12, 13)
         Me.Label6.TabIndex = 13
@@ -468,9 +503,10 @@ Partial Class FrmHADS
         '
         'ComboBoxHADSBinning
         '
+        Me.ComboBoxHADSBinning.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxHADSBinning.FormattingEnabled = True
         Me.ComboBoxHADSBinning.Items.AddRange(New Object() {"1x1", "2x2", "3x3"})
-        Me.ComboBoxHADSBinning.Location = New System.Drawing.Point(94, 154)
+        Me.ComboBoxHADSBinning.Location = New System.Drawing.Point(104, 209)
         Me.ComboBoxHADSBinning.Name = "ComboBoxHADSBinning"
         Me.ComboBoxHADSBinning.Size = New System.Drawing.Size(67, 21)
         Me.ComboBoxHADSBinning.TabIndex = 9
@@ -548,28 +584,35 @@ Partial Class FrmHADS
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.ComboBoxHADSBinning)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 456)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 285)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(922, 225)
+        Me.GroupBox1.Size = New System.Drawing.Size(760, 277)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         '
         'BtnTSXCenter
         '
-        Me.BtnTSXCenter.Location = New System.Drawing.Point(232, 12)
+        Me.BtnTSXCenter.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnTSXCenter.FlatAppearance.BorderSize = 0
+        Me.BtnTSXCenter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnTSXCenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnTSXCenter.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTSXCenter.Location = New System.Drawing.Point(159, 12)
         Me.BtnTSXCenter.Name = "BtnTSXCenter"
-        Me.BtnTSXCenter.Size = New System.Drawing.Size(99, 23)
+        Me.BtnTSXCenter.Size = New System.Drawing.Size(113, 23)
         Me.BtnTSXCenter.TabIndex = 90
         Me.BtnTSXCenter.Text = "Center on target"
-        Me.BtnTSXCenter.UseVisualStyleBackColor = True
+        Me.BtnTSXCenter.UseVisualStyleBackColor = False
         '
         'ChkHADSActive
         '
         Me.ChkHADSActive.AutoSize = True
         Me.ChkHADSActive.Enabled = False
-        Me.ChkHADSActive.Location = New System.Drawing.Point(232, 139)
+        Me.ChkHADSActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkHADSActive.Location = New System.Drawing.Point(259, 92)
         Me.ChkHADSActive.Name = "ChkHADSActive"
-        Me.ChkHADSActive.Size = New System.Drawing.Size(95, 17)
+        Me.ChkHADSActive.Size = New System.Drawing.Size(94, 17)
         Me.ChkHADSActive.TabIndex = 89
         Me.ChkHADSActive.Text = "Active target ?"
         Me.ToolTip.SetToolTip(Me.ChkHADSActive, "Is the object included in the current Excel-sheet or obsolete?")
@@ -578,34 +621,34 @@ Partial Class FrmHADS
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(702, 17)
+        Me.Label45.Location = New System.Drawing.Point(521, 141)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(23, 13)
+        Me.Label45.Size = New System.Drawing.Size(24, 13)
         Me.Label45.TabIndex = 88
         Me.Label45.Text = "Jul:"
         '
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(702, 40)
+        Me.Label44.Location = New System.Drawing.Point(521, 162)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(29, 13)
+        Me.Label44.Size = New System.Drawing.Size(30, 13)
         Me.Label44.TabIndex = 87
         Me.Label44.Text = "Aug:"
         '
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(702, 132)
+        Me.Label43.Location = New System.Drawing.Point(521, 246)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(30, 13)
+        Me.Label43.Size = New System.Drawing.Size(29, 13)
         Me.Label43.TabIndex = 86
         Me.Label43.Text = "Dec:"
         '
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(702, 109)
+        Me.Label42.Location = New System.Drawing.Point(521, 225)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(30, 13)
         Me.Label42.TabIndex = 85
@@ -614,16 +657,16 @@ Partial Class FrmHADS
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(702, 86)
+        Me.Label41.Location = New System.Drawing.Point(520, 204)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(27, 13)
+        Me.Label41.Size = New System.Drawing.Size(28, 13)
         Me.Label41.TabIndex = 84
         Me.Label41.Text = "Oct:"
         '
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(702, 63)
+        Me.Label40.Location = New System.Drawing.Point(521, 183)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(29, 13)
         Me.Label40.TabIndex = 83
@@ -632,199 +675,217 @@ Partial Class FrmHADS
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(473, 132)
+        Me.Label39.Location = New System.Drawing.Point(520, 120)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(27, 13)
+        Me.Label39.Size = New System.Drawing.Size(28, 13)
         Me.Label39.TabIndex = 82
         Me.Label39.Text = "Jun:"
         '
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(473, 109)
+        Me.Label38.Location = New System.Drawing.Point(521, 99)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(30, 13)
+        Me.Label38.Size = New System.Drawing.Size(31, 13)
         Me.Label38.TabIndex = 81
         Me.Label38.Text = "May:"
         '
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(473, 86)
+        Me.Label37.Location = New System.Drawing.Point(521, 78)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(26, 13)
+        Me.Label37.Size = New System.Drawing.Size(28, 13)
         Me.Label37.TabIndex = 80
         Me.Label37.Text = "Apr:"
         '
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(473, 63)
+        Me.Label36.Location = New System.Drawing.Point(520, 57)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(28, 13)
+        Me.Label36.Size = New System.Drawing.Size(29, 13)
         Me.Label36.TabIndex = 79
         Me.Label36.Text = "Mar:"
         '
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(473, 40)
+        Me.Label35.Location = New System.Drawing.Point(521, 36)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(28, 13)
+        Me.Label35.Size = New System.Drawing.Size(29, 13)
         Me.Label35.TabIndex = 78
         Me.Label35.Text = "Feb:"
         '
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(473, 17)
+        Me.Label34.Location = New System.Drawing.Point(521, 16)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(27, 13)
+        Me.Label34.Size = New System.Drawing.Size(28, 13)
         Me.Label34.TabIndex = 77
         Me.Label34.Text = "Jan:"
         '
         'TxtHADSDec
         '
+        Me.TxtHADSDec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSDec.Enabled = False
-        Me.TxtHADSDec.Location = New System.Drawing.Point(740, 129)
+        Me.TxtHADSDec.Location = New System.Drawing.Point(565, 244)
         Me.TxtHADSDec.Name = "TxtHADSDec"
-        Me.TxtHADSDec.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSDec.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSDec.TabIndex = 76
         '
         'TxtHADSNov
         '
+        Me.TxtHADSNov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSNov.Enabled = False
-        Me.TxtHADSNov.Location = New System.Drawing.Point(740, 106)
+        Me.TxtHADSNov.Location = New System.Drawing.Point(565, 223)
         Me.TxtHADSNov.Name = "TxtHADSNov"
-        Me.TxtHADSNov.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSNov.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSNov.TabIndex = 75
         '
         'TxtHADSOct
         '
+        Me.TxtHADSOct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSOct.Enabled = False
-        Me.TxtHADSOct.Location = New System.Drawing.Point(740, 83)
+        Me.TxtHADSOct.Location = New System.Drawing.Point(565, 202)
         Me.TxtHADSOct.Name = "TxtHADSOct"
-        Me.TxtHADSOct.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSOct.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSOct.TabIndex = 74
         '
         'TxtHADSSep
         '
+        Me.TxtHADSSep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSSep.Enabled = False
-        Me.TxtHADSSep.Location = New System.Drawing.Point(740, 60)
+        Me.TxtHADSSep.Location = New System.Drawing.Point(565, 181)
         Me.TxtHADSSep.Name = "TxtHADSSep"
-        Me.TxtHADSSep.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSSep.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSSep.TabIndex = 73
         '
         'TxtHADSAug
         '
+        Me.TxtHADSAug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSAug.Enabled = False
-        Me.TxtHADSAug.Location = New System.Drawing.Point(740, 37)
+        Me.TxtHADSAug.Location = New System.Drawing.Point(565, 160)
         Me.TxtHADSAug.Name = "TxtHADSAug"
-        Me.TxtHADSAug.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSAug.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSAug.TabIndex = 72
         '
         'TxtHADSJul
         '
+        Me.TxtHADSJul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSJul.Enabled = False
-        Me.TxtHADSJul.Location = New System.Drawing.Point(740, 14)
+        Me.TxtHADSJul.Location = New System.Drawing.Point(565, 139)
         Me.TxtHADSJul.Name = "TxtHADSJul"
-        Me.TxtHADSJul.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSJul.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSJul.TabIndex = 71
         '
         'TxtHADSJun
         '
+        Me.TxtHADSJun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSJun.Enabled = False
-        Me.TxtHADSJun.Location = New System.Drawing.Point(517, 129)
+        Me.TxtHADSJun.Location = New System.Drawing.Point(565, 118)
         Me.TxtHADSJun.Name = "TxtHADSJun"
-        Me.TxtHADSJun.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSJun.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSJun.TabIndex = 70
         '
         'TxtHADSMay
         '
+        Me.TxtHADSMay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSMay.Enabled = False
-        Me.TxtHADSMay.Location = New System.Drawing.Point(517, 106)
+        Me.TxtHADSMay.Location = New System.Drawing.Point(565, 97)
         Me.TxtHADSMay.Name = "TxtHADSMay"
-        Me.TxtHADSMay.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSMay.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSMay.TabIndex = 69
         '
         'TxtHADSApr
         '
+        Me.TxtHADSApr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSApr.Enabled = False
-        Me.TxtHADSApr.Location = New System.Drawing.Point(517, 83)
+        Me.TxtHADSApr.Location = New System.Drawing.Point(565, 76)
         Me.TxtHADSApr.Name = "TxtHADSApr"
-        Me.TxtHADSApr.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSApr.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSApr.TabIndex = 68
         '
         'TxtHADSMar
         '
+        Me.TxtHADSMar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSMar.Enabled = False
-        Me.TxtHADSMar.Location = New System.Drawing.Point(517, 60)
+        Me.TxtHADSMar.Location = New System.Drawing.Point(565, 55)
         Me.TxtHADSMar.Name = "TxtHADSMar"
-        Me.TxtHADSMar.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSMar.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSMar.TabIndex = 67
         '
         'TxtHADSFeb
         '
+        Me.TxtHADSFeb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSFeb.Enabled = False
-        Me.TxtHADSFeb.Location = New System.Drawing.Point(517, 37)
+        Me.TxtHADSFeb.Location = New System.Drawing.Point(565, 34)
         Me.TxtHADSFeb.Name = "TxtHADSFeb"
-        Me.TxtHADSFeb.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSFeb.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSFeb.TabIndex = 66
         '
         'TxtHADSJan
         '
+        Me.TxtHADSJan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSJan.Enabled = False
-        Me.TxtHADSJan.Location = New System.Drawing.Point(517, 14)
+        Me.TxtHADSJan.Location = New System.Drawing.Point(565, 13)
         Me.TxtHADSJan.Name = "TxtHADSJan"
-        Me.TxtHADSJan.Size = New System.Drawing.Size(179, 20)
+        Me.TxtHADSJan.Size = New System.Drawing.Size(179, 21)
         Me.TxtHADSJan.TabIndex = 65
         '
         'TxtHADSPeriod
         '
+        Me.TxtHADSPeriod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSPeriod.Enabled = False
-        Me.TxtHADSPeriod.Location = New System.Drawing.Point(393, 82)
+        Me.TxtHADSPeriod.Location = New System.Drawing.Point(104, 166)
         Me.TxtHADSPeriod.Name = "TxtHADSPeriod"
-        Me.TxtHADSPeriod.Size = New System.Drawing.Size(40, 20)
+        Me.TxtHADSPeriod.Size = New System.Drawing.Size(37, 21)
         Me.TxtHADSPeriod.TabIndex = 63
+        Me.TxtHADSPeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(351, 85)
+        Me.Label33.Location = New System.Drawing.Point(61, 168)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(40, 13)
+        Me.Label33.Size = New System.Drawing.Size(41, 13)
         Me.Label33.TabIndex = 64
         Me.Label33.Text = "Period:"
         '
         'TxtHADSMax
         '
+        Me.TxtHADSMax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSMax.Enabled = False
-        Me.TxtHADSMax.Location = New System.Drawing.Point(266, 105)
+        Me.TxtHADSMax.Location = New System.Drawing.Point(195, 145)
         Me.TxtHADSMax.Name = "TxtHADSMax"
-        Me.TxtHADSMax.Size = New System.Drawing.Size(37, 20)
+        Me.TxtHADSMax.Size = New System.Drawing.Size(37, 21)
         Me.TxtHADSMax.TabIndex = 61
+        Me.TxtHADSMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(233, 108)
+        Me.Label13.Location = New System.Drawing.Point(162, 147)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(30, 13)
+        Me.Label13.Size = New System.Drawing.Size(31, 13)
         Me.Label13.TabIndex = 62
         Me.Label13.Text = "Max:"
         '
         'TxtHADSMin
         '
+        Me.TxtHADSMin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSMin.Enabled = False
-        Me.TxtHADSMin.Location = New System.Drawing.Point(266, 82)
+        Me.TxtHADSMin.Location = New System.Drawing.Point(104, 145)
         Me.TxtHADSMin.Name = "TxtHADSMin"
-        Me.TxtHADSMin.Size = New System.Drawing.Size(37, 20)
+        Me.TxtHADSMin.Size = New System.Drawing.Size(37, 21)
         Me.TxtHADSMin.TabIndex = 59
+        Me.TxtHADSMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(233, 85)
+        Me.Label12.Location = New System.Drawing.Point(74, 147)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(27, 13)
         Me.Label12.TabIndex = 60
@@ -832,110 +893,122 @@ Partial Class FrmHADS
         '
         'BtnEstimate
         '
-        Me.BtnEstimate.Location = New System.Drawing.Point(167, 174)
+        Me.BtnEstimate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnEstimate.FlatAppearance.BorderSize = 0
+        Me.BtnEstimate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnEstimate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEstimate.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEstimate.Location = New System.Drawing.Point(194, 223)
         Me.BtnEstimate.Name = "BtnEstimate"
-        Me.BtnEstimate.Size = New System.Drawing.Size(55, 23)
+        Me.BtnEstimate.Size = New System.Drawing.Size(72, 23)
         Me.BtnEstimate.TabIndex = 58
         Me.BtnEstimate.Text = "Estimate"
-        Me.BtnEstimate.UseVisualStyleBackColor = True
+        Me.BtnEstimate.UseVisualStyleBackColor = False
         '
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(11, 105)
+        Me.Label32.Location = New System.Drawing.Point(21, 125)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(80, 13)
+        Me.Label32.Size = New System.Drawing.Size(77, 13)
         Me.Label32.TabIndex = 57
         Me.Label32.Text = "HADS Name 5:"
         '
         'TxtHADSName5
         '
+        Me.TxtHADSName5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSName5.Enabled = False
-        Me.TxtHADSName5.Location = New System.Drawing.Point(94, 102)
+        Me.TxtHADSName5.Location = New System.Drawing.Point(104, 124)
         Me.TxtHADSName5.Name = "TxtHADSName5"
-        Me.TxtHADSName5.Size = New System.Drawing.Size(128, 20)
+        Me.TxtHADSName5.Size = New System.Drawing.Size(128, 21)
         Me.TxtHADSName5.TabIndex = 56
         '
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(11, 85)
+        Me.Label31.Location = New System.Drawing.Point(21, 105)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(80, 13)
+        Me.Label31.Size = New System.Drawing.Size(77, 13)
         Me.Label31.TabIndex = 55
         Me.Label31.Text = "HADS Name 4:"
         '
         'TxtHADSName4
         '
+        Me.TxtHADSName4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSName4.Enabled = False
-        Me.TxtHADSName4.Location = New System.Drawing.Point(94, 80)
+        Me.TxtHADSName4.Location = New System.Drawing.Point(104, 103)
         Me.TxtHADSName4.Name = "TxtHADSName4"
-        Me.TxtHADSName4.Size = New System.Drawing.Size(128, 20)
+        Me.TxtHADSName4.Size = New System.Drawing.Size(128, 21)
         Me.TxtHADSName4.TabIndex = 54
         '
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(11, 63)
+        Me.Label30.Location = New System.Drawing.Point(21, 83)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(80, 13)
+        Me.Label30.Size = New System.Drawing.Size(77, 13)
         Me.Label30.TabIndex = 53
         Me.Label30.Text = "HADS Name 3:"
         '
         'TxtHADSName3
         '
+        Me.TxtHADSName3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSName3.Enabled = False
-        Me.TxtHADSName3.Location = New System.Drawing.Point(94, 58)
+        Me.TxtHADSName3.Location = New System.Drawing.Point(104, 82)
         Me.TxtHADSName3.Name = "TxtHADSName3"
-        Me.TxtHADSName3.Size = New System.Drawing.Size(128, 20)
+        Me.TxtHADSName3.Size = New System.Drawing.Size(128, 21)
         Me.TxtHADSName3.TabIndex = 52
         '
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(11, 39)
+        Me.Label29.Location = New System.Drawing.Point(21, 62)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(80, 13)
+        Me.Label29.Size = New System.Drawing.Size(77, 13)
         Me.Label29.TabIndex = 51
         Me.Label29.Text = "HADS Name 2:"
         '
         'TxtHADSName2
         '
+        Me.TxtHADSName2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSName2.Enabled = False
-        Me.TxtHADSName2.Location = New System.Drawing.Point(94, 36)
+        Me.TxtHADSName2.Location = New System.Drawing.Point(104, 61)
         Me.TxtHADSName2.Name = "TxtHADSName2"
-        Me.TxtHADSName2.Size = New System.Drawing.Size(128, 20)
+        Me.TxtHADSName2.Size = New System.Drawing.Size(128, 21)
         Me.TxtHADSName2.TabIndex = 50
         '
         'TxtHADSLastObserved
         '
-        Me.TxtHADSLastObserved.Location = New System.Drawing.Point(94, 199)
+        Me.TxtHADSLastObserved.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtHADSLastObserved.Location = New System.Drawing.Point(104, 252)
         Me.TxtHADSLastObserved.Name = "TxtHADSLastObserved"
-        Me.TxtHADSLastObserved.Size = New System.Drawing.Size(128, 20)
+        Me.TxtHADSLastObserved.Size = New System.Drawing.Size(128, 21)
         Me.TxtHADSLastObserved.TabIndex = 48
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(11, 202)
+        Me.Label28.Location = New System.Drawing.Point(21, 254)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(77, 13)
+        Me.Label28.Size = New System.Drawing.Size(79, 13)
         Me.Label28.TabIndex = 49
         Me.Label28.Text = "Last observed:"
         '
         'TxtHADSErrorText
         '
-        Me.TxtHADSErrorText.Location = New System.Drawing.Point(232, 199)
+        Me.TxtHADSErrorText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtHADSErrorText.Location = New System.Drawing.Point(388, 130)
         Me.TxtHADSErrorText.Name = "TxtHADSErrorText"
-        Me.TxtHADSErrorText.Size = New System.Drawing.Size(168, 20)
+        Me.TxtHADSErrorText.Size = New System.Drawing.Size(127, 21)
         Me.TxtHADSErrorText.TabIndex = 47
         '
         'ChkHADSError
         '
         Me.ChkHADSError.AutoSize = True
-        Me.ChkHADSError.Location = New System.Drawing.Point(232, 178)
+        Me.ChkHADSError.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkHADSError.Location = New System.Drawing.Point(259, 130)
         Me.ChkHADSError.Name = "ChkHADSError"
-        Me.ChkHADSError.Size = New System.Drawing.Size(133, 17)
+        Me.ChkHADSError.Size = New System.Drawing.Size(137, 17)
         Me.ChkHADSError.TabIndex = 46
         Me.ChkHADSError.Text = "Error observing target !"
         Me.ChkHADSError.UseVisualStyleBackColor = True
@@ -943,9 +1016,10 @@ Partial Class FrmHADS
         'ChkHADSPriority
         '
         Me.ChkHADSPriority.AutoSize = True
-        Me.ChkHADSPriority.Location = New System.Drawing.Point(232, 158)
+        Me.ChkHADSPriority.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkHADSPriority.Location = New System.Drawing.Point(259, 111)
         Me.ChkHADSPriority.Name = "ChkHADSPriority"
-        Me.ChkHADSPriority.Size = New System.Drawing.Size(93, 17)
+        Me.ChkHADSPriority.Size = New System.Drawing.Size(97, 17)
         Me.ChkHADSPriority.TabIndex = 14
         Me.ChkHADSPriority.Text = "Priority target !"
         Me.ChkHADSPriority.UseVisualStyleBackColor = True
@@ -953,24 +1027,25 @@ Partial Class FrmHADS
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(368, 17)
+        Me.Label27.Location = New System.Drawing.Point(21, 22)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(19, 13)
+        Me.Label27.Size = New System.Drawing.Size(21, 13)
         Me.Label27.TabIndex = 29
         Me.Label27.Text = "Id:"
         '
         'TxtID
         '
+        Me.TxtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtID.Enabled = False
-        Me.TxtID.Location = New System.Drawing.Point(393, 14)
+        Me.TxtID.Location = New System.Drawing.Point(104, 19)
         Me.TxtID.Name = "TxtID"
-        Me.TxtID.Size = New System.Drawing.Size(40, 20)
+        Me.TxtID.Size = New System.Drawing.Size(40, 21)
         Me.TxtID.TabIndex = 30
         '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(149, 180)
+        Me.Label24.Location = New System.Drawing.Point(176, 236)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(12, 13)
         Me.Label24.TabIndex = 28
@@ -978,24 +1053,27 @@ Partial Class FrmHADS
         '
         'TxtHADSExposure
         '
-        Me.TxtHADSExposure.Location = New System.Drawing.Point(94, 177)
+        Me.TxtHADSExposure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtHADSExposure.Location = New System.Drawing.Point(104, 231)
         Me.TxtHADSExposure.Name = "TxtHADSExposure"
-        Me.TxtHADSExposure.Size = New System.Drawing.Size(49, 20)
+        Me.TxtHADSExposure.Size = New System.Drawing.Size(67, 21)
         Me.TxtHADSExposure.TabIndex = 10
+        Me.TxtHADSExposure.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(11, 180)
+        Me.Label23.Location = New System.Drawing.Point(21, 233)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(54, 13)
+        Me.Label23.Size = New System.Drawing.Size(56, 13)
         Me.Label23.TabIndex = 26
         Me.Label23.Text = "Exposure:"
         '
         'ComboBoxHADSFilter
         '
+        Me.ComboBoxHADSFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxHADSFilter.FormattingEnabled = True
-        Me.ComboBoxHADSFilter.Location = New System.Drawing.Point(94, 131)
+        Me.ComboBoxHADSFilter.Location = New System.Drawing.Point(104, 187)
         Me.ComboBoxHADSFilter.Name = "ComboBoxHADSFilter"
         Me.ComboBoxHADSFilter.Size = New System.Drawing.Size(67, 21)
         Me.ComboBoxHADSFilter.TabIndex = 8
@@ -1003,90 +1081,125 @@ Partial Class FrmHADS
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 17)
+        Me.Label1.Location = New System.Drawing.Point(21, 43)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 13)
+        Me.Label1.Size = New System.Drawing.Size(68, 13)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "HADS Name:"
         '
         'TxtHADSName
         '
+        Me.TxtHADSName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtHADSName.Enabled = False
-        Me.TxtHADSName.Location = New System.Drawing.Point(94, 14)
+        Me.TxtHADSName.Location = New System.Drawing.Point(104, 40)
         Me.TxtHADSName.Name = "TxtHADSName"
-        Me.TxtHADSName.Size = New System.Drawing.Size(128, 20)
+        Me.TxtHADSName.Size = New System.Drawing.Size(128, 21)
         Me.TxtHADSName.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(229, 39)
+        Me.Label2.Location = New System.Drawing.Point(254, 44)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 45
         Me.Label2.Text = "RA  (2000):"
         '
         'BtnDownloadHADSList
         '
-        Me.BtnDownloadHADSList.Location = New System.Drawing.Point(292, 687)
+        Me.BtnDownloadHADSList.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnDownloadHADSList.FlatAppearance.BorderSize = 0
+        Me.BtnDownloadHADSList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnDownloadHADSList.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDownloadHADSList.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDownloadHADSList.ForeColor = System.Drawing.Color.White
+        Me.BtnDownloadHADSList.Location = New System.Drawing.Point(299, 568)
         Me.BtnDownloadHADSList.Name = "BtnDownloadHADSList"
         Me.BtnDownloadHADSList.Size = New System.Drawing.Size(144, 23)
         Me.BtnDownloadHADSList.TabIndex = 1
         Me.BtnDownloadHADSList.Text = "Download HADS List"
-        Me.BtnDownloadHADSList.UseVisualStyleBackColor = True
-        '
-        'BtnSave
-        '
-        Me.BtnSave.Location = New System.Drawing.Point(292, 778)
-        Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(75, 23)
-        Me.BtnSave.TabIndex = 22
-        Me.BtnSave.Text = "Save"
-        Me.BtnSave.UseVisualStyleBackColor = True
+        Me.BtnDownloadHADSList.UseVisualStyleBackColor = False
         '
         'BtnCancel
         '
-        Me.BtnCancel.Location = New System.Drawing.Point(373, 778)
+        Me.BtnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnCancel.FlatAppearance.BorderSize = 0
+        Me.BtnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancel.ForeColor = System.Drawing.Color.White
+        Me.BtnCancel.Location = New System.Drawing.Point(504, 593)
         Me.BtnCancel.Name = "BtnCancel"
-        Me.BtnCancel.Size = New System.Drawing.Size(63, 23)
+        Me.BtnCancel.Size = New System.Drawing.Size(75, 23)
         Me.BtnCancel.TabIndex = 26
         Me.BtnCancel.Text = "Cancel "
-        Me.BtnCancel.UseVisualStyleBackColor = True
+        Me.BtnCancel.UseVisualStyleBackColor = False
         '
         'BtnTruncateHADS
         '
-        Me.BtnTruncateHADS.Location = New System.Drawing.Point(292, 712)
+        Me.BtnTruncateHADS.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnTruncateHADS.FlatAppearance.BorderSize = 0
+        Me.BtnTruncateHADS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnTruncateHADS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnTruncateHADS.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTruncateHADS.ForeColor = System.Drawing.Color.White
+        Me.BtnTruncateHADS.Location = New System.Drawing.Point(299, 593)
         Me.BtnTruncateHADS.Name = "BtnTruncateHADS"
         Me.BtnTruncateHADS.Size = New System.Drawing.Size(144, 23)
         Me.BtnTruncateHADS.TabIndex = 27
         Me.BtnTruncateHADS.Text = "Truncate table"
-        Me.BtnTruncateHADS.UseVisualStyleBackColor = True
+        Me.BtnTruncateHADS.UseVisualStyleBackColor = False
         '
         'BtnDeleteInactiveHADS
         '
-        Me.BtnDeleteInactiveHADS.Location = New System.Drawing.Point(292, 737)
+        Me.BtnDeleteInactiveHADS.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnDeleteInactiveHADS.FlatAppearance.BorderSize = 0
+        Me.BtnDeleteInactiveHADS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnDeleteInactiveHADS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDeleteInactiveHADS.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDeleteInactiveHADS.ForeColor = System.Drawing.Color.White
+        Me.BtnDeleteInactiveHADS.Location = New System.Drawing.Point(299, 618)
         Me.BtnDeleteInactiveHADS.Name = "BtnDeleteInactiveHADS"
         Me.BtnDeleteInactiveHADS.Size = New System.Drawing.Size(143, 23)
         Me.BtnDeleteInactiveHADS.TabIndex = 28
         Me.BtnDeleteInactiveHADS.Text = "Delete inactive records"
-        Me.BtnDeleteInactiveHADS.UseVisualStyleBackColor = True
+        Me.BtnDeleteInactiveHADS.UseVisualStyleBackColor = False
+        '
+        'BtnSave
+        '
+        Me.BtnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnSave.FlatAppearance.BorderSize = 0
+        Me.BtnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSave.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSave.ForeColor = System.Drawing.Color.White
+        Me.BtnSave.Location = New System.Drawing.Point(504, 568)
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSave.TabIndex = 22
+        Me.BtnSave.Text = "Save"
+        Me.BtnSave.UseVisualStyleBackColor = False
         '
         'FrmHADS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(928, 833)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(765, 677)
         Me.Controls.Add(Me.BtnDeleteInactiveHADS)
         Me.Controls.Add(Me.BtnTruncateHADS)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.BtnDownloadHADSList)
         Me.Controls.Add(Me.DataGridViewHADS)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnSave)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnCancel)
+        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "FrmHADS"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HADS targets"
+        Me.TopMost = True
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridViewHADS, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1147,7 +1260,6 @@ Partial Class FrmHADS
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtHADSName As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents BtnSave As Button
     Friend WithEvents BtnCancel As Button
     Friend WithEvents TxtHADSLastObserved As TextBox
     Friend WithEvents Label28 As Label
@@ -1195,4 +1307,5 @@ Partial Class FrmHADS
     Friend WithEvents BtnTruncateHADS As Button
     Friend WithEvents BtnDeleteInactiveHADS As Button
     Friend WithEvents BtnTSXCenter As Button
+    Friend WithEvents BtnSave As Button
 End Class

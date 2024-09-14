@@ -296,6 +296,7 @@ Partial Class FrmDebug
         '
         Me.LblpIsActionRunning.AutoSize = True
         Me.LblpIsActionRunning.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpIsActionRunning.ForeColor = System.Drawing.Color.White
         Me.LblpIsActionRunning.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpIsActionRunning.Location = New System.Drawing.Point(6, 58)
         Me.LblpIsActionRunning.Name = "LblpIsActionRunning"
@@ -307,6 +308,7 @@ Partial Class FrmDebug
         '
         Me.LblpIsSequenceRunning.AutoSize = True
         Me.LblpIsSequenceRunning.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpIsSequenceRunning.ForeColor = System.Drawing.Color.White
         Me.LblpIsSequenceRunning.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpIsSequenceRunning.Location = New System.Drawing.Point(6, 36)
         Me.LblpIsSequenceRunning.Name = "LblpIsSequenceRunning"
@@ -318,6 +320,7 @@ Partial Class FrmDebug
         '
         Me.LblpIsEquipmentInitializing.AutoSize = True
         Me.LblpIsEquipmentInitializing.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpIsEquipmentInitializing.ForeColor = System.Drawing.Color.White
         Me.LblpIsEquipmentInitializing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpIsEquipmentInitializing.Location = New System.Drawing.Point(6, 156)
         Me.LblpIsEquipmentInitializing.Name = "LblpIsEquipmentInitializing"
@@ -329,6 +332,7 @@ Partial Class FrmDebug
         '
         Me.LblpEquipmentStatus.AutoSize = True
         Me.LblpEquipmentStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpEquipmentStatus.ForeColor = System.Drawing.Color.White
         Me.LblpEquipmentStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpEquipmentStatus.Location = New System.Drawing.Point(6, 179)
         Me.LblpEquipmentStatus.Name = "LblpEquipmentStatus"
@@ -340,6 +344,7 @@ Partial Class FrmDebug
         '
         Me.LblpRunStatus.AutoSize = True
         Me.LblpRunStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpRunStatus.ForeColor = System.Drawing.Color.White
         Me.LblpRunStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpRunStatus.Location = New System.Drawing.Point(6, 79)
         Me.LblpRunStatus.Name = "LblpRunStatus"
@@ -351,6 +356,7 @@ Partial Class FrmDebug
         '
         Me.LblpManualAbort.AutoSize = True
         Me.LblpManualAbort.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpManualAbort.ForeColor = System.Drawing.Color.White
         Me.LblpManualAbort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpManualAbort.Location = New System.Drawing.Point(6, 100)
         Me.LblpManualAbort.Name = "LblpManualAbort"
@@ -362,6 +368,7 @@ Partial Class FrmDebug
         '
         Me.LblpAbort.AutoSize = True
         Me.LblpAbort.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpAbort.ForeColor = System.Drawing.Color.White
         Me.LblpAbort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpAbort.Location = New System.Drawing.Point(6, 16)
         Me.LblpAbort.Name = "LblpAbort"
@@ -395,6 +402,7 @@ Partial Class FrmDebug
         '
         Me.LblpMoonCooldownStatus.AutoSize = True
         Me.LblpMoonCooldownStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpMoonCooldownStatus.ForeColor = System.Drawing.Color.White
         Me.LblpMoonCooldownStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpMoonCooldownStatus.Location = New System.Drawing.Point(193, 36)
         Me.LblpMoonCooldownStatus.Name = "LblpMoonCooldownStatus"
@@ -406,6 +414,7 @@ Partial Class FrmDebug
         '
         Me.LblMoonSafetyStatus.AutoSize = True
         Me.LblMoonSafetyStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMoonSafetyStatus.ForeColor = System.Drawing.Color.White
         Me.LblMoonSafetyStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblMoonSafetyStatus.Location = New System.Drawing.Point(193, 16)
         Me.LblMoonSafetyStatus.Name = "LblMoonSafetyStatus"
@@ -417,6 +426,7 @@ Partial Class FrmDebug
         '
         Me.lblpOldSequenceTimeSMART.AutoSize = True
         Me.lblpOldSequenceTimeSMART.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblpOldSequenceTimeSMART.ForeColor = System.Drawing.Color.White
         Me.lblpOldSequenceTimeSMART.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblpOldSequenceTimeSMART.Location = New System.Drawing.Point(7, 252)
         Me.lblpOldSequenceTimeSMART.Name = "lblpOldSequenceTimeSMART"
@@ -428,6 +438,7 @@ Partial Class FrmDebug
         '
         Me.LblpOldProgramTimeSMART.AutoSize = True
         Me.LblpOldProgramTimeSMART.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpOldProgramTimeSMART.ForeColor = System.Drawing.Color.White
         Me.LblpOldProgramTimeSMART.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpOldProgramTimeSMART.Location = New System.Drawing.Point(7, 233)
         Me.LblpOldProgramTimeSMART.Name = "LblpOldProgramTimeSMART"
@@ -439,6 +450,7 @@ Partial Class FrmDebug
         '
         Me.LblpSmartError.AutoSize = True
         Me.LblpSmartError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblpSmartError.ForeColor = System.Drawing.Color.White
         Me.LblpSmartError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblpSmartError.Location = New System.Drawing.Point(6, 214)
         Me.LblpSmartError.Name = "LblpSmartError"
@@ -450,6 +462,7 @@ Partial Class FrmDebug
         '
         Me.LblStartRun.AutoSize = True
         Me.LblStartRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblStartRun.ForeColor = System.Drawing.Color.White
         Me.LblStartRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LblStartRun.Location = New System.Drawing.Point(6, 120)
         Me.LblStartRun.Name = "LblStartRun"
@@ -580,6 +593,7 @@ Partial Class FrmDebug
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(719, 382)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtnError)

@@ -136,7 +136,7 @@ Public Class FrmTarget
             DataGridViewTarget.Columns(5).Width = 30 'checkbox
             DataGridViewTarget.Columns(6).Width = 120
             DataGridViewTarget.Columns(7).Width = 50 'checkbox
-            DataGridViewTarget.Width = 525
+            DataGridViewTarget.Width = 501
             DataGridViewTarget.BackgroundColor = Color.Silver
 
         Catch ex As Exception

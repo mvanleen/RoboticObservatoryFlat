@@ -83,7 +83,7 @@ Partial Class FrmSplash
         '
         'BtnClose
         '
-        Me.BtnClose.BackColor = System.Drawing.Color.Silver
+        Me.BtnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.BtnClose.FlatAppearance.BorderSize = 0
         Me.BtnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat

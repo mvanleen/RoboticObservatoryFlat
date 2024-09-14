@@ -566,6 +566,7 @@ Partial Class FrmTools
         'TxtRelPosition
         '
         Me.TxtRelPosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtRelPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtRelPosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtRelPosition.Location = New System.Drawing.Point(280, 36)
         Me.TxtRelPosition.Name = "TxtRelPosition"

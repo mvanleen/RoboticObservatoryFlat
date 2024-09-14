@@ -60,7 +60,7 @@ Partial Class FrmCalibration
         Me.BtnStart.FlatAppearance.BorderSize = 0
         Me.BtnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnStart.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnStart.ForeColor = System.Drawing.Color.White
         Me.BtnStart.Location = New System.Drawing.Point(2, 213)
         Me.BtnStart.Name = "BtnStart"
@@ -75,7 +75,7 @@ Partial Class FrmCalibration
         Me.BtnStop.FlatAppearance.BorderSize = 0
         Me.BtnStop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.BtnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnStop.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnStop.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnStop.ForeColor = System.Drawing.Color.White
         Me.BtnStop.Location = New System.Drawing.Point(224, 213)
         Me.BtnStop.Name = "BtnStop"
@@ -111,6 +111,7 @@ Partial Class FrmCalibration
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.ChkBias)
         Me.GroupBox1.Controls.Add(Me.ChkDarks1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(2, 4)
         Me.GroupBox1.Name = "GroupBox1"
@@ -129,7 +130,7 @@ Partial Class FrmCalibration
         Me.ChkDarks5.ForeColor = System.Drawing.Color.White
         Me.ChkDarks5.Location = New System.Drawing.Point(14, 175)
         Me.ChkDarks5.Name = "ChkDarks5"
-        Me.ChkDarks5.Size = New System.Drawing.Size(46, 17)
+        Me.ChkDarks5.Size = New System.Drawing.Size(45, 17)
         Me.ChkDarks5.TabIndex = 49
         Me.ChkDarks5.Text = "Dark"
         Me.ChkDarks5.UseVisualStyleBackColor = True
@@ -140,7 +141,7 @@ Partial Class FrmCalibration
         Me.TxtDarkExposureDuration5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDarkExposureDuration5.Location = New System.Drawing.Point(65, 173)
         Me.TxtDarkExposureDuration5.Name = "TxtDarkExposureDuration5"
-        Me.TxtDarkExposureDuration5.Size = New System.Drawing.Size(50, 20)
+        Me.TxtDarkExposureDuration5.Size = New System.Drawing.Size(50, 21)
         Me.TxtDarkExposureDuration5.TabIndex = 48
         Me.TxtDarkExposureDuration5.Text = "180"
         '
@@ -164,7 +165,7 @@ Partial Class FrmCalibration
         Me.ChkDarks4.ForeColor = System.Drawing.Color.White
         Me.ChkDarks4.Location = New System.Drawing.Point(14, 149)
         Me.ChkDarks4.Name = "ChkDarks4"
-        Me.ChkDarks4.Size = New System.Drawing.Size(46, 17)
+        Me.ChkDarks4.Size = New System.Drawing.Size(45, 17)
         Me.ChkDarks4.TabIndex = 46
         Me.ChkDarks4.Text = "Dark"
         Me.ChkDarks4.UseVisualStyleBackColor = True
@@ -179,7 +180,7 @@ Partial Class FrmCalibration
         Me.ChkDarks3.ForeColor = System.Drawing.Color.White
         Me.ChkDarks3.Location = New System.Drawing.Point(14, 122)
         Me.ChkDarks3.Name = "ChkDarks3"
-        Me.ChkDarks3.Size = New System.Drawing.Size(46, 17)
+        Me.ChkDarks3.Size = New System.Drawing.Size(45, 17)
         Me.ChkDarks3.TabIndex = 45
         Me.ChkDarks3.Text = "Dark"
         Me.ChkDarks3.UseVisualStyleBackColor = True
@@ -194,7 +195,7 @@ Partial Class FrmCalibration
         Me.ChkDarks2.ForeColor = System.Drawing.Color.White
         Me.ChkDarks2.Location = New System.Drawing.Point(14, 96)
         Me.ChkDarks2.Name = "ChkDarks2"
-        Me.ChkDarks2.Size = New System.Drawing.Size(46, 17)
+        Me.ChkDarks2.Size = New System.Drawing.Size(45, 17)
         Me.ChkDarks2.TabIndex = 44
         Me.ChkDarks2.Text = "Dark"
         Me.ChkDarks2.UseVisualStyleBackColor = True
@@ -205,7 +206,7 @@ Partial Class FrmCalibration
         Me.TxtDarkExposureDuration4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDarkExposureDuration4.Location = New System.Drawing.Point(65, 147)
         Me.TxtDarkExposureDuration4.Name = "TxtDarkExposureDuration4"
-        Me.TxtDarkExposureDuration4.Size = New System.Drawing.Size(50, 20)
+        Me.TxtDarkExposureDuration4.Size = New System.Drawing.Size(50, 21)
         Me.TxtDarkExposureDuration4.TabIndex = 43
         Me.TxtDarkExposureDuration4.Text = "120"
         '
@@ -225,7 +226,7 @@ Partial Class FrmCalibration
         Me.TxtDarkExposureDuration3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDarkExposureDuration3.Location = New System.Drawing.Point(65, 121)
         Me.TxtDarkExposureDuration3.Name = "TxtDarkExposureDuration3"
-        Me.TxtDarkExposureDuration3.Size = New System.Drawing.Size(50, 20)
+        Me.TxtDarkExposureDuration3.Size = New System.Drawing.Size(50, 21)
         Me.TxtDarkExposureDuration3.TabIndex = 41
         Me.TxtDarkExposureDuration3.Text = "90"
         '
@@ -245,7 +246,7 @@ Partial Class FrmCalibration
         Me.TxtDarkExposureDuration2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDarkExposureDuration2.Location = New System.Drawing.Point(65, 95)
         Me.TxtDarkExposureDuration2.Name = "TxtDarkExposureDuration2"
-        Me.TxtDarkExposureDuration2.Size = New System.Drawing.Size(50, 20)
+        Me.TxtDarkExposureDuration2.Size = New System.Drawing.Size(50, 21)
         Me.TxtDarkExposureDuration2.TabIndex = 39
         Me.TxtDarkExposureDuration2.Text = "60"
         '
@@ -284,7 +285,7 @@ Partial Class FrmCalibration
         Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(11, 24)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(51, 13)
+        Me.Label10.Size = New System.Drawing.Size(54, 13)
         Me.Label10.TabIndex = 35
         Me.Label10.Text = "Use filter:"
         '
@@ -316,7 +317,7 @@ Partial Class FrmCalibration
         Me.TxtBiasNumberExposures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtBiasNumberExposures.Location = New System.Drawing.Point(133, 45)
         Me.TxtBiasNumberExposures.Name = "TxtBiasNumberExposures"
-        Me.TxtBiasNumberExposures.Size = New System.Drawing.Size(50, 20)
+        Me.TxtBiasNumberExposures.Size = New System.Drawing.Size(50, 21)
         Me.TxtBiasNumberExposures.TabIndex = 32
         Me.TxtBiasNumberExposures.Text = "100"
         '
@@ -326,7 +327,7 @@ Partial Class FrmCalibration
         Me.TxtDarkNumberExposures.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDarkNumberExposures.Location = New System.Drawing.Point(133, 70)
         Me.TxtDarkNumberExposures.Name = "TxtDarkNumberExposures"
-        Me.TxtDarkNumberExposures.Size = New System.Drawing.Size(50, 20)
+        Me.TxtDarkNumberExposures.Size = New System.Drawing.Size(50, 21)
         Me.TxtDarkNumberExposures.TabIndex = 31
         Me.TxtDarkNumberExposures.Text = "40"
         '
@@ -336,7 +337,7 @@ Partial Class FrmCalibration
         Me.TxtDarkExposureDuration1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDarkExposureDuration1.Location = New System.Drawing.Point(65, 70)
         Me.TxtDarkExposureDuration1.Name = "TxtDarkExposureDuration1"
-        Me.TxtDarkExposureDuration1.Size = New System.Drawing.Size(50, 20)
+        Me.TxtDarkExposureDuration1.Size = New System.Drawing.Size(50, 21)
         Me.TxtDarkExposureDuration1.TabIndex = 30
         Me.TxtDarkExposureDuration1.Text = "30"
         '
@@ -346,7 +347,7 @@ Partial Class FrmCalibration
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(189, 48)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 13)
+        Me.Label4.Size = New System.Drawing.Size(57, 13)
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "exposures"
         '
@@ -356,7 +357,7 @@ Partial Class FrmCalibration
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(189, 73)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
+        Me.Label3.Size = New System.Drawing.Size(57, 13)
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "exposures"
         '
@@ -380,7 +381,7 @@ Partial Class FrmCalibration
         Me.ChkBias.ForeColor = System.Drawing.Color.White
         Me.ChkBias.Location = New System.Drawing.Point(14, 47)
         Me.ChkBias.Name = "ChkBias"
-        Me.ChkBias.Size = New System.Drawing.Size(43, 17)
+        Me.ChkBias.Size = New System.Drawing.Size(42, 17)
         Me.ChkBias.TabIndex = 26
         Me.ChkBias.Text = "Bias"
         Me.ChkBias.UseVisualStyleBackColor = True
@@ -395,7 +396,7 @@ Partial Class FrmCalibration
         Me.ChkDarks1.ForeColor = System.Drawing.Color.White
         Me.ChkDarks1.Location = New System.Drawing.Point(14, 72)
         Me.ChkDarks1.Name = "ChkDarks1"
-        Me.ChkDarks1.Size = New System.Drawing.Size(46, 17)
+        Me.ChkDarks1.Size = New System.Drawing.Size(45, 17)
         Me.ChkDarks1.TabIndex = 25
         Me.ChkDarks1.Text = "Dark"
         Me.ChkDarks1.UseVisualStyleBackColor = True
@@ -405,10 +406,11 @@ Partial Class FrmCalibration
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(304, 247)
+        Me.ClientSize = New System.Drawing.Size(304, 240)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnStop)
         Me.Controls.Add(Me.BtnStart)
+        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
