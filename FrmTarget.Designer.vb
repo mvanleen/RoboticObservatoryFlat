@@ -171,6 +171,8 @@ Partial Class FrmTarget
         '
         'TxtErrorTextTarget
         '
+        Me.TxtErrorTextTarget.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtErrorTextTarget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtErrorTextTarget.Location = New System.Drawing.Point(208, 144)
         Me.TxtErrorTextTarget.Name = "TxtErrorTextTarget"
         Me.TxtErrorTextTarget.Size = New System.Drawing.Size(225, 20)
@@ -179,9 +181,11 @@ Partial Class FrmTarget
         'ChkErrorObservingTarget
         '
         Me.ChkErrorObservingTarget.AutoSize = True
+        Me.ChkErrorObservingTarget.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkErrorObservingTarget.ForeColor = System.Drawing.Color.White
         Me.ChkErrorObservingTarget.Location = New System.Drawing.Point(77, 146)
         Me.ChkErrorObservingTarget.Name = "ChkErrorObservingTarget"
-        Me.ChkErrorObservingTarget.Size = New System.Drawing.Size(133, 17)
+        Me.ChkErrorObservingTarget.Size = New System.Drawing.Size(130, 17)
         Me.ChkErrorObservingTarget.TabIndex = 46
         Me.ChkErrorObservingTarget.Text = "Error observing target !"
         Me.ChkErrorObservingTarget.UseVisualStyleBackColor = True
@@ -189,25 +193,34 @@ Partial Class FrmTarget
         'ChkPriorityTarget
         '
         Me.ChkPriorityTarget.AutoSize = True
+        Me.ChkPriorityTarget.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkPriorityTarget.ForeColor = System.Drawing.Color.White
         Me.ChkPriorityTarget.Location = New System.Drawing.Point(268, 81)
         Me.ChkPriorityTarget.Name = "ChkPriorityTarget"
-        Me.ChkPriorityTarget.Size = New System.Drawing.Size(93, 17)
+        Me.ChkPriorityTarget.Size = New System.Drawing.Size(90, 17)
         Me.ChkPriorityTarget.TabIndex = 14
         Me.ChkPriorityTarget.Text = "Priority target !"
         Me.ChkPriorityTarget.UseVisualStyleBackColor = True
         '
         'BtnFindObject
         '
+        Me.BtnFindObject.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnFindObject.FlatAppearance.BorderSize = 0
+        Me.BtnFindObject.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnFindObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnFindObject.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFindObject.ForeColor = System.Drawing.Color.White
         Me.BtnFindObject.Location = New System.Drawing.Point(210, 13)
         Me.BtnFindObject.Name = "BtnFindObject"
         Me.BtnFindObject.Size = New System.Drawing.Size(44, 23)
         Me.BtnFindObject.TabIndex = 1
         Me.BtnFindObject.Text = "Find"
-        Me.BtnFindObject.UseVisualStyleBackColor = True
+        Me.BtnFindObject.UseVisualStyleBackColor = False
         '
         'Label27
         '
         Me.Label27.AutoSize = True
+        Me.Label27.ForeColor = System.Drawing.Color.White
         Me.Label27.Location = New System.Drawing.Point(368, 18)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(19, 13)
@@ -216,6 +229,8 @@ Partial Class FrmTarget
         '
         'TxtID
         '
+        Me.TxtID.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtID.Enabled = False
         Me.TxtID.Location = New System.Drawing.Point(393, 15)
         Me.TxtID.Name = "TxtID"
@@ -225,6 +240,7 @@ Partial Class FrmTarget
         'Label24
         '
         Me.Label24.AutoSize = True
+        Me.Label24.ForeColor = System.Drawing.Color.White
         Me.Label24.Location = New System.Drawing.Point(132, 126)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(12, 13)
@@ -233,6 +249,8 @@ Partial Class FrmTarget
         '
         'TxtTargetExposure
         '
+        Me.TxtTargetExposure.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetExposure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetExposure.Location = New System.Drawing.Point(77, 123)
         Me.TxtTargetExposure.Name = "TxtTargetExposure"
         Me.TxtTargetExposure.Size = New System.Drawing.Size(49, 20)
@@ -241,6 +259,7 @@ Partial Class FrmTarget
         'Label23
         '
         Me.Label23.AutoSize = True
+        Me.Label23.ForeColor = System.Drawing.Color.White
         Me.Label23.Location = New System.Drawing.Point(11, 126)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(54, 13)
@@ -249,6 +268,8 @@ Partial Class FrmTarget
         '
         'ComboBoxTargetFilter
         '
+        Me.ComboBoxTargetFilter.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ComboBoxTargetFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxTargetFilter.FormattingEnabled = True
         Me.ComboBoxTargetFilter.Location = New System.Drawing.Point(77, 77)
         Me.ComboBoxTargetFilter.Name = "ComboBoxTargetFilter"
@@ -258,6 +279,7 @@ Partial Class FrmTarget
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(11, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
@@ -266,6 +288,8 @@ Partial Class FrmTarget
         '
         'TxtTargetName
         '
+        Me.TxtTargetName.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetName.Location = New System.Drawing.Point(77, 11)
         Me.TxtTargetName.Name = "TxtTargetName"
         Me.TxtTargetName.Size = New System.Drawing.Size(128, 20)
@@ -274,7 +298,8 @@ Partial Class FrmTarget
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(11, 36)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(13, 36)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 45
@@ -283,6 +308,7 @@ Partial Class FrmTarget
         'Label35
         '
         Me.Label35.AutoSize = True
+        Me.Label35.ForeColor = System.Drawing.Color.White
         Me.Label35.Location = New System.Drawing.Point(114, 70)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(29, 13)
@@ -291,25 +317,38 @@ Partial Class FrmTarget
         '
         'BtnCancel
         '
+        Me.BtnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnCancel.FlatAppearance.BorderSize = 0
+        Me.BtnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancel.ForeColor = System.Drawing.Color.White
         Me.BtnCancel.Location = New System.Drawing.Point(896, 542)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(75, 23)
         Me.BtnCancel.TabIndex = 17
         Me.BtnCancel.Text = "Cancel "
-        Me.BtnCancel.UseVisualStyleBackColor = True
+        Me.BtnCancel.UseVisualStyleBackColor = False
         '
         'BtnNew
         '
+        Me.BtnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnNew.FlatAppearance.BorderSize = 0
+        Me.BtnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNew.ForeColor = System.Drawing.Color.White
         Me.BtnNew.Location = New System.Drawing.Point(608, 542)
         Me.BtnNew.Name = "BtnNew"
         Me.BtnNew.Size = New System.Drawing.Size(75, 23)
         Me.BtnNew.TabIndex = 14
         Me.BtnNew.Text = "New"
-        Me.BtnNew.UseVisualStyleBackColor = True
+        Me.BtnNew.UseVisualStyleBackColor = False
         '
         'Label34
         '
         Me.Label34.AutoSize = True
+        Me.Label34.ForeColor = System.Drawing.Color.White
         Me.Label34.Location = New System.Drawing.Point(114, 43)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(29, 13)
@@ -318,6 +357,8 @@ Partial Class FrmTarget
         '
         'TxtGuideStarYPMF
         '
+        Me.TxtGuideStarYPMF.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtGuideStarYPMF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtGuideStarYPMF.Location = New System.Drawing.Point(82, 67)
         Me.TxtGuideStarYPMF.Name = "TxtGuideStarYPMF"
         Me.TxtGuideStarYPMF.Size = New System.Drawing.Size(26, 20)
@@ -327,6 +368,7 @@ Partial Class FrmTarget
         'Label32
         '
         Me.Label32.AutoSize = True
+        Me.Label32.ForeColor = System.Drawing.Color.White
         Me.Label32.Location = New System.Drawing.Point(59, 70)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(17, 13)
@@ -335,6 +377,8 @@ Partial Class FrmTarget
         '
         'TxtGuideStarXPMF
         '
+        Me.TxtGuideStarXPMF.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtGuideStarXPMF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtGuideStarXPMF.Location = New System.Drawing.Point(27, 67)
         Me.TxtGuideStarXPMF.Name = "TxtGuideStarXPMF"
         Me.TxtGuideStarXPMF.Size = New System.Drawing.Size(26, 20)
@@ -344,6 +388,7 @@ Partial Class FrmTarget
         'Label33
         '
         Me.Label33.AutoSize = True
+        Me.Label33.ForeColor = System.Drawing.Color.White
         Me.Label33.Location = New System.Drawing.Point(4, 69)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(17, 13)
@@ -352,6 +397,8 @@ Partial Class FrmTarget
         '
         'TxtGuideStarYBMF
         '
+        Me.TxtGuideStarYBMF.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtGuideStarYBMF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtGuideStarYBMF.Location = New System.Drawing.Point(82, 41)
         Me.TxtGuideStarYBMF.Name = "TxtGuideStarYBMF"
         Me.TxtGuideStarYBMF.Size = New System.Drawing.Size(26, 20)
@@ -360,25 +407,38 @@ Partial Class FrmTarget
         '
         'BtnSave
         '
+        Me.BtnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnSave.FlatAppearance.BorderSize = 0
+        Me.BtnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSave.ForeColor = System.Drawing.Color.White
         Me.BtnSave.Location = New System.Drawing.Point(530, 542)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(75, 23)
         Me.BtnSave.TabIndex = 13
         Me.BtnSave.Text = "Save"
-        Me.BtnSave.UseVisualStyleBackColor = True
+        Me.BtnSave.UseVisualStyleBackColor = False
         '
         'BtnDelete
         '
+        Me.BtnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnDelete.FlatAppearance.BorderSize = 0
+        Me.BtnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.ForeColor = System.Drawing.Color.White
         Me.BtnDelete.Location = New System.Drawing.Point(686, 542)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(75, 23)
         Me.BtnDelete.TabIndex = 15
         Me.BtnDelete.Text = "Delete"
-        Me.BtnDelete.UseVisualStyleBackColor = True
+        Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'Label30
         '
         Me.Label30.AutoSize = True
+        Me.Label30.ForeColor = System.Drawing.Color.White
         Me.Label30.Location = New System.Drawing.Point(59, 44)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(17, 13)
@@ -387,6 +447,8 @@ Partial Class FrmTarget
         '
         'TxtGuideStarXBMF
         '
+        Me.TxtGuideStarXBMF.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtGuideStarXBMF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtGuideStarXBMF.Location = New System.Drawing.Point(27, 41)
         Me.TxtGuideStarXBMF.Name = "TxtGuideStarXBMF"
         Me.TxtGuideStarXBMF.Size = New System.Drawing.Size(26, 20)
@@ -396,6 +458,7 @@ Partial Class FrmTarget
         'Label31
         '
         Me.Label31.AutoSize = True
+        Me.Label31.ForeColor = System.Drawing.Color.White
         Me.Label31.Location = New System.Drawing.Point(4, 43)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(17, 13)
@@ -405,6 +468,7 @@ Partial Class FrmTarget
         'Label28
         '
         Me.Label28.AutoSize = True
+        Me.Label28.ForeColor = System.Drawing.Color.White
         Me.Label28.Location = New System.Drawing.Point(114, 96)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(12, 13)
@@ -413,6 +477,8 @@ Partial Class FrmTarget
         '
         'TxtGuideStarExposure
         '
+        Me.TxtGuideStarExposure.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtGuideStarExposure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtGuideStarExposure.Location = New System.Drawing.Point(66, 93)
         Me.TxtGuideStarExposure.Name = "TxtGuideStarExposure"
         Me.TxtGuideStarExposure.Size = New System.Drawing.Size(42, 20)
@@ -422,6 +488,7 @@ Partial Class FrmTarget
         'Label29
         '
         Me.Label29.AutoSize = True
+        Me.Label29.ForeColor = System.Drawing.Color.White
         Me.Label29.Location = New System.Drawing.Point(6, 96)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(54, 13)
@@ -431,21 +498,29 @@ Partial Class FrmTarget
         'ChkGuideAuto
         '
         Me.ChkGuideAuto.AutoSize = True
+        Me.ChkGuideAuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkGuideAuto.ForeColor = System.Drawing.Color.White
         Me.ChkGuideAuto.Location = New System.Drawing.Point(7, 10)
         Me.ChkGuideAuto.Name = "ChkGuideAuto"
-        Me.ChkGuideAuto.Size = New System.Drawing.Size(83, 17)
+        Me.ChkGuideAuto.Size = New System.Drawing.Size(80, 17)
         Me.ChkGuideAuto.TabIndex = 0
         Me.ChkGuideAuto.Text = "Autoguide ?"
         Me.ChkGuideAuto.UseVisualStyleBackColor = True
         '
         'BrnDuplicate
         '
+        Me.BrnDuplicate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BrnDuplicate.FlatAppearance.BorderSize = 0
+        Me.BrnDuplicate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BrnDuplicate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BrnDuplicate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BrnDuplicate.ForeColor = System.Drawing.Color.White
         Me.BrnDuplicate.Location = New System.Drawing.Point(763, 542)
         Me.BrnDuplicate.Name = "BrnDuplicate"
         Me.BrnDuplicate.Size = New System.Drawing.Size(75, 23)
         Me.BrnDuplicate.TabIndex = 16
         Me.BrnDuplicate.Text = "Duplicate"
-        Me.BrnDuplicate.UseVisualStyleBackColor = True
+        Me.BrnDuplicate.UseVisualStyleBackColor = False
         '
         'GroupBox3
         '
@@ -473,6 +548,7 @@ Partial Class FrmTarget
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(104, 36)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(13, 13)
@@ -482,6 +558,7 @@ Partial Class FrmTarget
         'Label25
         '
         Me.Label25.AutoSize = True
+        Me.Label25.ForeColor = System.Drawing.Color.White
         Me.Label25.Location = New System.Drawing.Point(132, 100)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(12, 13)
@@ -490,6 +567,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarExposure
         '
+        Me.TxtFocusStarExposure.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarExposure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarExposure.Location = New System.Drawing.Point(77, 97)
         Me.TxtFocusStarExposure.Name = "TxtFocusStarExposure"
         Me.TxtFocusStarExposure.Size = New System.Drawing.Size(49, 20)
@@ -499,6 +578,7 @@ Partial Class FrmTarget
         'Label26
         '
         Me.Label26.AutoSize = True
+        Me.Label26.ForeColor = System.Drawing.Color.White
         Me.Label26.Location = New System.Drawing.Point(11, 100)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(54, 13)
@@ -507,6 +587,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarDEC2000SS
         '
+        Me.TxtFocusStarDEC2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarDEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarDEC2000SS.Location = New System.Drawing.Point(165, 71)
         Me.TxtFocusStarDEC2000SS.Name = "TxtFocusStarDEC2000SS"
         Me.TxtFocusStarDEC2000SS.Size = New System.Drawing.Size(40, 20)
@@ -514,6 +596,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarDEC2000MM
         '
+        Me.TxtFocusStarDEC2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarDEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarDEC2000MM.Location = New System.Drawing.Point(118, 71)
         Me.TxtFocusStarDEC2000MM.Name = "TxtFocusStarDEC2000MM"
         Me.TxtFocusStarDEC2000MM.Size = New System.Drawing.Size(26, 20)
@@ -521,6 +605,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarDEC2000DG
         '
+        Me.TxtFocusStarDEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarDEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarDEC2000DG.Location = New System.Drawing.Point(77, 71)
         Me.TxtFocusStarDEC2000DG.Name = "TxtFocusStarDEC2000DG"
         Me.TxtFocusStarDEC2000DG.Size = New System.Drawing.Size(26, 20)
@@ -529,6 +615,7 @@ Partial Class FrmTarget
         'Label15
         '
         Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.White
         Me.Label15.Location = New System.Drawing.Point(148, 74)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(15, 13)
@@ -538,6 +625,7 @@ Partial Class FrmTarget
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(148, 36)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(15, 13)
@@ -547,6 +635,7 @@ Partial Class FrmTarget
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(206, 36)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(12, 13)
@@ -555,6 +644,8 @@ Partial Class FrmTarget
         '
         'TxtTargetRA2000HH
         '
+        Me.TxtTargetRA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetRA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetRA2000HH.Location = New System.Drawing.Point(77, 33)
         Me.TxtTargetRA2000HH.Name = "TxtTargetRA2000HH"
         Me.TxtTargetRA2000HH.Size = New System.Drawing.Size(26, 20)
@@ -562,6 +653,8 @@ Partial Class FrmTarget
         '
         'TxtTargetRA2000MM
         '
+        Me.TxtTargetRA2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetRA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetRA2000MM.Location = New System.Drawing.Point(118, 33)
         Me.TxtTargetRA2000MM.Name = "TxtTargetRA2000MM"
         Me.TxtTargetRA2000MM.Size = New System.Drawing.Size(26, 20)
@@ -569,6 +662,8 @@ Partial Class FrmTarget
         '
         'TxtTargetRA2000SS
         '
+        Me.TxtTargetRA2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetRA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetRA2000SS.Location = New System.Drawing.Point(165, 33)
         Me.TxtTargetRA2000SS.Name = "TxtTargetRA2000SS"
         Me.TxtTargetRA2000SS.Size = New System.Drawing.Size(40, 20)
@@ -577,6 +672,7 @@ Partial Class FrmTarget
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(11, 58)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 13)
@@ -586,6 +682,7 @@ Partial Class FrmTarget
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(104, 58)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(11, 13)
@@ -595,6 +692,7 @@ Partial Class FrmTarget
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(148, 58)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(15, 13)
@@ -604,6 +702,7 @@ Partial Class FrmTarget
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(207, 58)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(12, 13)
@@ -612,6 +711,8 @@ Partial Class FrmTarget
         '
         'TxtTargetDEC2000DG
         '
+        Me.TxtTargetDEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetDEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetDEC2000DG.Location = New System.Drawing.Point(77, 55)
         Me.TxtTargetDEC2000DG.Name = "TxtTargetDEC2000DG"
         Me.TxtTargetDEC2000DG.Size = New System.Drawing.Size(26, 20)
@@ -619,6 +720,8 @@ Partial Class FrmTarget
         '
         'TxtTargetDEC2000MM
         '
+        Me.TxtTargetDEC2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetDEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetDEC2000MM.Location = New System.Drawing.Point(118, 55)
         Me.TxtTargetDEC2000MM.Name = "TxtTargetDEC2000MM"
         Me.TxtTargetDEC2000MM.Size = New System.Drawing.Size(26, 20)
@@ -626,6 +729,8 @@ Partial Class FrmTarget
         '
         'TxtTargetDEC2000SS
         '
+        Me.TxtTargetDEC2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetDEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetDEC2000SS.Location = New System.Drawing.Point(165, 55)
         Me.TxtTargetDEC2000SS.Name = "TxtTargetDEC2000SS"
         Me.TxtTargetDEC2000SS.Size = New System.Drawing.Size(40, 20)
@@ -634,6 +739,7 @@ Partial Class FrmTarget
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.Location = New System.Drawing.Point(11, 80)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(32, 13)
@@ -643,9 +749,11 @@ Partial Class FrmTarget
         'ChkTargetDone
         '
         Me.ChkTargetDone.AutoSize = True
+        Me.ChkTargetDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkTargetDone.ForeColor = System.Drawing.Color.White
         Me.ChkTargetDone.Location = New System.Drawing.Point(268, 17)
         Me.ChkTargetDone.Name = "ChkTargetDone"
-        Me.ChkTargetDone.Size = New System.Drawing.Size(92, 17)
+        Me.ChkTargetDone.Size = New System.Drawing.Size(89, 17)
         Me.ChkTargetDone.TabIndex = 13
         Me.ChkTargetDone.Text = "Target Done !"
         Me.ChkTargetDone.UseVisualStyleBackColor = True
@@ -653,6 +761,7 @@ Partial Class FrmTarget
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(11, 103)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(45, 13)
@@ -661,6 +770,8 @@ Partial Class FrmTarget
         '
         'TxtTargetNbrExposedFrames
         '
+        Me.TxtTargetNbrExposedFrames.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetNbrExposedFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetNbrExposedFrames.Location = New System.Drawing.Point(393, 59)
         Me.TxtTargetNbrExposedFrames.Name = "TxtTargetNbrExposedFrames"
         Me.TxtTargetNbrExposedFrames.Size = New System.Drawing.Size(40, 20)
@@ -668,12 +779,18 @@ Partial Class FrmTarget
         '
         'BtnFindFocusStar
         '
+        Me.BtnFindFocusStar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnFindFocusStar.FlatAppearance.BorderSize = 0
+        Me.BtnFindFocusStar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnFindFocusStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnFindFocusStar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnFindFocusStar.ForeColor = System.Drawing.Color.White
         Me.BtnFindFocusStar.Location = New System.Drawing.Point(210, 17)
         Me.BtnFindFocusStar.Name = "BtnFindFocusStar"
         Me.BtnFindFocusStar.Size = New System.Drawing.Size(44, 23)
         Me.BtnFindFocusStar.TabIndex = 46
         Me.BtnFindFocusStar.Text = "Find"
-        Me.BtnFindFocusStar.UseVisualStyleBackColor = True
+        Me.BtnFindFocusStar.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
@@ -706,6 +823,7 @@ Partial Class FrmTarget
         'Label14
         '
         Me.Label14.AutoSize = True
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(207, 74)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(12, 13)
@@ -715,6 +833,7 @@ Partial Class FrmTarget
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.White
         Me.Label16.Location = New System.Drawing.Point(104, 74)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(11, 13)
@@ -724,6 +843,7 @@ Partial Class FrmTarget
         'Label17
         '
         Me.Label17.AutoSize = True
+        Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(11, 74)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(65, 13)
@@ -732,6 +852,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarRA2000SS
         '
+        Me.TxtFocusStarRA2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarRA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarRA2000SS.Location = New System.Drawing.Point(165, 45)
         Me.TxtFocusStarRA2000SS.Name = "TxtFocusStarRA2000SS"
         Me.TxtFocusStarRA2000SS.Size = New System.Drawing.Size(40, 20)
@@ -739,6 +861,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarRA2000MM
         '
+        Me.TxtFocusStarRA2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarRA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarRA2000MM.Location = New System.Drawing.Point(118, 45)
         Me.TxtFocusStarRA2000MM.Name = "TxtFocusStarRA2000MM"
         Me.TxtFocusStarRA2000MM.Size = New System.Drawing.Size(26, 20)
@@ -746,6 +870,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarRA2000HH
         '
+        Me.TxtFocusStarRA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarRA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarRA2000HH.Location = New System.Drawing.Point(77, 45)
         Me.TxtFocusStarRA2000HH.Name = "TxtFocusStarRA2000HH"
         Me.TxtFocusStarRA2000HH.Size = New System.Drawing.Size(26, 20)
@@ -754,6 +880,7 @@ Partial Class FrmTarget
         'Label18
         '
         Me.Label18.AutoSize = True
+        Me.Label18.ForeColor = System.Drawing.Color.White
         Me.Label18.Location = New System.Drawing.Point(207, 48)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(12, 13)
@@ -763,6 +890,7 @@ Partial Class FrmTarget
         'Label19
         '
         Me.Label19.AutoSize = True
+        Me.Label19.ForeColor = System.Drawing.Color.White
         Me.Label19.Location = New System.Drawing.Point(148, 48)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(15, 13)
@@ -772,6 +900,7 @@ Partial Class FrmTarget
         'Label20
         '
         Me.Label20.AutoSize = True
+        Me.Label20.ForeColor = System.Drawing.Color.White
         Me.Label20.Location = New System.Drawing.Point(104, 48)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(13, 13)
@@ -781,6 +910,7 @@ Partial Class FrmTarget
         'Label21
         '
         Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.White
         Me.Label21.Location = New System.Drawing.Point(11, 48)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(61, 13)
@@ -789,6 +919,8 @@ Partial Class FrmTarget
         '
         'TxtFocusStarName
         '
+        Me.TxtFocusStarName.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtFocusStarName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusStarName.Location = New System.Drawing.Point(77, 19)
         Me.TxtFocusStarName.Name = "TxtFocusStarName"
         Me.TxtFocusStarName.Size = New System.Drawing.Size(128, 20)
@@ -797,6 +929,7 @@ Partial Class FrmTarget
         'Label22
         '
         Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.Color.White
         Me.Label22.Location = New System.Drawing.Point(11, 23)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(59, 13)
@@ -808,10 +941,11 @@ Partial Class FrmTarget
         Me.DataGridViewTarget.AllowUserToAddRows = False
         Me.DataGridViewTarget.AllowUserToDeleteRows = False
         Me.DataGridViewTarget.AllowUserToOrderColumns = True
-        Me.DataGridViewTarget.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DataGridViewTarget.BackgroundColor = System.Drawing.Color.Silver
+        Me.DataGridViewTarget.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridViewTarget.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewTarget.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DataGridViewTarget.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridViewTarget.GridColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.DataGridViewTarget.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewTarget.MultiSelect = False
         Me.DataGridViewTarget.Name = "DataGridViewTarget"
@@ -824,6 +958,8 @@ Partial Class FrmTarget
         '
         'ComboBoxTargetBinning
         '
+        Me.ComboBoxTargetBinning.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.ComboBoxTargetBinning.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxTargetBinning.FormattingEnabled = True
         Me.ComboBoxTargetBinning.Items.AddRange(New Object() {"1x1", "2x2", "3x3"})
         Me.ComboBoxTargetBinning.Location = New System.Drawing.Point(77, 100)
@@ -833,6 +969,8 @@ Partial Class FrmTarget
         '
         'TxtTargetNbrFrames
         '
+        Me.TxtTargetNbrFrames.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetNbrFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetNbrFrames.Location = New System.Drawing.Point(393, 37)
         Me.TxtTargetNbrFrames.Name = "TxtTargetNbrFrames"
         Me.TxtTargetNbrFrames.Size = New System.Drawing.Size(40, 20)
@@ -841,6 +979,7 @@ Partial Class FrmTarget
         'Label12
         '
         Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(265, 61)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(122, 13)
@@ -850,6 +989,7 @@ Partial Class FrmTarget
         'Label13
         '
         Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.Color.White
         Me.Label13.Location = New System.Drawing.Point(265, 40)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(125, 13)
@@ -973,6 +1113,7 @@ Partial Class FrmTarget
         '
         Me.LabelMosaic4.AutoSize = True
         Me.LabelMosaic4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelMosaic4.ForeColor = System.Drawing.Color.White
         Me.LabelMosaic4.Location = New System.Drawing.Point(360, 117)
         Me.LabelMosaic4.Name = "LabelMosaic4"
         Me.LabelMosaic4.Size = New System.Drawing.Size(15, 15)
@@ -984,6 +1125,7 @@ Partial Class FrmTarget
         Me.LabelMosaic3.AutoSize = True
         Me.LabelMosaic3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LabelMosaic3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.LabelMosaic3.ForeColor = System.Drawing.Color.White
         Me.LabelMosaic3.Location = New System.Drawing.Point(343, 117)
         Me.LabelMosaic3.Name = "LabelMosaic3"
         Me.LabelMosaic3.Size = New System.Drawing.Size(15, 15)
@@ -994,6 +1136,7 @@ Partial Class FrmTarget
         '
         Me.LabelMosaic2.AutoSize = True
         Me.LabelMosaic2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelMosaic2.ForeColor = System.Drawing.Color.White
         Me.LabelMosaic2.Location = New System.Drawing.Point(360, 100)
         Me.LabelMosaic2.Name = "LabelMosaic2"
         Me.LabelMosaic2.Size = New System.Drawing.Size(15, 15)
@@ -1004,6 +1147,7 @@ Partial Class FrmTarget
         '
         Me.LabelMosaic1.AutoSize = True
         Me.LabelMosaic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelMosaic1.ForeColor = System.Drawing.Color.White
         Me.LabelMosaic1.Location = New System.Drawing.Point(343, 100)
         Me.LabelMosaic1.Name = "LabelMosaic1"
         Me.LabelMosaic1.Size = New System.Drawing.Size(15, 15)
@@ -1012,16 +1156,23 @@ Partial Class FrmTarget
         '
         'BtnClear
         '
+        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnClear.FlatAppearance.BorderSize = 0
+        Me.BtnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClear.ForeColor = System.Drawing.Color.White
         Me.BtnClear.Location = New System.Drawing.Point(357, 39)
         Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(40, 23)
+        Me.BtnClear.Size = New System.Drawing.Size(61, 23)
         Me.BtnClear.TabIndex = 97
         Me.BtnClear.Text = "Clear"
-        Me.BtnClear.UseVisualStyleBackColor = True
+        Me.BtnClear.UseVisualStyleBackColor = False
         '
         'Label50
         '
         Me.Label50.AutoSize = True
+        Me.Label50.ForeColor = System.Drawing.Color.White
         Me.Label50.Location = New System.Drawing.Point(403, 18)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(15, 13)
@@ -1030,6 +1181,8 @@ Partial Class FrmTarget
         '
         'TxtTargetMosaicOverlap
         '
+        Me.TxtTargetMosaicOverlap.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetMosaicOverlap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetMosaicOverlap.Location = New System.Drawing.Point(357, 15)
         Me.TxtTargetMosaicOverlap.Name = "TxtTargetMosaicOverlap"
         Me.TxtTargetMosaicOverlap.Size = New System.Drawing.Size(40, 20)
@@ -1039,6 +1192,7 @@ Partial Class FrmTarget
         'Label49
         '
         Me.Label49.AutoSize = True
+        Me.Label49.ForeColor = System.Drawing.Color.White
         Me.Label49.Location = New System.Drawing.Point(304, 19)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(47, 13)
@@ -1047,6 +1201,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel4NbrExposedFrames
         '
+        Me.TxtTargetPanel4NbrExposedFrames.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel4NbrExposedFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel4NbrExposedFrames.Location = New System.Drawing.Point(284, 164)
         Me.TxtTargetPanel4NbrExposedFrames.Name = "TxtTargetPanel4NbrExposedFrames"
         Me.TxtTargetPanel4NbrExposedFrames.Size = New System.Drawing.Size(40, 20)
@@ -1054,6 +1210,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel3NbrExposedFrames
         '
+        Me.TxtTargetPanel3NbrExposedFrames.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel3NbrExposedFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel3NbrExposedFrames.Location = New System.Drawing.Point(284, 143)
         Me.TxtTargetPanel3NbrExposedFrames.Name = "TxtTargetPanel3NbrExposedFrames"
         Me.TxtTargetPanel3NbrExposedFrames.Size = New System.Drawing.Size(40, 20)
@@ -1061,6 +1219,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel2NbrExposedFrames
         '
+        Me.TxtTargetPanel2NbrExposedFrames.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel2NbrExposedFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel2NbrExposedFrames.Location = New System.Drawing.Point(284, 121)
         Me.TxtTargetPanel2NbrExposedFrames.Name = "TxtTargetPanel2NbrExposedFrames"
         Me.TxtTargetPanel2NbrExposedFrames.Size = New System.Drawing.Size(40, 20)
@@ -1069,6 +1229,7 @@ Partial Class FrmTarget
         'Label58
         '
         Me.Label58.AutoSize = True
+        Me.Label58.ForeColor = System.Drawing.Color.White
         Me.Label58.Location = New System.Drawing.Point(281, 84)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(48, 13)
@@ -1077,6 +1238,8 @@ Partial Class FrmTarget
         '
         'TxtTargetMosaicFramesPerPanel
         '
+        Me.TxtTargetMosaicFramesPerPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetMosaicFramesPerPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetMosaicFramesPerPanel.Location = New System.Drawing.Point(242, 38)
         Me.TxtTargetMosaicFramesPerPanel.Name = "TxtTargetMosaicFramesPerPanel"
         Me.TxtTargetMosaicFramesPerPanel.Size = New System.Drawing.Size(40, 20)
@@ -1086,6 +1249,7 @@ Partial Class FrmTarget
         'Label57
         '
         Me.Label57.AutoSize = True
+        Me.Label57.ForeColor = System.Drawing.Color.White
         Me.Label57.Location = New System.Drawing.Point(115, 39)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(122, 13)
@@ -1094,6 +1258,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel1NbrExposedFrames
         '
+        Me.TxtTargetPanel1NbrExposedFrames.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel1NbrExposedFrames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel1NbrExposedFrames.Location = New System.Drawing.Point(284, 100)
         Me.TxtTargetPanel1NbrExposedFrames.Name = "TxtTargetPanel1NbrExposedFrames"
         Me.TxtTargetPanel1NbrExposedFrames.Size = New System.Drawing.Size(40, 20)
@@ -1102,6 +1268,7 @@ Partial Class FrmTarget
         'Label54
         '
         Me.Label54.AutoSize = True
+        Me.Label54.ForeColor = System.Drawing.Color.White
         Me.Label54.Location = New System.Drawing.Point(6, 167)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(43, 13)
@@ -1110,6 +1277,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel4RA2000HH
         '
+        Me.TxtTargetPanel4RA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel4RA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel4RA2000HH.Location = New System.Drawing.Point(70, 164)
         Me.TxtTargetPanel4RA2000HH.Name = "TxtTargetPanel4RA2000HH"
         Me.TxtTargetPanel4RA2000HH.Size = New System.Drawing.Size(26, 20)
@@ -1117,6 +1286,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel4RA2000MM
         '
+        Me.TxtTargetPanel4RA2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel4RA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel4RA2000MM.Location = New System.Drawing.Point(97, 164)
         Me.TxtTargetPanel4RA2000MM.Name = "TxtTargetPanel4RA2000MM"
         Me.TxtTargetPanel4RA2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1124,6 +1295,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel4RA2000SS
         '
+        Me.TxtTargetPanel4RA2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel4RA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel4RA2000SS.Location = New System.Drawing.Point(124, 164)
         Me.TxtTargetPanel4RA2000SS.Name = "TxtTargetPanel4RA2000SS"
         Me.TxtTargetPanel4RA2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1131,6 +1304,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel4DEC2000DG
         '
+        Me.TxtTargetPanel4DEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel4DEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel4DEC2000DG.Location = New System.Drawing.Point(179, 164)
         Me.TxtTargetPanel4DEC2000DG.Name = "TxtTargetPanel4DEC2000DG"
         Me.TxtTargetPanel4DEC2000DG.Size = New System.Drawing.Size(26, 20)
@@ -1138,6 +1313,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel4DEC2000MM
         '
+        Me.TxtTargetPanel4DEC2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel4DEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel4DEC2000MM.Location = New System.Drawing.Point(207, 164)
         Me.TxtTargetPanel4DEC2000MM.Name = "TxtTargetPanel4DEC2000MM"
         Me.TxtTargetPanel4DEC2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1145,6 +1322,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel4DEC2000SS
         '
+        Me.TxtTargetPanel4DEC2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel4DEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel4DEC2000SS.Location = New System.Drawing.Point(234, 164)
         Me.TxtTargetPanel4DEC2000SS.Name = "TxtTargetPanel4DEC2000SS"
         Me.TxtTargetPanel4DEC2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1153,6 +1332,7 @@ Partial Class FrmTarget
         'Label51
         '
         Me.Label51.AutoSize = True
+        Me.Label51.ForeColor = System.Drawing.Color.White
         Me.Label51.Location = New System.Drawing.Point(6, 146)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(43, 13)
@@ -1161,6 +1341,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel3RA2000HH
         '
+        Me.TxtTargetPanel3RA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel3RA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel3RA2000HH.Location = New System.Drawing.Point(70, 143)
         Me.TxtTargetPanel3RA2000HH.Name = "TxtTargetPanel3RA2000HH"
         Me.TxtTargetPanel3RA2000HH.Size = New System.Drawing.Size(26, 20)
@@ -1168,6 +1350,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel3RA2000MM
         '
+        Me.TxtTargetPanel3RA2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel3RA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel3RA2000MM.Location = New System.Drawing.Point(97, 143)
         Me.TxtTargetPanel3RA2000MM.Name = "TxtTargetPanel3RA2000MM"
         Me.TxtTargetPanel3RA2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1175,6 +1359,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel3RA2000SS
         '
+        Me.TxtTargetPanel3RA2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel3RA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel3RA2000SS.Location = New System.Drawing.Point(124, 143)
         Me.TxtTargetPanel3RA2000SS.Name = "TxtTargetPanel3RA2000SS"
         Me.TxtTargetPanel3RA2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1182,6 +1368,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel3DEC2000DG
         '
+        Me.TxtTargetPanel3DEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel3DEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel3DEC2000DG.Location = New System.Drawing.Point(179, 143)
         Me.TxtTargetPanel3DEC2000DG.Name = "TxtTargetPanel3DEC2000DG"
         Me.TxtTargetPanel3DEC2000DG.Size = New System.Drawing.Size(26, 20)
@@ -1189,6 +1377,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel3DEC2000MM
         '
+        Me.TxtTargetPanel3DEC2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel3DEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel3DEC2000MM.Location = New System.Drawing.Point(207, 143)
         Me.TxtTargetPanel3DEC2000MM.Name = "TxtTargetPanel3DEC2000MM"
         Me.TxtTargetPanel3DEC2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1196,6 +1386,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel3DEC2000SS
         '
+        Me.TxtTargetPanel3DEC2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel3DEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel3DEC2000SS.Location = New System.Drawing.Point(234, 143)
         Me.TxtTargetPanel3DEC2000SS.Name = "TxtTargetPanel3DEC2000SS"
         Me.TxtTargetPanel3DEC2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1204,6 +1396,7 @@ Partial Class FrmTarget
         'Label48
         '
         Me.Label48.AutoSize = True
+        Me.Label48.ForeColor = System.Drawing.Color.White
         Me.Label48.Location = New System.Drawing.Point(6, 126)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(43, 13)
@@ -1212,6 +1405,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel2RA2000HH
         '
+        Me.TxtTargetPanel2RA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel2RA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel2RA2000HH.Location = New System.Drawing.Point(70, 122)
         Me.TxtTargetPanel2RA2000HH.Name = "TxtTargetPanel2RA2000HH"
         Me.TxtTargetPanel2RA2000HH.Size = New System.Drawing.Size(26, 20)
@@ -1219,6 +1414,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel2RA2000MM
         '
+        Me.TxtTargetPanel2RA2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel2RA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel2RA2000MM.Location = New System.Drawing.Point(97, 122)
         Me.TxtTargetPanel2RA2000MM.Name = "TxtTargetPanel2RA2000MM"
         Me.TxtTargetPanel2RA2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1226,6 +1423,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel2RA2000SS
         '
+        Me.TxtTargetPanel2RA2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel2RA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel2RA2000SS.Location = New System.Drawing.Point(124, 122)
         Me.TxtTargetPanel2RA2000SS.Name = "TxtTargetPanel2RA2000SS"
         Me.TxtTargetPanel2RA2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1233,6 +1432,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel2DEC2000DG
         '
+        Me.TxtTargetPanel2DEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel2DEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel2DEC2000DG.Location = New System.Drawing.Point(179, 122)
         Me.TxtTargetPanel2DEC2000DG.Name = "TxtTargetPanel2DEC2000DG"
         Me.TxtTargetPanel2DEC2000DG.Size = New System.Drawing.Size(26, 20)
@@ -1240,6 +1441,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel2DEC2000MM
         '
+        Me.TxtTargetPanel2DEC2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel2DEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel2DEC2000MM.Location = New System.Drawing.Point(207, 122)
         Me.TxtTargetPanel2DEC2000MM.Name = "TxtTargetPanel2DEC2000MM"
         Me.TxtTargetPanel2DEC2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1247,6 +1450,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel2DEC2000SS
         '
+        Me.TxtTargetPanel2DEC2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel2DEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel2DEC2000SS.Location = New System.Drawing.Point(234, 122)
         Me.TxtTargetPanel2DEC2000SS.Name = "TxtTargetPanel2DEC2000SS"
         Me.TxtTargetPanel2DEC2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1255,6 +1460,7 @@ Partial Class FrmTarget
         'Label47
         '
         Me.Label47.AutoSize = True
+        Me.Label47.ForeColor = System.Drawing.Color.White
         Me.Label47.Location = New System.Drawing.Point(6, 104)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(43, 13)
@@ -1264,6 +1470,7 @@ Partial Class FrmTarget
         'Label39
         '
         Me.Label39.AutoSize = True
+        Me.Label39.ForeColor = System.Drawing.Color.White
         Me.Label39.Location = New System.Drawing.Point(88, 71)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(58, 13)
@@ -1273,6 +1480,7 @@ Partial Class FrmTarget
         'Label40
         '
         Me.Label40.AutoSize = True
+        Me.Label40.ForeColor = System.Drawing.Color.White
         Me.Label40.Location = New System.Drawing.Point(78, 85)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(13, 13)
@@ -1282,6 +1490,7 @@ Partial Class FrmTarget
         'Label41
         '
         Me.Label41.AutoSize = True
+        Me.Label41.ForeColor = System.Drawing.Color.White
         Me.Label41.Location = New System.Drawing.Point(107, 84)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(15, 13)
@@ -1291,6 +1500,7 @@ Partial Class FrmTarget
         'Label42
         '
         Me.Label42.AutoSize = True
+        Me.Label42.ForeColor = System.Drawing.Color.White
         Me.Label42.Location = New System.Drawing.Point(143, 85)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(12, 13)
@@ -1299,6 +1509,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel1RA2000HH
         '
+        Me.TxtTargetPanel1RA2000HH.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel1RA2000HH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel1RA2000HH.Location = New System.Drawing.Point(70, 101)
         Me.TxtTargetPanel1RA2000HH.Name = "TxtTargetPanel1RA2000HH"
         Me.TxtTargetPanel1RA2000HH.Size = New System.Drawing.Size(26, 20)
@@ -1306,6 +1518,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel1RA2000MM
         '
+        Me.TxtTargetPanel1RA2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel1RA2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel1RA2000MM.Location = New System.Drawing.Point(97, 101)
         Me.TxtTargetPanel1RA2000MM.Name = "TxtTargetPanel1RA2000MM"
         Me.TxtTargetPanel1RA2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1313,6 +1527,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel1RA2000SS
         '
+        Me.TxtTargetPanel1RA2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel1RA2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel1RA2000SS.Location = New System.Drawing.Point(124, 101)
         Me.TxtTargetPanel1RA2000SS.Name = "TxtTargetPanel1RA2000SS"
         Me.TxtTargetPanel1RA2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1321,6 +1537,7 @@ Partial Class FrmTarget
         'Label43
         '
         Me.Label43.AutoSize = True
+        Me.Label43.ForeColor = System.Drawing.Color.White
         Me.Label43.Location = New System.Drawing.Point(198, 71)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(62, 13)
@@ -1330,6 +1547,7 @@ Partial Class FrmTarget
         'Label44
         '
         Me.Label44.AutoSize = True
+        Me.Label44.ForeColor = System.Drawing.Color.White
         Me.Label44.Location = New System.Drawing.Point(186, 85)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(11, 13)
@@ -1339,6 +1557,7 @@ Partial Class FrmTarget
         'Label45
         '
         Me.Label45.AutoSize = True
+        Me.Label45.ForeColor = System.Drawing.Color.White
         Me.Label45.Location = New System.Drawing.Point(213, 85)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(15, 13)
@@ -1356,6 +1575,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel1DEC2000DG
         '
+        Me.TxtTargetPanel1DEC2000DG.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel1DEC2000DG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel1DEC2000DG.Location = New System.Drawing.Point(179, 101)
         Me.TxtTargetPanel1DEC2000DG.Name = "TxtTargetPanel1DEC2000DG"
         Me.TxtTargetPanel1DEC2000DG.Size = New System.Drawing.Size(26, 20)
@@ -1363,6 +1584,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel1DEC2000MM
         '
+        Me.TxtTargetPanel1DEC2000MM.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel1DEC2000MM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel1DEC2000MM.Location = New System.Drawing.Point(207, 101)
         Me.TxtTargetPanel1DEC2000MM.Name = "TxtTargetPanel1DEC2000MM"
         Me.TxtTargetPanel1DEC2000MM.Size = New System.Drawing.Size(26, 20)
@@ -1370,6 +1593,8 @@ Partial Class FrmTarget
         '
         'TxtTargetPanel1DEC2000SS
         '
+        Me.TxtTargetPanel1DEC2000SS.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetPanel1DEC2000SS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetPanel1DEC2000SS.Location = New System.Drawing.Point(234, 101)
         Me.TxtTargetPanel1DEC2000SS.Name = "TxtTargetPanel1DEC2000SS"
         Me.TxtTargetPanel1DEC2000SS.Size = New System.Drawing.Size(40, 20)
@@ -1377,15 +1602,23 @@ Partial Class FrmTarget
         '
         'BtnCalculateMosaic
         '
+        Me.BtnCalculateMosaic.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.BtnCalculateMosaic.FlatAppearance.BorderSize = 0
+        Me.BtnCalculateMosaic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.BtnCalculateMosaic.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCalculateMosaic.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCalculateMosaic.ForeColor = System.Drawing.Color.White
         Me.BtnCalculateMosaic.Location = New System.Drawing.Point(7, 42)
         Me.BtnCalculateMosaic.Name = "BtnCalculateMosaic"
         Me.BtnCalculateMosaic.Size = New System.Drawing.Size(75, 23)
         Me.BtnCalculateMosaic.TabIndex = 22
         Me.BtnCalculateMosaic.Text = "Calculate"
-        Me.BtnCalculateMosaic.UseVisualStyleBackColor = True
+        Me.BtnCalculateMosaic.UseVisualStyleBackColor = False
         '
         'CmbTargetMosaicType
         '
+        Me.CmbTargetMosaicType.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.CmbTargetMosaicType.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CmbTargetMosaicType.FormattingEnabled = True
         Me.CmbTargetMosaicType.Items.AddRange(New Object() {"1x2", "2x1", "2x2"})
         Me.CmbTargetMosaicType.Location = New System.Drawing.Point(193, 15)
@@ -1396,6 +1629,7 @@ Partial Class FrmTarget
         'Label38
         '
         Me.Label38.AutoSize = True
+        Me.Label38.ForeColor = System.Drawing.Color.White
         Me.Label38.Location = New System.Drawing.Point(115, 19)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(34, 13)
@@ -1405,15 +1639,19 @@ Partial Class FrmTarget
         'ChkTargetMosaic
         '
         Me.ChkTargetMosaic.AutoSize = True
+        Me.ChkTargetMosaic.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkTargetMosaic.ForeColor = System.Drawing.Color.White
         Me.ChkTargetMosaic.Location = New System.Drawing.Point(7, 19)
         Me.ChkTargetMosaic.Name = "ChkTargetMosaic"
-        Me.ChkTargetMosaic.Size = New System.Drawing.Size(95, 17)
+        Me.ChkTargetMosaic.Size = New System.Drawing.Size(92, 17)
         Me.ChkTargetMosaic.TabIndex = 20
         Me.ChkTargetMosaic.Text = "Enable mosaic"
         Me.ChkTargetMosaic.UseVisualStyleBackColor = True
         '
         'TxtTargetLastObservedDate
         '
+        Me.TxtTargetLastObservedDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetLastObservedDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetLastObservedDate.Location = New System.Drawing.Point(95, 188)
         Me.TxtTargetLastObservedDate.Name = "TxtTargetLastObservedDate"
         Me.TxtTargetLastObservedDate.Size = New System.Drawing.Size(194, 20)
@@ -1422,6 +1660,7 @@ Partial Class FrmTarget
         'Label37
         '
         Me.Label37.AutoSize = True
+        Me.Label37.ForeColor = System.Drawing.Color.White
         Me.Label37.Location = New System.Drawing.Point(11, 191)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(83, 13)
@@ -1431,6 +1670,7 @@ Partial Class FrmTarget
         'Label36
         '
         Me.Label36.AutoSize = True
+        Me.Label36.ForeColor = System.Drawing.Color.White
         Me.Label36.Location = New System.Drawing.Point(11, 169)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(52, 13)
@@ -1439,6 +1679,8 @@ Partial Class FrmTarget
         '
         'TxtTargetRemarks
         '
+        Me.TxtTargetRemarks.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtTargetRemarks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtTargetRemarks.Location = New System.Drawing.Point(95, 166)
         Me.TxtTargetRemarks.Name = "TxtTargetRemarks"
         Me.TxtTargetRemarks.Size = New System.Drawing.Size(338, 20)
@@ -1447,9 +1689,11 @@ Partial Class FrmTarget
         'ChkTargetIgnoreMoon
         '
         Me.ChkTargetIgnoreMoon.AutoSize = True
+        Me.ChkTargetIgnoreMoon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkTargetIgnoreMoon.ForeColor = System.Drawing.Color.White
         Me.ChkTargetIgnoreMoon.Location = New System.Drawing.Point(268, 113)
         Me.ChkTargetIgnoreMoon.Name = "ChkTargetIgnoreMoon"
-        Me.ChkTargetIgnoreMoon.Size = New System.Drawing.Size(95, 17)
+        Me.ChkTargetIgnoreMoon.Size = New System.Drawing.Size(92, 17)
         Me.ChkTargetIgnoreMoon.TabIndex = 49
         Me.ChkTargetIgnoreMoon.Text = "Ignore Moon ?"
         Me.ChkTargetIgnoreMoon.UseVisualStyleBackColor = True
@@ -1457,9 +1701,11 @@ Partial Class FrmTarget
         'ChkTargetIsComet
         '
         Me.ChkTargetIsComet.AutoSize = True
+        Me.ChkTargetIsComet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkTargetIsComet.ForeColor = System.Drawing.Color.White
         Me.ChkTargetIsComet.Location = New System.Drawing.Point(268, 97)
         Me.ChkTargetIsComet.Name = "ChkTargetIsComet"
-        Me.ChkTargetIsComet.Size = New System.Drawing.Size(65, 17)
+        Me.ChkTargetIsComet.Size = New System.Drawing.Size(62, 17)
         Me.ChkTargetIsComet.TabIndex = 48
         Me.ChkTargetIsComet.Text = "Comet ?"
         Me.ChkTargetIsComet.UseVisualStyleBackColor = True
@@ -1469,6 +1715,7 @@ Partial Class FrmTarget
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(980, 570)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.BtnNew)
@@ -1483,8 +1730,9 @@ Partial Class FrmTarget
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmTarget"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Deepsky targets"
+        Me.TopMost = True
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

@@ -66,16 +66,6 @@ Partial Class FrmMain
         Me.lblMountAz = New System.Windows.Forms.Label()
         Me.lblMountAlt = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.LblCivilTwilight = New System.Windows.Forms.Label()
-        Me.LblAstronomicalTwilight = New System.Windows.Forms.Label()
-        Me.LblLST = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.LblSunDawnFlats = New System.Windows.Forms.Label()
-        Me.LblSunDuskFlats = New System.Windows.Forms.Label()
-        Me.LblSunStopRun = New System.Windows.Forms.Label()
-        Me.LblSunStartRun = New System.Windows.Forms.Label()
-        Me.LblSunOpenRoof = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.LblLastFocusDateTime = New System.Windows.Forms.Label()
         Me.LblLastFocusTemperature = New System.Windows.Forms.Label()
@@ -129,6 +119,15 @@ Partial Class FrmMain
         Me.RTXLog = New System.Windows.Forms.RichTextBox()
         Me.LblMonitorStatus = New System.Windows.Forms.Label()
         Me.RTXErrors = New System.Windows.Forms.RichTextBox()
+        Me.GroupBox = New System.Windows.Forms.GroupBox()
+        Me.LblSunDawnFlats = New System.Windows.Forms.Label()
+        Me.LblSunDuskFlats = New System.Windows.Forms.Label()
+        Me.LblLST = New System.Windows.Forms.Label()
+        Me.LblSunStopRun = New System.Windows.Forms.Label()
+        Me.LblAstronomicalTwilight = New System.Windows.Forms.Label()
+        Me.LblSunStartRun = New System.Windows.Forms.Label()
+        Me.LblCivilTwilight = New System.Windows.Forms.Label()
+        Me.LblSunOpenRoof = New System.Windows.Forms.Label()
         CType(Me.SplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer.Panel1.SuspendLayout()
         Me.SplitContainer.Panel2.SuspendLayout()
@@ -136,7 +135,6 @@ Partial Class FrmMain
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.PanelCCD.SuspendLayout()
@@ -144,6 +142,7 @@ Partial Class FrmMain
         Me.Panel2.SuspendLayout()
         Me.PanelTop.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
+        Me.GroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'TimerCheckCycle
@@ -237,8 +236,8 @@ Partial Class FrmMain
         'SplitContainer.Panel2
         '
         Me.SplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.SplitContainer.Panel2.Controls.Add(Me.GroupBox)
         Me.SplitContainer.Panel2.Controls.Add(Me.Panel5)
-        Me.SplitContainer.Panel2.Controls.Add(Me.Panel6)
         Me.SplitContainer.Panel2.Controls.Add(Me.Panel7)
         Me.SplitContainer.Panel2.Controls.Add(Me.Panel8)
         Me.SplitContainer.Panel2.Controls.Add(Me.PanelCCD)
@@ -253,7 +252,7 @@ Partial Class FrmMain
         Me.SplitContainer.Panel2.Controls.Add(Me.LblMonitorStatus)
         Me.SplitContainer.Panel2.Controls.Add(Me.RTXErrors)
         Me.SplitContainer.Panel2MinSize = 1135
-        Me.SplitContainer.Size = New System.Drawing.Size(1195, 718)
+        Me.SplitContainer.Size = New System.Drawing.Size(1195, 722)
         Me.SplitContainer.SplitterDistance = 40
         Me.SplitContainer.SplitterIncrement = 10
         Me.SplitContainer.SplitterWidth = 1
@@ -724,140 +723,6 @@ Partial Class FrmMain
         Me.Label7.Size = New System.Drawing.Size(48, 16)
         Me.Label7.TabIndex = 43
         Me.Label7.Text = "Mount"
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.Transparent
-        Me.Panel6.Controls.Add(Me.LblCivilTwilight)
-        Me.Panel6.Controls.Add(Me.LblAstronomicalTwilight)
-        Me.Panel6.Controls.Add(Me.LblLST)
-        Me.Panel6.Controls.Add(Me.Label10)
-        Me.Panel6.Controls.Add(Me.LblSunDawnFlats)
-        Me.Panel6.Controls.Add(Me.LblSunDuskFlats)
-        Me.Panel6.Controls.Add(Me.LblSunStopRun)
-        Me.Panel6.Controls.Add(Me.LblSunStartRun)
-        Me.Panel6.Controls.Add(Me.LblSunOpenRoof)
-        Me.Panel6.Location = New System.Drawing.Point(906, 463)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(227, 166)
-        Me.Panel6.TabIndex = 110
-        '
-        'LblCivilTwilight
-        '
-        Me.LblCivilTwilight.AutoSize = True
-        Me.LblCivilTwilight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCivilTwilight.ForeColor = System.Drawing.Color.White
-        Me.LblCivilTwilight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblCivilTwilight.Location = New System.Drawing.Point(6, 37)
-        Me.LblCivilTwilight.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblCivilTwilight.Name = "LblCivilTwilight"
-        Me.LblCivilTwilight.Size = New System.Drawing.Size(92, 13)
-        Me.LblCivilTwilight.TabIndex = 84
-        Me.LblCivilTwilight.Text = "LblCivilTwilight"
-        '
-        'LblAstronomicalTwilight
-        '
-        Me.LblAstronomicalTwilight.AutoSize = True
-        Me.LblAstronomicalTwilight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblAstronomicalTwilight.ForeColor = System.Drawing.Color.White
-        Me.LblAstronomicalTwilight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblAstronomicalTwilight.Location = New System.Drawing.Point(5, 54)
-        Me.LblAstronomicalTwilight.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblAstronomicalTwilight.Name = "LblAstronomicalTwilight"
-        Me.LblAstronomicalTwilight.Size = New System.Drawing.Size(140, 13)
-        Me.LblAstronomicalTwilight.TabIndex = 83
-        Me.LblAstronomicalTwilight.Text = "LblAstronomicalTwilight"
-        '
-        'LblLST
-        '
-        Me.LblLST.AutoSize = True
-        Me.LblLST.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLST.ForeColor = System.Drawing.Color.White
-        Me.LblLST.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblLST.Location = New System.Drawing.Point(5, 20)
-        Me.LblLST.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblLST.Name = "LblLST"
-        Me.LblLST.Size = New System.Drawing.Size(47, 13)
-        Me.LblLST.TabIndex = 82
-        Me.LblLST.Text = "LblLST"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(2, 1)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(71, 16)
-        Me.Label10.TabIndex = 81
-        Me.Label10.Text = "Run times"
-        '
-        'LblSunDawnFlats
-        '
-        Me.LblSunDawnFlats.AutoSize = True
-        Me.LblSunDawnFlats.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSunDawnFlats.ForeColor = System.Drawing.Color.White
-        Me.LblSunDawnFlats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblSunDawnFlats.Location = New System.Drawing.Point(5, 139)
-        Me.LblSunDawnFlats.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblSunDawnFlats.Name = "LblSunDawnFlats"
-        Me.LblSunDawnFlats.Size = New System.Drawing.Size(105, 13)
-        Me.LblSunDawnFlats.TabIndex = 80
-        Me.LblSunDawnFlats.Text = "LblSunDawnFlats"
-        '
-        'LblSunDuskFlats
-        '
-        Me.LblSunDuskFlats.AutoSize = True
-        Me.LblSunDuskFlats.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSunDuskFlats.ForeColor = System.Drawing.Color.White
-        Me.LblSunDuskFlats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblSunDuskFlats.Location = New System.Drawing.Point(5, 88)
-        Me.LblSunDuskFlats.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblSunDuskFlats.Name = "LblSunDuskFlats"
-        Me.LblSunDuskFlats.Size = New System.Drawing.Size(102, 13)
-        Me.LblSunDuskFlats.TabIndex = 79
-        Me.LblSunDuskFlats.Text = "LblSunDuskFlats"
-        '
-        'LblSunStopRun
-        '
-        Me.LblSunStopRun.AutoSize = True
-        Me.LblSunStopRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSunStopRun.ForeColor = System.Drawing.Color.White
-        Me.LblSunStopRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblSunStopRun.Location = New System.Drawing.Point(5, 122)
-        Me.LblSunStopRun.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblSunStopRun.Name = "LblSunStopRun"
-        Me.LblSunStopRun.Size = New System.Drawing.Size(95, 13)
-        Me.LblSunStopRun.TabIndex = 78
-        Me.LblSunStopRun.Text = "LblSunStopRun"
-        '
-        'LblSunStartRun
-        '
-        Me.LblSunStartRun.AutoSize = True
-        Me.LblSunStartRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSunStartRun.ForeColor = System.Drawing.Color.White
-        Me.LblSunStartRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblSunStartRun.Location = New System.Drawing.Point(5, 105)
-        Me.LblSunStartRun.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblSunStartRun.Name = "LblSunStartRun"
-        Me.LblSunStartRun.Size = New System.Drawing.Size(96, 13)
-        Me.LblSunStartRun.TabIndex = 77
-        Me.LblSunStartRun.Text = "LblSunStartRun"
-        '
-        'LblSunOpenRoof
-        '
-        Me.LblSunOpenRoof.AutoSize = True
-        Me.LblSunOpenRoof.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblSunOpenRoof.ForeColor = System.Drawing.Color.White
-        Me.LblSunOpenRoof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblSunOpenRoof.Location = New System.Drawing.Point(6, 71)
-        Me.LblSunOpenRoof.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblSunOpenRoof.Name = "LblSunOpenRoof"
-        Me.LblSunOpenRoof.Size = New System.Drawing.Size(103, 13)
-        Me.LblSunOpenRoof.TabIndex = 76
-        Me.LblSunOpenRoof.Text = "LblSunOpenRoof"
         '
         'Panel7
         '
@@ -1402,7 +1267,7 @@ Partial Class FrmMain
         '
         Me.LblTSX.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTSX.ForeColor = System.Drawing.Color.White
-        Me.LblTSX.Location = New System.Drawing.Point(372, 3)
+        Me.LblTSX.Location = New System.Drawing.Point(371, 3)
         Me.LblTSX.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTSX.Name = "LblTSX"
         Me.LblTSX.Size = New System.Drawing.Size(121, 32)
@@ -1414,7 +1279,7 @@ Partial Class FrmMain
         '
         Me.LblInternet.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInternet.ForeColor = System.Drawing.Color.White
-        Me.LblInternet.Location = New System.Drawing.Point(496, 3)
+        Me.LblInternet.Location = New System.Drawing.Point(494, 3)
         Me.LblInternet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblInternet.Name = "LblInternet"
         Me.LblInternet.Size = New System.Drawing.Size(121, 32)
@@ -1426,7 +1291,7 @@ Partial Class FrmMain
         '
         Me.LblUPSCyberPower.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblUPSCyberPower.ForeColor = System.Drawing.Color.White
-        Me.LblUPSCyberPower.Location = New System.Drawing.Point(619, 3)
+        Me.LblUPSCyberPower.Location = New System.Drawing.Point(617, 3)
         Me.LblUPSCyberPower.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblUPSCyberPower.Name = "LblUPSCyberPower"
         Me.LblUPSCyberPower.Size = New System.Drawing.Size(120, 32)
@@ -1440,7 +1305,7 @@ Partial Class FrmMain
         Me.StatusStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.StatusStrip.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 696)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 700)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Size = New System.Drawing.Size(1154, 22)
         Me.StatusStrip.Stretch = False
@@ -1450,10 +1315,10 @@ Partial Class FrmMain
         'ToolStripStatusLabel
         '
         Me.ToolStripStatusLabel.BackColor = System.Drawing.Color.Silver
-        Me.ToolStripStatusLabel.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel.ForeColor = System.Drawing.Color.White
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(48, 17)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
         'ChkDisableSafetyCheck
@@ -1537,13 +1402,135 @@ Partial Class FrmMain
         Me.RTXErrors.TabIndex = 89
         Me.RTXErrors.Text = ""
         '
+        'GroupBox
+        '
+        Me.GroupBox.Controls.Add(Me.LblSunOpenRoof)
+        Me.GroupBox.Controls.Add(Me.LblCivilTwilight)
+        Me.GroupBox.Controls.Add(Me.LblSunStartRun)
+        Me.GroupBox.Controls.Add(Me.LblAstronomicalTwilight)
+        Me.GroupBox.Controls.Add(Me.LblSunStopRun)
+        Me.GroupBox.Controls.Add(Me.LblLST)
+        Me.GroupBox.Controls.Add(Me.LblSunDuskFlats)
+        Me.GroupBox.Controls.Add(Me.LblSunDawnFlats)
+        Me.GroupBox.ForeColor = System.Drawing.Color.White
+        Me.GroupBox.Location = New System.Drawing.Point(905, 466)
+        Me.GroupBox.Name = "GroupBox"
+        Me.GroupBox.Size = New System.Drawing.Size(228, 162)
+        Me.GroupBox.TabIndex = 85
+        Me.GroupBox.TabStop = False
+        Me.GroupBox.Text = "Run times"
+        '
+        'LblSunDawnFlats
+        '
+        Me.LblSunDawnFlats.AutoSize = True
+        Me.LblSunDawnFlats.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSunDawnFlats.ForeColor = System.Drawing.Color.White
+        Me.LblSunDawnFlats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSunDawnFlats.Location = New System.Drawing.Point(12, 138)
+        Me.LblSunDawnFlats.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSunDawnFlats.Name = "LblSunDawnFlats"
+        Me.LblSunDawnFlats.Size = New System.Drawing.Size(90, 13)
+        Me.LblSunDawnFlats.TabIndex = 80
+        Me.LblSunDawnFlats.Text = "LblSunDawnFlats"
+        '
+        'LblSunDuskFlats
+        '
+        Me.LblSunDuskFlats.AutoSize = True
+        Me.LblSunDuskFlats.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSunDuskFlats.ForeColor = System.Drawing.Color.White
+        Me.LblSunDuskFlats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSunDuskFlats.Location = New System.Drawing.Point(12, 87)
+        Me.LblSunDuskFlats.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSunDuskFlats.Name = "LblSunDuskFlats"
+        Me.LblSunDuskFlats.Size = New System.Drawing.Size(87, 13)
+        Me.LblSunDuskFlats.TabIndex = 79
+        Me.LblSunDuskFlats.Text = "LblSunDuskFlats"
+        '
+        'LblLST
+        '
+        Me.LblLST.AutoSize = True
+        Me.LblLST.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblLST.ForeColor = System.Drawing.Color.White
+        Me.LblLST.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblLST.Location = New System.Drawing.Point(12, 19)
+        Me.LblLST.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblLST.Name = "LblLST"
+        Me.LblLST.Size = New System.Drawing.Size(41, 13)
+        Me.LblLST.TabIndex = 82
+        Me.LblLST.Text = "LblLST"
+        '
+        'LblSunStopRun
+        '
+        Me.LblSunStopRun.AutoSize = True
+        Me.LblSunStopRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSunStopRun.ForeColor = System.Drawing.Color.White
+        Me.LblSunStopRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSunStopRun.Location = New System.Drawing.Point(12, 121)
+        Me.LblSunStopRun.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSunStopRun.Name = "LblSunStopRun"
+        Me.LblSunStopRun.Size = New System.Drawing.Size(82, 13)
+        Me.LblSunStopRun.TabIndex = 78
+        Me.LblSunStopRun.Text = "LblSunStopRun"
+        '
+        'LblAstronomicalTwilight
+        '
+        Me.LblAstronomicalTwilight.AutoSize = True
+        Me.LblAstronomicalTwilight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblAstronomicalTwilight.ForeColor = System.Drawing.Color.White
+        Me.LblAstronomicalTwilight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblAstronomicalTwilight.Location = New System.Drawing.Point(12, 53)
+        Me.LblAstronomicalTwilight.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblAstronomicalTwilight.Name = "LblAstronomicalTwilight"
+        Me.LblAstronomicalTwilight.Size = New System.Drawing.Size(117, 13)
+        Me.LblAstronomicalTwilight.TabIndex = 83
+        Me.LblAstronomicalTwilight.Text = "LblAstronomicalTwilight"
+        '
+        'LblSunStartRun
+        '
+        Me.LblSunStartRun.AutoSize = True
+        Me.LblSunStartRun.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSunStartRun.ForeColor = System.Drawing.Color.White
+        Me.LblSunStartRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSunStartRun.Location = New System.Drawing.Point(12, 104)
+        Me.LblSunStartRun.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSunStartRun.Name = "LblSunStartRun"
+        Me.LblSunStartRun.Size = New System.Drawing.Size(82, 13)
+        Me.LblSunStartRun.TabIndex = 77
+        Me.LblSunStartRun.Text = "LblSunStartRun"
+        '
+        'LblCivilTwilight
+        '
+        Me.LblCivilTwilight.AutoSize = True
+        Me.LblCivilTwilight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCivilTwilight.ForeColor = System.Drawing.Color.White
+        Me.LblCivilTwilight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblCivilTwilight.Location = New System.Drawing.Point(13, 36)
+        Me.LblCivilTwilight.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblCivilTwilight.Name = "LblCivilTwilight"
+        Me.LblCivilTwilight.Size = New System.Drawing.Size(76, 13)
+        Me.LblCivilTwilight.TabIndex = 84
+        Me.LblCivilTwilight.Text = "LblCivilTwilight"
+        '
+        'LblSunOpenRoof
+        '
+        Me.LblSunOpenRoof.AutoSize = True
+        Me.LblSunOpenRoof.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSunOpenRoof.ForeColor = System.Drawing.Color.White
+        Me.LblSunOpenRoof.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblSunOpenRoof.Location = New System.Drawing.Point(13, 70)
+        Me.LblSunOpenRoof.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSunOpenRoof.Name = "LblSunOpenRoof"
+        Me.LblSunOpenRoof.Size = New System.Drawing.Size(89, 13)
+        Me.LblSunOpenRoof.TabIndex = 76
+        Me.LblSunOpenRoof.Text = "LblSunOpenRoof"
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1184, 718)
+        Me.ClientSize = New System.Drawing.Size(1180, 722)
         Me.ControlBox = False
         Me.Controls.Add(Me.SplitContainer)
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1565,8 +1552,6 @@ Partial Class FrmMain
         CType(Me.PictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
@@ -1581,6 +1566,8 @@ Partial Class FrmMain
         Me.PanelTop.PerformLayout()
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
+        Me.GroupBox.ResumeLayout(False)
+        Me.GroupBox.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1642,7 +1629,6 @@ Partial Class FrmMain
     Friend WithEvents LblAmbientTemperature As Label
     Friend WithEvents lblSafe As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents PanelCCD As Panel
@@ -1680,13 +1666,13 @@ Partial Class FrmMain
     Friend WithEvents LblAltMoon As Label
     Friend WithEvents LblRAMoon As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents LblCivilTwilight As Label
-    Friend WithEvents LblAstronomicalTwilight As Label
-    Friend WithEvents LblLST As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents LblSunDawnFlats As Label
-    Friend WithEvents LblSunDuskFlats As Label
-    Friend WithEvents LblSunStopRun As Label
-    Friend WithEvents LblSunStartRun As Label
+    Friend WithEvents GroupBox As GroupBox
     Friend WithEvents LblSunOpenRoof As Label
+    Friend WithEvents LblCivilTwilight As Label
+    Friend WithEvents LblSunStartRun As Label
+    Friend WithEvents LblAstronomicalTwilight As Label
+    Friend WithEvents LblSunStopRun As Label
+    Friend WithEvents LblLST As Label
+    Friend WithEvents LblSunDuskFlats As Label
+    Friend WithEvents LblSunDawnFlats As Label
 End Class

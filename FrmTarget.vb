@@ -137,6 +137,7 @@ Public Class FrmTarget
             DataGridViewTarget.Columns(6).Width = 120
             DataGridViewTarget.Columns(7).Width = 50 'checkbox
             DataGridViewTarget.Width = 525
+            DataGridViewTarget.BackgroundColor = Color.Silver
 
         Catch ex As Exception
             ShowMessage("LoadDataGrid " + ex.Message, "CRITICAL", "Error!")

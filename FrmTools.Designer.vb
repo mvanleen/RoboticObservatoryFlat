@@ -530,7 +530,7 @@ Partial Class FrmTools
         Me.BtnFocusserAutofocus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnFocusserAutofocus.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnFocusserAutofocus.ForeColor = System.Drawing.Color.White
-        Me.BtnFocusserAutofocus.Location = New System.Drawing.Point(123, 32)
+        Me.BtnFocusserAutofocus.Location = New System.Drawing.Point(157, 34)
         Me.BtnFocusserAutofocus.Name = "BtnFocusserAutofocus"
         Me.BtnFocusserAutofocus.Size = New System.Drawing.Size(75, 23)
         Me.BtnFocusserAutofocus.TabIndex = 10
@@ -545,9 +545,9 @@ Partial Class FrmTools
         Me.BtnFocusserMoveTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnFocusserMoveTo.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnFocusserMoveTo.ForeColor = System.Drawing.Color.White
-        Me.BtnFocusserMoveTo.Location = New System.Drawing.Point(63, 32)
+        Me.BtnFocusserMoveTo.Location = New System.Drawing.Point(157, 7)
         Me.BtnFocusserMoveTo.Name = "BtnFocusserMoveTo"
-        Me.BtnFocusserMoveTo.Size = New System.Drawing.Size(57, 23)
+        Me.BtnFocusserMoveTo.Size = New System.Drawing.Size(75, 23)
         Me.BtnFocusserMoveTo.TabIndex = 9
         Me.BtnFocusserMoveTo.Text = "Move to"
         Me.BtnFocusserMoveTo.UseVisualStyleBackColor = False
@@ -557,9 +557,9 @@ Partial Class FrmTools
         Me.TxtFocusserAbsolutePosition.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtFocusserAbsolutePosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtFocusserAbsolutePosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtFocusserAbsolutePosition.Location = New System.Drawing.Point(9, 34)
+        Me.TxtFocusserAbsolutePosition.Location = New System.Drawing.Point(238, 10)
         Me.TxtFocusserAbsolutePosition.Name = "TxtFocusserAbsolutePosition"
-        Me.TxtFocusserAbsolutePosition.Size = New System.Drawing.Size(51, 21)
+        Me.TxtFocusserAbsolutePosition.Size = New System.Drawing.Size(67, 21)
         Me.TxtFocusserAbsolutePosition.TabIndex = 8
         Me.TxtFocusserAbsolutePosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -609,9 +609,9 @@ Partial Class FrmTools
         Me.LblFocusserPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LblFocusserPosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblFocusserPosition.ForeColor = System.Drawing.Color.White
-        Me.LblFocusserPosition.Location = New System.Drawing.Point(109, 5)
+        Me.LblFocusserPosition.Location = New System.Drawing.Point(76, 35)
         Me.LblFocusserPosition.Name = "LblFocusserPosition"
-        Me.LblFocusserPosition.Size = New System.Drawing.Size(95, 20)
+        Me.LblFocusserPosition.Size = New System.Drawing.Size(75, 20)
         Me.LblFocusserPosition.TabIndex = 4
         Me.LblFocusserPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -620,7 +620,7 @@ Partial Class FrmTools
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(52, 9)
+        Me.Label1.Location = New System.Drawing.Point(8, 39)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 0
@@ -1148,9 +1148,9 @@ Partial Class FrmTools
         Me.Label10.Location = New System.Drawing.Point(6, 4)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(29, 13)
+        Me.Label10.Size = New System.Drawing.Size(57, 13)
         Me.Label10.TabIndex = 41
-        Me.Label10.Text = "CCD"
+        Me.Label10.Text = "Focusser"
         '
         'Panel7
         '
@@ -1256,6 +1256,7 @@ Partial Class FrmTools
         Me.Name = "FrmTools"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tools"
+        Me.TopMost = True
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)

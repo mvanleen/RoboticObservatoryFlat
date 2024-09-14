@@ -645,7 +645,7 @@ Public Class FrmMain
             If pMonitorStatusColor = False Then
                 Select Case pRunStatus
                     Case "NOT RUNNING"
-                        LblMonitorStatus.BackColor = Color.LightGray
+                        LblMonitorStatus.BackColor = Color.Silver
                     Case "STARTUP"
                         LblMonitorStatus.BackColor = Color.LightBlue
                     Case "FLATS"
@@ -683,7 +683,7 @@ Public Class FrmMain
                 End Select
                 pMonitorStatusColor = True
             Else
-                LblMonitorStatus.BackColor = Color.Transparent
+                LblMonitorStatus.BackColor = Color.Silver
                 pMonitorStatusColor = False
             End If
 
@@ -895,7 +895,7 @@ Public Class FrmMain
                     pStartRun = False 'do not restart run
                 Else
                     TimerStartRun.Enabled = False
-                    LblMonitorStatus.BackColor = Color.Transparent
+                    LblMonitorStatus.BackColor = Color.Silver
                     pRunStatus = "ABORTED"
                     LogSessionEntry("ESSENTIAL", "RUN ABORTED.", "", "BtnStopRun_Click", "SEQUENCE")
                     BtnStartRun.Enabled = True
