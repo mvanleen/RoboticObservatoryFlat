@@ -189,6 +189,8 @@
     '               https://flatuicolors.com/palette/fr
     '               https://editor.method.ac/
     '       change: standard messagebox replace by form
+    '3.01   bug: park aborts using Paramount => added park condition to abort slew
+
     '&& last observed hads is sorted as text and not as date
     '&& maan opsplitsen < 40% => vanaf 10° en anders 0° / < 10% gewoon altijd
 
