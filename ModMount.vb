@@ -589,7 +589,8 @@ Module ModMount
             FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
             pIsActionRunning = True
-            If pMount.Slewing = True Then
+
+            If pMount.Slewing = True And pIsMountParking = False Then
                 pMount.AbortSlew()
             End If
 
