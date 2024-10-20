@@ -30,6 +30,7 @@ Public Class FrmMain
             pIsMountParking = False
             pSmartError = False
             pSmartTimeStamp = CDate("01/01/0001")
+            pWeatherSwitchDelay = DateTime.UtcNow
 
             pLastKnownUPSConnected = DateTime.UtcNow
             pLastKnownInternetConnected = DateTime.UtcNow
@@ -994,4 +995,6 @@ Public Class FrmMain
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         ShowMessage("godamned error", "CRITICAL", "what the fuck")
     End Sub
+
+
 End Class

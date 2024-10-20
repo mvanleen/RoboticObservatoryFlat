@@ -10,15 +10,15 @@ Public Class FrmProperties
 
             ChkAlarmPlay.Checked = My.Settings.sAlarmPlay
             TxtAlarmSound.Text = My.Settings.sAlarmSound
-            TxtAlarmRepeat.Text = My.Settings.sAlarmRepeat.ToString
+            TxtAlarmRepeat.Text = My.Settings.sAlarmRepeat.ToString(ciClone)
             TxtCCDFilter1.Text = My.Settings.sCCDFilter1
             TxtCCDFilter2.Text = My.Settings.sCCDFilter2
             TxtCCDFilter3.Text = My.Settings.sCCDFilter3
             TxtCCDFilter4.Text = My.Settings.sCCDFilter4
             TxtCCDFilter5.Text = My.Settings.sCCDFilter5
             TxtCCDImageScale.Text = My.Settings.sCCDImageScale.ToString(ciClone)
-            TxtCCDSensorsizeX.Text = My.Settings.sCCDSensorSizeX.ToString
-            TxtCCDSensorSizeY.Text = My.Settings.sCCDSensorSizeY.ToString
+            TxtCCDSensorsizeX.Text = My.Settings.sCCDSensorSizeX.ToString(ciClone)
+            TxtCCDSensorSizeY.Text = My.Settings.sCCDSensorSizeY.ToString(ciClone)
             TxtCCDImagePath.Text = My.Settings.sCCDImagePath
             TxtCCDPixelSize.Text = My.Settings.sCCDPixelSize.ToString(ciClone)
             ChkCCDCoolingEnabled.Checked = My.Settings.sCCDCoolingEnabled
@@ -27,17 +27,17 @@ Public Class FrmProperties
             TxtCCDDitheringAmount.Text = My.Settings.sCCDDitheringAmount.ToString
             TxtCCDFocusSubFrame.Text = My.Settings.sCCDFocusSubFrame.ToString(ciClone)
             TxtCCDFocusEveryXDegrees.Text = My.Settings.sCCDFocusEveryXDegrees.ToString(ciClone)
-            TxtCCDFocusEveryXExposures.Text = My.Settings.sCCDFocusEveryXImages.ToString()
+            TxtCCDFocusEveryXExposures.Text = My.Settings.sCCDFocusEveryXImages.ToString(ciClone)
             ChkCCDFocusMeridianFlip.Checked = My.Settings.sCCDFocusMeridianFlip
             ChkCCDFocusClosedLoopSlew.Checked = My.Settings.sCCDFocusClosedLoopSlew
             TxtCCDFocusDefExp.Text = My.Settings.sCCDFocusDefExp.ToString(ciClone)
-            TxtCCDFocusSamples.Text = My.Settings.sCCDFocusSamples.ToString()
+            TxtCCDFocusSamples.Text = My.Settings.sCCDFocusSamples.ToString(ciClone)
             txtCCDName.Text = My.Settings.sCCDName
             ChkCCDColorCamera.Checked = My.Settings.sCCDColorCamera
             TxtFocusDefaultPosition.Text = My.Settings.sCCDFocusDefaultPosition.ToString(ciClone)
             TxtFocusDefaultFork.Text = My.Settings.sCCDFocusDefaultFork.ToString(ciClone)
             ChkCCDBlindSolve.Checked = My.Settings.sCCDBlindSolve
-            TxtInternetTimeout.Text = My.Settings.sInternetTimeout.ToString
+            TxtInternetTimeout.Text = My.Settings.sInternetTimeout.ToString(ciClone)
             TxtLogLocation.Text = My.Settings.sLogLocation
             CmbLogType.Text = My.Settings.sLogType
             TxtMoonAltitudeAlwaysSafe.Text = My.Settings.sMoonAltitudeAlwaysSafe.ToString(ciClone)
@@ -85,14 +85,14 @@ Public Class FrmProperties
             TxtSwitch6Warning.Text = My.Settings.sSwitch6Warning
             TxtSwitch7Warning.Text = My.Settings.sSwitch7Warning
             TxtSwitch8Warning.Text = My.Settings.sSwitch8Warning
-            TxtSwitch1Startup.Text = My.Settings.sSwitch1Startup.ToString
-            TxtSwitch2Startup.Text = My.Settings.sSwitch2Startup.ToString
-            TxtSwitch3Startup.Text = My.Settings.sSwitch3Startup.ToString
-            TxtSwitch4Startup.Text = My.Settings.sSwitch4Startup.ToString
-            TxtSwitch5Startup.Text = My.Settings.sSwitch5Startup.ToString
-            TxtSwitch6Startup.Text = My.Settings.sSwitch6Startup.ToString
-            TxtSwitch7Startup.Text = My.Settings.sSwitch7Startup.ToString
-            TxtSwitch8Startup.Text = My.Settings.sSwitch8Startup.ToString
+            TxtSwitch1Startup.Text = My.Settings.sSwitch1Startup.ToString(ciClone)
+            TxtSwitch2Startup.Text = My.Settings.sSwitch2Startup.ToString(ciClone)
+            TxtSwitch3Startup.Text = My.Settings.sSwitch3Startup.ToString(ciClone)
+            TxtSwitch4Startup.Text = My.Settings.sSwitch4Startup.ToString(ciClone)
+            TxtSwitch5Startup.Text = My.Settings.sSwitch5Startup.ToString(ciClone)
+            TxtSwitch6Startup.Text = My.Settings.sSwitch6Startup.ToString(ciClone)
+            TxtSwitch7Startup.Text = My.Settings.sSwitch7Startup.ToString(ciClone)
+            TxtSwitch8Startup.Text = My.Settings.sSwitch8Startup.ToString(ciClone)
             RdSwitch1Mount.Checked = My.Settings.sSwitch1Mount
             RdSwitch2Mount.Checked = My.Settings.sSwitch2Mount
             RdSwitch3Mount.Checked = My.Settings.sSwitch3Mount
@@ -125,12 +125,15 @@ Public Class FrmProperties
             TxtWeatherRain_Wet.Text = My.Settings.sWeatherRain_Wet.ToString(ciClone)
             TxtWeatherTimeout.Text = My.Settings.sWeatherTimeout.ToString(ciClone)
             TxtWeatherURL.Text = My.Settings.sWeatherURL
+            RdWeatherUseSwitch.Checked = My.Settings.sWeatherUseSwitch
+            RdWeatherUseValues.Checked = My.Settings.sWeatherUseValues
+            TxtWeatherSafeSwitchDelay.Text = My.Settings.sWeatherSafeSwitchDelay.ToString(ciClone)
             TxtMountDevice.Text = My.Settings.sMountDevice
             TxtMountStartupLink.Text = My.Settings.sMountStartupLink
             TxtCCDPlateSolveExposure.Text = My.Settings.sCCDPlateSolveExposure.ToString(ciClone)
             TxtCCDPlateSolveMaxError.Text = My.Settings.sCCDPlateSolveMaxError.ToString(ciClone)
             CmbTargetBinning.Text = My.Settings.sCCDPlateSolveBinning
-            TxtCCDPlateSolveNbrTries.Text = My.Settings.sCCDPlateSolveNbrTries.ToString()
+            TxtCCDPlateSolveNbrTries.Text = My.Settings.sCCDPlateSolveNbrTries.ToString(ciClone)
             TxtSunOpenRoof.Text = My.Settings.sSunOpenRoof.ToString(ciClone)
             TxtSunDuskFlats.Text = My.Settings.sSunDuskFlats.ToString(ciClone)
             TxtSunStartRun.Text = My.Settings.sSunStartRun.ToString(ciClone)
@@ -173,8 +176,8 @@ Public Class FrmProperties
             TxtHADSMag15.Text = My.Settings.sHADSMag15
             txtHADSDECCutOff.Text = My.Settings.sHADSDECCutOff.ToString(ciClone)
             TxtTelescopeName.Text = My.Settings.sTelescopeName
-            TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString()
-            TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString()
+            TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString(ciClone)
+            TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString(ciClone)
 
             'add combobox options
             CmbsAutoFlatFilter.Items.Add(My.Settings.sCCDFilter1)
@@ -248,11 +251,11 @@ Public Class FrmProperties
                 TxtCCDFilter4.Text = My.Settings.sCCDFilter4 And
                 TxtCCDFilter5.Text = My.Settings.sCCDFilter5 And
                 TxtCCDImageScale.Text = My.Settings.sCCDImageScale.ToString(ciClone) And
-                TxtCCDSensorsizeX.Text = My.Settings.sCCDSensorSizeX.ToString() And
-                TxtCCDSensorSizeY.Text = My.Settings.sCCDSensorSizeY.ToString() And
+                TxtCCDSensorsizeX.Text = My.Settings.sCCDSensorSizeX.ToString(ciClone) And
+                TxtCCDSensorSizeY.Text = My.Settings.sCCDSensorSizeY.ToString(ciClone) And
                 TxtCCDFocusSubFrame.Text = My.Settings.sCCDFocusSubFrame.ToString(ciClone) And
                 TxtCCDFocusEveryXDegrees.Text = My.Settings.sCCDFocusEveryXDegrees.ToString(ciClone) And
-                TxtCCDFocusEveryXExposures.Text = My.Settings.sCCDFocusEveryXImages.ToString() And
+                TxtCCDFocusEveryXExposures.Text = My.Settings.sCCDFocusEveryXImages.ToString(ciClone) And
                 ChkCCDFocusMeridianFlip.Checked = My.Settings.sCCDFocusMeridianFlip And
                 ChkCCDFocusClosedLoopSlew.Checked = My.Settings.sCCDFocusClosedLoopSlew And
                 TxtCCDPixelSize.Text = My.Settings.sCCDPixelSize.ToString(ciClone) And
@@ -260,13 +263,13 @@ Public Class FrmProperties
                 TxtFocusDefaultFork.Text = My.Settings.sCCDFocusDefaultFork.ToString(ciClone) And
                 TxtCCDImagePath.Text = My.Settings.sCCDImagePath And
                 RdCCDDithering.Checked = My.Settings.sCCDDithering And
-                TxtCCDDitheringAmount.Text = My.Settings.sCCDDitheringAmount.ToString() And
+                TxtCCDDitheringAmount.Text = My.Settings.sCCDDitheringAmount.ToString(ciClone) And
                 ChkCCDBlindSolve.Checked = My.Settings.sCCDBlindSolve And
                 ChkCCDCoolingEnabled.Checked = My.Settings.sCCDCoolingEnabled And
                 TxtCCDCoolingTemperature.Text = My.Settings.sCCDCoolingTemp.ToString(ciClone) And
                 txtCCDName.Text = My.Settings.sCCDName And
                 ChkCCDColorCamera.Checked = My.Settings.sCCDColorCamera And
-                TxtInternetTimeout.Text = My.Settings.sInternetTimeout.ToString() And
+                TxtInternetTimeout.Text = My.Settings.sInternetTimeout.ToString(ciClone) And
                 TxtLogLocation.Text = My.Settings.sLogLocation And
                 CmbLogType.Text = My.Settings.sLogType And
                 TxtMoonAltitudeAlwaysSafe.Text = My.Settings.sMoonAltitudeAlwaysSafe.ToString(ciClone) And
@@ -352,12 +355,15 @@ Public Class FrmProperties
                 TxtWeatherRain_Wet.Text = My.Settings.sWeatherRain_Wet.ToString(ciClone) And
                 TxtWeatherTimeout.Text = My.Settings.sWeatherTimeout.ToString(ciClone) And
                 TxtWeatherURL.Text = My.Settings.sWeatherURL And
+                RdWeatherUseSwitch.Checked = My.Settings.sWeatherUseSwitch And
+                RdWeatherUseValues.Checked = My.Settings.sWeatherUseValues And
+                TxtWeatherSafeSwitchDelay.Text = My.Settings.sWeatherSafeSwitchDelay.ToString(ciClone) And
                 TxtMountDevice.Text = My.Settings.sMountDevice And
                 TxtMountStartupLink.Text = My.Settings.sMountStartupLink And
                 TxtCCDPlateSolveExposure.Text = My.Settings.sCCDPlateSolveExposure.ToString(ciClone) And
                 TxtCCDPlateSolveMaxError.Text = My.Settings.sCCDPlateSolveMaxError.ToString(ciClone) And
                 CmbTargetBinning.Text = My.Settings.sCCDPlateSolveBinning And
-                TxtCCDPlateSolveNbrTries.Text = My.Settings.sCCDPlateSolveNbrTries.ToString() And
+                TxtCCDPlateSolveNbrTries.Text = My.Settings.sCCDPlateSolveNbrTries.ToString(ciClone) And
                 TxtSunOpenRoof.Text = My.Settings.sSunOpenRoof.ToString(ciClone) And
                 TxtSunDuskFlats.Text = My.Settings.sSunDuskFlats.ToString(ciClone) And
                 TxtSunStartRun.Text = My.Settings.sSunStartRun.ToString(ciClone) And
@@ -369,7 +375,7 @@ Public Class FrmProperties
                 CmbCoverMethod.Text = My.Settings.sCoverMethod And
                 TxtCoverDevice.Text = My.Settings.sCoverDevice And
                 TxtCCDFocusDefExp.Text = My.Settings.sCCDFocusDefExp.ToString(ciClone) And
-                TxtCCDFocusSamples.Text = My.Settings.sCCDFocusSamples.ToString() And
+                TxtCCDFocusSamples.Text = My.Settings.sCCDFocusSamples.ToString(ciClone) And
                 ChkSunDuskFlatsNeeded.Checked = My.Settings.sSunDuskFlatsNeeded And
                 ChkSunDawnFlatsNeeded.Checked = My.Settings.sSunDawnFlatsNeeded And
                 TxtSynologyPath.Text = My.Settings.sSynologyPath And
@@ -401,8 +407,8 @@ Public Class FrmProperties
                 TxtHADSMag15.Text = My.Settings.sHADSMag15 And
                 txtHADSDECCutOff.Text = My.Settings.sHADSDECCutOff.ToString(ciClone) And
                 TxtTelescopeName.Text = My.Settings.sTelescopeName And
-                TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString() And
-                TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString() Then
+                TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString(ciClone) And
+                TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString(ciClone) Then
                 'no changes
             Else
                 If ShowMessage("Do you want to save the changes ?", "OKCANCEL", "Save changes ?") = vbOK Then
@@ -520,6 +526,9 @@ Public Class FrmProperties
                     My.Settings.sWeatherRain_Wet = Double.Parse(TxtWeatherRain_Wet.Text, ciClone)
                     My.Settings.sWeatherTimeout = Double.Parse(TxtWeatherTimeout.Text, ciClone)
                     My.Settings.sWeatherURL = TxtWeatherURL.Text
+                    My.Settings.sWeatherUseSwitch = RdWeatherUseSwitch.Checked
+                    My.Settings.sWeatherUseValues = RdWeatherUseValues.Checked
+                    My.Settings.sWeatherSafeSwitchDelay = Convert.ToInt32(TxtWeatherSafeSwitchDelay.Text)
                     My.Settings.sMountDevice = TxtMountDevice.Text
                     My.Settings.sMountStartupLink = TxtMountStartupLink.Text
                     My.Settings.sCCDPlateSolveExposure = Double.Parse(TxtCCDPlateSolveExposure.Text, ciClone)
@@ -806,5 +815,13 @@ Public Class FrmProperties
         Else
             TxtMountStartupLink.Enabled = False
         End If
+    End Sub
+
+    Private Sub RdWeatherUseSwitch_CheckedChanged(sender As Object, e As EventArgs) Handles RdWeatherUseSwitch.CheckedChanged
+        TxtWeatherSafeSwitchDelay.Enabled = False
+    End Sub
+
+    Private Sub RdWeatherUseValues_CheckedChanged(sender As Object, e As EventArgs) Handles RdWeatherUseValues.CheckedChanged
+        TxtWeatherSafeSwitchDelay.Enabled = True
     End Sub
 End Class

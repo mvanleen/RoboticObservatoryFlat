@@ -121,6 +121,10 @@ Partial Class FrmProperties
         Me.TxtAlarmSound = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GrpVariables = New System.Windows.Forms.GroupBox()
+        Me.Label165 = New System.Windows.Forms.Label()
+        Me.TxtWeatherSafeSwitchDelay = New System.Windows.Forms.TextBox()
+        Me.Label164 = New System.Windows.Forms.Label()
+        Me.RdWeatherUseValues = New System.Windows.Forms.RadioButton()
         Me.Label76 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.TxtWeatherRain_Wet = New System.Windows.Forms.TextBox()
@@ -129,6 +133,7 @@ Partial Class FrmProperties
         Me.Label66 = New System.Windows.Forms.Label()
         Me.TxtWeatherRain_Dry = New System.Windows.Forms.TextBox()
         Me.Label67 = New System.Windows.Forms.Label()
+        Me.RdWeatherUseSwitch = New System.Windows.Forms.RadioButton()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.TxtWeatherLightness_VeryLight = New System.Windows.Forms.TextBox()
         Me.Label62 = New System.Windows.Forms.Label()
@@ -1224,7 +1229,7 @@ Partial Class FrmProperties
         Me.GroupBox1.Controls.Add(Me.TxtAlarmSound)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 152)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 208)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(639, 208)
         Me.GroupBox1.TabIndex = 9
@@ -1581,8 +1586,13 @@ Partial Class FrmProperties
         '
         'GrpVariables
         '
+        Me.GrpVariables.Controls.Add(Me.Label165)
+        Me.GrpVariables.Controls.Add(Me.TxtWeatherSafeSwitchDelay)
+        Me.GrpVariables.Controls.Add(Me.Label164)
+        Me.GrpVariables.Controls.Add(Me.RdWeatherUseValues)
         Me.GrpVariables.Controls.Add(Me.Label76)
         Me.GrpVariables.Controls.Add(Me.GroupBox10)
+        Me.GrpVariables.Controls.Add(Me.RdWeatherUseSwitch)
         Me.GrpVariables.Controls.Add(Me.GroupBox13)
         Me.GrpVariables.Controls.Add(Me.GroupBox11)
         Me.GrpVariables.Controls.Add(Me.GroupBox9)
@@ -1593,15 +1603,57 @@ Partial Class FrmProperties
         Me.GrpVariables.ForeColor = System.Drawing.Color.White
         Me.GrpVariables.Location = New System.Drawing.Point(6, 6)
         Me.GrpVariables.Name = "GrpVariables"
-        Me.GrpVariables.Size = New System.Drawing.Size(639, 140)
+        Me.GrpVariables.Size = New System.Drawing.Size(639, 196)
         Me.GrpVariables.TabIndex = 6
         Me.GrpVariables.TabStop = False
         Me.GrpVariables.Text = "Weather"
         '
+        'Label165
+        '
+        Me.Label165.AutoSize = True
+        Me.Label165.Location = New System.Drawing.Point(346, 62)
+        Me.Label165.Name = "Label165"
+        Me.Label165.Size = New System.Drawing.Size(13, 13)
+        Me.Label165.TabIndex = 76
+        Me.Label165.Text = "s"
+        '
+        'TxtWeatherSafeSwitchDelay
+        '
+        Me.TxtWeatherSafeSwitchDelay.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtWeatherSafeSwitchDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtWeatherSafeSwitchDelay.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtWeatherSafeSwitchDelay.Location = New System.Drawing.Point(299, 60)
+        Me.TxtWeatherSafeSwitchDelay.Name = "TxtWeatherSafeSwitchDelay"
+        Me.TxtWeatherSafeSwitchDelay.Size = New System.Drawing.Size(41, 21)
+        Me.TxtWeatherSafeSwitchDelay.TabIndex = 74
+        '
+        'Label164
+        '
+        Me.Label164.AutoSize = True
+        Me.Label164.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label164.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label164.Location = New System.Drawing.Point(187, 62)
+        Me.Label164.Name = "Label164"
+        Me.Label164.Size = New System.Drawing.Size(95, 13)
+        Me.Label164.TabIndex = 75
+        Me.Label164.Text = "Safe switch delay:"
+        '
+        'RdWeatherUseValues
+        '
+        Me.RdWeatherUseValues.AutoSize = True
+        Me.RdWeatherUseValues.Location = New System.Drawing.Point(10, 37)
+        Me.RdWeatherUseValues.Name = "RdWeatherUseValues"
+        Me.RdWeatherUseValues.Size = New System.Drawing.Size(157, 17)
+        Me.RdWeatherUseValues.TabIndex = 73
+        Me.RdWeatherUseValues.TabStop = True
+        Me.RdWeatherUseValues.Text = "Use values below (RED)"
+        Me.ToolTip.SetToolTip(Me.RdWeatherUseValues, resources.GetString("RdWeatherUseValues.ToolTip"))
+        Me.RdWeatherUseValues.UseVisualStyleBackColor = True
+        '
         'Label76
         '
         Me.Label76.AutoSize = True
-        Me.Label76.Location = New System.Drawing.Point(158, 16)
+        Me.Label76.Location = New System.Drawing.Point(346, 39)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(13, 13)
         Me.Label76.TabIndex = 71
@@ -1611,12 +1663,12 @@ Partial Class FrmProperties
         '
         Me.GroupBox10.Controls.Add(Me.TxtWeatherRain_Wet)
         Me.GroupBox10.Controls.Add(Me.Label65)
-        Me.GroupBox10.Controls.Add(Me.TxtWeatherRain_Rain)
         Me.GroupBox10.Controls.Add(Me.Label66)
         Me.GroupBox10.Controls.Add(Me.TxtWeatherRain_Dry)
+        Me.GroupBox10.Controls.Add(Me.TxtWeatherRain_Rain)
         Me.GroupBox10.Controls.Add(Me.Label67)
         Me.GroupBox10.ForeColor = System.Drawing.Color.White
-        Me.GroupBox10.Location = New System.Drawing.Point(161, 58)
+        Me.GroupBox10.Location = New System.Drawing.Point(158, 90)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(146, 79)
         Me.GroupBox10.TabIndex = 3
@@ -1628,7 +1680,7 @@ Partial Class FrmProperties
         Me.TxtWeatherRain_Wet.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherRain_Wet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherRain_Wet.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherRain_Wet.Location = New System.Drawing.Point(36, 55)
+        Me.TxtWeatherRain_Wet.Location = New System.Drawing.Point(36, 34)
         Me.TxtWeatherRain_Wet.Name = "TxtWeatherRain_Wet"
         Me.TxtWeatherRain_Wet.Size = New System.Drawing.Size(104, 21)
         Me.TxtWeatherRain_Wet.TabIndex = 2
@@ -1637,7 +1689,7 @@ Partial Class FrmProperties
         '
         Me.Label65.AutoSize = True
         Me.Label65.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.Location = New System.Drawing.Point(9, 59)
+        Me.Label65.Location = New System.Drawing.Point(5, 37)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(31, 13)
         Me.Label65.TabIndex = 61
@@ -1648,7 +1700,7 @@ Partial Class FrmProperties
         Me.TxtWeatherRain_Rain.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherRain_Rain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherRain_Rain.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherRain_Rain.Location = New System.Drawing.Point(36, 34)
+        Me.TxtWeatherRain_Rain.Location = New System.Drawing.Point(36, 55)
         Me.TxtWeatherRain_Rain.Name = "TxtWeatherRain_Rain"
         Me.TxtWeatherRain_Rain.Size = New System.Drawing.Size(104, 21)
         Me.TxtWeatherRain_Rain.TabIndex = 1
@@ -1657,7 +1709,7 @@ Partial Class FrmProperties
         '
         Me.Label66.AutoSize = True
         Me.Label66.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label66.Location = New System.Drawing.Point(9, 36)
+        Me.Label66.Location = New System.Drawing.Point(5, 57)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(32, 13)
         Me.Label66.TabIndex = 59
@@ -1677,11 +1729,24 @@ Partial Class FrmProperties
         '
         Me.Label67.AutoSize = True
         Me.Label67.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.Location = New System.Drawing.Point(7, 14)
+        Me.Label67.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label67.Location = New System.Drawing.Point(5, 16)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(24, 13)
         Me.Label67.TabIndex = 57
         Me.Label67.Text = "Dry"
+        '
+        'RdWeatherUseSwitch
+        '
+        Me.RdWeatherUseSwitch.AutoSize = True
+        Me.RdWeatherUseSwitch.Location = New System.Drawing.Point(10, 18)
+        Me.RdWeatherUseSwitch.Name = "RdWeatherUseSwitch"
+        Me.RdWeatherUseSwitch.Size = New System.Drawing.Size(113, 17)
+        Me.RdWeatherUseSwitch.TabIndex = 72
+        Me.RdWeatherUseSwitch.TabStop = True
+        Me.RdWeatherUseSwitch.Text = "Use AAG Switch"
+        Me.ToolTip.SetToolTip(Me.RdWeatherUseSwitch, "USe AAG and physical safe switch, defined in AAG Cloudwatcher software.")
+        Me.RdWeatherUseSwitch.UseVisualStyleBackColor = True
         '
         'GroupBox13
         '
@@ -1692,7 +1757,7 @@ Partial Class FrmProperties
         Me.GroupBox13.Controls.Add(Me.TxtWeatherLightness_Dark)
         Me.GroupBox13.Controls.Add(Me.Label64)
         Me.GroupBox13.ForeColor = System.Drawing.Color.White
-        Me.GroupBox13.Location = New System.Drawing.Point(324, 58)
+        Me.GroupBox13.Location = New System.Drawing.Point(462, 90)
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.Size = New System.Drawing.Size(146, 79)
         Me.GroupBox13.TabIndex = 5
@@ -1768,7 +1833,7 @@ Partial Class FrmProperties
         Me.GroupBox11.Controls.Add(Me.TxtWeatherHumidity_Dry)
         Me.GroupBox11.Controls.Add(Me.Label61)
         Me.GroupBox11.ForeColor = System.Drawing.Color.White
-        Me.GroupBox11.Location = New System.Drawing.Point(1, 58)
+        Me.GroupBox11.Location = New System.Drawing.Point(310, 90)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(146, 79)
         Me.GroupBox11.TabIndex = 2
@@ -1844,7 +1909,7 @@ Partial Class FrmProperties
         Me.GroupBox9.Controls.Add(Me.TxtWeatherCloud_Clear)
         Me.GroupBox9.Controls.Add(Me.Label58)
         Me.GroupBox9.ForeColor = System.Drawing.Color.White
-        Me.GroupBox9.Location = New System.Drawing.Point(487, 58)
+        Me.GroupBox9.Location = New System.Drawing.Point(6, 90)
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.Size = New System.Drawing.Size(146, 79)
         Me.GroupBox9.TabIndex = 4
@@ -1885,6 +1950,7 @@ Partial Class FrmProperties
         '
         Me.Label57.AutoSize = True
         Me.Label57.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label57.ForeColor = System.Drawing.Color.White
         Me.Label57.Location = New System.Drawing.Point(6, 34)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(44, 13)
@@ -1905,7 +1971,7 @@ Partial Class FrmProperties
         '
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.ForeColor = System.Drawing.Color.White
+        Me.Label58.ForeColor = System.Drawing.Color.DarkRed
         Me.Label58.Location = New System.Drawing.Point(6, 14)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(36, 13)
@@ -1917,7 +1983,7 @@ Partial Class FrmProperties
         Me.TxtWeatherURL.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherURL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherURL.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherURL.Location = New System.Drawing.Point(53, 34)
+        Me.TxtWeatherURL.Location = New System.Drawing.Point(219, 14)
         Me.TxtWeatherURL.Name = "TxtWeatherURL"
         Me.TxtWeatherURL.Size = New System.Drawing.Size(417, 21)
         Me.TxtWeatherURL.TabIndex = 1
@@ -1926,7 +1992,7 @@ Partial Class FrmProperties
         '
         Me.Label54.AutoSize = True
         Me.Label54.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label54.Location = New System.Drawing.Point(7, 37)
+        Me.Label54.Location = New System.Drawing.Point(187, 16)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(26, 13)
         Me.Label54.TabIndex = 51
@@ -1937,7 +2003,7 @@ Partial Class FrmProperties
         Me.TxtWeatherClearDelay.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherClearDelay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherClearDelay.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherClearDelay.Location = New System.Drawing.Point(112, 13)
+        Me.TxtWeatherClearDelay.Location = New System.Drawing.Point(299, 37)
         Me.TxtWeatherClearDelay.Name = "TxtWeatherClearDelay"
         Me.TxtWeatherClearDelay.Size = New System.Drawing.Size(41, 21)
         Me.TxtWeatherClearDelay.TabIndex = 0
@@ -1946,7 +2012,7 @@ Partial Class FrmProperties
         '
         Me.Label55.AutoSize = True
         Me.Label55.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(7, 16)
+        Me.Label55.Location = New System.Drawing.Point(187, 39)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(106, 13)
         Me.Label55.TabIndex = 49
@@ -5243,4 +5309,9 @@ Partial Class FrmProperties
     Friend WithEvents Label19 As Label
     Friend WithEvents TxtMoonAltitudeAlwaysSafe As TextBox
     Friend WithEvents Label18 As Label
+    Friend WithEvents RdWeatherUseValues As RadioButton
+    Friend WithEvents RdWeatherUseSwitch As RadioButton
+    Friend WithEvents TxtWeatherSafeSwitchDelay As TextBox
+    Friend WithEvents Label164 As Label
+    Friend WithEvents Label165 As Label
 End Class

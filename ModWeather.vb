@@ -90,11 +90,13 @@
                             FrmMain.lblLight.Text = "Dark"
                             pLightStatus = "DARK"
                             FrmMain.lblLight.BackColor = Color.Gray
+                            FrmMain.lblLight.ForeColor = Color.White
                             FrmMain.lblLight.Visible = True
                         Case "LIGHT"
                             FrmMain.lblLight.Text = "Light"
                             pLightStatus = "LIGHT"
                             FrmMain.lblLight.BackColor = Color.Yellow
+                            FrmMain.lblLight.ForeColor = Color.Silver
                             FrmMain.lblLight.Visible = True
                     End Select
                 Else
@@ -104,19 +106,24 @@
                             FrmMain.lblLight.Text = "Dark"
                             pLightStatus = "DARK"
                             FrmMain.lblLight.BackColor = Color.Gray
+                            FrmMain.lblLight.ForeColor = Color.White
                             FrmMain.lblLight.Visible = True
                         Case >= My.Settings.sWeatherLightness_Light
                             FrmMain.lblLight.Text = "Light"
                             pLightStatus = "LIGHT"
                             FrmMain.lblLight.BackColor = Color.Yellow
+                            FrmMain.lblLight.ForeColor = Color.Silver
                             FrmMain.lblLight.Visible = True
                         Case >= My.Settings.sWeatherLightness_VeryLight
                             FrmMain.lblLight.Text = "Very Light"
                             pLightStatus = "VERY LIGHT"
                             FrmMain.lblLight.BackColor = Color.LightYellow
+                            FrmMain.lblLight.ForeColor = Color.Silver
                             FrmMain.lblLight.Visible = True
                         Case -9
                             FrmMain.lblLight.Text = ""
+                            FrmMain.lblLight.BackColor = Color.Fuchsia
+                            FrmMain.lblLight.ForeColor = Color.White
                             pLightStatus = "N/A"
                             FrmMain.lblLight.Visible = False
                             If pStrucWeather.AAGversion = "OLD" Then
@@ -124,6 +131,7 @@
                             End If
                         Case Else
                             FrmMain.lblLight.BackColor = Color.White
+                            FrmMain.lblLight.ForeColor = Color.Silver
                             pLightStatus = "UNKNOWN"
                             FrmMain.lblLight.Text = "Unknown"
                             FrmMain.lblLight.Visible = True
@@ -138,21 +146,25 @@
                     Case > My.Settings.sWeatherRain_Dry
                         FrmMain.lblRain.Text = "Dry"
                         FrmMain.lblRain.BackColor = Color.Transparent
+                        FrmMain.lblRain.ForeColor = Color.White
                     Case > My.Settings.sWeatherRain_Wet
                         FrmMain.lblRain.Text = "Wet"
                         FrmMain.lblRain.BackColor = Color.LightBlue
+                        FrmMain.lblRain.ForeColor = Color.White
                         If pStrucWeather.AAGversion = "OLD" Then
                             pStrucWeather.safe = 0
                         End If
                     Case > My.Settings.sWeatherRain_Rain
                         FrmMain.lblRain.Text = "Rain"
                         FrmMain.lblRain.BackColor = Color.Blue
+                        FrmMain.lblRain.ForeColor = Color.White
                         If pStrucWeather.AAGversion = "OLD" Then
                             pStrucWeather.safe = 0
                         End If
                     Case Else
                         FrmMain.lblRain.Text = "Unknown"
                         FrmMain.lblRain.BackColor = Color.White
+                        FrmMain.lblRain.ForeColor = Color.Silver
                         If pStrucWeather.AAGversion = "OLD" Then
                             pStrucWeather.safe = 0
                         End If
@@ -163,19 +175,23 @@
                     Case > My.Settings.sWeatherHumidity_Humid
                         FrmMain.lblRelativeHumidity.Text = "Humidity: wet - " + Format(pStrucWeather.hum) + "%"
                         FrmMain.lblRelativeHumidity.BackColor = Color.LightBlue
-
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.White
                     Case > My.Settings.sWeatherHumidity_Normal
                         FrmMain.lblRelativeHumidity.Text = "Humidity: normal - " + Format(pStrucWeather.hum) + "%"
                         FrmMain.lblRelativeHumidity.BackColor = Color.LightCyan
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.White
                     Case > My.Settings.sWeatherHumidity_Dry
                         FrmMain.lblRelativeHumidity.Text = "Humidity: dry - " + Format(pStrucWeather.hum) + "%"
                         FrmMain.lblRelativeHumidity.BackColor = Color.Transparent
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.Silver
                     Case -9
                         FrmMain.lblRelativeHumidity.Text = "Humidity: N/A"
                         FrmMain.lblRelativeHumidity.BackColor = Color.Transparent
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.Silver
                     Case Else
                         FrmMain.lblRelativeHumidity.Text = "Humidity: N/A"
                         FrmMain.lblRelativeHumidity.BackColor = Color.White
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.Silver
                 End Select
 
                 Dim Switch As String
@@ -185,34 +201,44 @@
                         Case "SAFE"
                             FrmMain.lblSafe.BackColor = Color.LightGreen
                             FrmMain.LblCloudSafe.BackColor = Color.LightGreen
+                            FrmMain.LblCloudSafe.ForeColor = Color.White
                             pWeatherStatus = "SAFE"
                             FrmMain.LblCloudSafe.Text = "SAFE and Open"
                         Case "UNSAFE"
                             FrmMain.lblSafe.BackColor = Color.IndianRed
+                            FrmMain.lblSafe.ForeColor = Color.White
                             FrmMain.LblCloudSafe.BackColor = Color.IndianRed
+                            FrmMain.LblCloudSafe.ForeColor = Color.White
                             pWeatherStatus = "UNSAFE"
                             FrmMain.LblCloudSafe.Text = "UNSAFE and Closed"
                     End Select
                 Else
                     If pStrucWeather.safe = 1 And pStrucWeather.switch = 1 Then
                         FrmMain.lblSafe.BackColor = Color.LightGreen
+                        FrmMain.lblSafe.ForeColor = Color.White
                         FrmMain.LblCloudSafe.BackColor = Color.LightGreen
                         pWeatherStatus = "SAFE"
                         Switch = " and Open"
                     ElseIf pStrucWeather.safe = 1 And pStrucWeather.switch = 0 Then
                         FrmMain.lblSafe.BackColor = Color.IndianRed
+                        FrmMain.lblSafe.ForeColor = Color.White
                         FrmMain.LblCloudSafe.BackColor = Color.IndianRed
+                        FrmMain.LblCloudSafe.ForeColor = Color.White
                         pWeatherStatus = "UNSAFE"
                         Switch = " and Closed"
                     ElseIf pStrucWeather.safe = 0 Then
                         FrmMain.lblSafe.BackColor = Color.IndianRed
+                        FrmMain.lblSafe.ForeColor = Color.White
                         FrmMain.LblCloudSafe.BackColor = Color.IndianRed
+                        FrmMain.LblCloudSafe.ForeColor = Color.White
                         pWeatherStatus = "UNSAFE"
                         Switch = " and Closed"
                     Else
                         pWeatherStatus = "UNKNOWN"
                         FrmMain.lblSafe.BackColor = Color.Transparent
+                        FrmMain.lblSafe.ForeColor = Color.Silver
                         FrmMain.LblCloudSafe.BackColor = Color.Transparent
+                        FrmMain.LblCloudSafe.ForeColor = Color.Silver
                         Switch = " and Unknown"
                     End If
 

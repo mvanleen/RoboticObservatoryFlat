@@ -2215,6 +2215,42 @@ Namespace My
                 Me("sMoonStartCooldownHigh") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property sWeatherUseSwitch() As Boolean
+            Get
+                Return CType(Me("sWeatherUseSwitch"),Boolean)
+            End Get
+            Set
+                Me("sWeatherUseSwitch") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property sWeatherUseValues() As Boolean
+            Get
+                Return CType(Me("sWeatherUseValues"),Boolean)
+            End Get
+            Set
+                Me("sWeatherUseValues") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("600")>  _
+        Public Property sWeatherSafeSwitchDelay() As Integer
+            Get
+                Return CType(Me("sWeatherSafeSwitchDelay"),Integer)
+            End Get
+            Set
+                Me("sWeatherSafeSwitchDelay") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -190,6 +190,13 @@
     '               https://editor.method.ac/
     '       change: standard messagebox replace by form
     '3.01   bug: park aborts using Paramount => added park condition to abort slew
+    '3.02   bug: changed coloring of AAG data as certain values were not visible
+    '       changed: added option to use someone elses AAG skywatcher if mine breaks down
+    '       && AAG: als datum niet verandert timeout nodig
+
+
+    ' && add alternat aag temperatur source
+    ' && homing loopt fout
 
     '&& last observed hads is sorted as text and not as date
     '&& maan opsplitsen < 40% => vanaf 10° en anders 0° / < 10% gewoon altijd

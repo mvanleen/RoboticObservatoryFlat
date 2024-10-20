@@ -542,5 +542,14 @@
     <Setting Name="sMoonStartCooldownHigh" Type="System.Double" Scope="User">
       <Value Profile="(Default)">25</Value>
     </Setting>
+    <Setting Name="sWeatherUseSwitch" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="sWeatherUseValues" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="sWeatherSafeSwitchDelay" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">600</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -5,6 +5,7 @@ Module ModAAG
 
     Public pAAGFile As String
     Public pLastKnownAAGConnected As DateTime
+    Public pWeatherSwitchDelay As DateTime
 
     'http://185.228.120.224:17045/cgi-bin/cgiLastData
     'http://customer.astrohostinge-eye.es:17045/cgi-bin/cgiLastData
@@ -81,7 +82,6 @@ Module ModAAG
 
         GetAAGData = "OK"
         Try
-
             startExecution = DateTime.UtcNow()
 
             If My.Settings.sDebugAAGData = False Then
@@ -156,6 +156,7 @@ Module ModAAG
     Public Function ProcessAAGData() As String
         Dim returnvalue As String
         Dim i As Integer
+        Dim j As Long
         Dim startExecution As Date
         Dim executionTime As TimeSpan
 
@@ -192,7 +193,7 @@ Module ModAAG
                 Double.TryParse(words(4).Replace("rain=", ""), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, pStrucWeather.rain)
                 Double.TryParse(words(5).Replace("light=", ""), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, pStrucWeather.light)
                 Double.TryParse(words(6).Replace("switch=", ""), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, Convert.ToInt16(pStrucWeather.switch))
-                pStrucWeather.safe = 1
+                Integer.TryParse(words(7).Replace("safe=", ""), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, pStrucWeather.safe)
                 pStrucWeather.AAGversion = "OLD"
                 pStrucWeather.containsData = 1
             Else
@@ -219,6 +220,26 @@ Module ModAAG
                     pStrucWeather.hum = 100
                 End If
             End If
+
+            'check if physical AAG is used or not
+            If My.Settings.sWeatherUseValues = True Then
+                'the safe switch should be calculated based on the values, taking into account delay
+                If pStrucWeather.clouds < My.Settings.sWeatherCloud_Clear Then
+                    pStrucWeather.safe = 1
+                    j = DateDiff(DateInterval.Second, pWeatherSwitchDelay, Date.UtcNow)
+                    If j > My.Settings.sWeatherSafeSwitchDelay Then
+                        pStrucWeather.switch = 1
+                    Else
+                        pStrucWeather.switch = 0
+                        LogSessionEntry("FULL", "Weather is safe, safe switch enabled in : " + Format(My.Settings.sWeatherSafeSwitchDelay - j), " s", "ProcessAAGData", "WEATHER")
+                    End If
+                Else
+                    pStrucWeather.safe = 0
+                    pStrucWeather.switch = 0
+                    pWeatherSwitchDelay = Now
+                End If
+            End If
+
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  ProcessAAGData" + executionTime.ToString, "", "ProcessAAGData", "WEATHER")
