@@ -183,15 +183,15 @@
                     Case > My.Settings.sWeatherHumidity_Dry
                         FrmMain.lblRelativeHumidity.Text = "Humidity: dry - " + Format(pStrucWeather.hum) + "%"
                         FrmMain.lblRelativeHumidity.BackColor = Color.Transparent
-                        FrmMain.lblRelativeHumidity.ForeColor = Color.Silver
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.White
                     Case -9
                         FrmMain.lblRelativeHumidity.Text = "Humidity: N/A"
                         FrmMain.lblRelativeHumidity.BackColor = Color.Transparent
-                        FrmMain.lblRelativeHumidity.ForeColor = Color.Silver
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.White
                     Case Else
                         FrmMain.lblRelativeHumidity.Text = "Humidity: N/A"
-                        FrmMain.lblRelativeHumidity.BackColor = Color.White
-                        FrmMain.lblRelativeHumidity.ForeColor = Color.Silver
+                        FrmMain.lblRelativeHumidity.BackColor = Color.Transparent
+                        FrmMain.lblRelativeHumidity.ForeColor = Color.White
                 End Select
 
                 Dim Switch As String

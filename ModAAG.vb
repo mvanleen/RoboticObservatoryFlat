@@ -236,7 +236,7 @@ Module ModAAG
                 Else
                     pStrucWeather.safe = 0
                     pStrucWeather.switch = 0
-                    pWeatherSwitchDelay = Now
+                    pWeatherSwitchDelay = DateTime.UtcNow
                 End If
             End If
 

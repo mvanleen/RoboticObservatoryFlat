@@ -129,9 +129,9 @@ Partial Class FrmProperties
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.TxtWeatherRain_Wet = New System.Windows.Forms.TextBox()
         Me.Label65 = New System.Windows.Forms.Label()
-        Me.TxtWeatherRain_Rain = New System.Windows.Forms.TextBox()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.TxtWeatherRain_Dry = New System.Windows.Forms.TextBox()
+        Me.TxtWeatherRain_Rain = New System.Windows.Forms.TextBox()
         Me.Label67 = New System.Windows.Forms.Label()
         Me.RdWeatherUseSwitch = New System.Windows.Forms.RadioButton()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
@@ -1695,16 +1695,6 @@ Partial Class FrmProperties
         Me.Label65.TabIndex = 61
         Me.Label65.Text = "Wet:"
         '
-        'TxtWeatherRain_Rain
-        '
-        Me.TxtWeatherRain_Rain.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.TxtWeatherRain_Rain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtWeatherRain_Rain.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherRain_Rain.Location = New System.Drawing.Point(36, 55)
-        Me.TxtWeatherRain_Rain.Name = "TxtWeatherRain_Rain"
-        Me.TxtWeatherRain_Rain.Size = New System.Drawing.Size(104, 21)
-        Me.TxtWeatherRain_Rain.TabIndex = 1
-        '
         'Label66
         '
         Me.Label66.AutoSize = True
@@ -1724,6 +1714,16 @@ Partial Class FrmProperties
         Me.TxtWeatherRain_Dry.Name = "TxtWeatherRain_Dry"
         Me.TxtWeatherRain_Dry.Size = New System.Drawing.Size(104, 21)
         Me.TxtWeatherRain_Dry.TabIndex = 0
+        '
+        'TxtWeatherRain_Rain
+        '
+        Me.TxtWeatherRain_Rain.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtWeatherRain_Rain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtWeatherRain_Rain.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtWeatherRain_Rain.Location = New System.Drawing.Point(36, 55)
+        Me.TxtWeatherRain_Rain.Name = "TxtWeatherRain_Rain"
+        Me.TxtWeatherRain_Rain.Size = New System.Drawing.Size(104, 21)
+        Me.TxtWeatherRain_Rain.TabIndex = 1
         '
         'Label67
         '
@@ -1769,7 +1769,7 @@ Partial Class FrmProperties
         Me.TxtWeatherLightness_VeryLight.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherLightness_VeryLight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherLightness_VeryLight.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherLightness_VeryLight.Location = New System.Drawing.Point(57, 52)
+        Me.TxtWeatherLightness_VeryLight.Location = New System.Drawing.Point(60, 54)
         Me.TxtWeatherLightness_VeryLight.Name = "TxtWeatherLightness_VeryLight"
         Me.TxtWeatherLightness_VeryLight.Size = New System.Drawing.Size(83, 21)
         Me.TxtWeatherLightness_VeryLight.TabIndex = 2
@@ -1778,7 +1778,7 @@ Partial Class FrmProperties
         '
         Me.Label62.AutoSize = True
         Me.Label62.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.Location = New System.Drawing.Point(6, 54)
+        Me.Label62.Location = New System.Drawing.Point(6, 56)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(56, 13)
         Me.Label62.TabIndex = 61
@@ -1789,7 +1789,7 @@ Partial Class FrmProperties
         Me.TxtWeatherLightness_Light.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherLightness_Light.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherLightness_Light.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherLightness_Light.Location = New System.Drawing.Point(57, 31)
+        Me.TxtWeatherLightness_Light.Location = New System.Drawing.Point(60, 33)
         Me.TxtWeatherLightness_Light.Name = "TxtWeatherLightness_Light"
         Me.TxtWeatherLightness_Light.Size = New System.Drawing.Size(83, 21)
         Me.TxtWeatherLightness_Light.TabIndex = 1
@@ -1798,7 +1798,7 @@ Partial Class FrmProperties
         '
         Me.Label63.AutoSize = True
         Me.Label63.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label63.Location = New System.Drawing.Point(6, 34)
+        Me.Label63.Location = New System.Drawing.Point(6, 36)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(34, 13)
         Me.Label63.TabIndex = 59
@@ -1809,7 +1809,7 @@ Partial Class FrmProperties
         Me.TxtWeatherLightness_Dark.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherLightness_Dark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherLightness_Dark.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherLightness_Dark.Location = New System.Drawing.Point(57, 10)
+        Me.TxtWeatherLightness_Dark.Location = New System.Drawing.Point(60, 12)
         Me.TxtWeatherLightness_Dark.Name = "TxtWeatherLightness_Dark"
         Me.TxtWeatherLightness_Dark.Size = New System.Drawing.Size(83, 21)
         Me.TxtWeatherLightness_Dark.TabIndex = 0
@@ -1818,7 +1818,7 @@ Partial Class FrmProperties
         '
         Me.Label64.AutoSize = True
         Me.Label64.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label64.Location = New System.Drawing.Point(5, 13)
+        Me.Label64.Location = New System.Drawing.Point(5, 15)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(33, 13)
         Me.Label64.TabIndex = 57
