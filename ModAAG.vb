@@ -5,6 +5,8 @@ Module ModAAG
 
     Public pAAGFile As String
     Public pLastKnownAAGConnected As DateTime
+    Public pLastKnownAAGTimestamp As DateTime
+    Public pLastKnownAAGTimestampCounter As Integer
     Public pWeatherSwitchDelay As DateTime
 
     'http://185.228.120.224:17045/cgi-bin/cgiLastData
@@ -110,6 +112,7 @@ Module ModAAG
                             dewp=11.900000"
                 pLastKnownAAGConnected = DateTime.UtcNow
             End If
+
             'log all the weather data in a file, simulator or not
             LogSessionEntry("DEBUG", "  GetAAGData" + pAAGFile, "", "GetAAGData", "WEATHER_DATA")
             LogSessionEntry("DEBUG", "  GetAAGData: " + executionTime.ToString, "", "GetAAGData", "WEATHER")
@@ -149,6 +152,40 @@ Module ModAAG
         Catch ex As Exception
             CheckTimeoutAAG = "CheckTimeoutAAG: " + ex.Message
             LogSessionEntry("ERROR", "CheckTimeoutAAG: " + ex.Message, "", "CheckTimeoutAAG", "WEATHER")
+        End Try
+    End Function
+
+    Public Function CheckTimeoutAAGTimestamp() As String
+        'wrapper that takes into account a delay before the alarm is raised
+        'if the timestamp returned by the AAG does not change, raise the alarm
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        CheckTimeoutAAGTimestamp = "OK"
+        Try
+            startExecution = DateTime.UtcNow()
+
+            If pStrucWeather.dataGMTTime = pLastKnownAAGTimestamp Then
+                pLastKnownAAGTimestampCounter += 1
+            Else
+                pLastKnownAAGTimestampCounter = 0
+            End If
+            pLastKnownAAGTimestamp = pStrucWeather.dataGMTTime
+
+            'log file is not changing
+            If pLastKnownAAGTimestampCounter > 30 Then
+                FrmMain.lblSafe.BackColor = ColorTranslator.FromHtml("#d63031") 'red
+                FrmMain.LblCloudSafe.Text = "AAG is showing the same values for a long time !"
+                CheckTimeoutAAGTimestamp = "NOK"
+                LogSessionEntry("ERROR", "AAG is showing the same values for a long time !", "", "CheckTimeoutAAGTimestamp", "WEATHER")
+            End If
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  CheckTimeoutAAGTimestamp: " + executionTime.ToString, "", "CheckTimeoutAAGTimestamp", "WEATHER")
+
+        Catch ex As Exception
+            CheckTimeoutAAGTimestamp = "CheckTimeoutAAGTimestamp: " + ex.Message
+            LogSessionEntry("ERROR", "CheckTimeoutAAGTimestamp: " + ex.Message, "", "CheckTimeoutAAGTimestamp", "WEATHER")
         End Try
     End Function
 

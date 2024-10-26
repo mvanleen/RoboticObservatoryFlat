@@ -3331,7 +3331,7 @@ Module ModRun
                     Exit Function
                 End If
 
-                LogSessionEntry("ESSENTIAL", pVSLTarget.HADSName + "too low... " + Format(i - 1) + " frames were exposed. Selecting new target.", "", "RunHADS", "SEQUENCE")
+                LogSessionEntry("ESSENTIAL", pVSLTarget.HADSName + "too low... " + Format(i) + " frames were exposed. Selecting new target.", "", "RunHADS", "SEQUENCE")
             End If
 
             pIsSequenceRunning = False

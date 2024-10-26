@@ -379,6 +379,22 @@ Public Class FrmMain
                     Exit Sub
                 End If
             End If
+
+            'check AAG timeout: see if new values are being delivered
+            returnvalue = CheckTimeoutAAGTimestamp()
+            If returnvalue <> "OK" And pRunStatus <> "ABORTED" Then
+                'abort any sequence running
+                pStartRun = False 'do not restart run
+                pIsActionRunning = False
+                pRunStatus = "ABORTING"
+                returnvalue = PauseRun("Aborting run due to AAG error...", "",
+                                       "Aborting run due to AAG error: CheckCycle: ", "",
+                                       "AAG error: equipment paused, run aborted.", "", "ABORTING", "ABORTED")
+                If returnvalue <> "OK" Then
+                    Exit Sub
+                End If
+            End If
+
         Catch ex As Exception
             ShowMessage("TimerWeather_Tick: " + ex.Message, "CRITICAL", "Error!")
         End Try
