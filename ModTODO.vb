@@ -194,6 +194,7 @@
     '       changed: added option to use someone elses AAG skywatcher if mine breaks down
     '       bug: RunHADS: Index was outside the bounds of the array
     '       change: AAG timestamp timeout verification
+    '3.03   bug: error in insert procedure deepsky
 
     ' && homing loopt fout
 

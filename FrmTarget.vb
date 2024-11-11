@@ -1346,7 +1346,8 @@ Public Class FrmTarget
                                                 + TxtTargetPanel1DEC2000DG.Text + "','" + TxtTargetPanel2DEC2000DG.Text + "','" + TxtTargetPanel3DEC2000DG.Text + "','" + TxtTargetPanel4DEC2000DG.Text + "','" _
                                                 + TxtTargetPanel1DEC2000MM.Text + "','" + TxtTargetPanel2DEC2000MM.Text + "','" + TxtTargetPanel3DEC2000MM.Text + "','" + TxtTargetPanel4DEC2000MM.Text + "','" _
                                                 + TxtTargetPanel1DEC2000SS.Text + "','" + TxtTargetPanel2DEC2000SS.Text + "','" + TxtTargetPanel3DEC2000SS.Text + "','" + TxtTargetPanel4DEC2000SS.Text + "','" _
-                                                + TxtTargetPanel1NbrExposedFrames.Text + "','" + TxtTargetPanel2NbrExposedFrames.Text + "','" + TxtTargetPanel3NbrExposedFrames.Text + "','" + TxtTargetPanel4NbrExposedFrames.Text + TxtTargetMosaicOverlap.Text + "','" + "')"
+                                                + TxtTargetPanel1NbrExposedFrames.Text + "','" + TxtTargetPanel2NbrExposedFrames.Text + "','" + TxtTargetPanel3NbrExposedFrames.Text + "','" + TxtTargetPanel4NbrExposedFrames.Text + "','" _
+                                                + TxtTargetMosaicOverlap.Text + "')"
 
                                 daSL.SelectCommand = cmd
                                 i = cmd.ExecuteNonQuery
