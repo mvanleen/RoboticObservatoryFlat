@@ -824,4 +824,6 @@ Public Class FrmProperties
     Private Sub RdWeatherUseValues_CheckedChanged(sender As Object, e As EventArgs) Handles RdWeatherUseValues.CheckedChanged
         TxtWeatherSafeSwitchDelay.Enabled = True
     End Sub
+
+
 End Class

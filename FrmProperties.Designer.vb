@@ -307,6 +307,7 @@ Partial Class FrmProperties
         Me.TxtMoonAltitudeLimitHigh = New System.Windows.Forms.TextBox()
         Me.ChkMoonStartCooldown = New System.Windows.Forms.CheckBox()
         Me.TxtMoonStartCooldownHigh = New System.Windows.Forms.TextBox()
+        Me.Label166 = New System.Windows.Forms.Label()
         Me.GrpSnapCap = New System.Windows.Forms.GroupBox()
         Me.Label153 = New System.Windows.Forms.Label()
         Me.TxtCoverDevice = New System.Windows.Forms.TextBox()
@@ -403,6 +404,7 @@ Partial Class FrmProperties
         Me.Label118 = New System.Windows.Forms.Label()
         Me.Label120 = New System.Windows.Forms.Label()
         Me.TabPageHADS = New System.Windows.Forms.TabPage()
+        Me.Label167 = New System.Windows.Forms.Label()
         Me.GroupBoxCCD.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GrpFocus.SuspendLayout()
@@ -3725,6 +3727,17 @@ Partial Class FrmProperties
         Me.ToolTip.SetToolTip(Me.TxtMoonStartCooldownHigh, "When Moon rises above this altitude and phase is larger then limit: abort deepsky" &
         ".")
         '
+        'Label166
+        '
+        Me.Label166.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label166.Location = New System.Drawing.Point(206, 109)
+        Me.Label166.Name = "Label166"
+        Me.Label166.Size = New System.Drawing.Size(397, 50)
+        Me.Label166.TabIndex = 18
+        Me.Label166.Text = "https://docs.google.com/spreadsheets/d/1oGA2HaEHE8L6eX19ZoHqQQTu0LYV56HX3Srg7oCtO" &
+    "Ho/edit?hl=en&pref=2&pli=1&gid=203763529#gid=203763529"
+        Me.ToolTip.SetToolTip(Me.Label166, "Only select objects above this declination.")
+        '
         'GrpSnapCap
         '
         Me.GrpSnapCap.Controls.Add(Me.Label153)
@@ -3986,6 +3999,8 @@ Partial Class FrmProperties
         '
         'GroupBox16
         '
+        Me.GroupBox16.Controls.Add(Me.Label167)
+        Me.GroupBox16.Controls.Add(Me.Label166)
         Me.GroupBox16.Controls.Add(Me.Label146)
         Me.GroupBox16.Controls.Add(Me.txtHADSDECCutOff)
         Me.GroupBox16.Controls.Add(Me.Label145)
@@ -4858,6 +4873,17 @@ Partial Class FrmProperties
         Me.TabPageHADS.TabIndex = 1
         Me.TabPageHADS.Text = "HADS"
         '
+        'Label167
+        '
+        Me.Label167.AutoSize = True
+        Me.Label167.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label167.Location = New System.Drawing.Point(206, 172)
+        Me.Label167.Name = "Label167"
+        Me.Label167.Size = New System.Drawing.Size(152, 13)
+        Me.Label167.TabIndex = 19
+        Me.Label167.Text = "Goto Share -> Publish for web"
+        Me.ToolTip.SetToolTip(Me.Label167, "Only select objects above this declination.")
+        '
         'FrmProperties
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5314,4 +5340,6 @@ Partial Class FrmProperties
     Friend WithEvents TxtWeatherSafeSwitchDelay As TextBox
     Friend WithEvents Label164 As Label
     Friend WithEvents Label165 As Label
+    Friend WithEvents Label166 As Label
+    Friend WithEvents Label167 As Label
 End Class

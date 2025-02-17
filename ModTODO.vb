@@ -195,6 +195,7 @@
     '       bug: RunHADS: Index was outside the bounds of the array
     '       change: AAG timestamp timeout verification
     '3.03   bug: error in insert procedure deepsky
+    '3.04   changed: added instructions for HADS yearly refresh
 
     ' && homing loopt fout
 
