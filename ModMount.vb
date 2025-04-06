@@ -269,7 +269,7 @@ Module ModMount
             Try
                 pStructMount.SideOfPier = Convert.ToString(pMount.SideOfPier)
             Catch ex As Exception
-                pStructMount.SideOfPier = -1
+                pStructMount.SideOfPier = "-1"
             End Try
 
             'pStructMount.SiderealTime = AMount.SiderealTime
