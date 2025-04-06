@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maarten\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maarten\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmproperties.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmproperties.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
@@ -14,20 +22,12 @@
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|RoboticObs||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\maarten\\source\\repos\\mvanleen\\roboticobservatoryflat\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modhelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modhelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modheartbeat.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modheartbeat.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmtarget.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -77,11 +77,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FrmProperties.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmProperties.vb",
               "RelativeDocumentMoniker": "FrmProperties.vb",
@@ -93,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ModHeartBeat.vb",
               "DocumentMoniker": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModHeartBeat.vb",
               "RelativeDocumentMoniker": "ModHeartBeat.vb",
@@ -140,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FrmMain.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmMain.vb",
               "RelativeDocumentMoniker": "FrmMain.vb",
@@ -199,15 +199,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "ModTODO.vb",
               "DocumentMoniker": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModTODO.vb",
               "RelativeDocumentMoniker": "ModTODO.vb",
               "ToolTip": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModTODO.vb",
               "RelativeToolTip": "ModTODO.vb",
-              "ViewState": "AgIAALwAAAAAAAAAAAAAAMwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAALMAAAAAAAAAAIApwMUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-20T10:01:12.643Z"
+              "WhenOpened": "2024-10-20T10:01:12.643Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -235,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "RoboticObs",
               "DocumentMoniker": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\RoboticObs.vbproj",
               "RelativeDocumentMoniker": "RoboticObs.vbproj",
@@ -247,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FrmProperties.vb",
               "DocumentMoniker": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\FrmProperties.vb",
               "RelativeDocumentMoniker": "FrmProperties.vb",
@@ -260,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ModHelper.vb",
               "DocumentMoniker": "C:\\Users\\Maarten\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModHelper.vb",
               "RelativeDocumentMoniker": "ModHelper.vb",

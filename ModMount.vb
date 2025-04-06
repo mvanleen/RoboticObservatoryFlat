@@ -266,73 +266,78 @@ Module ModMount
             pStructMount.RightAscension = pMount.RightAscension
             'pStructMount.DriverInfo = AMount.DriverInfo
             'pStructMount.Name = AMount.Name
-            pStructMount.SideOfPier = Convert.ToString(pMount.SideOfPier)
+            Try
+                pStructMount.SideOfPier = Convert.ToString(pMount.SideOfPier)
+            Catch ex As Exception
+                pStructMount.SideOfPier = -1
+            End Try
+
             'pStructMount.SiderealTime = AMount.SiderealTime
             'pStructMount.DeclinationRate = AMount.DeclinationRate
             'pStructMount.RightAscensionRate = AMount.RightAscensionRate
             pStructMount.Tracking = pMount.Tracking
-            pStructMount.TrackingRate = pMount.TrackingRate
-            'pStructMount.Slewing = AMount.Slewing
-            'pStructMount.UTCDate = AMount.UTCDate
-            'pStructMount.CanMoveAxisRA = AMount.CanMoveAxis(0)
-            'pStructMount.CanMoveAxisDEC = AMount.CanMoveAxis(1)
+                pStructMount.TrackingRate = pMount.TrackingRate
+                'pStructMount.Slewing = AMount.Slewing
+                'pStructMount.UTCDate = AMount.UTCDate
+                'pStructMount.CanMoveAxisRA = AMount.CanMoveAxis(0)
+                'pStructMount.CanMoveAxisDEC = AMount.CanMoveAxis(1)
 
 
-            'handle visual aspect
-            FrmMain.lblMountAlt.Text = "Alt " + pAUtil.DegreesToDMS(pStructMount.Altitude)
-            FrmMain.lblMountAz.Text = "Az " + pAUtil.DegreesToDMS(pStructMount.Azimuth)
+                'handle visual aspect
+                FrmMain.lblMountAlt.Text = "Alt " + pAUtil.DegreesToDMS(pStructMount.Altitude)
+                FrmMain.lblMountAz.Text = "Az " + pAUtil.DegreesToDMS(pStructMount.Azimuth)
 
-            'driveSidereal	0	Sidereal tracking rate (15.041 arcseconds per second).
-            'driveLunar  1	Lunar tracking rate (14.685 arcseconds per second).
-            'driveSolar  2	Solar tracking rate (15.0 arcseconds per second).
-            'driveKing   3	King tracking rate (15.0369 arcseconds per second). 
+                'driveSidereal	0	Sidereal tracking rate (15.041 arcseconds per second).
+                'driveLunar  1	Lunar tracking rate (14.685 arcseconds per second).
+                'driveSolar  2	Solar tracking rate (15.0 arcseconds per second).
+                'driveKing   3	King tracking rate (15.0369 arcseconds per second). 
 
 
-            If pStructMount.AtPark = True Then
-                FrmMain.LblMountStatus.Text = "Parked"
-                FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
-            Else
-                If pStructMount.Tracking = True Then
-                    If pStructMount.TrackingRate = 0 Then
-                        FrmMain.LblMountStatus.Text = "Tracking: Sidereal"
-                        FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
-                    ElseIf pStructMount.TrackingRate = 1 Then
-                        FrmMain.LblMountStatus.Text = "Tracking: Lunar"
-                        FrmMain.LblMountStatus.BackColor = Color.Yellow
-                    ElseIf pStructMount.TrackingRate = 2 Then
-                        FrmMain.LblMountStatus.Text = "Tracking: Solar"
-                        FrmMain.LblMountStatus.BackColor = Color.Yellow
-                    ElseIf pStructMount.TrackingRate = 3 Then
-                        FrmMain.LblMountStatus.Text = "Tracking: King"
-                        FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
-                    End If
-                Else
-                    FrmMain.LblMountStatus.Text = "Not tracking"
+                If pStructMount.AtPark = True Then
+                    FrmMain.LblMountStatus.Text = "Parked"
                     FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
+                Else
+                    If pStructMount.Tracking = True Then
+                        If pStructMount.TrackingRate = 0 Then
+                            FrmMain.LblMountStatus.Text = "Tracking: Sidereal"
+                            FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
+                        ElseIf pStructMount.TrackingRate = 1 Then
+                            FrmMain.LblMountStatus.Text = "Tracking: Lunar"
+                            FrmMain.LblMountStatus.BackColor = Color.Yellow
+                        ElseIf pStructMount.TrackingRate = 2 Then
+                            FrmMain.LblMountStatus.Text = "Tracking: Solar"
+                            FrmMain.LblMountStatus.BackColor = Color.Yellow
+                        ElseIf pStructMount.TrackingRate = 3 Then
+                            FrmMain.LblMountStatus.Text = "Tracking: King"
+                            FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
+                        End If
+                    Else
+                        FrmMain.LblMountStatus.Text = "Not tracking"
+                        FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
+                    End If
                 End If
-            End If
 
-            FrmMain.LblMountRADEC.Text = "RA: " + pAUtil.HoursToHMS(pStructMount.RightAscension, "h ", "m ", "s ") + " DEC: " + pAUtil.DegreesToDMS(pStructMount.Declination, "° ", "' ", """ ")
+                FrmMain.LblMountRADEC.Text = "RA: " + pAUtil.HoursToHMS(pStructMount.RightAscension, "h ", "m ", "s ") + " DEC: " + pAUtil.DegreesToDMS(pStructMount.Declination, "° ", "' ", """ ")
 
-            'pierEast    0	Normal pointing state - Mount on the East side of pier (looking West)
-            'pierUnknown -1	Unknown Or indeterminate.
-            'pierWest    1	Through the pole pointing state - Mount on the West side of pier (looking East) 
+                'pierEast    0	Normal pointing state - Mount on the East side of pier (looking West)
+                'pierUnknown -1	Unknown Or indeterminate.
+                'pierWest    1	Through the pole pointing state - Mount on the West side of pier (looking East) 
 
-            If Convert.ToInt32(pStructMount.SideOfPier) = -1 Then
-                FrmMain.LblMountPierSide.Text = "Unkown pier side"
-            ElseIf Convert.ToInt32(pStructMount.SideOfPier) = 0 Then
-                FrmMain.LblMountPierSide.Text = "Tube East of pier, looking West"
-            ElseIf Convert.ToInt32(pStructMount.SideOfPier) = 1 Then
-                FrmMain.LblMountPierSide.Text = "Tube West of pier, looking East"
-            End If
+                If Convert.ToInt32(pStructMount.SideOfPier) = -1 Then
+                    FrmMain.LblMountPierSide.Text = "Unkown pier side"
+                ElseIf Convert.ToInt32(pStructMount.SideOfPier) = 0 Then
+                    FrmMain.LblMountPierSide.Text = "Tube East of pier, looking West"
+                ElseIf Convert.ToInt32(pStructMount.SideOfPier) = 1 Then
+                    FrmMain.LblMountPierSide.Text = "Tube West of pier, looking East"
+                End If
 
-            'AUtil.Dispose()
+                'AUtil.Dispose()
 
-            executionTime = DateTime.UtcNow() - startExecution
-            LogSessionEntry("DEBUG", "  CheckMountStatus: " + executionTime.ToString, "", "CheckMountStatus", "MOUNT")
+                executionTime = DateTime.UtcNow() - startExecution
+                LogSessionEntry("DEBUG", "  CheckMountStatus: " + executionTime.ToString, "", "CheckMountStatus", "MOUNT")
 
-        Catch ex As Exception
-            CheckMountStatus = "CheckMountStatus: " + ex.Message
+            Catch ex As Exception
+                CheckMountStatus = "CheckMountStatus: " + ex.Message
             pStructMount.AtPark = False
             LogSessionEntry("ERROR", "CheckMountStatus: " + ex.Message, "", "CheckMountStatus", "MOUNT")
         End Try
