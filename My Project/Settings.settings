@@ -551,5 +551,14 @@
     <Setting Name="sWeatherSafeSwitchDelay" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">600</Value>
     </Setting>
+    <Setting Name="sMountTimeout" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="sCoverTimeout" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">75</Value>
+    </Setting>
+    <Setting Name="sCCDTimeout" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">90</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

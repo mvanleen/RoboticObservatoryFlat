@@ -492,15 +492,15 @@ Module ModMount
                                 Exit Function
                             End If
 
-                            If startExecution.AddSeconds(75) < DateTime.UtcNow() Then
-                                LogSessionEntry("ERROR", "Mount slew timeout!", "MountSlewToTarget", "", "MOUNT")
-                                returnvalue = PauseRun("ERROR: Mount slew timeout: PAUSING EQUIPMENT...", "",
+                        If startExecution.AddSeconds(My.Settings.sMountTimeout) < DateTime.UtcNow() Then
+                            LogSessionEntry("ERROR", "Mount slew timeout!", "MountSlewToTarget", "", "MOUNT")
+                            returnvalue = PauseRun("ERROR: Mount slew timeout: PAUSING EQUIPMENT...", "",
                                                        "ERROR: Mount slew timeout: PauseEquipment: ", "",
                                                        "ERROR: equipment paused.", "", "PAUSING", "WAITING")
-                                MountSlewToTarget = "TIMEOUT"
-                                Exit Function
-                            End If
-                        Loop
+                            MountSlewToTarget = "TIMEOUT"
+                            Exit Function
+                        End If
+                    Loop
 
                     If vShowMessages = True Then
                         Dim MountRA, MountDEC As String
@@ -606,7 +606,7 @@ Module ModMount
 
                 While pMount.AtPark = False
                     Application.DoEvents()
-                    If startExecution.AddSeconds(75) < DateTime.UtcNow() Then
+                    If startExecution.AddSeconds(My.Settings.sMountTimeout) < DateTime.UtcNow() Then
                         LogSessionEntry("ERROR", "Mount parking timeout!", "", "MountPark", "MOUNT")
                         returnvalue = PauseRun("ERROR: Mount parking timeout: PAUSING EQUIPMENT...", "",
                                                        "ERROR: Mount parking timeout: PauseEquipment: ", "",
@@ -825,7 +825,7 @@ Module ModMount
                     Exit Function
                 End If
 
-                If startExecution.AddSeconds(150) < DateTime.UtcNow() Then
+                If startExecution.AddSeconds(My.Settings.sMountTimeout) < DateTime.UtcNow() Then
                     LogSessionEntry("ERROR", "Mount slew timeout!", "", "MountSlewToAltAz", "MOUNT")
                     returnvalue = PauseRun("ERROR: Mount slew timeout: PAUSING EQUIPMENT...", "",
                                                        "ERROR: Mount slew timeout: PauseEquipment: ", "",

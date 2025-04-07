@@ -119,7 +119,7 @@ Module ModCover
                         'Thread.Sleep(500)
                         My.Application.DoEvents()
 
-                        If startExecution.AddSeconds(75) < DateTime.UtcNow() Then
+                        If startExecution.AddSeconds(My.Settings.sCoverTimeout) < DateTime.UtcNow() Then
                             LogSessionEntry("ERROR", "Cover open timeout!", "", "CoverOpen", "COVER")
                             returnvalue = PauseRun("ERROR: Cover open timeout: PAUSING EQUIPMENT...", "",
                                                    "ERROR: Cover open timeout: PauseEquipment: ", "",
@@ -181,7 +181,7 @@ Module ModCover
                             My.Application.DoEvents()
                             LogSessionEntry("FULL", "Cover closing...", "", "CoverClose", "COVER")
 
-                            If startExecution.AddSeconds(75) < DateTime.UtcNow() Then
+                            If startExecution.AddSeconds(My.Settings.sCoverTimeout) < DateTime.UtcNow() Then
                                 LogSessionEntry("ERROR", "Cover close timeout!", "", "CoverClose", "COVER")
                                 returnvalue = PauseRun("ERROR: Cover close timeout: PAUSING EQUIPMENT...", "",
                                                        "ERROR: Cover close timeout: PauseEquipment: ", "",

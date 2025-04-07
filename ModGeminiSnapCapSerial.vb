@@ -152,7 +152,7 @@ Module modGeminiSnapCapSerial
                         Exit Function
                     End If
 
-                    If startExecution.AddSeconds(75) < DateTime.UtcNow() Then
+                    If startExecution.AddSeconds(My.Settings.sCoverTimeout) < DateTime.UtcNow() Then
                         LogSessionEntry("ERROR", "", "CloseSnapCap", "", "SNAPCAP")
                         returnvalue = PauseRun("ERROR: Snapcap close timeout: PAUSING EQUIPMENT...", "",
                                                "ERROR: Snapcap close timeout: PauseEquipment: ", "",
@@ -177,7 +177,7 @@ Module modGeminiSnapCapSerial
                     Exit Function
                 End If
 
-                If startExecution.AddSeconds(75) < DateTime.UtcNow() Then
+                If startExecution.AddSeconds(My.Settings.sCoverTimeout) < DateTime.UtcNow() Then
                     LogSessionEntry("ERROR", "Snapcap close timeout!", "", "CloseSnapCap", "SNAPCAP")
                     returnvalue = PauseRun("ERROR: Snapcap close timeout: PAUSING EQUIPMENT...", "",
                                            "ERROR: Snapcap close timeout: PauseEquipment: ", "",
@@ -233,7 +233,7 @@ Module modGeminiSnapCapSerial
                         Exit Function
                     End If
 
-                    If startExecution.AddSeconds(75) < DateTime.UtcNow() Then
+                    If startExecution.AddSeconds(My.Settings.sCoverTimeout) < DateTime.UtcNow() Then
                         LogSessionEntry("ERROR", "Snapcap open timeout!", "", "OpenSnapCap", "SNAPCAP")
                         returnvalue = PauseRun("ERROR: Snapcap open timeout: PAUSING EQUIPMENT...", "",
                                                "ERROR: Snapcap open timeout: PauseEquipment: ", "",

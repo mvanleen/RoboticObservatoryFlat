@@ -178,6 +178,10 @@ Public Class FrmProperties
             TxtTelescopeName.Text = My.Settings.sTelescopeName
             TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString(ciClone)
             TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString(ciClone)
+            TxtMountTimeout.Text = My.Settings.sMountTimeout.ToString(ciClone)
+            TxtCoverTimeout.Text = My.Settings.sCoverTimeout.ToString(ciClone)
+            TxtCCDTimeout.Text = My.Settings.sCCDTimeout.ToString(ciClone)
+
 
             'add combobox options
             CmbsAutoFlatFilter.Items.Add(My.Settings.sCCDFilter1)
@@ -406,6 +410,9 @@ Public Class FrmProperties
                 TxtHADSMag14.Text = My.Settings.sHADSMag14 And
                 TxtHADSMag15.Text = My.Settings.sHADSMag15 And
                 txtHADSDECCutOff.Text = My.Settings.sHADSDECCutOff.ToString(ciClone) And
+                TxtMountTimeout.Text = My.Settings.sMountTimeout.ToString(ciClone) And
+                TxtCoverTimeout.Text = My.Settings.sCoverTimeout.ToString(ciClone) And
+                TxtCCDTimeout.Text = My.Settings.sCCDTimeout.ToString(ciClone) And
                 TxtTelescopeName.Text = My.Settings.sTelescopeName And
                 TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString(ciClone) And
                 TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString(ciClone) Then
@@ -580,6 +587,9 @@ Public Class FrmProperties
                     My.Settings.sTelescopeName = TxtTelescopeName.Text
                     My.Settings.sTelescopeAparture = Convert.ToInt32(TxtTelescopeAparture.Text)
                     My.Settings.sTelescopeFocalLength = Convert.ToInt32(TxtTelescopeFocalLength.Text)
+                    My.Settings.sMountTimeout = Double.Parse(TxtMountTimeout.Text, ciClone)
+                    My.Settings.sCoverTimeout = Double.Parse(TxtCoverTimeout.Text, ciClone)
+                    My.Settings.sCCDTimeout = Double.Parse(TxtCCDTimeout.Text, ciClone)
                     My.Settings.Save()
 
                     If pTheSkyXEquipmentConnected = True Then
@@ -824,6 +834,5 @@ Public Class FrmProperties
     Private Sub RdWeatherUseValues_CheckedChanged(sender As Object, e As EventArgs) Handles RdWeatherUseValues.CheckedChanged
         TxtWeatherSafeSwitchDelay.Enabled = True
     End Sub
-
 
 End Class

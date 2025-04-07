@@ -308,6 +308,7 @@ Partial Class FrmProperties
         Me.ChkMoonStartCooldown = New System.Windows.Forms.CheckBox()
         Me.TxtMoonStartCooldownHigh = New System.Windows.Forms.TextBox()
         Me.Label166 = New System.Windows.Forms.Label()
+        Me.Label167 = New System.Windows.Forms.Label()
         Me.GrpSnapCap = New System.Windows.Forms.GroupBox()
         Me.Label153 = New System.Windows.Forms.Label()
         Me.TxtCoverDevice = New System.Windows.Forms.TextBox()
@@ -404,7 +405,15 @@ Partial Class FrmProperties
         Me.Label118 = New System.Windows.Forms.Label()
         Me.Label120 = New System.Windows.Forms.Label()
         Me.TabPageHADS = New System.Windows.Forms.TabPage()
-        Me.Label167 = New System.Windows.Forms.Label()
+        Me.Label169 = New System.Windows.Forms.Label()
+        Me.Label170 = New System.Windows.Forms.Label()
+        Me.Label171 = New System.Windows.Forms.Label()
+        Me.TxtMountTimeout = New System.Windows.Forms.TextBox()
+        Me.Label172 = New System.Windows.Forms.Label()
+        Me.TxtCoverTimeout = New System.Windows.Forms.TextBox()
+        Me.Label173 = New System.Windows.Forms.Label()
+        Me.TxtCCDTimeout = New System.Windows.Forms.TextBox()
+        Me.Label174 = New System.Windows.Forms.Label()
         Me.GroupBoxCCD.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GrpFocus.SuspendLayout()
@@ -1198,6 +1207,15 @@ Partial Class FrmProperties
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TxtCCDTimeout)
+        Me.GroupBox1.Controls.Add(Me.Label174)
+        Me.GroupBox1.Controls.Add(Me.TxtCoverTimeout)
+        Me.GroupBox1.Controls.Add(Me.Label173)
+        Me.GroupBox1.Controls.Add(Me.TxtMountTimeout)
+        Me.GroupBox1.Controls.Add(Me.Label172)
+        Me.GroupBox1.Controls.Add(Me.Label171)
+        Me.GroupBox1.Controls.Add(Me.Label170)
+        Me.GroupBox1.Controls.Add(Me.Label169)
         Me.GroupBox1.Controls.Add(Me.ChkSentinelAutostart)
         Me.GroupBox1.Controls.Add(Me.Label111)
         Me.GroupBox1.Controls.Add(Me.TxtSMARTCycle)
@@ -1233,7 +1251,7 @@ Partial Class FrmProperties
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(6, 208)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(639, 208)
+        Me.GroupBox1.Size = New System.Drawing.Size(639, 274)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Alarm"
@@ -1479,7 +1497,7 @@ Partial Class FrmProperties
         '
         Me.Label38.AutoSize = True
         Me.Label38.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(4, 99)
+        Me.Label38.Location = New System.Drawing.Point(7, 98)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(69, 13)
         Me.Label38.TabIndex = 21
@@ -3738,6 +3756,17 @@ Partial Class FrmProperties
     "Ho/edit?hl=en&pref=2&pli=1&gid=203763529#gid=203763529"
         Me.ToolTip.SetToolTip(Me.Label166, "Only select objects above this declination.")
         '
+        'Label167
+        '
+        Me.Label167.AutoSize = True
+        Me.Label167.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label167.Location = New System.Drawing.Point(206, 172)
+        Me.Label167.Name = "Label167"
+        Me.Label167.Size = New System.Drawing.Size(152, 13)
+        Me.Label167.TabIndex = 19
+        Me.Label167.Text = "Goto Share -> Publish for web"
+        Me.ToolTip.SetToolTip(Me.Label167, "Only select objects above this declination.")
+        '
         'GrpSnapCap
         '
         Me.GrpSnapCap.Controls.Add(Me.Label153)
@@ -4873,16 +4902,98 @@ Partial Class FrmProperties
         Me.TabPageHADS.TabIndex = 1
         Me.TabPageHADS.Text = "HADS"
         '
-        'Label167
+        'Label169
         '
-        Me.Label167.AutoSize = True
-        Me.Label167.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label167.Location = New System.Drawing.Point(206, 172)
-        Me.Label167.Name = "Label167"
-        Me.Label167.Size = New System.Drawing.Size(152, 13)
-        Me.Label167.TabIndex = 19
-        Me.Label167.Text = "Goto Share -> Publish for web"
-        Me.ToolTip.SetToolTip(Me.Label167, "Only select objects above this declination.")
+        Me.Label169.AutoSize = True
+        Me.Label169.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label169.Location = New System.Drawing.Point(7, 204)
+        Me.Label169.Name = "Label169"
+        Me.Label169.Size = New System.Drawing.Size(80, 13)
+        Me.Label169.TabIndex = 43
+        Me.Label169.Text = "Mount timeout:"
+        '
+        'Label170
+        '
+        Me.Label170.AutoSize = True
+        Me.Label170.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label170.Location = New System.Drawing.Point(7, 224)
+        Me.Label170.Name = "Label170"
+        Me.Label170.Size = New System.Drawing.Size(79, 13)
+        Me.Label170.TabIndex = 44
+        Me.Label170.Text = "Cover timeout:"
+        '
+        'Label171
+        '
+        Me.Label171.AutoSize = True
+        Me.Label171.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label171.Location = New System.Drawing.Point(7, 246)
+        Me.Label171.Name = "Label171"
+        Me.Label171.Size = New System.Drawing.Size(71, 13)
+        Me.Label171.TabIndex = 45
+        Me.Label171.Text = "CCD timeout:"
+        '
+        'TxtMountTimeout
+        '
+        Me.TxtMountTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtMountTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtMountTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtMountTimeout.Location = New System.Drawing.Point(95, 201)
+        Me.TxtMountTimeout.Name = "TxtMountTimeout"
+        Me.TxtMountTimeout.Size = New System.Drawing.Size(69, 21)
+        Me.TxtMountTimeout.TabIndex = 46
+        Me.ToolTip.SetToolTip(Me.TxtMountTimeout, "When AAG is offline for x seconds, raise alarm.")
+        '
+        'Label172
+        '
+        Me.Label172.AutoSize = True
+        Me.Label172.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label172.Location = New System.Drawing.Point(170, 204)
+        Me.Label172.Name = "Label172"
+        Me.Label172.Size = New System.Drawing.Size(12, 13)
+        Me.Label172.TabIndex = 47
+        Me.Label172.Text = "s"
+        '
+        'TxtCoverTimeout
+        '
+        Me.TxtCoverTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtCoverTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCoverTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCoverTimeout.Location = New System.Drawing.Point(95, 222)
+        Me.TxtCoverTimeout.Name = "TxtCoverTimeout"
+        Me.TxtCoverTimeout.Size = New System.Drawing.Size(69, 21)
+        Me.TxtCoverTimeout.TabIndex = 48
+        Me.ToolTip.SetToolTip(Me.TxtCoverTimeout, "When AAG is offline for x seconds, raise alarm.")
+        '
+        'Label173
+        '
+        Me.Label173.AutoSize = True
+        Me.Label173.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label173.Location = New System.Drawing.Point(170, 225)
+        Me.Label173.Name = "Label173"
+        Me.Label173.Size = New System.Drawing.Size(12, 13)
+        Me.Label173.TabIndex = 49
+        Me.Label173.Text = "s"
+        '
+        'TxtCCDTimeout
+        '
+        Me.TxtCCDTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtCCDTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCCDTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDTimeout.Location = New System.Drawing.Point(95, 243)
+        Me.TxtCCDTimeout.Name = "TxtCCDTimeout"
+        Me.TxtCCDTimeout.Size = New System.Drawing.Size(69, 21)
+        Me.TxtCCDTimeout.TabIndex = 50
+        Me.ToolTip.SetToolTip(Me.TxtCCDTimeout, "When AAG is offline for x seconds, raise alarm.")
+        '
+        'Label174
+        '
+        Me.Label174.AutoSize = True
+        Me.Label174.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label174.Location = New System.Drawing.Point(170, 246)
+        Me.Label174.Name = "Label174"
+        Me.Label174.Size = New System.Drawing.Size(12, 13)
+        Me.Label174.TabIndex = 51
+        Me.Label174.Text = "s"
         '
         'FrmProperties
         '
@@ -5342,4 +5453,13 @@ Partial Class FrmProperties
     Friend WithEvents Label165 As Label
     Friend WithEvents Label166 As Label
     Friend WithEvents Label167 As Label
+    Friend WithEvents TxtMountTimeout As TextBox
+    Friend WithEvents Label172 As Label
+    Friend WithEvents Label171 As Label
+    Friend WithEvents Label170 As Label
+    Friend WithEvents Label169 As Label
+    Friend WithEvents TxtCCDTimeout As TextBox
+    Friend WithEvents Label174 As Label
+    Friend WithEvents TxtCoverTimeout As TextBox
+    Friend WithEvents Label173 As Label
 End Class

@@ -726,7 +726,7 @@ Module ModTheSkyX
                     Exit Function
                 End If
 
-                If startExecution.AddSeconds(vExposureTime + 150) < DateTime.UtcNow() Then
+                If startExecution.AddSeconds(vExposureTime + My.Settings.sCCDTimeout) < DateTime.UtcNow() Then
                     LogSessionEntry("ERROR", "Take image The Sky X timeout!", "", "TakeImageTheSkyX", "TSX")
                     returnvalue = PauseRun("ERROR: Take image The Sky X timeout: PAUSING EQUIPMENT...", "",
                                                        "ERROR: Take image The Sky X timeout: PauseEquipment", "",
@@ -1770,7 +1770,7 @@ Module ModTheSkyX
                     Exit Function
                 End If
 
-                If startExecution.AddSeconds(vExposureTime + 90) < DateTime.UtcNow() Then
+                If startExecution.AddSeconds(vExposureTime + My.Settings.sCCDTimeout) < DateTime.UtcNow() Then
                     LogSessionEntry("ERROR", "Take image The Sky X timeout!", "", "TakeFlatTheSkyX", "TSX")
                     returnvalue = PauseRun("ERROR: Take image The Sky X timeout: PAUSING EQUIPMENT...", "",
                                            "ERROR: Take image The Sky X timeout: PauseEquipment", "",

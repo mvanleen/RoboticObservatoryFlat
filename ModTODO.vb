@@ -197,6 +197,7 @@
     '3.03   bug: error in insert procedure deepsky
     '3.04   changed: added instructions for HADS yearly refresh
     '3.05   bug: Paramount does not know side of pier before homing
+    '3.06   change: added sMountTimeout / sCoverTimeOut / sCameraTimeout
 
     ' && homing loopt fout
 
