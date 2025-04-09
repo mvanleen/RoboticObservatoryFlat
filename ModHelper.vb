@@ -73,7 +73,6 @@ Module ModHelper
     ' SOUND
     '--------------------------------------------------------------------------------------------------------------------------------------------
     Public Function PlaySound(vSound As String, vLoop As Boolean, vMessage As String, vTitle As String, vBox As Boolean) As String
-
         PlaySound = "OK"
         Try
             If pAudioPlaying = False Then
@@ -140,7 +139,6 @@ Module ModHelper
     ' HELPER FUNCTIONS HIGH LEVEL
     '------------------------------------------------------------------------------------------------
     Public Function CheckIfRunning(vProcessName As String) As String
-
         Try
             Dim listProc() As System.Diagnostics.Process
             listProc = System.Diagnostics.Process.GetProcessesByName(vProcessName)
@@ -160,7 +158,6 @@ Module ModHelper
     End Function
 
     Public Function StartProcess(vProcessName As String) As String
-
         StartProcess = "OK"
         Try
             'first check if already running
@@ -1388,7 +1385,6 @@ Module ModHelper
 
 
     Private Function Bgw7_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) As String Handles Bgw7.DoWork
-
         Bgw7_DoWork = "OK"
         Try
             'if file exists delete

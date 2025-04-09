@@ -15,30 +15,41 @@ Module modGeminiSnapCapSerial
         Dim Port As String
         Dim i As Integer
         Dim AvailablePorts() As String = SerialPort.GetPortNames()
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         GetSerialPorts = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  GetSerialPorts...", "", "GetSerialPorts", "SNAPCAP")
+
             i = 0
 
             For Each Port In AvailablePorts
                 pAllSerialPorts(i) = Port
                 i += 1
             Next Port
-            LogSessionEntry("DEBUG", "  GetSerialPorts", "", "GetSerialPorts", "SNAPCAP")
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  GetSerialPorts: " + executionTime.ToString, "", "GetSerialPorts", "SNAPCAP")
 
         Catch ex As Exception
             GetSerialPorts = "GetSerialPorts: " + ex.ToString
             LogSessionEntry("ERROR", "GetSerialPorts: " + ex.ToString, "", "GetSerialPorts", "SNAPCAP")
         End Try
-
     End Function
 
 
 
     Function OpenSerialPort(vPort As String, vShowMessages As Boolean) As String
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         OpenSerialPort = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  OpenSerialPort...", "", "OpenSerialPort", "SNAPCAP")
+
             pSerialPort = New SerialPort With {
                 .PortName = vPort,   'Assign the port name to the MyCOMPort object
                 .BaudRate = 38400,     'Assign the Baudrate to the MyCOMPort object
@@ -50,7 +61,10 @@ Module modGeminiSnapCapSerial
             'open port
             pSerialPort.Open()
             pSerialPortStatus = "OPEN"
-            LogSessionEntry("DEBUG", "  OpenSerialPort", "", "OpenSerialPort", "SNAPCAP")
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  OpenSerialPort: " + executionTime.ToString, "", "OpenSerialPort", "SNAPCAP")
+
         Catch ex As Exception
             OpenSerialPort = "OpenSerialPort: " + ex.ToString
             If vShowMessages = True Then
@@ -61,12 +75,19 @@ Module modGeminiSnapCapSerial
 
 
     Function CloseSerialPort() As String
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         CloseSerialPort = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CloseSerialPort...", "", "CloseSerialPort", "SNAPCAP")
+
             pSerialPort.Close()                      ' Close port
             pSerialPortStatus = "CLOSED"
-            LogSessionEntry("DEBUG", "  CloseSerialPort", "", "CloseSerialPort", "SNAPCAP")
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  CloseSerialPort: " + executionTime.ToString, "", "CloseSerialPort", "SNAPCAP")
 
         Catch ex As Exception
             CloseSerialPort = "CloseSerialPort: " + ex.ToString
@@ -83,6 +104,7 @@ Module modGeminiSnapCapSerial
         'WriteSerialPort = ""
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  WriteSerialPort...", "", "WriteSerialPort", "SNAPCAP")
 
             ' Open the port
             If pSerialPortStatus <> "OPEN" Then
@@ -121,6 +143,9 @@ Module modGeminiSnapCapSerial
 
         CloseSnapCap = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CloseSnapCap...", "", "CloseSnapCap", "SNAPCAP")
+
             FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
 
@@ -186,8 +211,8 @@ Module modGeminiSnapCapSerial
                     Exit Function
                 End If
             Loop
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  CloseSnapCap: " + executionTime.ToString, "", "CloseSnapCap", "SNAPCAP")
             LogSessionEntry("BRIEF", "CloseSnapCap succeeded! ", "", "CloseSnapCap", "SNAPCAP")
@@ -206,8 +231,10 @@ Module modGeminiSnapCapSerial
 
         OpenSnapCap = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  OpenSnapCap...", "", "OpenSnapCap", "SNAPCAP")
+
+            FrmMain.Cursor = Cursors.WaitCursor
 
             'not debugging
             returnvalue = GetStatusSnapCap(vCOMPort, True)
@@ -244,6 +271,7 @@ Module modGeminiSnapCapSerial
                 Loop
             End If
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  OpenSnapCap : " + executionTime.ToString, "", "OpenSnapCap", "SNAPCAP")
             'LogSessionEntry("BRIEF", "OpenSnapCap succeeded!", "OpenSnapCap", "SNAPCAP")
@@ -262,6 +290,8 @@ Module modGeminiSnapCapSerial
         GetStatusSnapCap = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  GetStatusSnapCap...", "", "GetStatusSnapCap", "SNAPCAP")
+
             returnvalue = WriteSerialPort(vCOMPort, ">S000", vShowMessages) 'returnvalue contains actual data !
             tmpSnapMotor = returnvalue.Substring(2, 1)
 
@@ -325,9 +355,10 @@ Module modGeminiSnapCapSerial
 
         PartlyOpenSnapCap = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  PartlyOpenSnapCap...", "", "PartlyOpenSnapCap", "PROGRAM")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             returnvalue = GetStatusSnapCap(vCOMPort, True)
             If returnvalue <> "OK" Then
                 FrmMain.Cursor = Cursors.Default
@@ -343,8 +374,8 @@ Module modGeminiSnapCapSerial
             Else
                 PartlyOpenSnapCap = "Already open !"
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  PartlyOpenSnapCap: " + executionTime.ToString, "", "PartlyOpenSnapCap", "SNAPCAP")
 
@@ -364,6 +395,8 @@ Module modGeminiSnapCapSerial
         LightSnapCap = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  LightSnapCap...", "", "LightSnapCap", "PROGRAM")
+
             lightlevel = (vLevel / 100) * 255
 
             If vLevel > 0 Then

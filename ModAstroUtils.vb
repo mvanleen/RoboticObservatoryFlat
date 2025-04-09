@@ -131,6 +131,7 @@ Module ModAstroUtils
         CalculateEventTimes = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CalculateEventTimes...", "", "CalculateEventTimes", "PROGRAM")
 
             ResetCalculateEventTimes()
 
@@ -658,7 +659,7 @@ Module ModAstroUtils
         Try
 
             startExecution = DateTime.UtcNow()
-
+            LogSessionEntry("DEBUG", "  CalculateEventTimesHighIntensity..." + executionTime.ToString, "", "CalculateEventTimesHighIntensity", "PROGRAM")
 
             pAUtils = New ASCOM.Astrometry.AstroUtils.AstroUtils
             pANova = New ASCOM.Astrometry.NOVAS.NOVAS31
@@ -1041,6 +1042,7 @@ Module ModAstroUtils
         Try
 
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CalculateEventTimesLowIntensity...", "", "CalculateEventTimesLowIntensity", "PROGRAM")
 
             'ResetCalculateEventTimes() 'only in low intensity
 
@@ -1192,6 +1194,12 @@ Module ModAstroUtils
 
 
     Private Sub ResetCalculateEventTimes()
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        startExecution = DateTime.UtcNow()
+        LogSessionEntry("DEBUG", "  ResetCalculateEventTimes...", "", "ResetCalculateEventTimes", "PROGRAM")
+
         With pStructEventTimes
             .LST = Nothing
             .GST = Nothing
@@ -1229,6 +1237,9 @@ Module ModAstroUtils
             .AstronomicalTwilightEvening = Nothing
             .AstronomicalTwilightMorning = Nothing
         End With
+
+        executionTime = DateTime.UtcNow() - startExecution
+        LogSessionEntry("DEBUG", "  ResetCalculateEventTimes: " + executionTime.ToString, "", "ResetCalculateEventTimes", "PROGRAM")
     End Sub
 
     '------------------------------------------------------------------------------------------------------------------------------------------
@@ -1245,6 +1256,7 @@ Module ModAstroUtils
         CalculateObject = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CalculateObject...", "", "CalculateObject", "PROGRAM")
 
             With AObserver
                 .Where = CType(1, ASCOM.Astrometry.ObserverLocation)
@@ -1353,6 +1365,12 @@ Module ModAstroUtils
     End Function
 
     Private Sub ResetCalculateObject()
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        startExecution = DateTime.UtcNow()
+        LogSessionEntry("DEBUG", "  ResetCalculateObject...", "", "ResetCalculateObject", "PROGRAM")
+
         With pStructObject
             .LST = Nothing
             .GST = Nothing
@@ -1363,12 +1381,22 @@ Module ModAstroUtils
             .ObjectAz = Nothing
             .ObjectCompasDirection = Nothing
         End With
+
+        executionTime = DateTime.UtcNow() - startExecution
+        LogSessionEntry("DEBUG", "  ResetCalculateObject: " + executionTime.ToString, "", "ResetCalculateObject", "PROGRAM")
+
     End Sub
 
     Public Function ConvertTargetJ2000ToTopocentric(vRA2000 As Double, vDEC2000 As Double) As String
         Dim AObserver As ASCOM.Astrometry.Observer
         'Dim ATransform As ASCOM.Astrometry.Transform.Transform
         Dim ATransform = New ASCOM.Astrometry.Transform.Transform
+
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        startExecution = DateTime.UtcNow()
+        LogSessionEntry("DEBUG", "  ConvertTargetJ2000ToTopocentric...", "", "ConvertTargetJ2000ToTopocentric", "PROGRAM")
 
         ConvertTargetJ2000ToTopocentric = "OK"
         Try
@@ -1398,6 +1426,10 @@ Module ModAstroUtils
             pDECTargetTopocentric = ATransform.DECTopocentric
             LogSessionEntry("DEBUG", "  ConvertTargetJ2000ToTopocentric: RA " + Format(pRATargetTopocentric) + " DEC " + Format(pDECTargetTopocentric), "", "ConvertTargetJ2000ToTopocentric", "PROGRAM")
 
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  ConvertTargetJ2000ToTopocentric: " + executionTime.ToString, "", "ConvertTargetJ2000ToTopocentric", "PROGRAM")
+
+
         Catch ex As Exception
             ConvertTargetJ2000ToTopocentric = "ConvertTargetJ2000ToTopocentric: " + ex.Message
             LogSessionEntry("ERROR", "ConvertTargetJ2000ToTopocentric: " + ex.Message, "", "ConvertTargetJ2000ToTopocentric", "PROGRAM")
@@ -1409,6 +1441,11 @@ Module ModAstroUtils
         Dim AObserver As ASCOM.Astrometry.Observer
         'Dim ATransform As ASCOM.Astrometry.Transform.Transform
         Dim ATransform = New ASCOM.Astrometry.Transform.Transform
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        startExecution = DateTime.UtcNow()
+        LogSessionEntry("DEBUG", "  ConvertFocusJ2000ToTopocentric...", "", "ConvertFocusJ2000ToTopocentric", "PROGRAM")
 
         ConvertFocusJ2000ToTopocentric = "OK"
         Try
@@ -1439,6 +1476,10 @@ Module ModAstroUtils
             pDECFocusTopocentric = ATransform.DECTopocentric
             LogSessionEntry("DEBUG", "  ConvertFocusJ2000ToTopocentric: RA " + Format(pRAFocusTopocentric) + " DEC " + Format(pDECFocusTopocentric), "", "ConvertFocusJ2000ToTopocentric", "PROGRAM")
 
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  ConvertFocusJ2000ToTopocentrics: " + executionTime.ToString, "", "ConvertFocusJ2000ToTopocentric", "PROGRAM")
+
+
         Catch ex As Exception
             ConvertFocusJ2000ToTopocentric = "ConvertFocusJ2000ToTopocentric: " + ex.Message
             LogSessionEntry("ERROR", "ConvertFocusJ2000ToTopocentric: " + ex.Message, "", "ConvertFocusJ2000ToTopocentric", "PROGRAM")
@@ -1466,6 +1507,7 @@ Module ModAstroUtils
         CalculateSunMoonTimesOrig = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "CalculateObject...", "", "CalculateObject", "PROGRAM")
 
             pANova = New ASCOM.Astrometry.NOVAS.NOVAS31
 
@@ -1553,7 +1595,7 @@ Module ModAstroUtils
             Loop
 
             executionTime = DateTime.UtcNow() - startExecution
-            LogSessionEntry("BRIEF", "CalculateObject: " + executionTime.ToString, "", "CalculateObject", "PROGRAM")
+            LogSessionEntry("DEBUG", "CalculateObject: " + executionTime.ToString, "", "CalculateObject", "PROGRAM")
 
 
         Catch ex As Exception
@@ -1583,6 +1625,7 @@ Module ModAstroUtils
         CalculateSunMoonTimes = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "CalculateSunMoonTimes: " + executionTime.ToString, "", "CalculateSunMoonTimes", "PROGRAM")
 
             pANova = New ASCOM.Astrometry.NOVAS.NOVAS31
 
@@ -1711,7 +1754,7 @@ Module ModAstroUtils
             FrmMain.LblSunDawnFlats.Text = "Dawn flats: " + pStructEventTimes.SunDawnFlats
 
             executionTime = DateTime.UtcNow() - startExecution
-            LogSessionEntry("DEBUG", "  CalculateObject: " + executionTime.ToString, "", "CalculateObject", "PROGRAM")
+            LogSessionEntry("DEBUG", "  CalculateSunMoonTimes: " + executionTime.ToString, "", "CalculateSunMoonTimes", "PROGRAM")
 
 
         Catch ex As Exception
@@ -1730,6 +1773,9 @@ Module ModAstroUtils
         CalculateMosaic = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CalculateMosaic...", "", "CalculateMosaic", "PROGRAM")
+
+
             ClearStructMosaic()
 
             'convert arcsec to hours/degrees
@@ -1809,6 +1855,7 @@ Module ModAstroUtils
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  CalculateMosaic: " + executionTime.ToString, "", "CalculateMosaic", "PROGRAM")
+
         Catch ex As Exception
             CalculateMosaic = "CalculateMosaic: " + ex.Message
             LogSessionEntry("ERROR", "CalculateMosaic: " + ex.Message, "", "CalculateMosaic", "PROGRAM")
@@ -1822,6 +1869,7 @@ Module ModAstroUtils
 
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ClearStructMosaic: " + executionTime.ToString, "", "ClearStructMosaic", "PROGRAM")
 
             pStructMosaic.Panel1_RA2000 = vbEmpty
             pStructMosaic.Panel1_DEC2000 = vbEmpty
@@ -1834,6 +1882,7 @@ Module ModAstroUtils
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  ClearStructMosaic: " + executionTime.ToString, "", "ClearStructMosaic", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "ClearStructMosaic: " + ex.Message, "", "ClearStructMosaic", "PROGRAM")
         End Try

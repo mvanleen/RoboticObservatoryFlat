@@ -40,19 +40,20 @@ Module ModMount
     '-------------------------------------------------------------------------------------------------
 
     Public Function MountConnect() As String
+        Dim returnvalue As String
         Dim startExecution As Date
         Dim executionTime As TimeSpan
-        Dim returnvalue As String
-
 
         'Dim webClient As New System.Net.WebClient
         'Dim result As String = webClient.DownloadString("http://user:secret@172.20.7.49/?cmd=5&p=1&a1=1&a2=0&s=2")
 
         MountConnect = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountConnect...", "", "MountConnect", "PROGRAM")
+
             FrmMain.Cursor = Cursors.WaitCursor
             pIsActionRunning = True
-            startExecution = DateTime.UtcNow()
 
             If My.Settings.sSimulatorMode = True Then
                 LogSessionEntry("BRIEF", "Connecting to the mount...", "", "MountConnect", "MOUNT")
@@ -160,8 +161,10 @@ Module ModMount
             End If
 
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  MountConnect: " + executionTime.ToString, "", "MountConnect", "MOUNT")
+
         Catch ex As Exception
             FrmMain.Cursor = Cursors.Default
             MountConnect = "MountConnect: " + ex.Message
@@ -171,8 +174,14 @@ Module ModMount
     End Function
 
     Public Function MountStartupTime() As String
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
         MountStartupTime = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountStartupTime...", "", "MountStartupTime", "MOUNT")
+
             If My.Settings.sSwitch1Mount = True Then
                 pMountStartupTime = My.Settings.sSwitch1Startup
             ElseIf My.Settings.sSwitch2Mount = True Then
@@ -193,6 +202,8 @@ Module ModMount
                 pMountStartupTime = 0
                 LogSessionEntry("ERROR", "Switch has no mount checked !", "", "MountStartupTime", "MOUNT")
             End If
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  MountStartupTime: " + executionTime.ToString, "", "MountStartupTime", "MOUNT")
 
         Catch ex As Exception
             MountStartupTime = "MountStartupTime: " + ex.Message
@@ -206,9 +217,10 @@ Module ModMount
 
         MountDisconnect = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountDisconnect...", "", "MountDisconnect", "MOUNT")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             If My.Settings.sSimulatorMode = True Then
                 LogSessionEntry("BRIEF", "Disconnecting mount...", "", "MountDisonnect", "MOUNT")
             Else
@@ -236,10 +248,11 @@ Module ModMount
                     LogSessionEntry("BRIEF", "Mount disconnected.", "", "MountDisconnect", "MOUNT")
                 End If
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  MountDisconnect: " + executionTime.ToString, "", "MountDisconnect", "MOUNT")
+
         Catch ex As Exception
             FrmMain.Cursor = Cursors.Default
             MountDisconnect = "MountDisconnect: " + ex.Message
@@ -254,6 +267,7 @@ Module ModMount
         CheckMountStatus = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckMountStatus...", "", "CheckMountStatus", "MOUNT")
 
             'AUtil = New ASCOM.Utilities.Util
 
@@ -348,9 +362,14 @@ Module ModMount
 
     Public Function MountMoveAxis(vDirection As String, vSpeed As Double) As String
         Dim returnvalue As String
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         MountMoveAxis = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountMoveAxis...", "", "MountMoveAxis", "MOUNT")
+
             'will move indefinatly untill rate is reset to zero, when moving, is slewing is true
             If pMount.Slewing = False Then
                 'axisPrimary	0	Primary axis (e.g., Right Ascension or Azimuth).
@@ -385,6 +404,8 @@ Module ModMount
                 MountMoveAxis = returnvalue
                 Exit Function
             End If
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  MountMoveAxis: " + executionTime.ToString, "", "MountMoveAxis", "MOUNT")
 
         Catch ex As Exception
             MountMoveAxis = "MountMoveAxis: " + ex.Message
@@ -400,6 +421,9 @@ Module ModMount
 
         MountSlewToTarget = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountSlewToTarget...", "", "MountSlewToTarget", "MOUNT")
+
             FrmMain.Cursor = Cursors.WaitCursor
             pIsActionRunning = True
             startExecution = DateTime.UtcNow()
@@ -443,54 +467,54 @@ Module ModMount
                 End If
 
                 If vShowMessages = True Then
-                        'calculate alt az
-                        returnvalue = CalculateObject(vRATopocentric, vDECTopocentric)
-                        If returnvalue <> "OK" Then
-                            MountSlewToTarget = returnvalue
-                            Exit Function
-                        End If
+                    'calculate alt az
+                    returnvalue = CalculateObject(vRATopocentric, vDECTopocentric)
+                    If returnvalue <> "OK" Then
+                        MountSlewToTarget = returnvalue
+                        Exit Function
+                    End If
 
                     LogSessionEntry("BRIEF", "Slewing to " + vTarget + " target RA " + vRATopocentric_String + " - DEC " + vDECTopocentric_String + " / Alt " + Format(pStructObject.ObjectAlt, "#0.00") + "° - Az " + Format(pStructObject.ObjectAz, "#0.00") + "°", "", "MountSlewToTarget", "MOUNT")
                     'LogSessionEntry("BRIEF", "Slewing to " + vTarget + " RA " + vRA2000_string + " - DEC " + vDEC2000_string + " / Alt " + Format(pStructObject.ObjectAlt, "#0.00") + "° - Az " + Format(pStructObject.ObjectAz, "#0.00") + "°", "", "MountSlewToTarget", "MOUNT")
                 End If
 
-                    'if target is below horizon: abort !
-                    returnvalue = CalculateObject(vRATopocentric, vDECTopocentric)
-                    If returnvalue <> "OK" Then
+                'if target is below horizon: abort !
+                returnvalue = CalculateObject(vRATopocentric, vDECTopocentric)
+                If returnvalue <> "OK" Then
+                    pIsActionRunning = False
+                    pClosedLoopSlew = ""
+                    FrmMain.Cursor = Cursors.Default
+                    MountSlewToTarget = returnvalue
+                    Exit Function
+                End If
+
+                If pStructObject.ObjectAlt > 10 Then
+                    'move to RA / DEC in topocentric coordindates
+
+                    pMount.TargetRightAscension = vRATopocentric
+                    pMount.TargetDeclination = vDECTopocentric
+
+                    ' if run needs to abort
+                    If (pAbort = True And vManual = False) Or pToolsAbort = True Then
                         pIsActionRunning = False
-                        pClosedLoopSlew = ""
                         FrmMain.Cursor = Cursors.Default
-                        MountSlewToTarget = returnvalue
+                        MountSlewToTarget = "SLEW_ABORTED"
                         Exit Function
                     End If
 
-                    If pStructObject.ObjectAlt > 10 Then
-                        'move to RA / DEC in topocentric coordindates
-
-                        pMount.TargetRightAscension = vRATopocentric
-                        pMount.TargetDeclination = vDECTopocentric
+                    pMount.SlewToTargetAsync()
+                    Do While pMount.Slewing = True
+                        Thread.Sleep(250)
+                        Application.DoEvents()
 
                         ' if run needs to abort
                         If (pAbort = True And vManual = False) Or pToolsAbort = True Then
+                            returnvalue = MountAbortSlew()
                             pIsActionRunning = False
                             FrmMain.Cursor = Cursors.Default
                             MountSlewToTarget = "SLEW_ABORTED"
                             Exit Function
                         End If
-
-                        pMount.SlewToTargetAsync()
-                        Do While pMount.Slewing = True
-                            Thread.Sleep(250)
-                            Application.DoEvents()
-
-                            ' if run needs to abort
-                            If (pAbort = True And vManual = False) Or pToolsAbort = True Then
-                                returnvalue = MountAbortSlew()
-                                pIsActionRunning = False
-                                FrmMain.Cursor = Cursors.Default
-                                MountSlewToTarget = "SLEW_ABORTED"
-                                Exit Function
-                            End If
 
                         If startExecution.AddSeconds(My.Settings.sMountTimeout) < DateTime.UtcNow() Then
                             LogSessionEntry("ERROR", "Mount slew timeout!", "MountSlewToTarget", "", "MOUNT")
@@ -519,25 +543,28 @@ Module ModMount
                         LogSessionEntry("BRIEF", "Slewed to " + vTarget + " actual RA " + MountRA + " - DEC " + MountDEC + " - Moon Alt " + Format(pStructEventTimes.MoonAlt, "#0.00") + "°", "", "MountSlewToTarget", "MOUNT")
                     End If
                 Else
-                        MountSlewToTarget = "BELOWHORIZON"
-                        LogSessionEntry("BRIEF", "Slew could not be completed! " + vTarget + " is below the horizon at " + Format(pStructObject.ObjectAlt, "0.00") + "°", "", "MountSlewToTarget", "MOUNT")
-                    End If
-
-                    executionTime = DateTime.UtcNow() - startExecution
-                    LogSessionEntry("DEBUG", "  MountSlewToTarget: " + executionTime.ToString, "", "MountSlewToTarget", "MOUNT")
-
-                    'fill the fields on the main form
-                    returnvalue = CheckMountStatus()
-                    If returnvalue <> "OK" Then
-                        FrmMain.Cursor = Cursors.Default
-                        pIsActionRunning = False
-                        MountSlewToTarget = returnvalue
-                        Exit Function
-                    End If
-                    pClosedLoopSlew = ""
+                    MountSlewToTarget = "BELOWHORIZON"
+                    LogSessionEntry("BRIEF", "Slew could not be completed! " + vTarget + " is below the horizon at " + Format(pStructObject.ObjectAlt, "0.00") + "°", "", "MountSlewToTarget", "MOUNT")
                 End If
-                pIsActionRunning = False
+
+                executionTime = DateTime.UtcNow() - startExecution
+                LogSessionEntry("DEBUG", "  MountSlewToTarget: " + executionTime.ToString, "", "MountSlewToTarget", "MOUNT")
+
+                'fill the fields on the main form
+                returnvalue = CheckMountStatus()
+                If returnvalue <> "OK" Then
+                    FrmMain.Cursor = Cursors.Default
+                    pIsActionRunning = False
+                    MountSlewToTarget = returnvalue
+                    Exit Function
+                End If
+                pClosedLoopSlew = ""
+            End If
+            pIsActionRunning = False
             FrmMain.Cursor = Cursors.Default
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  MountSlewToTarget: " + executionTime.ToString, "", "MountSlewToTarget", "MOUNT")
 
         Catch ex As Exception
             FrmMain.Cursor = Cursors.Default
@@ -555,8 +582,10 @@ Module ModMount
 
         MountAbortSlew = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountAbortSlew...", "", "MountAbortSlew", "MOUNT")
+
+            FrmMain.Cursor = Cursors.WaitCursor
 
             If pMount.Slewing = True Then
                 LogSessionEntry("FULL", "Aborting slew...", "", "MountAbortSlew", "MOUNT")
@@ -572,10 +601,10 @@ Module ModMount
                 MountAbortSlew = returnvalue
                 Exit Function
             End If
+            FrmMain.Cursor = Cursors.Default
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  MountAbortSlew: " + executionTime.ToString, "", "MountAbortSlew", "MOUNT")
-            FrmMain.Cursor = Cursors.Default
 
         Catch ex As Exception
             FrmMain.Cursor = Cursors.Default
@@ -591,8 +620,10 @@ Module ModMount
 
         MountPark = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountPark...", "", "ResetCalculateEventTimes", "MOUNT")
+
+            FrmMain.Cursor = Cursors.WaitCursor
             pIsActionRunning = True
 
             If pMount.Slewing = True And pIsMountParking = False Then
@@ -633,6 +664,7 @@ Module ModMount
             pIsActionRunning = False
 
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  MountPark: " + executionTime.ToString, "", "MountPark", "MOUNT")
 
@@ -663,9 +695,11 @@ Module ModMount
 
         MountUnpark = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountUnpark...", "", "MountUnpark", "MOUNT")
+
             pIsActionRunning = True
             FrmMain.Cursor = Cursors.WaitCursor
-            startExecution = DateTime.UtcNow()
 
             If pMount.Slewing = False Then
                 LogSessionEntry("BRIEF", "Unparking mount...", "", "MountUnpark", "MOUNT")
@@ -703,6 +737,7 @@ Module ModMount
         MountEnableTracking = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountEnableTracking...", "", "MountEnableTracking", "MOUNT")
 
             If pMount.Tracking = False And pMount.CanSetTracking = True Then '1.98
                 LogSessionEntry("BRIEF", "Enable tracking...", "", "MountEnableTracking", "MOUNT")
@@ -736,6 +771,7 @@ Module ModMount
         MountDisableTracking = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountDisableTracking...", "", "MountDisableTracking", "MOUNT")
 
             If pMount.Tracking = True And pMount.CanSetTracking = True Then '1.98
                 LogSessionEntry("BRIEF", "Enable tracking...", "", "MountEnableTracking", "MOUNT")
@@ -768,9 +804,11 @@ Module ModMount
 
         MountSlewToAltAz = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MountSlewToAltAz...", "", "MountSlewToAltAz", "MOUNT")
+
             FrmMain.Cursor = Cursors.WaitCursor
             pIsActionRunning = True
-            startExecution = DateTime.UtcNow()
 
             ' if run needs to abort
             If pAbort = True Then
@@ -838,9 +876,6 @@ Module ModMount
 
             LogSessionEntry("BRIEF", "Slewed to Alt " + Format(vAlt, "#0.00") + "° Az " + Format(vAz, "#0.00") + "° - Moon Alt " + Format(pStructEventTimes.MoonAlt, "#0.00") + "°", "", "MountSlewToAltAz", "MOUNT")
 
-            executionTime = DateTime.UtcNow() - startExecution
-            LogSessionEntry("DEBUG", "  MountSlewToAltAz: " + executionTime.ToString, "", "MountSlewToAltAz", "MOUNT")
-
             'fill the fields on the main form
             returnvalue = CheckMountStatus()
             If returnvalue <> "OK" Then
@@ -852,6 +887,9 @@ Module ModMount
 
             pIsActionRunning = False
             FrmMain.Cursor = Cursors.Default
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  MountSlewToAltAz: " + executionTime.ToString, "", "MountSlewToAltAz", "MOUNT")
 
         Catch ex As Exception
             FrmMain.Cursor = Cursors.Default

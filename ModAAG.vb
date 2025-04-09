@@ -85,6 +85,7 @@ Module ModAAG
         GetAAGData = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  GetAAGData...", "", "GetAAGData", "WEATHER")
 
             If My.Settings.sDebugAAGData = False Then
                 Dim address As String = My.Settings.sWeatherURL
@@ -114,7 +115,7 @@ Module ModAAG
             End If
 
             'log all the weather data in a file, simulator or not
-            LogSessionEntry("DEBUG", "  GetAAGData" + pAAGFile, "", "GetAAGData", "WEATHER_DATA")
+            LogSessionEntry("DEBUG", "  GetAAGData" + pAAGFile, "", "GetAAGData", "WEATHER")
             LogSessionEntry("DEBUG", "  GetAAGData: " + executionTime.ToString, "", "GetAAGData", "WEATHER")
 
         Catch ex As Exception
@@ -134,6 +135,7 @@ Module ModAAG
         CheckTimeoutAAG = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckTimeoutAAG...", "", "CheckTimeoutAAG", "WEATHER")
 
             'If My.Settings.sSimulatorMode = vbFalse Then
             i = DateDiff(DateInterval.Second, pLastKnownAAGConnected, Date.UtcNow)
@@ -164,6 +166,7 @@ Module ModAAG
         CheckTimeoutAAGTimestamp = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckTimeoutAAGTimestamp...", "", "CheckTimeoutAAGTimestamp", "WEATHER")
 
             If pStrucWeather.dataGMTTime = pLastKnownAAGTimestamp Then
                 pLastKnownAAGTimestampCounter += 1
@@ -200,6 +203,7 @@ Module ModAAG
         ProcessAAGData = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ProcessAAGData...", "", "ProcessAAGData", "WEATHER")
 
             'get the file
             returnvalue = GetAAGData()

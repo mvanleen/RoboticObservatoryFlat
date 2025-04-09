@@ -4,9 +4,14 @@ Imports System.Threading
 Module ModHeartBeat
     Public Function MonitorHeartBeat() As String
         'check if processes are running and write according textfile in webserver location
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         MonitorHeartBeat = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MonitorHeartBeat...", "", "MonitorHeartBeat", "PROGRAM")
+
             'write file to webserver
             'Dim file As System.IO.StreamWriter
 
@@ -33,7 +38,9 @@ Module ModHeartBeat
                     i += 1
                 End Try
             Loop
-            LogSessionEntry("DEBUG", "  MonitorHeartbeat", "", "MonitorHeartbeat", "PROGRAM")
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  MonitorHeartbeat: " + executionTime.ToString, "", "MonitorHeartbeat", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "MonitorHeartbeat: " + ex.ToString, "", "MonitorHeartbeat", "PROGRAM")
             MonitorHeartBeat = "MonitorHeartbeat: " + ex.ToString

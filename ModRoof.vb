@@ -16,8 +16,10 @@ Module ModRoof
 
         RoofConnect = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  RoofConnect...", "", "RoofConnect", "ROOF")
+
+            FrmMain.Cursor = Cursors.WaitCursor
 
             LogSessionEntry("BRIEF", "Connecting to the roof...", "", "RoofConnect", "ROOF")
             If My.Settings.sSimulatorMode = True Then
@@ -42,6 +44,7 @@ Module ModRoof
             End If
 
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  RoofConnect: " + executionTime.ToString, "", "RoofConnect", "ROOF")
 
@@ -60,8 +63,10 @@ Module ModRoof
 
         RoofDisconnect = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  RoofDisconnect...", "", "RoofDisconnect", "ROOF")
+
+            FrmMain.Cursor = Cursors.WaitCursor
             LogSessionEntry("BRIEF", "Disconnecting the roof...", "", "RoofDisconnect", "ROOF")
 
             If My.Settings.sRoofDevice <> "NONE" Then
@@ -96,9 +101,10 @@ Module ModRoof
 
         RoofOpenRoof = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  RoofOpenRoof...", "", "RoofOpenRoof", "ROOF")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             'delay for 1 sec to make sure AAG actually opened the switch
             Thread.Sleep(1000)
 
@@ -158,8 +164,8 @@ Module ModRoof
                 RoofOpenRoof = returnvalue
                 Exit Function
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  RoofOpenRoof: " + executionTime.ToString, "", "RoofOpenRoof", "ROOF")
 
@@ -179,8 +185,10 @@ Module ModRoof
 
         RoofCloseRoof = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  RoofCloseRoof...", "", "RoofCloseRoof", "ROOF")
+
+            FrmMain.Cursor = Cursors.WaitCursor
             RoofStartClosing = DateTime.UtcNow()
 
             If My.Settings.sRoofDevice <> "NONE" Then
@@ -214,8 +222,8 @@ Module ModRoof
                 RoofCloseRoof = returnvalue
                 Exit Function
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  RoofCloseRoof: " + executionTime.ToString, "", "RoofCloseRoof", "ROOF")
 
@@ -235,6 +243,7 @@ Module ModRoof
         RoofShutterStatus = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  RoofShutterStatus...", "", "RoofShutterStatus", "ROOF")
 
             ShutterResult = ""
             ShutterStatus = pRoof.ShutterStatus
@@ -272,8 +281,10 @@ Module ModRoof
 
         RoofOpenShutterPct = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  RoofOpenShutterPct...", "", "RoofOpenShutterPct", "ROOF")
+
+            FrmMain.Cursor = Cursors.WaitCursor
 
             LogSessionEntry("BRIEF", "Opening roof " + Format(vPct) + "%...", "", "RoofOpenShutterPct", "ROOF")
             pRoof.SlewToAltitude(vPct)
@@ -292,8 +303,8 @@ Module ModRoof
                 FrmMain.Cursor = Cursors.Default
                 Exit Function
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  RoofOpenShutterPct: " + executionTime.ToString, "", "RoofOpenShutterPct", "ROOF")
 
@@ -312,6 +323,8 @@ Module ModRoof
         CheckRoof = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckRoof...", "", "CheckRoof", "ROOF")
+
             If My.Settings.sRoofDevice = "NONE" Then
                 FrmMain.LblRoof.BackColor = Color.Transparent
                 FrmMain.LblRoof.Text = "NO ROOF"
@@ -352,6 +365,7 @@ Module ModRoof
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  CheckRoof: " + executionTime.ToString, "", "CheckRoof", "ROOF")
             LogSessionEntry("DEBUG", "  CheckRoof: " + pRoofShutterStatus, "", "CheckRoof", "ROOF")
+
         Catch ex As Exception
             CheckRoof = "CheckRoof: " + ex.Message
             LogSessionEntry("ERROR", "CheckRoof: " + ex.Message, "", "CheckRoof", "ROOF")

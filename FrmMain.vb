@@ -297,7 +297,7 @@ Public Class FrmMain
         Try
             If My.Settings.sCoverMethod = "NONE" Then
                 LblCover.Text = "NO COVER"
-                LblCover.BackColor = Color.Silver
+                LblCover.BackColor = Color.Transparent
             Else
                 If My.Settings.sCoverDevice = "ASCOM.SnapCap.CoverCalibrator" Then
                     LblCover.Text = "SNAPCAP"

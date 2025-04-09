@@ -124,6 +124,8 @@ Module ModDatabaseDeepsky
         DatabaseSelectDeepSky = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DatabaseSelectDeepSky...", "", "DatabaseSelectDeepSky", "PROGRAM")
+
             FrmMain.Cursor = Cursors.WaitCursor
 
             PriorityTarget.ID = Nothing
@@ -1402,6 +1404,12 @@ Module ModDatabaseDeepsky
     End Function
 
     Private Sub DatabaseClearDeepSky()
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        startExecution = DateTime.UtcNow()
+        LogSessionEntry("DEBUG", "  DatabaseClearDeepSky...", "", "DatabaseClearDeepSky", "PROGRAM")
+
         pDSLTarget.ID = Nothing
         pDSLTarget.TargetName = Nothing
         pDSLTarget.TargetRA2000HH = Nothing
@@ -1474,6 +1482,10 @@ Module ModDatabaseDeepsky
         pDSLTarget.TargetPanel2NbrExposedFrames = Nothing
         pDSLTarget.TargetPanel3NbrExposedFrames = Nothing
         pDSLTarget.TargetPanel4NbrExposedFrames = Nothing
+
+        executionTime = DateTime.UtcNow() - startExecution
+        LogSessionEntry("DEBUG", "  DatabaseClearDeepSky: " + executionTime.ToString, "", "DatabaseClearDeepSky", "PROGRAM")
+
     End Sub
 
     Public Function DatabaseMarkErrorDeepSky(vReason As String) As String
@@ -1482,11 +1494,10 @@ Module ModDatabaseDeepsky
         Dim executionTime As TimeSpan
 
         DatabaseMarkErrorDeepSky = "OK"
+
         Try
             startExecution = DateTime.UtcNow()
-
             LogSessionEntry("ERROR", "Marking " + pDSLTarget.TargetName + " as unusable: " + vReason, "", "DatabaseMarkErrorDeepSky", "PROGRAM")
-
 
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
@@ -1526,6 +1537,7 @@ Module ModDatabaseDeepsky
         DatabaseUpdateNbrExpDeepSky = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DatabaseUpdateNbrExpDeepSky...", "", "DatabaseUpdateNbrExpDeepSky", "PROGRAM")
 
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand

@@ -72,6 +72,12 @@ Module ModDatabaseHADS
     Public pVSLTarget As StructHADSRecord 'Deepsky target
 
     Private Sub ClearHADSRecord()
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+
+        startExecution = DateTime.UtcNow()
+        LogSessionEntry("DEBUG", "  ClearHADSRecord...", "", "ClearHADSRecord", "PROGRAM")
         pStrucHADSRecord.ID = Nothing
         pStrucHADSRecord.HADSName = Nothing
         pStrucHADSRecord.HADSName2 = Nothing
@@ -173,12 +179,20 @@ Module ModDatabaseHADS
         pStrucOldHADSRecord.HADSCircumpolar = Nothing
         pStrucOldHADSRecord.HADSCircumPriority = Nothing
 
+        executionTime = DateTime.UtcNow() - startExecution
+        LogSessionEntry("DEBUG", "  ClearHADSRecord: " + executionTime.ToString, "", "ClearHADSRecord", "PROGRAM")
+
     End Sub
 
     Public Function DownloadHADSFile() As String
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         DownloadHADSFile = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DownloadHADSFile...", "", "DownloadHADSFile", "PROGRAM")
+
             Dim remoteUri As String = My.Settings.SHADSURL
             Dim fileName As String = My.Settings.sLogLocation + "HADS.tsv"
             'Dim password As String = "..."
@@ -189,6 +203,10 @@ Module ModDatabaseHADS
                 '   client.Credentials = New NetworkCredential(username, password)
                 client.DownloadFile(remoteUri, fileName)
             End Using
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  DownloadHADSFile: " + executionTime.ToString, "", "DownloadHADSFile", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "DownloadHADSFile: " + ex.Message, "", "DownloadHADSFile", "PROGRAM")
             DownloadHADSFile = ex.Message
@@ -202,9 +220,15 @@ Module ModDatabaseHADS
         Dim i As Integer
         Dim HADSNbrOfInsertedRecords As Integer
         Dim HADSNbrOfUpdatedRecords As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
 
         ReadHADSFile = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ReadHADSFile...", "", "ReadHADSFile", "PROGRAM")
+
             HADSNbrOfInsertedRecords = 0
             HADSNbrOfUpdatedRecords = 0
 
@@ -361,6 +385,8 @@ Module ModDatabaseHADS
                 End If
 
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  ReadHADSFile: " + executionTime.ToString, "", "ReadHADSFile", "PROGRAM")
 
         Catch ex As Exception
             LogSessionEntry("ERROR", "ReadHADSFile: " + ex.Message, "ReadHADSFile", "", "PROGRAM")
@@ -372,9 +398,14 @@ Module ModDatabaseHADS
     Public Function CheckHADSRecord(vHADSName As String) As String
         'check if a HADS-record already exists
         Dim reader As SQLiteDataReader
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         CheckHADSRecord = "0"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckHADSRecord...", "", "CheckHADSRecord", "PROGRAM")
+
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
                     Try
@@ -495,6 +526,9 @@ Module ModDatabaseHADS
                 End Using
             End Using
 
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  CheckHADSRecord: " + executionTime.ToString, "", "CheckHADSRecord", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "CheckHADSRecord: " + ex.Message, "", "CheckHADSRecord", "PROGRAM")
             CheckHADSRecord = ex.Message
@@ -504,9 +538,15 @@ Module ModDatabaseHADS
     Public Function CheckHADSEmptyFocusStar() As String
         'check if all the HADS-records have focusstars
         Dim reader As SQLiteDataReader
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         CheckHADSEmptyFocusStar = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckHADSEmptyFocusStar...", "", "CheckHADSEmptyFocusStar", "PROGRAM")
+
+
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
                     Try
@@ -528,6 +568,8 @@ Module ModDatabaseHADS
                     End Try
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  CheckHADSEmptyFocusStar: " + executionTime.ToString, "", "CheckHADSEmptyFocusStar", "PROGRAM")
 
         Catch ex As Exception
             LogSessionEntry("ERROR", "CheckHADSEmptyFocusStar: " + ex.Message, "", "CheckHADSEmptyFocusStar", "PROGRAM")
@@ -539,9 +581,14 @@ Module ModDatabaseHADS
         Dim i As Integer
         Dim reader As SQLiteDataReader
         Dim returnvalue As String
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         InsertHADSRecord = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  InsertHADSRecord...", "", "InsertHADSRecord", "PROGRAM")
+
             'find if a focusstar was defined
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
@@ -624,6 +671,9 @@ Module ModDatabaseHADS
                     End Using
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  InsertHADSRecord: " + executionTime.ToString, "", "InsertHADSRecord", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "InsertHADSRecord: " + ex.Message, "", "InsertHADSRecord", "PROGRAM")
             InsertHADSRecord = ex.Message
@@ -633,9 +683,15 @@ Module ModDatabaseHADS
 
     Public Function UpdateHADSRecord() As String
         Dim i As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         UpdateHADSRecord = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  UpdateHADSRecord...", "", "UpdateHADSRecord", "PROGRAM")
+
+
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
                     Using daSL As New SQLiteDataAdapter
@@ -683,6 +739,10 @@ Module ModDatabaseHADS
                     End Using
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  UpdateHADSRecord: " + executionTime.ToString, "", "UpdateHADSRecord", "PROGRAM")
+
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "UpdateHADSRecord: " + ex.Message, "", "UpdateHADSRecord", "PROGRAM")
             UpdateHADSRecord = ex.Message
@@ -693,9 +753,14 @@ Module ModDatabaseHADS
 
     Public Function SetInactiveHADSRecord() As String
         Dim i As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         SetInactiveHADSRecord = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SetInactiveHADSRecord...", "", "SetInactiveHADSRecord", "PROGRAM")
+
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
                     Using daSL As New SQLiteDataAdapter
@@ -715,6 +780,9 @@ Module ModDatabaseHADS
                     End Using
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  SetInactiveHADSRecord: " + executionTime.ToString, "", "SetInactiveHADSRecord", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "SetInactiveHADSRecord: " + ex.Message, "", "SetInactiveHADSRecord", "PROGRAM")
             SetInactiveHADSRecord = ex.Message
@@ -724,9 +792,14 @@ Module ModDatabaseHADS
 
     Public Function UpdateHADSRecordActiveFlag() As String
         Dim i As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         UpdateHADSRecordActiveFlag = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  UpdateHADSRecordActiveFlag...", "", "UpdateHADSRecordActiveFlag", "PROGRAM")
+
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
                     Using daSL As New SQLiteDataAdapter
@@ -748,6 +821,9 @@ Module ModDatabaseHADS
                     End Using
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  UpdateHADSRecordActiveFlag: " + executionTime.ToString, "", "UpdateHADSRecordActiveFlag", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "UpdateHADSRecordActiveFlag: " + ex.Message, "", "UpdateHADSRecordActiveFlag", "PROGRAM")
             UpdateHADSRecordActiveFlag = ex.Message
@@ -759,9 +835,15 @@ Module ModDatabaseHADS
         'first truncate the table with all the links, next refill, based on current HADS-table
         Dim reader As SQLiteDataReader
         Dim i As Integer
-        UpdateHADSFocusLink = "OK"
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
+
+        UpdateHADSFocusLink = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  UpdateHADSFocusLink...", "", "UpdateHADSFocusLink", "PROGRAM")
+
             'truncate the HADSFocus table
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
@@ -822,6 +904,9 @@ Module ModDatabaseHADS
                     End Try
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  UpdateHADSFocusLink: " + executionTime.ToString, "", "UpdateHADSFocusLink", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "UpdateHADSFocusLink: " + ex.Message, "", "UpdateHADSFocusLink", "PROGRAM")
             UpdateHADSFocusLink = ex.Message
@@ -829,7 +914,13 @@ Module ModDatabaseHADS
     End Function
 
     Public Function EstimateExposureTime(vMinMag As Double) As Double
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  EstimateExposureTime...", "", "EstimateExposureTime", "PROGRAM")
+
             EstimateExposureTime = 120
 
             If vMinMag < 9 Then
@@ -850,6 +941,9 @@ Module ModDatabaseHADS
                 EstimateExposureTime = Convert.ToDouble(My.Settings.sHADSMag15)
             End If
 
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  EstimateExposureTime: " + executionTime.ToString, "", "EstimateExposureTime", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "EstimateExposureTime: " + ex.Message, "", "EstimateExposureTime", "PROGRAM")
             'if error set default to 120
@@ -869,6 +963,8 @@ Module ModDatabaseHADS
         DatabaseSelectHADS = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DatabaseSelectHADS...", "", "DatabaseSelectHADS", "PROGRAM")
+
             FrmMain.Cursor = Cursors.WaitCursor
 
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
@@ -923,7 +1019,7 @@ Module ModDatabaseHADS
                                         'use azimuth desc as sortorder
                                         sortorder = 500 + pStructObject.ObjectAz
                                     Else
-                                        'sort by asc altitude, lowest first
+                                        'sort by asc azimuth, lowest first
                                         sortorder = pStructObject.ObjectAz
                                     End If
                                 Else
@@ -1066,6 +1162,7 @@ Module ModDatabaseHADS
                 End Using
             End Using
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  DatabaseSelectHADS: " + executionTime.ToString, "", "DatabaseSelectHADS", "PROGRAM")
 
@@ -1076,6 +1173,12 @@ Module ModDatabaseHADS
     End Function
 
     Private Sub DatabaseClearHADS()
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        startExecution = DateTime.UtcNow()
+        LogSessionEntry("DEBUG", "  DatabaseClearHADS...", "", "DatabaseClearHADS", "PROGRAM")
+
         pVSLTarget.ID = Nothing
         pVSLTarget.HADSName = Nothing
         pVSLTarget.HADSName2 = Nothing
@@ -1125,6 +1228,9 @@ Module ModDatabaseHADS
         pVSLTarget.HADSCompassDirection = Nothing
         pVSLTarget.HADSCircumpolar = Nothing
         pVSLTarget.HADSCircumPriority = Nothing
+
+        executionTime = DateTime.UtcNow() - startExecution
+        LogSessionEntry("DEBUG", "  DatabaseClearHADS: " + executionTime.ToString, "", "DatabaseClearHADS", "PROGRAM")
     End Sub
 
     Public Function DatabaseMarkErrorHADS(vReason As String) As String
@@ -1135,7 +1241,6 @@ Module ModDatabaseHADS
         DatabaseMarkErrorHADS = "OK"
         Try
             startExecution = DateTime.UtcNow()
-
             LogSessionEntry("ERROR", "Marking " + pVSLTarget.HADSName + " as unusable: " + vReason, "", "DatabaseMarkErrorHADS", "PROGRAM")
 
 
@@ -1167,18 +1272,23 @@ Module ModDatabaseHADS
         End Try
     End Function
 
-    Public Function DatabaseSetLastObservedHADS() As String
+    Public Function DatabaseSetLastObservedHADS(vID As Integer) As String
         Dim i As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         DatabaseSetLastObservedHADS = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DatabaseSetLastObservedHADS...", "", "DatabaseSetLastObservedHADS", "PROGRAM")
+
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
                     Using daSL As New SQLiteDataAdapter
                         Try
                             pCon.Open()
                             daSL.SelectCommand = cmd
-                            cmd.CommandText = "UPDATE HADS set HADSLastObserved='" + DateTime.UtcNow().ToString + "'" + " WHERE Id = " + Format(pVSLTarget.ID)
+                            cmd.CommandText = "UPDATE HADS set HADSLastObserved='" + DateTime.UtcNow().ToString + "'" + " WHERE Id = " + Format(vID)
 
                             daSL.SelectCommand = cmd
                             i = cmd.ExecuteNonQuery
@@ -1191,6 +1301,9 @@ Module ModDatabaseHADS
                     End Using
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  DatabaseSetLastObservedHADS: " + executionTime.ToString, "", "DatabaseSetLastObservedHADS", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "DatabaseSetLastObservedHADS: " + ex.Message, "", "DatabaseSetLastObservedHADS", "PROGRAM")
             DatabaseSetLastObservedHADS = ex.Message
@@ -1199,8 +1312,13 @@ Module ModDatabaseHADS
 
     Public Function DatabaseTruncateHADS() As String
         Dim i As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
         DatabaseTruncateHADS = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DatabaseTruncateHADS...", "", "DatabaseTruncateHADS", "PROGRAM")
 
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
@@ -1221,6 +1339,9 @@ Module ModDatabaseHADS
                     End Using
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  DatabaseTruncateHADS: " + executionTime.ToString, "", "DatabaseTruncateHADS", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "DatabaseTruncateHADS: " + ex.Message, "", "DatabaseTruncateHADS", "PROGRAM")
             DatabaseTruncateHADS = ex.Message
@@ -1230,9 +1351,14 @@ Module ModDatabaseHADS
 
     Public Function DatabaseDeleteInactiveHADS() As String
         Dim i As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         DatabaseDeleteInactiveHADS = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DatabaseDeleteInactiveHADS...", "", "DatabaseDeleteInactiveHADS", "PROGRAM")
+
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
                     Using daSL As New SQLiteDataAdapter
@@ -1252,10 +1378,12 @@ Module ModDatabaseHADS
                     End Using
                 End Using
             End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  DatabaseDeleteInactiveHADS: " + executionTime.ToString, "", "DatabaseDeleteInactiveHADS", "PROGRAM")
+
         Catch ex As Exception
             LogSessionEntry("ERROR", "DatabaseDeleteInactiveHADS: " + ex.Message, "", "DatabaseDeleteInactiveHADS", "PROGRAM")
             DatabaseDeleteInactiveHADS = ex.Message
         End Try
     End Function
-
 End Module

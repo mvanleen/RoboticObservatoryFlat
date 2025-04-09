@@ -13,6 +13,7 @@ Module ModInternet
         IsInternetConnected = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  IsInternetConnected...", "", "IsInternetConnected", "INTERNET")
 
             If My.Settings.sDebugKillInternet = False Then
                 'Dim IPHost As IPHostEntry = Dns.GetHostEntry("www.google.com")
@@ -38,8 +39,6 @@ Module ModInternet
     '
     'End Function
 
-
-
     Public Function CheckTimeoutInternet() As String
         'wrapper that takes into account a delay before the alarm is raised
         Dim returnvalue As String
@@ -50,6 +49,8 @@ Module ModInternet
         CheckTimeoutInternet = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckTimeoutInternet...", "", "CheckTimeoutInternet", "INTERNET")
+
             returnvalue = IsInternetConnected()
             If returnvalue <> "OK" Then
                 CheckTimeoutInternet = "OK"

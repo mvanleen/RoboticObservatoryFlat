@@ -182,4 +182,8 @@ Public Class FrmDebug
     Private Sub BtnError_Click(sender As Object, e As EventArgs) Handles BtnError.Click
         LogSessionEntry("ERROR", "SOME ERROR", "", "SOMETHING", "TSX")
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        DatabaseSelectHADS(True)
+    End Sub
 End Class

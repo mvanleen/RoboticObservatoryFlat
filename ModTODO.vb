@@ -198,6 +198,12 @@
     '3.04   changed: added instructions for HADS yearly refresh
     '3.05   bug: Paramount does not know side of pier before homing
     '3.06   change: added sMountTimeout / sCoverTimeOut / sCameraTimeout
+    '3.07   bug: change cover color when no cover
+    '       bug: RunHADS: Index was outside the bounds of the array. 
+    '       change: added uniform debug reporting in modules
+
+
+
 
     ' && homing loopt fout
 

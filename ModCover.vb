@@ -21,12 +21,10 @@ Module ModCover
 
         CoverConnect = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
-
             LogSessionEntry("BRIEF", "Connecting to the cover...", "", "CoverConnect", "COVER")
 
-
+            FrmMain.Cursor = Cursors.WaitCursor
             If My.Settings.sSimulatorMode = True Then
                 If My.Settings.sCoverMethod = "ASCOM" Then
                     pCover = New ASCOM.DriverAccess.CoverCalibrator("ASCOM.Simulator.CoverCalibrator") With {
@@ -70,11 +68,10 @@ Module ModCover
 
         CoverDisconnect = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
-
             LogSessionEntry("BRIEF", "Disconnecting Cover...", "", "CoverDisconnect", "COVER")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             If My.Settings.sCoverMethod = "ASCOM" Then
                 pCover.Connected = False
             End If
@@ -107,10 +104,10 @@ Module ModCover
 
         CoverOpen = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
-
             LogSessionEntry("BRIEF", "Cover opening...", "", "CoverOpen", "COVER")
+
+            FrmMain.Cursor = Cursors.WaitCursor
             'do not open cover is scope is not parked
             If pStructMount.AtPark = True Then
                 If My.Settings.sCoverMethod = "ASCOM" Then
@@ -166,10 +163,10 @@ Module ModCover
 
         CoverClose = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
-
             LogSessionEntry("BRIEF", "Cover closing...", "", "CoverClose", "COVER")
+
+            FrmMain.Cursor = Cursors.WaitCursor
             'do not close cover is scope is not parked
             If pCoverConnected = True Then
                 If pStructMount.AtPark = True Then
@@ -233,6 +230,7 @@ Module ModCover
         CoverGetStatus = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CoverGetStatus...", "", "CoverGetStatus", "COVER")
 
             If My.Settings.sCoverMethod = "ASCOM" Then
                 pCoverStatus = pCover.CoverState
@@ -246,6 +244,7 @@ Module ModCover
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  CoverGetStatus: " + executionTime.ToString, "", "CoverGetStatus", "COVER")
+
         Catch ex As Exception
             CoverGetStatus = "CoverGetStatus: " + ex.Message
             If vShowMessages = True Then
@@ -263,6 +262,8 @@ Module ModCover
         CheckCover = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckCover...", "", "CheckCover", "COVER")
+
             returnvalue = CoverGetStatus(True)
             If returnvalue <> "OK" Then
                 CheckCover = returnvalue
@@ -292,8 +293,10 @@ Module ModCover
                 FrmMain.LblCover.BackColor = Color.Transparent
                 FrmMain.LblCover.Text = "COVER"
             End If
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  CheckCover: " + executionTime.ToString, "", "CheckCover", "COVER")
+
         Catch ex As Exception
             CheckCover = "CheckCover: " + ex.Message
             LogSessionEntry("ERROR", "CheckCover: " + ex.Message, "", "CheckCover", "COVER")

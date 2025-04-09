@@ -35,8 +35,10 @@ Module ModSwitch
 
         SwitchConnect = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SwitchConnect...", "", "SwitchConnect", "SWITCH")
+
+            FrmMain.Cursor = Cursors.WaitCursor
             If My.Settings.sSimulatorMode = True Then
                 LogSessionEntry("BRIEF", "Connecting to the switch...", "", "SwitchConnect", "SWITCH")
             ElseIf My.Settings.sSwitchDevice = "Dragonfly.Switch" Then
@@ -74,8 +76,8 @@ Module ModSwitch
             If returnvalue <> "OK" Then
                 SwitchConnect = "SwitchConnect: " + returnvalue
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  SwitchConnect: " + executionTime.ToString, "", "SwitchConnect", "SWITCH")
 
@@ -93,9 +95,10 @@ Module ModSwitch
 
         SwitchDisconnect = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SwitchDisconnect...", "", "SwitchDisconnect", "SWITCH")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             If My.Settings.sSimulatorMode = True Then
                 LogSessionEntry("BRIEF", "Disconnecting switch...", "", "SwitchDisconnect", "SWITCH")
             Else
@@ -115,8 +118,8 @@ Module ModSwitch
             If returnvalue <> "OK" Then
                 SwitchDisconnect = "SwitchDisconnect: " + returnvalue
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  SwitchDisconnect: " + executionTime.ToString, "", "SwitchDisconnect", "SWITCH")
 
@@ -134,7 +137,7 @@ Module ModSwitch
         SwitchStatus = "OK"
         Try
             startExecution = DateTime.UtcNow()
-            LogSessionEntry("DEBUG", "  2SwitchStatus: " + startExecution.ToString, "", "SwitchStatus", "SWITCH")
+            LogSessionEntry("DEBUG", "  SwitchStatus: " + startExecution.ToString, "", "SwitchStatus", "SWITCH")
 
             'pStructSwitch.Switch1Status = ASwitch.GetSwitch(0)
             'pStructSwitch.Switch2Status = ASwitch.GetSwitch(1)
@@ -146,8 +149,6 @@ Module ModSwitch
             'pStructSwitch.Switch8Status = ASwitch.GetSwitch(7)
 
             '-----------------------------
-
-
 
             If BgwSwitchStatus.IsBusy = False Then
                 LogSessionEntry("DEBUG", "  SwitchStatus - RunWorkerAsync: " + startExecution.ToString, "", "SwitchStatus", "SWITCH")
@@ -166,9 +167,9 @@ Module ModSwitch
                 SwitchStatus = BgwErrorSwitchStatus
             End If
 
+            executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  3SwitchStatus: " + Format(pStructSwitch.Switch1Status) + "-" + Format(pStructSwitch.Switch2Status) + "-" + Format(pStructSwitch.Switch3Status) + "-" + Format(pStructSwitch.Switch4Status) _
                 + "-" + Format(pStructSwitch.Switch5Status) + "-" + Format(pStructSwitch.Switch6Status) + "-" + Format(pStructSwitch.Switch7Status) + "-" + Format(pStructSwitch.Switch8Status), "", "SwitchStatus", "SWITCH")
-            executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  4SwitchStatus: " + executionTime.ToString, "", "SwitchStatus", "SWITCH")
 
         Catch ex As Exception
@@ -218,7 +219,6 @@ Module ModSwitch
                 OldResetErrorSwitchStatus = "OK"
             End If
         End If
-
     End Sub
 
     Public Function CheckSwitch() As String
@@ -230,6 +230,7 @@ Module ModSwitch
         CheckSwitch = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckSwitch...", "", "CheckSwitch", "SWITCH")
 
             returnvalue = SwitchStatus()
             If returnvalue <> "OK" Then
@@ -307,9 +308,10 @@ Module ModSwitch
 
         SwitchEnable = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SwitchEnable...", "", "SwitchEnable", "SWITCH")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             ASwitch.SetSwitch(CShort(vID), vState)
             If vState = True Then
                 OnOff = "on"
@@ -341,8 +343,8 @@ Module ModSwitch
             If returnvalue <> "OK" Then
                 SwitchEnable = "SwitchEnable: " + returnvalue
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  SwitchEnable: " + executionTime.ToString, "", "SwitchEnable", "SWITCH")
 
@@ -364,6 +366,7 @@ Module ModSwitch
         SwitchEquipmentOn = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SwitchEquipmentOn...", "", "SwitchEquipmentOn", "SWITCH")
 
             If pSwitchingEquipmentOff = True Then
                 LogSessionEntry("BRIEF", "Cannot switch equipment on: switching off not completed!", "", "SwitchEquipmentOn", "SWITCH")
@@ -581,9 +584,14 @@ Module ModSwitch
 
     Private Function StartSwitchMount() As String
         Dim returnvalue As String
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         StartSwitchMount = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  StartSwitchMount...", "", "StartSwitchMount", "SWITCH")
+
             returnvalue = MountStartupTime()
             If My.Settings.sMountDevice = "ASCOM.tenmicron_mount.Telescope" Then
                 LogSessionEntry("BRIEF", "Waiting for Baader remote switch to power up.", "", "MountConnect", "MOUNT")
@@ -616,6 +624,9 @@ Module ModSwitch
                 WaitSeconds(pMountStartupTime, False, True)
             End If
             FrmMain.Cursor = Cursors.Default
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  StartSwitchMount: " + executionTime.ToString, "", "StartSwitchMount", "SWITCH")
         Catch ex As Exception
             StartSwitchMount = "StartSwitchMount: " + ex.Message
             LogSessionEntry("ERROR", "StartSwitchMount: " + ex.Message, "", "StartSwitchMount", "SWITCH")
@@ -630,6 +641,7 @@ Module ModSwitch
         SwitchEquipmentOff = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SwitchEquipmentOff...", "", "SwitchEquipmentOff", "SWITCH")
 
             If pSwitchingEquipmentOn = True Then
                 LogSessionEntry("BRIEF", "Cannot switch off equipment: switching on not completed!", "", "SwitchEquipmentOff", "SWITCH")
@@ -806,9 +818,14 @@ Module ModSwitch
     Private Function ShutdownSwitchMount() As String
         Dim returnvalue As String
         Dim MountConnected As Boolean
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
 
         ShutdownSwitchMount = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ShutdownSwitchMount...", "", "ShutdownSwitchMount", "SWITCH")
+
             'first try to see if the mount is already powered down
             Try
                 pMount.Connected = True
@@ -838,6 +855,9 @@ Module ModSwitch
                 LogSessionEntry("BRIEF", "10Micron mount shut down...", "", "ShutdownSwitchMount", "MOUNT")
             End If
 
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  ShutdownSwitchMount: " + executionTime.ToString, "", "ShutdownSwitchMount", "SWITCH")
+
         Catch ex As Exception
             ShutdownSwitchMount = "ShutdownSwitchMount: " + ex.Message
             LogSessionEntry("ERROR", "ShutdownSwitchMount: " + ex.Message, "", "ShutdownSwitchMount", "SWITCH")
@@ -853,6 +873,7 @@ Module ModSwitch
         SwitchAllEquipmentOff = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SwitchAllEquipmentOff...", "", "SwitchAllEquipmentOff", "SWITCH")
 
             If pSwitchingEquipmentOn = True Then
                 LogSessionEntry("BRIEF", "Cannot switch off equipment: switching on not completed!", "", "SwitchAllEquipmentOff", "SWITCH")

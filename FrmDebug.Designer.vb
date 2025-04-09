@@ -75,6 +75,7 @@ Partial Class FrmDebug
         Me.TxtMosaicOverlap = New System.Windows.Forms.TextBox()
         Me.BtnError = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GrpStatus.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -461,6 +462,7 @@ Partial Class FrmDebug
         '
         'GrpStatus
         '
+        Me.GrpStatus.Controls.Add(Me.Button3)
         Me.GrpStatus.Controls.Add(Me.LblpMoonCooldownStatus)
         Me.GrpStatus.Controls.Add(Me.LblMoonSafetyStatus)
         Me.GrpStatus.Controls.Add(Me.lblpOldSequenceTimeSMART)
@@ -711,6 +713,21 @@ Partial Class FrmDebug
         Me.Button1.Text = "Play Error"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(157, 128)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(91, 23)
+        Me.Button3.TabIndex = 101
+        Me.Button3.Text = "HADS"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'FrmDebug
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -819,4 +836,5 @@ Partial Class FrmDebug
     Friend WithEvents Button1 As Button
     Friend WithEvents LblpMoonCooldownStatus As Label
     Friend WithEvents LblMoonSafetyStatus As Label
+    Friend WithEvents Button3 As Button
 End Class

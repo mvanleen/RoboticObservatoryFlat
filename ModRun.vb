@@ -3133,7 +3133,7 @@ Module ModRun
                         End If
                     Else
                         'set the last observed date
-                        returnvalue = DatabaseSetLastObservedHADS()
+                        returnvalue = DatabaseSetLastObservedHADS(pVSLTarget.ID)
                         If returnvalue <> "OK" Then
                             pIsSequenceRunning = False
                             RunHADS = returnvalue
@@ -3323,6 +3323,7 @@ Module ModRun
                     End If
                 End While
 
+                LogSessionEntry("ESSENTIAL", "TESTING JUST BEFORE PROBABLE ERROR", "", "RunHADS", "SEQUENCE")
                 'set the last observed date
                 returnvalue = DatabaseSetLastObservedHADS(pVSLTarget.ID)
                 If returnvalue <> "OK" Then
@@ -3331,7 +3332,7 @@ Module ModRun
                     Exit Function
                 End If
 
-                LogSessionEntry("ESSENTIAL", pVSLTarget.HADSName + "too low... " + Format(i) + " frames were exposed. Selecting new target.", "", "RunHADS", "SEQUENCE")
+                LogSessionEntry("ESSENTIAL", pVSLTarget.HADSName + "too low... Selecting new target.", "", "RunHADS", "SEQUENCE")
             End If
 
             pIsSequenceRunning = False
