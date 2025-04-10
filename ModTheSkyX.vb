@@ -84,13 +84,14 @@ Module ModTheSkyX
 
     Public Function DefineImageDatedPath(vType As String) As String
         'NORMAL / PLATESOLVE / FOCUS
+        Dim SubFolder As String
         Dim startExecution As Date
         Dim executionTime As TimeSpan
-        Dim SubFolder As String
 
         DefineImageDatedPath = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DefineImageDatedPath...", "", "DefineImageDatedPath", "TSX")
 
             If Convert.ToInt32(DateTime.UtcNow.ToString("HH")) < 12 Then
                 'images still belong to previous day
@@ -133,9 +134,10 @@ Module ModTheSkyX
 
         ConnectTheSkyXApplication = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ConnectTheSkyXApplication...", "", "ConnectTheSkyXApplication", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             pTheSkyXApp = New TheSky64Lib.Application
             pTheSkyXConnected = True
 
@@ -159,13 +161,14 @@ Module ModTheSkyX
 
         DisconnectTheSkyXApplication = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DisconnectTheSkyXApplication...", "", "DisconnectTheSkyXApplication", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             pTheSkyXApp = Nothing
             pTheSkyXConnected = False
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  DisconnectTheSkyXApplication: " + executionTime.ToString, "", "DisconnectTheSkyXApplication", "TSX")
 
@@ -184,6 +187,8 @@ Module ModTheSkyX
         CheckIsRunningTheSkyX = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ResetCalculateEventTimes...", "", "ResetCalculateEventTimes", "TSX")
+
             TSXRunning = CheckIfRunning("TheSky64")
             If TSXRunning = "OK" Then
                 FrmMain.LblTSX.BackColor = ColorTranslator.FromHtml("#4cd137") 'green
@@ -213,6 +218,7 @@ Module ModTheSkyX
         ConnectTheSkyXEquipment = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ConnectTheSkyXEquipment...", "", "ConnectTheSkyXEquipment", "TSX")
 
             returnvalue = ConnectTheSkyXCamera(vShowMessages)
             If returnvalue <> "OK" Then
@@ -240,7 +246,6 @@ Module ModTheSkyX
             If returnvalue <> "OK" Then
                 ConnectTheSkyXEquipment = "CheckTheSkyXCCD: " + returnvalue
             End If
-
             pTheSkyXEquipmentConnected = True
 
             executionTime = DateTime.UtcNow() - startExecution
@@ -264,6 +269,7 @@ Module ModTheSkyX
         DisconnectTheSkyXEquipment = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DisconnectTheSkyXEquipment...", "", "DisconnectTheSkyXEquipment", "TSX")
 
             returnvalue = DisconnectTheSkyXCamera()
             If returnvalue <> "OK" Then
@@ -310,16 +316,16 @@ Module ModTheSkyX
 
         ConnectTheSkyXFocusser = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ConnectTheSkyXFocusser...", "", "ConnectTheSkyXFocusser", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             If vShowMessages = True Then
                 LogSessionEntry("BRIEF", "Connecting to the focusser...", "", "ConnectTheSkyXFocusser", "TSX")
             End If
 
             pTheSkyXCamera.focConnect()
             LogSessionEntry("FULL", "Focusser connected.", "", "ConnectTheSkyXFocusser", "TSX")
-
 
             FrmMain.Cursor = Cursors.Default
             executionTime = DateTime.UtcNow() - startExecution
@@ -345,6 +351,7 @@ Module ModTheSkyX
         Try
             FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DisconnectTheSkyXFocusser...", "", "DisconnectTheSkyXFocusser", "TSX")
 
             LogSessionEntry("BRIEF", "Disconnecting the focusser...", "", "DisconnectTheSkyXFocusser", "TSX")
             pTheSkyXCamera.focDisconnect()
@@ -369,9 +376,10 @@ Module ModTheSkyX
 
         MoveTheSkyXFocusser = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MoveTheSkyXFocusser...", "", "MoveTheSkyXFocusser", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             LogSessionEntry("FULL", "Moving the focusser " + vTXTDirection + ":" + Format(vINTSteps) + " steps.", "", "MoveTheSkyXFocusser", "TSX")
             If vTXTDirection = "IN" Then
                 pTheSkyXCamera.focMoveIn(vINTSteps)
@@ -384,8 +392,8 @@ Module ModTheSkyX
             If returnvalue <> "OK" Then
                 MoveTheSkyXFocusser = "CheckTheSkyXCCD: " + returnvalue
             End If
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  MoveTheSkyXFocusser: " + executionTime.ToString, "", "MoveTheSkyXFocusser", "TSX")
 
@@ -405,9 +413,10 @@ Module ModTheSkyX
 
         MoveAbsoluteTheSkyXFocusser = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  MoveAbsoluteTheSkyXFocusser...", "", "MoveAbsoluteTheSkyXFocusser", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             'get the actual focus position
             returnvalue = GetTheSkyXFocusserPosition()
             If returnvalue <> "OK" Then
@@ -451,10 +460,11 @@ Module ModTheSkyX
         GetTheSkyXFocusserPosition = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  GetTheSkyXFocusserPosition...", "", "GetTheSkyXFocusserPosition", "TSX")
 
-            LogSessionEntry("DEBUG", "  GetTheSkyXFocusserPosition.", "", "GetTheSkyXFocusserPosition", "TSX")
             pCurrentFocusserPosition = pTheSkyXCamera.focPosition
             pCurrentFocusserTemperature = pTheSkyXCamera.focTemperature
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  GetTheSkyXFocusserPosition: " + executionTime.ToString, "", "GetTheSkyXFocusserPosition", "TSX")
 
@@ -477,9 +487,10 @@ Module ModTheSkyX
 
         ConnectTheSkyXCamera = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ConnectTheSkyXCamera...", "", "ConnectTheSkyXCamera", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             If vShowMessages = True Then
                 LogSessionEntry("BRIEF", "Connecting to the camera...", "", "ConnectTheSkyXCamera", "TSX")
             End If
@@ -494,6 +505,7 @@ Module ModTheSkyX
             LogSessionEntry("FULL", "Camera connected.", "", "ConnectTheSkyXCamera", "TSX")
 
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  ConnectTheSkyXCamera: " + executionTime.ToString, "", "ConnectTheSkyXCamera", "TSX")
 
@@ -515,15 +527,16 @@ Module ModTheSkyX
 
         DisconnectTheSkyXCamera = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DisconnectTheSkyXCamera...", "", "DisconnectTheSkyXCamera", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             LogSessionEntry("BRIEF", "Disconnecting the camera...", "", "DisconnectTheSkyXCamera", "TSX")
             pTheSkyXCamera.Disconnect()
             pTheSkyXCamera.ShutDownTemperatureRegulationOnDisconnect = vbTrue
             LogSessionEntry("FULL", "Camera disconnected.", "", "DisconnectTheSkyXCamera", "TSX")
-
             FrmMain.Cursor = Cursors.Default
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  DisconnectTheSkyXCamera: " + executionTime.ToString, "", "DisconnectTheSkyXCamera", "TSX")
         Catch ex As Exception
@@ -542,9 +555,10 @@ Module ModTheSkyX
 
         ConnectTheSkyXFilterWheel = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ConnectTheSkyXFilterWheel...", "", "ConnectTheSkyXFilterWheel", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             If vShowMessages = True Then
                 LogSessionEntry("BRIEF", "Connecting to the filterwheel...", "", "ConnectTheSkyXFilterWheel", "TSX")
             End If
@@ -573,9 +587,10 @@ Module ModTheSkyX
 
         DisconnectTheSkyXFilterWheel = "OK"
         Try
-            FrmMain.Cursor = Cursors.WaitCursor
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  DisconnectTheSkyXFilterWheel...", "", "DisconnectTheSkyXFilterWheel", "TSX")
 
+            FrmMain.Cursor = Cursors.WaitCursor
             LogSessionEntry("BRIEF", "Disconnecting the filterwheel...", "", "DisconnectTheSkyXFilterWheel", "TSX")
             pTheSkyXCamera.filterWheelDisconnect()
             LogSessionEntry("FULL", "Filterwheel disconnected.", "", "DisconnectTheSkyXFilterWheel", "TSX")
@@ -597,6 +612,7 @@ Module ModTheSkyX
         GetTheSkyXCurrrentFilter = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  GetTheSkyXCurrrentFilter...", "", "GetTheSkyXCurrrentFilter", "TSX")
 
             pCurrentFilterNumber = pTheSkyXCamera.PropLng("m_nFilterIndex Real-Time")
             'get the filtername
@@ -612,8 +628,8 @@ Module ModTheSkyX
                 Case 4
                     pCurrentFilterName = My.Settings.sCCDFilter5
             End Select
-
             LogSessionEntry("DEBUG", "  Current filter:" + pCurrentFilterName, "", "GetTheSkyXCurrrentFilter", "TSX")
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  GetTheSkyXCurrrentFilter: " + executionTime.ToString, "", "GetTheSkyXCurrrentFilter", "TSX")
 
@@ -634,9 +650,10 @@ Module ModTheSkyX
 
         TakeImageTheSkyX = "OK"
         Try
-            pIsActionRunning = True
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  TakeImageTheSkyX...", "", "TakeImageTheSkyX", "TSX")
 
+            pIsActionRunning = True
             ' if run is to abort: exit
             If (pAbort = True And vManual = False) Or pToolsAbort = True Then
                 pIsActionRunning = False
@@ -963,6 +980,7 @@ Module ModTheSkyX
         AbortImageTheSkyX = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  AbortImageTheSkyX...", "", "AbortImageTheSkyX", "TSX")
 
             pTheSkyXCamera.Abort()
             pTheSkyXTakingImage = False
@@ -997,6 +1015,7 @@ Module ModTheSkyX
         TheSkyXAtFocus3 = "OK"
         Try
             FrmMain.Cursor = Cursors.WaitCursor
+            LogSessionEntry("DEBUG", "  TheSkyXAtFocus3...", "", "TheSkyXAtFocus3", "TSX")
             LogSessionEntry("BRIEF", "Running @Focus3... (Position = " + Format(pTheSkyXCamera.focPosition) + ")", "", "TheSkyX@Focus3", "TSX")
 
             startExecution = DateTime.UtcNow()
@@ -1108,12 +1127,11 @@ Module ModTheSkyX
             Else
                 LogSessionEntry("BRIEF", "@Focus3 succeeded. (Debug position = " + Format(pTheSkyXCamera.focPosition) + ", Temperature: " + Format(pInitialFocusTemperature, "##0.00 °C)"), "", "TheSkyX@Focus3", "TSX")
             End If
-
-
             FrmMain.Cursor = Cursors.Default
-            executionTime = DateTime.UtcNow() - startExecution
             pIsActionRunning = False
-            LogSessionEntry("DEBUG", "  @Focus3: " + executionTime.ToString, "", "TheSkyX@Focus3", "TSX")
+
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "TheSkyXAtFocus3" + executionTime.ToString, "", "TheSkyX@Focus3", "TSX")
 
         Catch ex As Exception
             FrmMain.Cursor = Cursors.Default
@@ -1144,11 +1162,15 @@ Module ModTheSkyX
         Dim arrayY() As Integer
         Dim arrayFWHM() As Double
         Dim arrayFullSortedFWHM() As Double
+
         Dim startExecution As Date
         Dim executionTime As TimeSpan
 
         GetFWHMTheSkyX = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  GetFWHMTheSkyX...", "", "GetFWHMTheSkyX", "TSX")
+
             pFWHMFullFrameMedian = 0
             pFWHMFullFrameAverage = 0
 
@@ -1205,8 +1227,6 @@ Module ModTheSkyX
                 LogSessionEntry("DEBUG", "  Full Frame: nbr of stars: " + Format(pFWHMFullFrameNbrStars) + " median: " + Format(pFWHMFullFrameMedian, "#0.00") + " px", "", "GetFWHMTheSkyX", "TSX")
             End If
 
-            startExecution = DateTime.UtcNow()
-
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  GetFWHMTheSkyX: " + executionTime.ToString, "", "GetFWHMTheSkyX", "TSX")
 
@@ -1227,6 +1247,8 @@ Module ModTheSkyX
         FindTheSkyXTarget = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  FindTheSkyXTarget...", "", "FindTheSkyXTarget", "TSX")
+
             pTheSkyXChart = New TheSky64Lib.sky6StarChart
             pTheSkyXObjInfo = New TheSky64Lib.sky6ObjectInformation
 
@@ -1283,12 +1305,16 @@ Module ModTheSkyX
 
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  FindTheSkyXRADEC...", "", "FindTheSkyXRADEC", "TSX")
+
             pTheSkyXChart = New TheSky64Lib.sky6StarChart
             pTheSkyXChart.RightAscension = vRA
             pTheSkyXChart.Declination = vDEC
             pTheSkyXChart = Nothing
+
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  FindTheSkyXRADEC: " + executionTime.ToString, "", "FindTheSkyXRADEC", "TSX")
+
         Catch ex As Exception
             FindTheSkyXRADEC = "FindTheSkyXRADEC: " + ex.Message
             LogSessionEntry("ERROR", "FindTheSkyXRADEC: " + ex.Message, "", "FindTheSkyXRADEC", "TSX")
@@ -1314,6 +1340,9 @@ Module ModTheSkyX
 
         ClosedLoopSlew = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ClosedLoopSlew...", "", "ClosedLoopSlew", "TSX")
+
             pIsActionRunning = True
             LogSessionEntry("ESSENTIAL", "Closed loop slew to " + vTargetName + " - Moon Alt " + Format(pStructEventTimes.MoonAlt, "#0.00") + "°", "", "ClosedLoopSlew", "TSX")
             ' if run is to abort: exit
@@ -1324,7 +1353,7 @@ Module ModTheSkyX
                 Exit Function
             End If
 
-            startExecution = DateTime.UtcNow()
+
             pClosedLoopSlew = "SLEW"
 
             '-------------------------------------------------------------------
@@ -1587,6 +1616,7 @@ Module ModTheSkyX
         CheckTheSkyXCCD = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckTheSkyXCCD...", "", "CheckTheSkyXCCD", "TSX")
 
             If pTheSkyXTakingImage = True Then
                 Dim ExposureStatus As String
@@ -1644,6 +1674,8 @@ Module ModTheSkyX
         RunCalibrationFrames = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  RunCalibrationFrames...", "", "RunCalibrationFrames", "TSX")
+
             i = 0
 
             Do While i < vNumberofExposures And pContinueRunningCalibrationFrames = True
@@ -1651,7 +1683,7 @@ Module ModTheSkyX
                 If returnvalue <> "OK" And returnvalue <> "IMAGE_ABORTED" Then
                     pIsSequenceRunning = False
                     RunCalibrationFrames = returnvalue
-                    LogSessionEntry("ERROR", "Image failed!", "", "RunDeepsky", "SEQUENCE")
+                    LogSessionEntry("ERROR", "Image failed!", "", "RunDeepsky", "TSX")
                 End If
 
                 i += 1
@@ -1676,6 +1708,8 @@ Module ModTheSkyX
         CalculateAverageImage = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CalculateAverageImage...", "", "CalculateAverageImage", "TSX")
+
             i = 0
             TheSkyXImage.Path = vImagePath
             TheSkyXImage.Open()
@@ -1702,9 +1736,10 @@ Module ModTheSkyX
 
         TakeFlatTheSkyX = "OK"
         Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  TakeFlatTheSkyX...", "", "TakeFlatTheSkyX", "TSX")
 
             pIsActionRunning = True
-            startExecution = DateTime.UtcNow()
 
             ' if run is to abort: exit
             If pAbort = True Then
@@ -1823,6 +1858,7 @@ Module ModTheSkyX
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  TakeFlatTheSkyX: " + executionTime.ToString, "", "TakeFlatTheSkyX", "TSX")
+
         Catch ex As Exception
             Select Case ex.HResult
                 Case 1655

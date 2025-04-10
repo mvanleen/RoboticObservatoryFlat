@@ -13,6 +13,8 @@ Module ModUPS
         GetUPSData = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  GetUPSData...", "", "GetUPSData", "UPS")
+
 
             If My.Settings.sSimulatorMode = True Then
                 If My.Settings.sDebugKillUPS = False Then
@@ -93,6 +95,7 @@ Module ModUPS
         CheckTimeoutUPS = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  CheckTimeoutUPS...", "", "CheckTimeoutUPS", "UPS")
 
             If My.Settings.sUPSNotPresent = True Then
                 FrmMain.LblUPSCyberPower.BackColor = Color.Transparent

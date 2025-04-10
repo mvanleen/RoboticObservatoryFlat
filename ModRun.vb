@@ -2695,6 +2695,7 @@ Module ModRun
                 TargetDEC2000SS = Double.Parse(pDSLTarget.FocusStarDEC2000SS)
                 TargetName = pDSLTarget.FocusStarName
                 Focusstar = True
+                LogSessionEntry("BRIEF", "Slewing to focus star " + TargetName + " .", "", "FocusDeepsky", "SEQUENCE")
             Else
                 'use object
                 RA2000 = pAUtil.HMSToHours(Format(pDSLTarget.TargetRA2000HH) + " " + Format(pDSLTarget.TargetRA2000MM) + " " + Format(pDSLTarget.TargetRA2000SS))
@@ -2708,6 +2709,7 @@ Module ModRun
                 TargetDEC2000SS = Double.Parse(pDSLTarget.TargetDEC2000SS)
                 TargetName = pDSLTarget.TargetName
                 Focusstar = False
+                LogSessionEntry("BRIEF", "Slewing to target " + TargetName + " for focussing.", "", "FocusDeepsky", "SEQUENCE")
             End If
 
             'convert to topographic coordinates
@@ -2760,7 +2762,7 @@ Module ModRun
             End If
 
             If returnvalue <> "OK" And returnvalue <> "SLEW_ABORTED" Then
-                LogSessionEntry("ERROR", "Focus slew failed!", "", "RunDeepsky", "SEQUENCE")
+                LogSessionEntry("ERROR", "Focus slew failed!", "", "FocusDeepsky", "SEQUENCE")
                 FocusDeepsky = "Focus slew failed."
                 Exit Function
             End If
@@ -2786,10 +2788,10 @@ Module ModRun
             'focus
             returnvalue = TheSkyXAtFocus3("Manual", My.Settings.sCCDFocusSamples, pDSLTarget.FocusStarExposure, Binning, True, FilterNumber)
             If returnvalue <> "OK" And returnvalue <> "Error code = 5 (5). No additional information is available." Then
-                LogSessionEntry("ESSENTIAL", "Retrying focus...", "", "RunDeepsky", "SEQUENCE")
+                LogSessionEntry("ESSENTIAL", "Retrying focus...", "", "FocusDeepsky", "SEQUENCE")
                 returnvalue = TheSkyXAtFocus3("Manual", 1, pDSLTarget.FocusStarExposure, Binning, True, FilterNumber)
                 If returnvalue <> "OK" And returnvalue <> "Error code = 5 (5). No additional information is available." Then
-                    LogSessionEntry("ESSENTIAL", "Focus failed a second time, continuing with other target...", "", "RunDeepsky", "SEQUENCE")
+                    LogSessionEntry("ESSENTIAL", "Focus failed a second time, continuing with other target...", "", "FocusDeepsky", "SEQUENCE")
                     FocusDeepsky = "Focus failed a second time, continuing with other target..."
                     Exit Function
                 ElseIf returnvalue = "Error code = 5 (5). No additional information is available." Then
@@ -2841,6 +2843,7 @@ Module ModRun
                 TargetDEC2000SS = Double.Parse(pVSLTarget.FocusStarDEC2000SS)
                 TargetName = pVSLTarget.FocusStarName
                 Focusstar = True
+                LogSessionEntry("BRIEF", "Slewing to focus star " + TargetName + " .", "", "FocusHADS", "SEQUENCE")
             Else
                 'use object
                 RA2000 = pAUtil.HMSToHours(Format(pVSLTarget.HADSRA2000HH) + " " + Format(pVSLTarget.HADSRA2000MM) + " " + Format(pVSLTarget.HADSRA2000SS))
@@ -2854,6 +2857,7 @@ Module ModRun
                 TargetDEC2000SS = Double.Parse(pVSLTarget.HADSDEC2000SS)
                 TargetName = pVSLTarget.HADSName
                 Focusstar = False
+                LogSessionEntry("BRIEF", "Slewing to target " + TargetName + " for focussing.", "", "FocusHADS", "SEQUENCE")
             End If
 
             'convert to topographic coordinates
@@ -3323,7 +3327,6 @@ Module ModRun
                     End If
                 End While
 
-                LogSessionEntry("ESSENTIAL", "TESTING JUST BEFORE PROBABLE ERROR", "", "RunHADS", "SEQUENCE")
                 'set the last observed date
                 returnvalue = DatabaseSetLastObservedHADS(pVSLTarget.ID)
                 If returnvalue <> "OK" Then
@@ -3332,7 +3335,7 @@ Module ModRun
                     Exit Function
                 End If
 
-                LogSessionEntry("ESSENTIAL", pVSLTarget.HADSName + "too low... Selecting new target.", "", "RunHADS", "SEQUENCE")
+                LogSessionEntry("ESSENTIAL", pVSLTarget.HADSName + " too low... Selecting new target.", "", "RunHADS", "SEQUENCE")
             End If
 
             pIsSequenceRunning = False

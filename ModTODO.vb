@@ -201,13 +201,16 @@
     '3.07   bug: change cover color when no cover
     '       bug: RunHADS: Index was outside the bounds of the array. 
     '       change: added uniform debug reporting in modules
+    '       change: added message when slewing to focus star / object
 
 
 
 
-    ' && homing loopt fout
-
+    ' && homing voor unpark maar enkel indien nodig
+    '&& geeft geen alarm bij BEWOLKING EN GEEN DAK !!!
     '&& last observed hads is sorted as text and not as date
+
+
     '&& maan opsplitsen < 40% => vanaf 10° en anders 0° / < 10% gewoon altijd
 
 

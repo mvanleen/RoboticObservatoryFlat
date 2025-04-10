@@ -44,6 +44,7 @@
         ReportWeather = "OK"
         Try
             startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  ReportWeather...", "", "ReportWeather", "WEATHER_STATUS")
 
             If pStrucWeather.containsData = 1 Then
 
