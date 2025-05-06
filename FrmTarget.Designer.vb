@@ -54,7 +54,6 @@ Partial Class FrmTarget
         Me.TxtGuideStarExposure = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.ChkGuideAuto = New System.Windows.Forms.CheckBox()
-        Me.BrnDuplicate = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -511,21 +510,6 @@ Partial Class FrmTarget
         Me.ChkGuideAuto.TabIndex = 0
         Me.ChkGuideAuto.Text = "Autoguide ?"
         Me.ChkGuideAuto.UseVisualStyleBackColor = True
-        '
-        'BrnDuplicate
-        '
-        Me.BrnDuplicate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.BrnDuplicate.FlatAppearance.BorderSize = 0
-        Me.BrnDuplicate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.BrnDuplicate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BrnDuplicate.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BrnDuplicate.ForeColor = System.Drawing.Color.White
-        Me.BrnDuplicate.Location = New System.Drawing.Point(737, 533)
-        Me.BrnDuplicate.Name = "BrnDuplicate"
-        Me.BrnDuplicate.Size = New System.Drawing.Size(75, 23)
-        Me.BrnDuplicate.TabIndex = 16
-        Me.BrnDuplicate.Text = "Duplicate"
-        Me.BrnDuplicate.UseVisualStyleBackColor = False
         '
         'GroupBox3
         '
@@ -1727,7 +1711,6 @@ Partial Class FrmTarget
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.TxtTargetRemarks)
-        Me.Controls.Add(Me.BrnDuplicate)
         Me.Controls.Add(Me.ChkTargetIgnoreMoon)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.ChkTargetIsComet)
@@ -1818,7 +1801,6 @@ Partial Class FrmTarget
     Friend WithEvents TxtGuideStarExposure As TextBox
     Friend WithEvents Label29 As Label
     Friend WithEvents ChkGuideAuto As CheckBox
-    Friend WithEvents BrnDuplicate As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label25 As Label

@@ -215,7 +215,7 @@ Module ModDatabaseHADS
 
     Public Function ReadHADSFile() As String
         Dim currentRow As String()
-        Dim currentRecord(20) As String
+        Dim currentRecord(25) As String
         Dim returnvalue As String
         Dim i As Integer
         Dim HADSNbrOfInsertedRecords As Integer

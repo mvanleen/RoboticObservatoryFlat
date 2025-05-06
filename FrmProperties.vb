@@ -181,7 +181,7 @@ Public Class FrmProperties
             TxtMountTimeout.Text = My.Settings.sMountTimeout.ToString(ciClone)
             TxtCoverTimeout.Text = My.Settings.sCoverTimeout.ToString(ciClone)
             TxtCCDTimeout.Text = My.Settings.sCCDTimeout.ToString(ciClone)
-
+            ChkEnableDebugLogging.Checked = My.Settings.sEnableDebugLogging
 
             'add combobox options
             CmbsAutoFlatFilter.Items.Add(My.Settings.sCCDFilter1)
@@ -415,7 +415,9 @@ Public Class FrmProperties
                 TxtCCDTimeout.Text = My.Settings.sCCDTimeout.ToString(ciClone) And
                 TxtTelescopeName.Text = My.Settings.sTelescopeName And
                 TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString(ciClone) And
-                TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString(ciClone) Then
+                TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString(ciClone) And
+                ChkEnableDebugLogging.Checked = My.Settings.sEnableDebugLogging Then
+
                 'no changes
             Else
                 If ShowMessage("Do you want to save the changes ?", "OKCANCEL", "Save changes ?") = vbOK Then
@@ -590,6 +592,8 @@ Public Class FrmProperties
                     My.Settings.sMountTimeout = Double.Parse(TxtMountTimeout.Text, ciClone)
                     My.Settings.sCoverTimeout = Double.Parse(TxtCoverTimeout.Text, ciClone)
                     My.Settings.sCCDTimeout = Double.Parse(TxtCCDTimeout.Text, ciClone)
+                    My.Settings.sEnableDebugLogging = ChkEnableDebugLogging.Checked
+
                     My.Settings.Save()
 
                     If pTheSkyXEquipmentConnected = True Then
@@ -835,4 +839,7 @@ Public Class FrmProperties
         TxtWeatherSafeSwitchDelay.Enabled = True
     End Sub
 
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ChkEnableDebugLogging.CheckedChanged
+
+    End Sub
 End Class

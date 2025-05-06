@@ -148,7 +148,7 @@ Public Class FrmDebug
 
         LblMoonSafetyStatus.Text = "pMoonSafetyStatus: " + pStructEventTimes.MoonSafetyStatus
         LblpMoonCooldownStatus.Text = "pMoonCooldownStatus: " + pStructEventTimes.MoonCooldownStatus
-
+        LblMountAtHome.Text = "pMountAtHome: " + Format(pStructMount.AtHome)
 
     End Sub
 

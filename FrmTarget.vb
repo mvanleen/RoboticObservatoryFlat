@@ -2036,7 +2036,7 @@ Public Class FrmTarget
         End Try
     End Sub
 
-    Private Sub BrnDuplicate_Click(sender As Object, e As EventArgs) Handles BrnDuplicate.Click
+    Private Sub BrnDuplicate_Click(sender As Object, e As EventArgs)
         Try
             'add row to datagrid
             dtSL_master.Rows.Add()

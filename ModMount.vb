@@ -8,7 +8,7 @@ Module ModMount
         Dim Altitude As Double
         Dim Azimuth As Double
         Dim AtPark As Boolean
-        'Dim AtHome
+        Dim AtHome As Boolean
         'Dim EquatorialSystem
         Dim Declination As Double
         Dim RightAscension As Double
@@ -274,7 +274,10 @@ Module ModMount
             pStructMount.Altitude = pMount.Altitude
             pStructMount.Azimuth = pMount.Azimuth
             pStructMount.AtPark = pMount.AtPark
-            'pStructMount.AtHome = AMount.AtHome
+            If My.Settings.sMountDevice = "ASCOM.SoftwareBisque.Telescope" Then
+                pStructMount.AtHome = pMount.AtHome
+            End If
+
             'pStructMount.EquatorialSystem = AMount.EquatorialSystem
             pStructMount.Declination = pMount.Declination
             pStructMount.RightAscension = pMount.RightAscension
@@ -290,24 +293,22 @@ Module ModMount
             'pStructMount.DeclinationRate = AMount.DeclinationRate
             'pStructMount.RightAscensionRate = AMount.RightAscensionRate
             pStructMount.Tracking = pMount.Tracking
-                pStructMount.TrackingRate = pMount.TrackingRate
-                'pStructMount.Slewing = AMount.Slewing
-                'pStructMount.UTCDate = AMount.UTCDate
-                'pStructMount.CanMoveAxisRA = AMount.CanMoveAxis(0)
-                'pStructMount.CanMoveAxisDEC = AMount.CanMoveAxis(1)
+            pStructMount.TrackingRate = pMount.TrackingRate
+            'pStructMount.Slewing = AMount.Slewing
+            'pStructMount.UTCDate = AMount.UTCDate
+            'pStructMount.CanMoveAxisRA = AMount.CanMoveAxis(0)
+            'pStructMount.CanMoveAxisDEC = AMount.CanMoveAxis(1)
 
+            'handle visual aspect
+            FrmMain.lblMountAlt.Text = "Alt " + pAUtil.DegreesToDMS(pStructMount.Altitude)
+            FrmMain.lblMountAz.Text = "Az " + pAUtil.DegreesToDMS(pStructMount.Azimuth)
 
-                'handle visual aspect
-                FrmMain.lblMountAlt.Text = "Alt " + pAUtil.DegreesToDMS(pStructMount.Altitude)
-                FrmMain.lblMountAz.Text = "Az " + pAUtil.DegreesToDMS(pStructMount.Azimuth)
+            'driveSidereal	0	Sidereal tracking rate (15.041 arcseconds per second).
+            'driveLunar  1	Lunar tracking rate (14.685 arcseconds per second).
+            'driveSolar  2	Solar tracking rate (15.0 arcseconds per second).
+            'driveKing   3	King tracking rate (15.0369 arcseconds per second). 
 
-                'driveSidereal	0	Sidereal tracking rate (15.041 arcseconds per second).
-                'driveLunar  1	Lunar tracking rate (14.685 arcseconds per second).
-                'driveSolar  2	Solar tracking rate (15.0 arcseconds per second).
-                'driveKing   3	King tracking rate (15.0369 arcseconds per second). 
-
-
-                If pStructMount.AtPark = True Then
+            If pStructMount.AtPark = True Then
                     FrmMain.LblMountStatus.Text = "Parked"
                     FrmMain.LblMountStatus.BackColor = ColorTranslator.FromHtml("#d63031") 'red
                 Else
@@ -705,6 +706,8 @@ Module ModMount
                 LogSessionEntry("BRIEF", "Unparking mount...", "", "MountUnpark", "MOUNT")
                 pMount.Unpark()
                 LogSessionEntry("BRIEF", "Mount unparked.", "", "MountUnpark", "MOUNT")
+            Else
+                LogSessionEntry("ERROR", "MountUnpark: mount still slewing !", "", "MountUnpark", "MOUNT")
             End If
 
             'fill the fields on the main form

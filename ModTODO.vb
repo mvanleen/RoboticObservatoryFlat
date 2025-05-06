@@ -202,15 +202,18 @@
     '       bug: RunHADS: Index was outside the bounds of the array. 
     '       change: added uniform debug reporting in modules
     '       change: added message when slewing to focus star / object
+    '3.08   change: added switch sEnableDebugLogging: full debug text logging
+    '       bug: when CLOUDED NO ROOF no error message is played 
+    '3.09   bug: modified number of columns in HADS array due to error
+    '       bug: number format . , when estimating HADS magnitude
+    '3.10   change: removed duplicate button in target window
 
 
 
 
-    ' && homing voor unpark maar enkel indien nodig
+    '&& homing voor unpark maar enkel indien nodig
     '&& geeft geen alarm bij BEWOLKING EN GEEN DAK !!!
     '&& last observed hads is sorted as text and not as date
-
-
     '&& maan opsplitsen < 40% => vanaf 10° en anders 0° / < 10% gewoon altijd
 
 

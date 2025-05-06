@@ -1531,6 +1531,12 @@ Module ModRun
                             Exit Function
                         End If
 
+                        If My.Settings.sRoofDevice = "NONE" Then
+                            LogSessionEntry("ERROR", "CLOUDS UNSAFE ... CLOSE ROOF!", "", "CheckRun", "SEQUENCE")
+                        End If
+
+
+
                     End If
                 End If
             End If

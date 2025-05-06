@@ -1135,21 +1135,24 @@ Module ModHelper
                         WriteLine = True
                     End If
 
+
                     'write all lines in logfile                   
                     Dim Text As String
-                    Text = aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")"
-                    pLogFileFull.WriteLine(aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")")
-                    pLogFileFull.Flush()
+                        Text = aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")"
+                    If My.Settings.sEnableDebugLogging = True Then
+                        pLogFileFull.WriteLine(aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")")
+                        pLogFileFull.Flush()
+                    End If
 
                     'write normal line in logfile                   
                     If WriteLine = True Then
-                        Text = aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")"
-                        pLogFile.WriteLine(aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")")
-                        pLogFile.Flush()
-                        FrmMain.RTXLog.SaveFile(pLogFileNameRTF)
+                            Text = aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")"
+                            pLogFile.WriteLine(aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")")
+                            pLogFile.Flush()
+                            FrmMain.RTXLog.SaveFile(pLogFileNameRTF)
+                        End If
                     End If
                 End If
-            End If
 
             '--------------------------
             'SOUND

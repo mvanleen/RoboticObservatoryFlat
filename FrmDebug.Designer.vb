@@ -55,6 +55,7 @@ Partial Class FrmDebug
         Me.LblpManualAbort = New System.Windows.Forms.Label()
         Me.LblpAbort = New System.Windows.Forms.Label()
         Me.GrpStatus = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.LblpMoonCooldownStatus = New System.Windows.Forms.Label()
         Me.LblMoonSafetyStatus = New System.Windows.Forms.Label()
         Me.lblpOldSequenceTimeSMART = New System.Windows.Forms.Label()
@@ -75,7 +76,7 @@ Partial Class FrmDebug
         Me.TxtMosaicOverlap = New System.Windows.Forms.TextBox()
         Me.BtnError = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.LblMountAtHome = New System.Windows.Forms.Label()
         Me.GrpStatus.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -462,6 +463,7 @@ Partial Class FrmDebug
         '
         'GrpStatus
         '
+        Me.GrpStatus.Controls.Add(Me.LblMountAtHome)
         Me.GrpStatus.Controls.Add(Me.Button3)
         Me.GrpStatus.Controls.Add(Me.LblpMoonCooldownStatus)
         Me.GrpStatus.Controls.Add(Me.LblMoonSafetyStatus)
@@ -484,6 +486,21 @@ Partial Class FrmDebug
         Me.GrpStatus.TabIndex = 95
         Me.GrpStatus.TabStop = False
         Me.GrpStatus.Text = "Status"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(157, 128)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(91, 23)
+        Me.Button3.TabIndex = 101
+        Me.Button3.Text = "HADS"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'LblpMoonCooldownStatus
         '
@@ -713,20 +730,17 @@ Partial Class FrmDebug
         Me.Button1.Text = "Play Error"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Button3
+        'LblMountAtHome
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(157, 128)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(91, 23)
-        Me.Button3.TabIndex = 101
-        Me.Button3.Text = "HADS"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.LblMountAtHome.AutoSize = True
+        Me.LblMountAtHome.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblMountAtHome.ForeColor = System.Drawing.Color.White
+        Me.LblMountAtHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblMountAtHome.Location = New System.Drawing.Point(284, 252)
+        Me.LblMountAtHome.Name = "LblMountAtHome"
+        Me.LblMountAtHome.Size = New System.Drawing.Size(81, 13)
+        Me.LblMountAtHome.TabIndex = 102
+        Me.LblMountAtHome.Text = "pMountAtHome"
         '
         'FrmDebug
         '
@@ -837,4 +851,5 @@ Partial Class FrmDebug
     Friend WithEvents LblpMoonCooldownStatus As Label
     Friend WithEvents LblMoonSafetyStatus As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents LblMountAtHome As Label
 End Class

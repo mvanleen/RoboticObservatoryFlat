@@ -1088,7 +1088,7 @@ Public Class FrmHADS
     Private Sub BtnEstimate_Click(sender As Object, e As EventArgs) Handles BtnEstimate.Click
         'estimate the exposure of the variable
         Dim ciClone As CultureInfo = CType(CultureInfo.InvariantCulture.Clone(), CultureInfo)
-        ciClone.NumberFormat.NumberDecimalSeparator = "."
+        ciClone.NumberFormat.NumberDecimalSeparator = ","
 
         TxtHADSExposure.Text = EstimateExposureTime(Double.Parse(TxtHADSMax.Text, ciClone)).ToString
     End Sub

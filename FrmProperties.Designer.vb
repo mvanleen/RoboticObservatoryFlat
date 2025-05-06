@@ -88,6 +88,15 @@ Partial Class FrmProperties
         Me.TxtCCDFocusSubFrame = New System.Windows.Forms.TextBox()
         Me.ChkCCDFocusMeridianFlip = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TxtCCDTimeout = New System.Windows.Forms.TextBox()
+        Me.Label174 = New System.Windows.Forms.Label()
+        Me.TxtCoverTimeout = New System.Windows.Forms.TextBox()
+        Me.Label173 = New System.Windows.Forms.Label()
+        Me.TxtMountTimeout = New System.Windows.Forms.TextBox()
+        Me.Label172 = New System.Windows.Forms.Label()
+        Me.Label171 = New System.Windows.Forms.Label()
+        Me.Label170 = New System.Windows.Forms.Label()
+        Me.Label169 = New System.Windows.Forms.Label()
         Me.ChkSentinelAutostart = New System.Windows.Forms.CheckBox()
         Me.Label111 = New System.Windows.Forms.Label()
         Me.TxtSMARTCycle = New System.Windows.Forms.TextBox()
@@ -405,15 +414,7 @@ Partial Class FrmProperties
         Me.Label118 = New System.Windows.Forms.Label()
         Me.Label120 = New System.Windows.Forms.Label()
         Me.TabPageHADS = New System.Windows.Forms.TabPage()
-        Me.Label169 = New System.Windows.Forms.Label()
-        Me.Label170 = New System.Windows.Forms.Label()
-        Me.Label171 = New System.Windows.Forms.Label()
-        Me.TxtMountTimeout = New System.Windows.Forms.TextBox()
-        Me.Label172 = New System.Windows.Forms.Label()
-        Me.TxtCoverTimeout = New System.Windows.Forms.TextBox()
-        Me.Label173 = New System.Windows.Forms.Label()
-        Me.TxtCCDTimeout = New System.Windows.Forms.TextBox()
-        Me.Label174 = New System.Windows.Forms.Label()
+        Me.ChkEnableDebugLogging = New System.Windows.Forms.CheckBox()
         Me.GroupBoxCCD.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GrpFocus.SuspendLayout()
@@ -1207,6 +1208,7 @@ Partial Class FrmProperties
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ChkEnableDebugLogging)
         Me.GroupBox1.Controls.Add(Me.TxtCCDTimeout)
         Me.GroupBox1.Controls.Add(Me.Label174)
         Me.GroupBox1.Controls.Add(Me.TxtCoverTimeout)
@@ -1256,12 +1258,105 @@ Partial Class FrmProperties
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Alarm"
         '
+        'TxtCCDTimeout
+        '
+        Me.TxtCCDTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtCCDTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCCDTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCCDTimeout.Location = New System.Drawing.Point(95, 243)
+        Me.TxtCCDTimeout.Name = "TxtCCDTimeout"
+        Me.TxtCCDTimeout.Size = New System.Drawing.Size(69, 21)
+        Me.TxtCCDTimeout.TabIndex = 50
+        Me.ToolTip.SetToolTip(Me.TxtCCDTimeout, "When AAG is offline for x seconds, raise alarm.")
+        '
+        'Label174
+        '
+        Me.Label174.AutoSize = True
+        Me.Label174.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label174.Location = New System.Drawing.Point(170, 246)
+        Me.Label174.Name = "Label174"
+        Me.Label174.Size = New System.Drawing.Size(12, 13)
+        Me.Label174.TabIndex = 51
+        Me.Label174.Text = "s"
+        '
+        'TxtCoverTimeout
+        '
+        Me.TxtCoverTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtCoverTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtCoverTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCoverTimeout.Location = New System.Drawing.Point(95, 222)
+        Me.TxtCoverTimeout.Name = "TxtCoverTimeout"
+        Me.TxtCoverTimeout.Size = New System.Drawing.Size(69, 21)
+        Me.TxtCoverTimeout.TabIndex = 48
+        Me.ToolTip.SetToolTip(Me.TxtCoverTimeout, "When AAG is offline for x seconds, raise alarm.")
+        '
+        'Label173
+        '
+        Me.Label173.AutoSize = True
+        Me.Label173.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label173.Location = New System.Drawing.Point(170, 225)
+        Me.Label173.Name = "Label173"
+        Me.Label173.Size = New System.Drawing.Size(12, 13)
+        Me.Label173.TabIndex = 49
+        Me.Label173.Text = "s"
+        '
+        'TxtMountTimeout
+        '
+        Me.TxtMountTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtMountTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtMountTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtMountTimeout.Location = New System.Drawing.Point(95, 201)
+        Me.TxtMountTimeout.Name = "TxtMountTimeout"
+        Me.TxtMountTimeout.Size = New System.Drawing.Size(69, 21)
+        Me.TxtMountTimeout.TabIndex = 46
+        Me.ToolTip.SetToolTip(Me.TxtMountTimeout, "When AAG is offline for x seconds, raise alarm.")
+        '
+        'Label172
+        '
+        Me.Label172.AutoSize = True
+        Me.Label172.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label172.Location = New System.Drawing.Point(170, 204)
+        Me.Label172.Name = "Label172"
+        Me.Label172.Size = New System.Drawing.Size(12, 13)
+        Me.Label172.TabIndex = 47
+        Me.Label172.Text = "s"
+        '
+        'Label171
+        '
+        Me.Label171.AutoSize = True
+        Me.Label171.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label171.Location = New System.Drawing.Point(7, 246)
+        Me.Label171.Name = "Label171"
+        Me.Label171.Size = New System.Drawing.Size(71, 13)
+        Me.Label171.TabIndex = 45
+        Me.Label171.Text = "CCD timeout:"
+        '
+        'Label170
+        '
+        Me.Label170.AutoSize = True
+        Me.Label170.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label170.Location = New System.Drawing.Point(7, 224)
+        Me.Label170.Name = "Label170"
+        Me.Label170.Size = New System.Drawing.Size(79, 13)
+        Me.Label170.TabIndex = 44
+        Me.Label170.Text = "Cover timeout:"
+        '
+        'Label169
+        '
+        Me.Label169.AutoSize = True
+        Me.Label169.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label169.Location = New System.Drawing.Point(7, 204)
+        Me.Label169.Name = "Label169"
+        Me.Label169.Size = New System.Drawing.Size(80, 13)
+        Me.Label169.TabIndex = 43
+        Me.Label169.Text = "Mount timeout:"
+        '
         'ChkSentinelAutostart
         '
         Me.ChkSentinelAutostart.AutoSize = True
         Me.ChkSentinelAutostart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChkSentinelAutostart.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkSentinelAutostart.Location = New System.Drawing.Point(276, 138)
+        Me.ChkSentinelAutostart.Location = New System.Drawing.Point(276, 79)
         Me.ChkSentinelAutostart.Name = "ChkSentinelAutostart"
         Me.ChkSentinelAutostart.Size = New System.Drawing.Size(203, 17)
         Me.ChkSentinelAutostart.TabIndex = 42
@@ -1510,7 +1605,7 @@ Partial Class FrmProperties
         Me.CmbLogType.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbLogType.FormattingEnabled = True
         Me.CmbLogType.Items.AddRange(New Object() {"DEBUG", "FULL", "BRIEF"})
-        Me.CmbLogType.Location = New System.Drawing.Point(95, 32)
+        Me.CmbLogType.Location = New System.Drawing.Point(96, 32)
         Me.CmbLogType.Name = "CmbLogType"
         Me.CmbLogType.Size = New System.Drawing.Size(117, 21)
         Me.CmbLogType.TabIndex = 12
@@ -4902,98 +4997,18 @@ Partial Class FrmProperties
         Me.TabPageHADS.TabIndex = 1
         Me.TabPageHADS.Text = "HADS"
         '
-        'Label169
+        'ChkEnableDebugLogging
         '
-        Me.Label169.AutoSize = True
-        Me.Label169.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label169.Location = New System.Drawing.Point(7, 204)
-        Me.Label169.Name = "Label169"
-        Me.Label169.Size = New System.Drawing.Size(80, 13)
-        Me.Label169.TabIndex = 43
-        Me.Label169.Text = "Mount timeout:"
-        '
-        'Label170
-        '
-        Me.Label170.AutoSize = True
-        Me.Label170.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label170.Location = New System.Drawing.Point(7, 224)
-        Me.Label170.Name = "Label170"
-        Me.Label170.Size = New System.Drawing.Size(79, 13)
-        Me.Label170.TabIndex = 44
-        Me.Label170.Text = "Cover timeout:"
-        '
-        'Label171
-        '
-        Me.Label171.AutoSize = True
-        Me.Label171.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label171.Location = New System.Drawing.Point(7, 246)
-        Me.Label171.Name = "Label171"
-        Me.Label171.Size = New System.Drawing.Size(71, 13)
-        Me.Label171.TabIndex = 45
-        Me.Label171.Text = "CCD timeout:"
-        '
-        'TxtMountTimeout
-        '
-        Me.TxtMountTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.TxtMountTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtMountTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMountTimeout.Location = New System.Drawing.Point(95, 201)
-        Me.TxtMountTimeout.Name = "TxtMountTimeout"
-        Me.TxtMountTimeout.Size = New System.Drawing.Size(69, 21)
-        Me.TxtMountTimeout.TabIndex = 46
-        Me.ToolTip.SetToolTip(Me.TxtMountTimeout, "When AAG is offline for x seconds, raise alarm.")
-        '
-        'Label172
-        '
-        Me.Label172.AutoSize = True
-        Me.Label172.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label172.Location = New System.Drawing.Point(170, 204)
-        Me.Label172.Name = "Label172"
-        Me.Label172.Size = New System.Drawing.Size(12, 13)
-        Me.Label172.TabIndex = 47
-        Me.Label172.Text = "s"
-        '
-        'TxtCoverTimeout
-        '
-        Me.TxtCoverTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.TxtCoverTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtCoverTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCoverTimeout.Location = New System.Drawing.Point(95, 222)
-        Me.TxtCoverTimeout.Name = "TxtCoverTimeout"
-        Me.TxtCoverTimeout.Size = New System.Drawing.Size(69, 21)
-        Me.TxtCoverTimeout.TabIndex = 48
-        Me.ToolTip.SetToolTip(Me.TxtCoverTimeout, "When AAG is offline for x seconds, raise alarm.")
-        '
-        'Label173
-        '
-        Me.Label173.AutoSize = True
-        Me.Label173.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label173.Location = New System.Drawing.Point(170, 225)
-        Me.Label173.Name = "Label173"
-        Me.Label173.Size = New System.Drawing.Size(12, 13)
-        Me.Label173.TabIndex = 49
-        Me.Label173.Text = "s"
-        '
-        'TxtCCDTimeout
-        '
-        Me.TxtCCDTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.TxtCCDTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtCCDTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCCDTimeout.Location = New System.Drawing.Point(95, 243)
-        Me.TxtCCDTimeout.Name = "TxtCCDTimeout"
-        Me.TxtCCDTimeout.Size = New System.Drawing.Size(69, 21)
-        Me.TxtCCDTimeout.TabIndex = 50
-        Me.ToolTip.SetToolTip(Me.TxtCCDTimeout, "When AAG is offline for x seconds, raise alarm.")
-        '
-        'Label174
-        '
-        Me.Label174.AutoSize = True
-        Me.Label174.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label174.Location = New System.Drawing.Point(170, 246)
-        Me.Label174.Name = "Label174"
-        Me.Label174.Size = New System.Drawing.Size(12, 13)
-        Me.Label174.TabIndex = 51
-        Me.Label174.Text = "s"
+        Me.ChkEnableDebugLogging.AutoSize = True
+        Me.ChkEnableDebugLogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkEnableDebugLogging.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkEnableDebugLogging.Location = New System.Drawing.Point(276, 140)
+        Me.ChkEnableDebugLogging.Name = "ChkEnableDebugLogging"
+        Me.ChkEnableDebugLogging.Size = New System.Drawing.Size(125, 17)
+        Me.ChkEnableDebugLogging.TabIndex = 52
+        Me.ChkEnableDebugLogging.Text = "Enable debug logging"
+        Me.ToolTip.SetToolTip(Me.ChkEnableDebugLogging, "Play sound when alarm occurs !")
+        Me.ChkEnableDebugLogging.UseVisualStyleBackColor = True
         '
         'FrmProperties
         '
@@ -5462,4 +5477,5 @@ Partial Class FrmProperties
     Friend WithEvents Label174 As Label
     Friend WithEvents TxtCoverTimeout As TextBox
     Friend WithEvents Label173 As Label
+    Friend WithEvents ChkEnableDebugLogging As CheckBox
 End Class
