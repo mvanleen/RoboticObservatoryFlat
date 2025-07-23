@@ -208,6 +208,7 @@
     '       bug: number format . , when estimating HADS magnitude
     '3.10   change: removed duplicate button in target window
     '3.20   change: better explanations concerning debugging
+    '               added logging concerning cover
 
 
 

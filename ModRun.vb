@@ -514,13 +514,14 @@ Module ModRun
                 End If
 
                 'Cover
-                LogSessionEntry("FULL", "Checking if Cover is on...", "", "CheckEquipmentStatus", "PROGRAM")
+                LogSessionEntry("FULL", "Checking if cover is connected...", "", "CheckEquipmentStatus", "PROGRAM")
                 returnvalue = CoverGetStatus(False)
                 If pCoverStatus = 1 Or pCoverStatus = 2 Or pCoverStatus = 3 Then
                     pCoverConnected = True
                     LogSessionEntry("FULL", "Cover connected.", "", "CheckEquipmentStatus", "PROGRAM")
                 Else
                     pCoverConnected = False
+                    LogSessionEntry("FULL", "Cover not connected: " + pCoverStatus.ToString, "", "CheckEquipmentStatus", "PROGRAM")
                 End If
 
 

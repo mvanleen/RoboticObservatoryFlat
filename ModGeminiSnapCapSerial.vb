@@ -302,7 +302,8 @@ Module modGeminiSnapCapSerial
                 pSnapMotor = "STOPPED"
             Else
                 pSnapMotor = "ERROR Reading SnapCap"
-                pCoverConnected = False
+                'pCoverConnected = False
+                LogSessionEntry("FULL", "  ERROR Reading SnapCap: " + executionTime.ToString, "", "GetStatusSnapCap", "SNAPCAP")
             End If
 
             tmpSnapStatus = returnvalue.Substring(4, 1)
@@ -327,7 +328,8 @@ Module modGeminiSnapCapSerial
                 pCoverStatus = 4
             Else
                 pSnapStatus = "ERROR Reading SnapCap"
-                pCoverConnected = False
+                'pCoverConnected = False
+                LogSessionEntry("FULL", "  ERROR Reading SnapCap: " + executionTime.ToString, "", "GetStatusSnapCap", "SNAPCAP")
             End If
 
             'convert to ASCOM-values
