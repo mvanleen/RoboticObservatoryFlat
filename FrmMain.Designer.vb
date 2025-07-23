@@ -1346,7 +1346,7 @@ Partial Class FrmMain
         Me.LblVersion.Name = "LblVersion"
         Me.LblVersion.Size = New System.Drawing.Size(88, 16)
         Me.LblVersion.TabIndex = 105
-        Me.LblVersion.Text = "Version 3.10"
+        Me.LblVersion.Text = "Version 3.20"
         Me.LblVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'LblRoof

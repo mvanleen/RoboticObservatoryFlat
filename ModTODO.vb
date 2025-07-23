@@ -207,6 +207,8 @@
     '3.09   bug: modified number of columns in HADS array due to error
     '       bug: number format . , when estimating HADS magnitude
     '3.10   change: removed duplicate button in target window
+    '3.20   change: better explanations concerning debugging
+
 
 
 

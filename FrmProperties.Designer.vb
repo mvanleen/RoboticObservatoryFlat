@@ -88,6 +88,7 @@ Partial Class FrmProperties
         Me.TxtCCDFocusSubFrame = New System.Windows.Forms.TextBox()
         Me.ChkCCDFocusMeridianFlip = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ChkEnableDebugLogging = New System.Windows.Forms.CheckBox()
         Me.TxtCCDTimeout = New System.Windows.Forms.TextBox()
         Me.Label174 = New System.Windows.Forms.Label()
         Me.TxtCoverTimeout = New System.Windows.Forms.TextBox()
@@ -414,7 +415,6 @@ Partial Class FrmProperties
         Me.Label118 = New System.Windows.Forms.Label()
         Me.Label120 = New System.Windows.Forms.Label()
         Me.TabPageHADS = New System.Windows.Forms.TabPage()
-        Me.ChkEnableDebugLogging = New System.Windows.Forms.CheckBox()
         Me.GroupBoxCCD.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GrpFocus.SuspendLayout()
@@ -1258,12 +1258,25 @@ Partial Class FrmProperties
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Alarm"
         '
+        'ChkEnableDebugLogging
+        '
+        Me.ChkEnableDebugLogging.AutoSize = True
+        Me.ChkEnableDebugLogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChkEnableDebugLogging.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkEnableDebugLogging.Location = New System.Drawing.Point(276, 140)
+        Me.ChkEnableDebugLogging.Name = "ChkEnableDebugLogging"
+        Me.ChkEnableDebugLogging.Size = New System.Drawing.Size(156, 17)
+        Me.ChkEnableDebugLogging.TabIndex = 52
+        Me.ChkEnableDebugLogging.Text = "Enable full debugging logfile"
+        Me.ToolTip.SetToolTip(Me.ChkEnableDebugLogging, "Play sound when alarm occurs !")
+        Me.ChkEnableDebugLogging.UseVisualStyleBackColor = True
+        '
         'TxtCCDTimeout
         '
         Me.TxtCCDTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtCCDTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtCCDTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCCDTimeout.Location = New System.Drawing.Point(95, 243)
+        Me.TxtCCDTimeout.Location = New System.Drawing.Point(107, 243)
         Me.TxtCCDTimeout.Name = "TxtCCDTimeout"
         Me.TxtCCDTimeout.Size = New System.Drawing.Size(69, 21)
         Me.TxtCCDTimeout.TabIndex = 50
@@ -1273,7 +1286,7 @@ Partial Class FrmProperties
         '
         Me.Label174.AutoSize = True
         Me.Label174.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label174.Location = New System.Drawing.Point(170, 246)
+        Me.Label174.Location = New System.Drawing.Point(182, 246)
         Me.Label174.Name = "Label174"
         Me.Label174.Size = New System.Drawing.Size(12, 13)
         Me.Label174.TabIndex = 51
@@ -1284,7 +1297,7 @@ Partial Class FrmProperties
         Me.TxtCoverTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtCoverTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtCoverTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCoverTimeout.Location = New System.Drawing.Point(95, 222)
+        Me.TxtCoverTimeout.Location = New System.Drawing.Point(107, 222)
         Me.TxtCoverTimeout.Name = "TxtCoverTimeout"
         Me.TxtCoverTimeout.Size = New System.Drawing.Size(69, 21)
         Me.TxtCoverTimeout.TabIndex = 48
@@ -1294,7 +1307,7 @@ Partial Class FrmProperties
         '
         Me.Label173.AutoSize = True
         Me.Label173.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label173.Location = New System.Drawing.Point(170, 225)
+        Me.Label173.Location = New System.Drawing.Point(182, 225)
         Me.Label173.Name = "Label173"
         Me.Label173.Size = New System.Drawing.Size(12, 13)
         Me.Label173.TabIndex = 49
@@ -1305,7 +1318,7 @@ Partial Class FrmProperties
         Me.TxtMountTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtMountTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtMountTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMountTimeout.Location = New System.Drawing.Point(95, 201)
+        Me.TxtMountTimeout.Location = New System.Drawing.Point(107, 201)
         Me.TxtMountTimeout.Name = "TxtMountTimeout"
         Me.TxtMountTimeout.Size = New System.Drawing.Size(69, 21)
         Me.TxtMountTimeout.TabIndex = 46
@@ -1315,7 +1328,7 @@ Partial Class FrmProperties
         '
         Me.Label172.AutoSize = True
         Me.Label172.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label172.Location = New System.Drawing.Point(170, 204)
+        Me.Label172.Location = New System.Drawing.Point(182, 204)
         Me.Label172.Name = "Label172"
         Me.Label172.Size = New System.Drawing.Size(12, 13)
         Me.Label172.TabIndex = 47
@@ -1368,7 +1381,7 @@ Partial Class FrmProperties
         '
         Me.Label111.AutoSize = True
         Me.Label111.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label111.Location = New System.Drawing.Point(170, 161)
+        Me.Label111.Location = New System.Drawing.Point(182, 161)
         Me.Label111.Name = "Label111"
         Me.Label111.Size = New System.Drawing.Size(12, 13)
         Me.Label111.TabIndex = 41
@@ -1379,7 +1392,7 @@ Partial Class FrmProperties
         Me.TxtSMARTCycle.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtSMARTCycle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSMARTCycle.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSMARTCycle.Location = New System.Drawing.Point(95, 159)
+        Me.TxtSMARTCycle.Location = New System.Drawing.Point(107, 159)
         Me.TxtSMARTCycle.Name = "TxtSMARTCycle"
         Me.TxtSMARTCycle.Size = New System.Drawing.Size(69, 21)
         Me.TxtSMARTCycle.TabIndex = 40
@@ -1399,7 +1412,7 @@ Partial Class FrmProperties
         '
         Me.Label108.AutoSize = True
         Me.Label108.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label108.Location = New System.Drawing.Point(170, 140)
+        Me.Label108.Location = New System.Drawing.Point(182, 140)
         Me.Label108.Name = "Label108"
         Me.Label108.Size = New System.Drawing.Size(12, 13)
         Me.Label108.TabIndex = 38
@@ -1411,7 +1424,7 @@ Partial Class FrmProperties
         Me.BtnSentinel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.BtnSentinel.FlatAppearance.BorderSize = 0
         Me.BtnSentinel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSentinel.Location = New System.Drawing.Point(395, 178)
+        Me.BtnSentinel.Location = New System.Drawing.Point(405, 178)
         Me.BtnSentinel.Name = "BtnSentinel"
         Me.BtnSentinel.Size = New System.Drawing.Size(68, 23)
         Me.BtnSentinel.TabIndex = 37
@@ -1423,7 +1436,7 @@ Partial Class FrmProperties
         Me.TxtSentinelEXE.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtSentinelEXE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSentinelEXE.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSentinelEXE.Location = New System.Drawing.Point(95, 180)
+        Me.TxtSentinelEXE.Location = New System.Drawing.Point(107, 180)
         Me.TxtSentinelEXE.Name = "TxtSentinelEXE"
         Me.TxtSentinelEXE.Size = New System.Drawing.Size(294, 21)
         Me.TxtSentinelEXE.TabIndex = 36
@@ -1444,7 +1457,7 @@ Partial Class FrmProperties
         '
         Me.Label104.AutoSize = True
         Me.Label104.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label104.Location = New System.Drawing.Point(170, 77)
+        Me.Label104.Location = New System.Drawing.Point(182, 77)
         Me.Label104.Name = "Label104"
         Me.Label104.Size = New System.Drawing.Size(12, 13)
         Me.Label104.TabIndex = 34
@@ -1455,7 +1468,7 @@ Partial Class FrmProperties
         Me.TxtSMARTTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtSMARTTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtSMARTTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSMARTTimeout.Location = New System.Drawing.Point(95, 138)
+        Me.TxtSMARTTimeout.Location = New System.Drawing.Point(107, 138)
         Me.TxtSMARTTimeout.Name = "TxtSMARTTimeout"
         Me.TxtSMARTTimeout.Size = New System.Drawing.Size(69, 21)
         Me.TxtSMARTTimeout.TabIndex = 33
@@ -1506,7 +1519,7 @@ Partial Class FrmProperties
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(182, 181)
+        Me.Label46.Location = New System.Drawing.Point(194, 181)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(13, 13)
         Me.Label46.TabIndex = 29
@@ -1517,7 +1530,7 @@ Partial Class FrmProperties
         Me.TxtWeatherTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtWeatherTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtWeatherTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtWeatherTimeout.Location = New System.Drawing.Point(95, 117)
+        Me.TxtWeatherTimeout.Location = New System.Drawing.Point(107, 117)
         Me.TxtWeatherTimeout.Name = "TxtWeatherTimeout"
         Me.TxtWeatherTimeout.Size = New System.Drawing.Size(69, 21)
         Me.TxtWeatherTimeout.TabIndex = 19
@@ -1537,7 +1550,7 @@ Partial Class FrmProperties
         '
         Me.Label45.AutoSize = True
         Me.Label45.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.Location = New System.Drawing.Point(170, 120)
+        Me.Label45.Location = New System.Drawing.Point(182, 120)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(12, 13)
         Me.Label45.TabIndex = 26
@@ -1548,7 +1561,7 @@ Partial Class FrmProperties
         Me.TxtUPSTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtUPSTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtUPSTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUPSTimeout.Location = New System.Drawing.Point(95, 96)
+        Me.TxtUPSTimeout.Location = New System.Drawing.Point(107, 96)
         Me.TxtUPSTimeout.Name = "TxtUPSTimeout"
         Me.TxtUPSTimeout.Size = New System.Drawing.Size(69, 21)
         Me.TxtUPSTimeout.TabIndex = 18
@@ -1560,7 +1573,7 @@ Partial Class FrmProperties
         Me.BtnBrowseLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.BtnBrowseLog.FlatAppearance.BorderSize = 0
         Me.BtnBrowseLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBrowseLog.Location = New System.Drawing.Point(395, 8)
+        Me.BtnBrowseLog.Location = New System.Drawing.Point(407, 8)
         Me.BtnBrowseLog.Name = "BtnBrowseLog"
         Me.BtnBrowseLog.Size = New System.Drawing.Size(68, 23)
         Me.BtnBrowseLog.TabIndex = 11
@@ -1572,7 +1585,7 @@ Partial Class FrmProperties
         Me.TxtLogLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtLogLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtLogLocation.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtLogLocation.Location = New System.Drawing.Point(95, 10)
+        Me.TxtLogLocation.Location = New System.Drawing.Point(107, 10)
         Me.TxtLogLocation.Name = "TxtLogLocation"
         Me.TxtLogLocation.Size = New System.Drawing.Size(294, 21)
         Me.TxtLogLocation.TabIndex = 10
@@ -1584,9 +1597,9 @@ Partial Class FrmProperties
         Me.Label17.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Location = New System.Drawing.Point(6, 35)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(50, 13)
+        Me.Label17.Size = New System.Drawing.Size(99, 13)
         Me.Label17.TabIndex = 19
-        Me.Label17.Text = "Logtype:"
+        Me.Label17.Text = "Log detail in logfile:"
         '
         'Label38
         '
@@ -1605,7 +1618,7 @@ Partial Class FrmProperties
         Me.CmbLogType.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbLogType.FormattingEnabled = True
         Me.CmbLogType.Items.AddRange(New Object() {"DEBUG", "FULL", "BRIEF"})
-        Me.CmbLogType.Location = New System.Drawing.Point(96, 32)
+        Me.CmbLogType.Location = New System.Drawing.Point(108, 32)
         Me.CmbLogType.Name = "CmbLogType"
         Me.CmbLogType.Size = New System.Drawing.Size(117, 21)
         Me.CmbLogType.TabIndex = 12
@@ -1615,7 +1628,7 @@ Partial Class FrmProperties
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(170, 100)
+        Me.Label4.Location = New System.Drawing.Point(182, 100)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(12, 13)
         Me.Label4.TabIndex = 11
@@ -1626,7 +1639,7 @@ Partial Class FrmProperties
         Me.TxtInternetTimeout.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtInternetTimeout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtInternetTimeout.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtInternetTimeout.Location = New System.Drawing.Point(95, 75)
+        Me.TxtInternetTimeout.Location = New System.Drawing.Point(107, 75)
         Me.TxtInternetTimeout.Name = "TxtInternetTimeout"
         Me.TxtInternetTimeout.Size = New System.Drawing.Size(69, 21)
         Me.TxtInternetTimeout.TabIndex = 17
@@ -1683,7 +1696,7 @@ Partial Class FrmProperties
         Me.TxtAlarmSound.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.TxtAlarmSound.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtAlarmSound.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtAlarmSound.Location = New System.Drawing.Point(95, 54)
+        Me.TxtAlarmSound.Location = New System.Drawing.Point(107, 54)
         Me.TxtAlarmSound.Name = "TxtAlarmSound"
         Me.TxtAlarmSound.Size = New System.Drawing.Size(294, 21)
         Me.TxtAlarmSound.TabIndex = 13
@@ -4996,19 +5009,6 @@ Partial Class FrmProperties
         Me.TabPageHADS.Size = New System.Drawing.Size(651, 494)
         Me.TabPageHADS.TabIndex = 1
         Me.TabPageHADS.Text = "HADS"
-        '
-        'ChkEnableDebugLogging
-        '
-        Me.ChkEnableDebugLogging.AutoSize = True
-        Me.ChkEnableDebugLogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ChkEnableDebugLogging.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkEnableDebugLogging.Location = New System.Drawing.Point(276, 140)
-        Me.ChkEnableDebugLogging.Name = "ChkEnableDebugLogging"
-        Me.ChkEnableDebugLogging.Size = New System.Drawing.Size(125, 17)
-        Me.ChkEnableDebugLogging.TabIndex = 52
-        Me.ChkEnableDebugLogging.Text = "Enable debug logging"
-        Me.ToolTip.SetToolTip(Me.ChkEnableDebugLogging, "Play sound when alarm occurs !")
-        Me.ChkEnableDebugLogging.UseVisualStyleBackColor = True
         '
         'FrmProperties
         '

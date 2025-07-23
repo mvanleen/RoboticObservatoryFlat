@@ -1099,12 +1099,13 @@ Module ModHelper
                         FrmMain.RTXLog.ScrollToCaret()
                         FrmMain.RTXLog.Refresh()
                         pLastLogLineTimeStamp = DateTime.UtcNow()
-                    ElseIf vLogType = "DEBUG" And My.Settings.sLogType = "DEBUG" Then
-                        FrmMain.RTXLog.SelectionColor = Color.LightGray
-                        FrmMain.RTXLog.AppendText(Format(DateTime.UtcNow(), "HH:mm:ss") + ": " + vLogText + vLogTextVar + vbCrLf)
-                        FrmMain.RTXLog.SelectionColor = Color.Black
-                        FrmMain.RTXLog.ScrollToCaret()
-                        FrmMain.RTXLog.Refresh()
+                        'never show debugging on form, messages fill too fast
+                        'ElseIf vLogType = "DEBUG" And My.Settings.sLogType = "DEBUG" Then
+                        'FrmMain.RTXLog.SelectionColor = Color.LightGray
+                        'FrmMain.RTXLog.AppendText(Format(DateTime.UtcNow(), "HH:mm:ss") + ": " + vLogText + vLogTextVar + vbCrLf)
+                        'FrmMain.RTXLog.SelectionColor = Color.Black
+                        'FrmMain.RTXLog.ScrollToCaret()
+                        'FrmMain.RTXLog.Refresh()
                     End If
 
                     'when ERROR, add a line to the textbox
@@ -1139,6 +1140,7 @@ Module ModHelper
                     'write all lines in logfile                   
                     Dim Text As String
                         Text = aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")"
+                    'only fill the full logfile when debugging is enabled
                     If My.Settings.sEnableDebugLogging = True Then
                         pLogFileFull.WriteLine(aTime.ToString(aFormat) + ": " + vLogText + vLogTextVar + " (" + vLogType + ": " + vLogProcedure + ")")
                         pLogFileFull.Flush()
