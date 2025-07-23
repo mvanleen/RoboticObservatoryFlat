@@ -1199,7 +1199,6 @@ Partial Class FrmHADS
         Me.Name = "FrmHADS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HADS targets"
-        Me.TopMost = True
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridViewHADS, System.ComponentModel.ISupportInitialize).EndInit()

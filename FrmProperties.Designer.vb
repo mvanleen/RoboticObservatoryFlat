@@ -5025,7 +5025,6 @@ Partial Class FrmProperties
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Properties"
-        Me.TopMost = True
         Me.GroupBoxCCD.ResumeLayout(False)
         Me.GroupBoxCCD.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)

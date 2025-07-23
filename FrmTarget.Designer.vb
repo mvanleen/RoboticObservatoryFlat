@@ -1757,7 +1757,6 @@ Partial Class FrmTarget
         Me.Name = "FrmTarget"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Deepsky targets"
-        Me.TopMost = True
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

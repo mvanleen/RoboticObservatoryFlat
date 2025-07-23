@@ -1257,7 +1257,6 @@ Partial Class FrmTools
         Me.Name = "FrmTools"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tools"
-        Me.TopMost = True
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
