@@ -22,6 +22,7 @@ Module ModHelper
     Public pOldInternetMessage(4) As String 'Old internet message, prevents double lines in log
     Public pOldRoofMessage(4) As String     'Old roof message, prevents double lines in log
     Public pOldCoverMessage(4) As String  'Old cover message, prevents double lines in log
+    Public pOldSnapcapMessage(4) As String  'Old snapcap message, prevents double lines in log
     Public pOldSwitchMessage(4) As String   'Old switch message, prevents double lines in log
     Public pOldMountMessage(4) As String    'Old mount message, prevents double lines in log
     Public pOldUPSMessage(4) As String      'Old UPS message, prevents double lines in log
@@ -35,6 +36,7 @@ Module ModHelper
     Public pOldInternetTime(4) As Date  'Contains last date a message was processed
     Public pOldRoofTime(4) As Date      'Contains last date a message was processed
     Public pOldCoverTime(4) As Date   'Contains last date a message was processed
+    Public pOldSnapcapTime(4) As Date   'Contains last date a message was processed
     Public pOldSwitchTime(4) As Date    'Contains last date a message was processed
     Public pOldMountTime(4) As Date     'Contains last date a message was processed
     Public pOldUPSTime(4) As Date       'Contains last date a message was processed
@@ -234,6 +236,13 @@ Module ModHelper
             pOldCoverTime(3) = CDate("01/01/1977")
             pOldCoverTime(4) = CDate("01/01/1977")
 
+
+            pOldSnapcapTime(0) = CDate("01/01/1977")
+            pOldSnapcapTime(1) = CDate("01/01/1977")
+            pOldSnapcapTime(2) = CDate("01/01/1977")
+            pOldSnapcapTime(3) = CDate("01/01/1977")
+            pOldSnapcapTime(4) = CDate("01/01/1977")
+
             pOldSwitchTime(0) = CDate("01/01/1977")
             pOldSwitchTime(1) = CDate("01/01/1977")
             pOldSwitchTime(2) = CDate("01/01/1977")
@@ -305,6 +314,12 @@ Module ModHelper
             pOldCoverMessage(2) = ""
             pOldCoverMessage(3) = ""
             pOldCoverMessage(4) = ""
+
+            pOldSnapcapMessage(0) = ""
+            pOldSnapcapMessage(1) = ""
+            pOldSnapcapMessage(2) = ""
+            pOldSnapcapMessage(3) = ""
+            pOldSnapcapMessage(4) = ""
 
             pOldSwitchMessage(0) = ""
             pOldSwitchMessage(1) = ""
@@ -593,6 +608,68 @@ Module ModHelper
                                 If DateDiff(DateInterval.Second, pOldCoverTime(4), DateTime.UtcNow) > My.Settings.sAlarmRepeat Then
                                     LogMessage = 1
                                     pOldCoverTime(4) = DateTime.UtcNow
+                                End If
+                            End If
+                    End Select
+                ElseIf vLogArea = "SNAPCAP" Then
+                    Select Case vLogType
+                        Case "ERROR"
+                            If pOldSnapcapMessage(0) <> vLogText Then
+                                LogMessage = 1
+                                pOldSnapcapMessage(0) = vLogText
+                                pOldSnapcapTime(0) = DateTime.UtcNow
+                            ElseIf pOldsnapcapMessage(0) = vLogText Then
+                                If DateDiff(DateInterval.Second, pOldSnapcapTime(0), DateTime.UtcNow) > My.Settings.sAlarmRepeat Then
+                                    LogMessage = 1
+                                    pOldSnapcapTime(0) = DateTime.UtcNow
+                                End If
+                            End If
+                            pOldProgramTimeSMART = DateTime.UtcNow
+                        Case "ESSENTIAL"
+                            If pOldSnapcapMessage(1) <> vLogText Then
+                                LogMessage = 1
+                                pOldSnapcapMessage(1) = vLogText
+                                pOldSnapcapTime(1) = DateTime.UtcNow
+                            ElseIf pOldsnapcapMessage(1) = vLogText Then
+                                If DateDiff(DateInterval.Second, pOldSnapcapTime(1), DateTime.UtcNow) > My.Settings.sAlarmRepeat Then
+                                    LogMessage = 1
+                                    pOldSnapcapTime(1) = DateTime.UtcNow
+                                End If
+                            End If
+                            pOldProgramTimeSMART = DateTime.UtcNow
+                        Case "BRIEF"
+                            If pOldSnapcapMessage(2) <> vLogText Then
+                                LogMessage = 1
+                                pOldSnapcapMessage(2) = vLogText
+                                pOldSnapcapTime(2) = DateTime.UtcNow
+                            ElseIf pOldSnapcapMessage(2) = vLogText Then
+                                If DateDiff(DateInterval.Second, pOldSnapcapTime(2), DateTime.UtcNow) > My.Settings.sAlarmRepeat Then
+                                    LogMessage = 1
+                                    pOldSnapcapTime(2) = DateTime.UtcNow
+                                End If
+                            End If
+                            pOldProgramTimeSMART = DateTime.UtcNow
+                        Case "FULL"
+                            If pOldSnapcapMessage(3) <> vLogText Then
+                                LogMessage = 1
+                                pOldSnapcapMessage(3) = vLogText
+                                pOldSnapcapTime(3) = DateTime.UtcNow
+                            ElseIf pOldSnapcapMessage(3) = vLogText Then
+                                If DateDiff(DateInterval.Second, pOldSnapcapTime(3), DateTime.UtcNow) > My.Settings.sAlarmRepeat Then
+                                    LogMessage = 1
+                                    pOldSnapcapTime(3) = DateTime.UtcNow
+                                End If
+                            End If
+                            pOldProgramTimeSMART = DateTime.UtcNow
+                        Case "DEBUG"
+                            If pOldSnapcapMessage(4) <> vLogText Then
+                                LogMessage = 1
+                                pOldSnapcapMessage(4) = vLogText
+                                pOldSnapcapTime(4) = DateTime.UtcNow
+                            ElseIf pOldSnapcapMessage(4) = vLogText Then
+                                If DateDiff(DateInterval.Second, pOldSnapcapTime(4), DateTime.UtcNow) > My.Settings.sAlarmRepeat Then
+                                    LogMessage = 1
+                                    pOldSnapcapTime(4) = DateTime.UtcNow
                                 End If
                             End If
                     End Select

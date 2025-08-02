@@ -170,7 +170,6 @@ Module ModCover
             'do not close cover is scope is not parked
             If pCoverConnected = True Then
                 If pStructMount.AtPark = True Then
-
                     If My.Settings.sCoverMethod = "ASCOM" Then
                         pCover.CloseCover()
                         While pCover.CoverState <> 1 And pCover.CoverState <> 4
@@ -186,7 +185,6 @@ Module ModCover
                                 CoverClose = "TIMEOUT"
                                 Exit Function
                             End If
-
                         End While
                     Else
                         returnvalue = CloseSnapCap(My.Settings.sSnapCapSerialPort)

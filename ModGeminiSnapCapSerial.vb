@@ -68,7 +68,7 @@ Module modGeminiSnapCapSerial
         Catch ex As Exception
             OpenSerialPort = "OpenSerialPort: " + ex.ToString
             If vShowMessages = True Then
-                LogSessionEntry("ERROR", "OpenSerialPort: " + ex.ToString, "", "OpenSerialPort", "SNAPCAP")
+                LogSessionEntry("ERROR", "OpenSerialPort trying again: " + ex.ToString, "", "OpenSerialPort", "SNAPCAP")
             End If
         End Try
     End Function
@@ -108,23 +108,38 @@ Module modGeminiSnapCapSerial
 
             ' Open the port
             If pSerialPortStatus <> "OPEN" Then
+                LogSessionEntry("FULL", "  Serial port not open: opening port..." + startExecution.ToString, "", "WriteSerialPort", "SNAPCAP")
                 returnvalue = OpenSerialPort(vPort, vShowMessages)
+                'If returnvalue <> "OK" Then
+                ' WriteSerialPort = returnvalue
+                ' Exit Function
+                'End If
+
                 If returnvalue <> "OK" Then
-                    WriteSerialPort = returnvalue
-                    Exit Function
+                    LogSessionEntry("FULL", "  Serial port did not open: retrying..." + startExecution.ToString, "", "WriteSerialPort", "SNAPCAP")
+                    'retry
+                    Thread.Sleep(50)
+                    returnvalue = OpenSerialPort(vPort, vShowMessages)
+                    If returnvalue <> "OK" Then
+                        WriteSerialPort = returnvalue
+                        Exit Function
+                    End If
                 End If
+
             End If
 
             pSerialPort.Write(vbCrLf + vCommand + vbCrLf)
+            LogSessionEntry("DEBUG", "  writing..." + startExecution.ToString, "", "WriteSerialPort", "SNAPCAP")
             Thread.Sleep(100)
             Dim n As Integer = pSerialPort.BytesToRead 'find number of bytes in buf
             WriteSerialPort = pSerialPort.ReadExisting()
 
-            returnvalue = CloseSerialPort()
-            If returnvalue <> "OK" Then
-                WriteSerialPort = returnvalue
-                Exit Function
-            End If
+            '&&
+            'returnvalue = CloseSerialPort()
+            'If returnvalue <> "OK" Then
+            'WriteSerialPort = returnvalue
+            'Exit Function
+            'End If
 
             executionTime = DateTime.UtcNow() - startExecution
             LogSessionEntry("DEBUG", "  WriteSerialPort: " + executionTime.ToString, "", "WriteSerialPort", "SNAPCAP")
@@ -303,7 +318,8 @@ Module modGeminiSnapCapSerial
             Else
                 pSnapMotor = "ERROR Reading SnapCap"
                 'pCoverConnected = False
-                LogSessionEntry("FULL", "  ERROR Reading SnapCap: " + executionTime.ToString, "", "GetStatusSnapCap", "SNAPCAP")
+                '&& 
+                LogSessionEntry("BRIEF", "  ERROR Reading SnapCap: " + executionTime.ToString, "", "GetStatusSnapCap", "SNAPCAP")
             End If
 
             tmpSnapStatus = returnvalue.Substring(4, 1)
@@ -328,6 +344,7 @@ Module modGeminiSnapCapSerial
                 pCoverStatus = 4
             Else
                 pSnapStatus = "ERROR Reading SnapCap"
+                pCoverStatus = 5
                 'pCoverConnected = False
                 LogSessionEntry("FULL", "  ERROR Reading SnapCap: " + executionTime.ToString, "", "GetStatusSnapCap", "SNAPCAP")
             End If

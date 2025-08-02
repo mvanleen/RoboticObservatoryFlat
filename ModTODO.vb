@@ -210,6 +210,8 @@
     '3.20   change: better explanations concerning debugging
     '               added logging concerning cover
     '               removed topmost windows: annoying
+    '       bug: snapcap messages are not logged
+    '       bug: snapcap hardware refuses to connect by times: no longer close serial port after each write and reopen twice if needed
 
 
 
