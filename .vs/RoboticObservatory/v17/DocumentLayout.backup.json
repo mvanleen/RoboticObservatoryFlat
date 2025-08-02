@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\eyemaobs\\source\\repos\\mvanleen\\roboticobservatoryflat\\modgeminisnapcapserial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modgeminisnapcapserial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modcover.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modcover.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|c:\\users\\eyemaobs\\source\\repos\\mvanleen\\roboticobservatoryflat\\modgeminisnapcapserial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modgeminisnapcapserial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modhelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modhelper.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modcover.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modcover.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|solutionrelative:modtodo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{965078DF-D290-4B08-B0D5-838708762713}|RoboticObs.vbproj|C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\frmtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -57,24 +57,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ModGeminiSnapCapSerial.vb",
               "DocumentMoniker": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModGeminiSnapCapSerial.vb",
               "RelativeDocumentMoniker": "ModGeminiSnapCapSerial.vb",
               "ToolTip": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModGeminiSnapCapSerial.vb",
               "RelativeToolTip": "ModGeminiSnapCapSerial.vb",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAwG8AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAALMBAAAAAAAAAAAAAHoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-07-23T11:07:26.91Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -89,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ModTODO.vb",
               "DocumentMoniker": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModTODO.vb",
               "RelativeDocumentMoniker": "ModTODO.vb",
@@ -134,15 +134,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ModCover.vb",
               "DocumentMoniker": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModCover.vb",
               "RelativeDocumentMoniker": "ModCover.vb",
-              "ToolTip": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModCover.vb",
-              "RelativeToolTip": "ModCover.vb",
-              "ViewState": "AgIAANUAAAAAAAAAAAAgwOsAAAAlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModCover.vb*",
+              "RelativeToolTip": "ModCover.vb*",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwCYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-23T10:01:20.195Z"
+              "WhenOpened": "2025-07-23T10:01:20.195Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -152,9 +153,10 @@
               "RelativeDocumentMoniker": "ModHelper.vb",
               "ToolTip": "C:\\Users\\EYEMAOBS\\source\\repos\\mvanleen\\RoboticObservatoryFlat\\ModHelper.vb",
               "RelativeToolTip": "ModHelper.vb",
-              "ViewState": "AgIAAKwDAAAAAAAAAAAAAKICAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAOMFAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-23T10:40:27.653Z"
+              "WhenOpened": "2025-07-23T10:40:27.653Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

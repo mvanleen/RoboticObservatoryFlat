@@ -29,13 +29,13 @@ Module ModCover
                 If My.Settings.sCoverMethod = "ASCOM" Then
                     pCover = New ASCOM.DriverAccess.CoverCalibrator("ASCOM.Simulator.CoverCalibrator") With {
                 .Connected = True
-            }
+                    }
                 End If
 
             ElseIf My.Settings.sCoverMethod = "ASCOM" Then
                 pCover = New ASCOM.DriverAccess.CoverCalibrator(My.Settings.sCoverDevice) With {
                 .Connected = True
-            }
+                 }
             ElseIf My.Settings.sCoverMethod = "SERIAL" Then
                 If pSerialPortStatus <> "OPEN" Then
                     returnvalue = OpenSerialPort(My.Settings.sSnapCapSerialPort, False)
