@@ -210,6 +210,7 @@
     '3.20   change: better explanations concerning debugging
     '               added logging concerning cover
     '               removed topmost windows: annoying
+    '3.21   change: cover serial protocol keeps port open now
 
 
 

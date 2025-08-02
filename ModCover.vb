@@ -32,13 +32,18 @@ Module ModCover
             }
                 End If
 
-            Else
-                If My.Settings.sCoverMethod = "ASCOM" Then
-                    pCover = New ASCOM.DriverAccess.CoverCalibrator(My.Settings.sCoverDevice) With {
+            ElseIf My.Settings.sCoverMethod = "ASCOM" Then
+                pCover = New ASCOM.DriverAccess.CoverCalibrator(My.Settings.sCoverDevice) With {
                 .Connected = True
             }
+            ElseIf My.Settings.sCoverMethod = "SERIAL" Then
+                If pSerialPortStatus <> "OPEN" Then
+                    returnvalue = OpenSerialPort(My.Settings.sSnapCapSerialPort, False)
+                    If returnvalue <> "OK" Then
+                        CoverConnect = returnvalue
+                        Exit Function
+                    End If
                 End If
-
             End If
             pCoverConnected = True
 
@@ -74,9 +79,15 @@ Module ModCover
             FrmMain.Cursor = Cursors.WaitCursor
             If My.Settings.sCoverMethod = "ASCOM" Then
                 pCover.Connected = False
+            ElseIf My.Settings.sCoverMethod = "SERIAL" Then
+                returnvalue = CloseSerialPort()
+                If returnvalue <> "OK" Then
+                    CoverDisconnect = returnvalue
+                    Exit Function
+                End If
             End If
 
-            pCoverConnected = False
+                pCoverConnected = False
 
             'check Cover: fill fields on main form
             returnvalue = CheckCover()

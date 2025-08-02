@@ -83,3 +83,4 @@ C:\Users\EYEMAOBS\Source\Repos\mvanleen\RoboticObservatoryFlat\obj\Debug\Robotic
 C:\Users\EYEMAOBS\Source\Repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObservatory.exe
 C:\Users\EYEMAOBS\Source\Repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObservatory.xml
 C:\Users\EYEMAOBS\Source\Repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObservatory.pdb
+C:\Users\Maarten\source\repos\mvanleen\RoboticObservatoryFlat\obj\Debug\RoboticObservatory.exe.config
