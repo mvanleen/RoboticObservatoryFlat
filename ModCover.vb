@@ -76,6 +76,8 @@ Module ModCover
             startExecution = DateTime.UtcNow()
             LogSessionEntry("BRIEF", "Disconnecting Cover...", "", "CoverDisconnect", "COVER")
 
+
+
             FrmMain.Cursor = Cursors.WaitCursor
             If My.Settings.sCoverMethod = "ASCOM" Then
                 pCover.Connected = False
@@ -87,13 +89,16 @@ Module ModCover
                 End If
             End If
 
-                pCoverConnected = False
+            pCoverConnected = False
+            pCoverStatus = 4
+            FrmMain.LblCover.BackColor = Color.Transparent
+            FrmMain.LblCover.Text = "COVER"
 
             'check Cover: fill fields on main form
-            returnvalue = CheckCover()
-            If returnvalue <> "OK" Then
-                CoverDisconnect = "CheckCover: " + returnvalue
-            End If
+            'returnvalue = CheckCover()
+            'If returnvalue <> "OK" Then
+            ' CoverDisconnect = "CheckCover: " + returnvalue
+            'End If
 
             FrmMain.Cursor = Cursors.Default
             LogSessionEntry("FULL", "Cover disconnected.", "", "CoverDisconnect", "COVER")
@@ -243,7 +248,7 @@ Module ModCover
 
             If My.Settings.sCoverMethod = "ASCOM" Then
                 pCoverStatus = pCover.CoverState
-            Else
+            ElseIf My.Settings.sCoverMethod = "SERIAL" Then
                 returnvalue = GetStatusSnapCap(My.Settings.sSnapCapSerialPort, vShowMessages)
                 If returnvalue <> "OK" Then
                     CoverGetStatus = returnvalue

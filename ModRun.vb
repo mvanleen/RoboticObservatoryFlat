@@ -513,24 +513,26 @@ Module ModRun
                     End If
                 End If
 
-                'Cover
-                LogSessionEntry("FULL", "Checking if cover is connected...", "", "CheckEquipmentStatus", "PROGRAM")
-                returnvalue = CoverGetStatus(False)
-                If pCoverStatus = 1 Or pCoverStatus = 2 Or pCoverStatus = 3 Then
-                    pCoverConnected = True
-                    LogSessionEntry("FULL", "Cover connected.", "", "CheckEquipmentStatus", "PROGRAM")
-                Else
-                    pCoverConnected = False
-                    LogSessionEntry("FULL", "Cover not connected: " + pCoverStatus.ToString, "", "CheckEquipmentStatus", "PROGRAM")
+                If My.Settings.sCoverMethod <> "NONE" Then
+                    'Cover
+                    LogSessionEntry("FULL", "Checking if cover is connected...", "", "CheckEquipmentStatus", "PROGRAM")
+                    returnvalue = CoverGetStatus(False)
+                    If pCoverStatus = 1 Or pCoverStatus = 2 Or pCoverStatus = 3 Then
+                        pCoverConnected = True
+                        LogSessionEntry("FULL", "Cover connected.", "", "CheckEquipmentStatus", "PROGRAM")
+                    Else
+                        pCoverConnected = False
+                        LogSessionEntry("FULL", "Cover not connected: " + pCoverStatus.ToString, "", "CheckEquipmentStatus", "PROGRAM")
+                    End If
                 End If
 
 
                 'TSX: try to connect the camera's
                 LogSessionEntry("FULL", "Checking if camera and focusser are on...", "", "CheckEquipmentStatus", "PROGRAM")
-                returnvalue = ConnectTheSkyXEquipment(False)
+                    returnvalue = ConnectTheSkyXEquipment(False)
 
-            End If
-            LogSessionEntry("FULL", "Equipment check completed.", "", "CheckEquipmentStatus", "PROGRAM")
+                End If
+                LogSessionEntry("FULL", "Equipment check completed.", "", "CheckEquipmentStatus", "PROGRAM")
         Catch ex As Exception
             CheckEquipmentStatus = "CheckEquipmentStatus: " + ex.Message
             pEquipmentStatus = "ERROR"

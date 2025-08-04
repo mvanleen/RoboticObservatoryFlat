@@ -210,7 +210,7 @@
     '3.20   change: better explanations concerning debugging
     '               added logging concerning cover
     '               removed topmost windows: annoying
-
+    '               added extra checks for cover so serial is not opened all the time
 
 
 
