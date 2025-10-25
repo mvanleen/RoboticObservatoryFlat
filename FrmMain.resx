@@ -338,6 +338,9 @@
         wIXOUXJIAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="StatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>130, 46</value>
+  </metadata>
   <data name="BtnMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAR5JREFUSEvF
@@ -469,9 +472,6 @@
         mjRp0qRJkyZNmjRp0qRJkyZNmjRp0qRJk3/o/wGtUem2/4zNpgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="StatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>130, 46</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>92</value>
   </metadata>

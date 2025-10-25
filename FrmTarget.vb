@@ -4,6 +4,7 @@ Imports System.Data.SQLite
 Imports System.Data.SqlTypes
 Imports System.Globalization
 Imports System.Net.Mime.MediaTypeNames
+Imports SnmpSharpNet
 
 Public Class FrmTarget
 
@@ -56,14 +57,19 @@ Public Class FrmTarget
                         Try
                             pCon.Open()
                             daSL_master.SelectCommand = cmd
-                            cmd.CommandText = "Select TargetName as Name, TargetFilter as Filter, TargetDone as Done, TargetNbrFrames - TargetNbrExposedFrames as Todo, TargetPriority as Priority, " +
-                                              "TargetError as Error, TargetLastObservedDate as LastObserved, TargetMosaic as Mosaic from Target order by 6 desc, 3 asc, 5 desc, 1 asc "
+                            cmd.CommandText = "Select Id as ID, TargetName as Name, TargetFilter as Filter, TargetDone as Done, TargetNbrFrames - TargetNbrExposedFrames as Todo, TargetPriority as Priority, " +
+                                              "TargetError as Error, TargetLastObservedDate as LastObserved, TargetMosaic as Mosaic from Target order by 7 desc, 4 asc, 6 desc, 2 asc "
                             daSL_master.SelectCommand = cmd
 
                             'Add the columns
-                            If dtSL_master.Columns.Count = 8 Then
+                            If dtSL_master.Columns.Count = 9 Then
                                 'do nothing
                             Else
+                                Using colId As New DataColumn("ID")
+                                    colId.DataType = System.Type.GetType("System.Int32")
+                                    dtSL_master.Columns.Add(colId)
+                                End Using
+
                                 Using colName As New DataColumn("Name")
                                     colName.DataType = System.Type.GetType("System.String")
                                     dtSL_master.Columns.Add(colName)
@@ -119,7 +125,7 @@ Public Class FrmTarget
 
             'load first record
             If dtSL_master.Rows.Count > 0 Then
-                returnvalue = LoadRecord(dtSL_master.Rows(0).Item(0).ToString, dtSL_master.Rows(0).Item(1).ToString)
+                returnvalue = LoadRecord(CInt(dtSL_master.Rows(0).Item(0)))
                 If returnvalue <> "OK" Then
                     LoadDataGrid = "OK"
                     Exit Function
@@ -128,14 +134,15 @@ Public Class FrmTarget
 
             DataGridViewTarget.DataSource = dtSL_master
 
-            DataGridViewTarget.Columns(0).Width = 100
-            DataGridViewTarget.Columns(1).Width = 50
+            DataGridViewTarget.Columns(0).Width = 30
+            DataGridViewTarget.Columns(1).Width = 80
             DataGridViewTarget.Columns(2).Width = 50 'checkbox
             DataGridViewTarget.Columns(3).Width = 50
             DataGridViewTarget.Columns(4).Width = 50
-            DataGridViewTarget.Columns(5).Width = 30 'checkbox
-            DataGridViewTarget.Columns(6).Width = 120
-            DataGridViewTarget.Columns(7).Width = 50 'checkbox
+            DataGridViewTarget.Columns(5).Width = 50
+            DataGridViewTarget.Columns(6).Width = 30 'checkbox
+            DataGridViewTarget.Columns(7).Width = 120
+            DataGridViewTarget.Columns(8).Width = 50 'checkbox
             DataGridViewTarget.Width = 501
             DataGridViewTarget.BackgroundColor = Color.Silver
 
@@ -145,7 +152,7 @@ Public Class FrmTarget
         End Try
     End Function
 
-    Public Function LoadRecord(vTargetName As String, vTargetFilter As String) As String
+    Public Function LoadRecord(vTargetID As Integer) As String
         Dim returnvalue As String
         Dim ciClone As CultureInfo = CType(CultureInfo.InvariantCulture.Clone(), CultureInfo)
         ciClone.NumberFormat.NumberDecimalSeparator = "."
@@ -183,7 +190,7 @@ Public Class FrmTarget
                                                "TargetPanel1DEC2000MM, TargetPanel2DEC2000MM, TargetPanel3DEC2000MM, TargetPanel4DEC2000MM, " +
                                                "TargetPanel1DEC2000SS, TargetPanel2DEC2000SS, TargetPanel3DEC2000SS, TargetPanel4DEC2000SS, " +
                                                "TargetPanel1NbrExposedFrames, TargetPanel2NbrExposedFrames, TargetPanel3NbrExposedFrames, TargetPanel4NbrExposedFrames, TargetMosaicOverlap " +
-                                               "from Target where TargetName=""" + vTargetName + """ And TargetFilter =""" + vTargetFilter + """"
+                                               "from Target where ID=" + vTargetID.ToString
 
                             daSL_detail.SelectCommand = cmd
                             dtSL_detail.Clear()
@@ -573,7 +580,7 @@ Public Class FrmTarget
         InsertUpdateRecord()
     End Sub
     Private Sub DataGridViewTarget_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewTarget.CellClick
-        Dim TargetName, TargetFilter As String
+        Dim TargetID As Integer
         Dim returnvalue As String
         Dim cmd As New OleDb.OleDbCommand
 
@@ -586,11 +593,9 @@ Public Class FrmTarget
             '-------------------------------------------------------------------------------------------------------------
             'change the row
             '-------------------------------------------------------------------------------------------------------------
-            TargetName = DataGridViewTarget.CurrentRow.Cells(0).Value.ToString
-            TargetFilter = DataGridViewTarget.CurrentRow.Cells(1).Value.ToString
+            TargetID = CInt(DataGridViewTarget.CurrentRow.Cells(0).Value)
 
-
-            returnvalue = LoadRecord(TargetName, TargetFilter)
+            returnvalue = LoadRecord(TargetID)
             If returnvalue <> "OK" Then
                 Exit Sub
             End If
@@ -1983,7 +1988,7 @@ Public Class FrmTarget
     End Sub
 
     Private Sub DataGridViewTarget_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridViewTarget.KeyDown
-        Dim TargetName As String, TargetFilter As String
+        Dim TargetID As Integer
         Dim returnvalue As String
         Dim cmd As New OleDb.OleDbCommand
 
@@ -1996,10 +2001,9 @@ Public Class FrmTarget
             '-------------------------------------------------------------------------------------------------------------
             'change the row
             '-------------------------------------------------------------------------------------------------------------
-            TargetName = DataGridViewTarget.CurrentRow.Cells(0).Value.ToString
-            TargetFilter = DataGridViewTarget.CurrentRow.Cells(1).Value.ToString
+            TargetID = CInt(DataGridViewTarget.CurrentRow.Cells(0).Value)
 
-            returnvalue = LoadRecord(TargetName, TargetFilter)
+            returnvalue = LoadRecord(TargetID)
             If returnvalue <> "OK" Then
                 Exit Sub
             End If
@@ -2010,7 +2014,7 @@ Public Class FrmTarget
     End Sub
 
     Private Sub DataGridViewTarget_KeyUp(sender As Object, e As KeyEventArgs) Handles DataGridViewTarget.KeyUp
-        Dim TargetName, TargetFilter As String
+        Dim TargetID As Integer
         Dim returnvalue As String
         Dim cmd As New OleDb.OleDbCommand
 
@@ -2023,10 +2027,9 @@ Public Class FrmTarget
             '-------------------------------------------------------------------------------------------------------------
             'change the row
             '-------------------------------------------------------------------------------------------------------------
-            TargetName = DataGridViewTarget.CurrentRow.Cells(0).Value.ToString
-            TargetFilter = DataGridViewTarget.CurrentRow.Cells(1).Value.ToString
+            TargetID = CInt(DataGridViewTarget.CurrentRow.Cells(0).Value)
 
-            returnvalue = LoadRecord(TargetName, TargetFilter)
+            returnvalue = LoadRecord(TargetID)
             If returnvalue <> "OK" Then
                 Exit Sub
             End If
@@ -3230,7 +3233,7 @@ Public Class FrmTarget
     End Sub
 
     Private Sub DataGridViewTarget_Scroll(sender As Object, e As ScrollEventArgs) Handles DataGridViewTarget.Scroll
-        Dim TargetName, TargetFilter As String
+        Dim TargetID As Integer
         Dim returnvalue As String
         Dim cmd As New OleDb.OleDbCommand
 
@@ -3243,11 +3246,10 @@ Public Class FrmTarget
             '-------------------------------------------------------------------------------------------------------------
             'change the row
             '-------------------------------------------------------------------------------------------------------------
-            TargetName = DataGridViewTarget.CurrentRow.Cells(0).Value.ToString
-            TargetFilter = DataGridViewTarget.CurrentRow.Cells(1).Value.ToString
+            TargetID = CInt(DataGridViewTarget.CurrentRow.Cells(0).Value)
 
 
-            returnvalue = LoadRecord(TargetName, TargetFilter)
+            returnvalue = LoadRecord(TargetID)
             If returnvalue <> "OK" Then
                 Exit Sub
             End If

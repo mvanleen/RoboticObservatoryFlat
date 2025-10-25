@@ -1346,7 +1346,7 @@ Partial Class FrmMain
         Me.LblVersion.Name = "LblVersion"
         Me.LblVersion.Size = New System.Drawing.Size(88, 16)
         Me.LblVersion.TabIndex = 105
-        Me.LblVersion.Text = "Version 3.21"
+        Me.LblVersion.Text = "Version 3.22"
         Me.LblVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'LblRoof
@@ -1520,6 +1520,7 @@ Partial Class FrmMain
         Me.RTXErrors.Location = New System.Drawing.Point(170, 630)
         Me.RTXErrors.Margin = New System.Windows.Forms.Padding(4)
         Me.RTXErrors.Name = "RTXErrors"
+        Me.RTXErrors.ReadOnly = True
         Me.RTXErrors.Size = New System.Drawing.Size(733, 64)
         Me.RTXErrors.TabIndex = 89
         Me.RTXErrors.Text = ""

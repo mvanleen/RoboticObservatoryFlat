@@ -211,6 +211,9 @@
     '               added logging concerning cover
     '               removed topmost windows: annoying
     '               added extra checks for cover so serial is not opened all the time
+    '3.21   bug: related to Paramount
+    '3.22   change: removed possibility to type in error box
+    '       change: using id to insert/update records in deepsky
 
 
 
