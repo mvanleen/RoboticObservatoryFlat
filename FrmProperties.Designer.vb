@@ -319,6 +319,7 @@ Partial Class FrmProperties
         Me.TxtMoonStartCooldownHigh = New System.Windows.Forms.TextBox()
         Me.Label166 = New System.Windows.Forms.Label()
         Me.Label167 = New System.Windows.Forms.Label()
+        Me.TxtHADSFailedAttempts = New System.Windows.Forms.TextBox()
         Me.GrpSnapCap = New System.Windows.Forms.GroupBox()
         Me.Label153 = New System.Windows.Forms.Label()
         Me.TxtCoverDevice = New System.Windows.Forms.TextBox()
@@ -341,6 +342,8 @@ Partial Class FrmProperties
         Me.GroupBoxProgram = New System.Windows.Forms.GroupBox()
         Me.Label106 = New System.Windows.Forms.Label()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.Label175 = New System.Windows.Forms.Label()
+        Me.Label176 = New System.Windows.Forms.Label()
         Me.Label146 = New System.Windows.Forms.Label()
         Me.txtHADSDECCutOff = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -3875,6 +3878,20 @@ Partial Class FrmProperties
         Me.Label167.Text = "Goto Share -> Publish for web"
         Me.ToolTip.SetToolTip(Me.Label167, "Only select objects above this declination.")
         '
+        'TxtHADSFailedAttempts
+        '
+        Me.TxtHADSFailedAttempts.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.TxtHADSFailedAttempts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtHADSFailedAttempts.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtHADSFailedAttempts.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtHADSFailedAttempts.Location = New System.Drawing.Point(96, 288)
+        Me.TxtHADSFailedAttempts.Name = "TxtHADSFailedAttempts"
+        Me.TxtHADSFailedAttempts.Size = New System.Drawing.Size(59, 21)
+        Me.TxtHADSFailedAttempts.TabIndex = 32
+        Me.TxtHADSFailedAttempts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ToolTip.SetToolTip(Me.TxtHADSFailedAttempts, "Sometimes a HADS-star will fail due to refocus or plate solving. As it is very an" &
+        "noyingt to be woken up everytime, an alarm will be sounded after x attempts.")
+        '
         'GrpSnapCap
         '
         Me.GrpSnapCap.Controls.Add(Me.Label153)
@@ -4136,6 +4153,9 @@ Partial Class FrmProperties
         '
         'GroupBox16
         '
+        Me.GroupBox16.Controls.Add(Me.Label175)
+        Me.GroupBox16.Controls.Add(Me.TxtHADSFailedAttempts)
+        Me.GroupBox16.Controls.Add(Me.Label176)
         Me.GroupBox16.Controls.Add(Me.Label167)
         Me.GroupBox16.Controls.Add(Me.Label166)
         Me.GroupBox16.Controls.Add(Me.Label146)
@@ -4147,10 +4167,30 @@ Partial Class FrmProperties
         Me.GroupBox16.ForeColor = System.Drawing.Color.White
         Me.GroupBox16.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox16.Name = "GroupBox16"
-        Me.GroupBox16.Size = New System.Drawing.Size(609, 288)
+        Me.GroupBox16.Size = New System.Drawing.Size(609, 328)
         Me.GroupBox16.TabIndex = 16
         Me.GroupBox16.TabStop = False
         Me.GroupBox16.Text = "Variables"
+        '
+        'Label175
+        '
+        Me.Label175.AutoSize = True
+        Me.Label175.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label175.Location = New System.Drawing.Point(161, 292)
+        Me.Label175.Name = "Label175"
+        Me.Label175.Size = New System.Drawing.Size(95, 13)
+        Me.Label175.TabIndex = 33
+        Me.Label175.Text = "failed HADS-stars."
+        '
+        'Label176
+        '
+        Me.Label176.AutoSize = True
+        Me.Label176.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label176.Location = New System.Drawing.Point(6, 292)
+        Me.Label176.Name = "Label176"
+        Me.Label176.Size = New System.Drawing.Size(84, 13)
+        Me.Label176.TabIndex = 31
+        Me.Label176.Text = "Play error after "
         '
         'Label146
         '
@@ -5477,4 +5517,7 @@ Partial Class FrmProperties
     Friend WithEvents TxtCoverTimeout As TextBox
     Friend WithEvents Label173 As Label
     Friend WithEvents ChkEnableDebugLogging As CheckBox
+    Friend WithEvents Label175 As Label
+    Friend WithEvents TxtHADSFailedAttempts As TextBox
+    Friend WithEvents Label176 As Label
 End Class

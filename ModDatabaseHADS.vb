@@ -70,6 +70,7 @@ Module ModDatabaseHADS
     Public pStrucHADSRecord As StructHADSRecord
     Public pStrucOldHADSRecord As StructHADSRecord
     Public pVSLTarget As StructHADSRecord 'Deepsky target
+    Public pHADSFailedAttempts As Integer
 
     Private Sub ClearHADSRecord()
         Dim startExecution As Date
@@ -1241,8 +1242,14 @@ Module ModDatabaseHADS
         DatabaseMarkErrorHADS = "OK"
         Try
             startExecution = DateTime.UtcNow()
-            LogSessionEntry("ERROR", "Marking " + pVSLTarget.HADSName + " as unusable: " + vReason, "", "DatabaseMarkErrorHADS", "PROGRAM")
 
+            If pHADSFailedAttempts >= My.Settings.sHADSFailedAttempts Then
+                LogSessionEntry("ERROR", "MULTIPLE FAILED HADS! Marking " + pVSLTarget.HADSName + " as unusable: " + vReason, "", "DatabaseMarkErrorHADS", "PROGRAM")
+                pHADSFailedAttempts = 0
+            Else
+                LogSessionEntry("ESSENTIAL", "Marking " + pVSLTarget.HADSName + " as unusable:  " + vReason, "", "DatabaseMarkErrorHADS", "PROGRAM")
+                pHADSFailedAttempts += 1
+            End If
 
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand

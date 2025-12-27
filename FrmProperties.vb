@@ -205,6 +205,7 @@ Public Class FrmProperties
             End If
 
             TxtMountDevice.Enabled = False
+            TxtHADSFailedAttempts.Text = My.Settings.sHADSFailedAttempts.ToString(ciClone)
 
         Catch ex As Exception
             ShowMessage("FrmProperties_Load: " + ex.Message, "CRITICAL", "Error!")
@@ -416,7 +417,8 @@ Public Class FrmProperties
                 TxtTelescopeName.Text = My.Settings.sTelescopeName And
                 TxtTelescopeAparture.Text = My.Settings.sTelescopeAparture.ToString(ciClone) And
                 TxtTelescopeFocalLength.Text = My.Settings.sTelescopeFocalLength.ToString(ciClone) And
-                ChkEnableDebugLogging.Checked = My.Settings.sEnableDebugLogging Then
+                ChkEnableDebugLogging.Checked = My.Settings.sEnableDebugLogging And
+                TxtHADSFailedAttempts.Text = My.Settings.sHADSFailedAttempts.ToString(ciClone) Then
 
                 'no changes
             Else
@@ -593,6 +595,7 @@ Public Class FrmProperties
                     My.Settings.sCoverTimeout = Double.Parse(TxtCoverTimeout.Text, ciClone)
                     My.Settings.sCCDTimeout = Double.Parse(TxtCCDTimeout.Text, ciClone)
                     My.Settings.sEnableDebugLogging = ChkEnableDebugLogging.Checked
+                    My.Settings.sHADSFailedAttempts = Convert.ToInt32(TxtHADSFailedAttempts.Text)
 
                     My.Settings.Save()
 
@@ -839,7 +842,4 @@ Public Class FrmProperties
         TxtWeatherSafeSwitchDelay.Enabled = True
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ChkEnableDebugLogging.CheckedChanged
-
-    End Sub
 End Class

@@ -214,7 +214,24 @@
     '3.21   bug: related to Paramount
     '3.22   change: removed possibility to type in error box
     '       change: using id to insert/update records in deepsky
+    '3.23   change: SAFETY CHECK NIGHT as error !
+    '       change: DUSK FLATS: not enough light. Waiting for sun to set. => park the mount, no matter what, status flag is not always set correctly
+    '       change: Marking V377 Boo as unusable: will only give error following x HADS variables failures
+    '       change: "Focus slew failed! => made essential in stead of error
 
+
+
+
+
+
+    '1/05/2025 
+    '- volgorde variabelen ? lijkt nergens op
+
+
+    '-- bugs in forms
+    ' kip of ei: eerst plate solve en dan focus of omgekeerd ?
+
+    'RGB filters
 
 
 
