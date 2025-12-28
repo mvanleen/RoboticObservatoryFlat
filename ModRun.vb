@@ -989,21 +989,21 @@ Module ModRun
                                                 LogSessionEntry("ESSENTIAL", "DUSK FLATS: not enough light. Waiting for sun to set.", "", "CheckRun", "SEQUENCE")
                                                 pIsSequenceRunning = False
 
-                                                'If pStructMount.AtPark = False Then 'park the mount no matter what
-                                                'park the mount and continue waiting
-                                                returnvalue = MountPark()
+                                                If pStructMount.AtPark <> True Then 'park the mount
+                                                    'park the mount and continue waiting
+                                                    returnvalue = MountPark()
                                                     If returnvalue <> "OK" Then
                                                         CheckRun = returnvalue
                                                         LogSessionEntry("ERROR", "Mount park: " + returnvalue, "", "MountPark", "SEQUENCE")
                                                         Exit Function
                                                     End If
-                                                'End If
+                                                End If
 
                                                 pRunStatus = "WAITING"
-                                                LogSessionEntry("DEBUG", "Set pRunStatus to WAITING", "", "RunFlats", "SEQUENCE")
-                                            End If
+                                                    LogSessionEntry("DEBUG", "Set pRunStatus to WAITING", "", "RunFlats", "SEQUENCE")
+                                                End If
 
-                                        End If
+                                            End If
                                     End If
                                 Else
                                     '---------------------------------------

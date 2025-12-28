@@ -215,7 +215,7 @@
     '3.22   change: removed possibility to type in error box
     '       change: using id to insert/update records in deepsky
     '3.23   change: SAFETY CHECK NIGHT as error !
-    '       change: DUSK FLATS: not enough light. Waiting for sun to set. => park the mount, no matter what, status flag is not always set correctly
+    '       change: DUSK FLATS: not enough light. Waiting for sun to set. => park the mount, changed if tot <> true as status flag is not always set correctly
     '       change: Marking V377 Boo as unusable: will only give error following x HADS variables failures
     '       change: "Focus slew failed! => made essential in stead of error
 
