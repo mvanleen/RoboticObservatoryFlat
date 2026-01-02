@@ -235,14 +235,14 @@ Module ModDatabaseHADS
 
             DownloadHADSFile()
 
-            'set all records inactive
-            SetInactiveHADSRecord()
-
             Using MyReader As New Microsoft.VisualBasic.
                 FileIO.TextFieldParser(My.Settings.sLogLocation + "HADS.tsv")
                 MyReader.TextFieldType = FileIO.FieldType.Delimited
                 MyReader.SetDelimiters(vbTab)
                 i = 0
+
+                'set all records inactive
+                SetAllInactiveHADSRecord()
 
                 While Not MyReader.EndOfData
                     Try
@@ -392,6 +392,8 @@ Module ModDatabaseHADS
         Catch ex As Exception
             LogSessionEntry("ERROR", "ReadHADSFile: " + ex.Message, "ReadHADSFile", "", "PROGRAM")
             ReadHADSFile = ex.Message
+            'reset all records active
+            SetAllActiveHADSRecord()
         End Try
     End Function
 
@@ -752,15 +754,15 @@ Module ModDatabaseHADS
 
 
 
-    Public Function SetInactiveHADSRecord() As String
+    Public Function SetAllInactiveHADSRecord() As String
         Dim i As Integer
         Dim startExecution As Date
         Dim executionTime As TimeSpan
 
-        SetInactiveHADSRecord = "OK"
+        SetAllInactiveHADSRecord = "OK"
         Try
             startExecution = DateTime.UtcNow()
-            LogSessionEntry("DEBUG", "  SetInactiveHADSRecord...", "", "SetInactiveHADSRecord", "PROGRAM")
+            LogSessionEntry("DEBUG", "  SetAllInactiveHADSRecord...", "", "SetAllInactiveHADSRecord", "PROGRAM")
 
             Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
                 Using cmd As SQLiteCommand = pCon.CreateCommand
@@ -775,20 +777,60 @@ Module ModDatabaseHADS
                             pCon.Close()
 
                         Catch ex As Exception
-                            SetInactiveHADSRecord = "SetInactiveHADSRecord: " + ex.Message
-                            LogSessionEntry("ERROR", "SetInactiveHADSRecord: " + ex.Message, "", "SetInactiveHADSRecord", "PROGRAM")
+                            SetAllInactiveHADSRecord = "SetAllInactiveHADSRecord: " + ex.Message
+                            LogSessionEntry("ERROR", "SetAllInactiveHADSRecord: " + ex.Message, "", "SetAllInactiveHADSRecord", "PROGRAM")
                         End Try
                     End Using
                 End Using
             End Using
             executionTime = DateTime.UtcNow() - startExecution
-            LogSessionEntry("DEBUG", "  SetInactiveHADSRecord: " + executionTime.ToString, "", "SetInactiveHADSRecord", "PROGRAM")
+            LogSessionEntry("DEBUG", "  SetAllInactiveHADSRecord: " + executionTime.ToString, "", "SetAllInactiveHADSRecord", "PROGRAM")
 
         Catch ex As Exception
-            LogSessionEntry("ERROR", "SetInactiveHADSRecord: " + ex.Message, "", "SetInactiveHADSRecord", "PROGRAM")
-            SetInactiveHADSRecord = ex.Message
+            LogSessionEntry("ERROR", "SetAllInactiveHADSRecord: " + ex.Message, "", "SetAllInactiveHADSRecord", "PROGRAM")
+            SetAllInactiveHADSRecord = ex.Message
         End Try
     End Function
+
+
+    Public Function SetAllActiveHADSRecord() As String
+        Dim i As Integer
+        Dim startExecution As Date
+        Dim executionTime As TimeSpan
+
+        SetAllActiveHADSRecord = "OK"
+        Try
+            startExecution = DateTime.UtcNow()
+            LogSessionEntry("DEBUG", "  SetAllActiveHADSRecord...", "", "SetAllActiveHADSRecord", "PROGRAM")
+
+            Using pCon As New SQLiteConnection("Data Source=RoboticObservatory.db;Version=3;")
+                Using cmd As SQLiteCommand = pCon.CreateCommand
+                    Using daSL As New SQLiteDataAdapter
+                        Try
+                            pCon.Open()
+                            daSL.SelectCommand = cmd
+                            cmd.CommandText = "UPDATE HADS set HADSActive='1'"
+
+                            daSL.SelectCommand = cmd
+                            i = cmd.ExecuteNonQuery
+                            pCon.Close()
+
+                        Catch ex As Exception
+                            SetAllActiveHADSRecord = "SetAllActiveHADSRecord: " + ex.Message
+                            LogSessionEntry("ERROR", "SetAllActiveHADSRecord: " + ex.Message, "", "SetAllActiveHADSRecord", "PROGRAM")
+                        End Try
+                    End Using
+                End Using
+            End Using
+            executionTime = DateTime.UtcNow() - startExecution
+            LogSessionEntry("DEBUG", "  SetAllActiveHADSRecord: " + executionTime.ToString, "", "SetAllActiveHADSRecord", "PROGRAM")
+
+        Catch ex As Exception
+            LogSessionEntry("ERROR", "SetAllActiveHADSRecord: " + ex.Message, "", "SetAllActiveHADSRecord", "PROGRAM")
+            SetAllActiveHADSRecord = ex.Message
+        End Try
+    End Function
+
 
 
     Public Function UpdateHADSRecordActiveFlag() As String

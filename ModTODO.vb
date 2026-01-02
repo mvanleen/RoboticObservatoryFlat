@@ -218,7 +218,8 @@
     '       change: DUSK FLATS: not enough light. Waiting for sun to set. => park the mount, changed if tot <> true as status flag is not always set correctly
     '       change: Marking V377 Boo as unusable: will only give error following x HADS variables failures
     '       change: "Focus slew failed! => made essential in stead of error
-
+    '3.24   change: modified SetAllInactiveHADSRecord, added SetAllActiveHADSRecord
+    '       change: when file read HADS fails; in error handling all HADS records will be reset to active
 
 
 
